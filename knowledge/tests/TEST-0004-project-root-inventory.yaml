@@ -1,0 +1,13 @@
+id: TEST-0004
+kind: test
+title: Project inventory must traverse project-level containers
+given: A Premiere project with bins, nested bins, project items, and sequences.
+when: An AI agent builds a read-only project inventory.
+then: It must traverse Project-owned organization and sequence collections without treating timeline clips as project-level assets.
+expected: Inventory output separates Project, Bin, ProjectItem, and Sequence records and preserves their scope.
+applies_to:
+  - OBJ-0002
+  - OBJ-0003
+  - OBJ-0004
+  - OBJ-0005
+automation_level: semi_automated
