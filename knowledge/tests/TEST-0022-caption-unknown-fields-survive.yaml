@@ -1,0 +1,11 @@
+id: TEST-0022
+kind: Test
+title: Caption unknown fields survive replacement
+given: Caption serialization containing unknown fields.
+when: Visible text is replaced.
+then: Unknown fields remain present in output.
+expected:
+  - Unknown keys retained.
+  - No full-object regeneration unless explicitly requested.
+evidence:
+  - EVID-0002

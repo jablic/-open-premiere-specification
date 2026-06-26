@@ -1,0 +1,73 @@
+id: CAP-0001
+kind: Capability
+title: Read Premiere Project
+status: Draft
+summary: Safely inspect the active Premiere Pro project and derive its top-level object graph without modifying project state.
+intent: Provide an AI agent with a safe read-only capability for understanding project structure before any automation task.
+scope:
+  includes:
+    - Detect active project context.
+    - Enumerate bins, project items, and sequences.
+    - Preserve distinction between ProjectItem and TrackItem.
+    - Build a read-only project graph for downstream tasks.
+  excludes:
+    - Modifying project contents.
+    - Relinking media.
+    - Editing sequences.
+inputs:
+  - name: project_context
+    type: PremiereProjectContext
+    required: true
+    description: Active project/session context supplied by Premiere API, XML export, or extracted project metadata.
+  - name: read_mode
+    type: enum[api,xml,hybrid]
+    required: false
+    description: Preferred inspection mode.
+outputs:
+  - name: project_graph
+    type: KnowledgeGraphFragment
+    description: Graph of Project, Bin, ProjectItem, Sequence and relevant references.
+  - name: inventory_report
+    type: StructuredReport
+    description: Summary of bins, sequences, project items and unresolved references.
+workflow:
+  - Confirm that operation is read-only.
+  - Identify the active project object.
+  - Enumerate rootItem/bin hierarchy if API access is available.
+  - Enumerate sequences separately from media project items.
+  - Record references without treating timeline instances as source media.
+  - Return graph and inventory report.
+knowledge_dependencies:
+  objects:
+    - OBJ-0001
+    - OBJ-0002
+    - OBJ-0003
+    - OBJ-0004
+    - OBJ-0005
+  rules:
+    - RULE-0001
+    - RULE-0002
+    - RULE-0004
+    - RULE-0005
+  recipes:
+    - REC-0001
+safety_rules:
+  - RULE-0001
+  - RULE-0004
+failure_modes:
+  - No active project is open.
+  - API surface returns partial data.
+  - XML export omits runtime-only state.
+validation:
+  - ProjectItem and TrackItem must not be merged.
+  - Sequence references must not be interpreted as media ownership.
+tests:
+  - TEST-0008
+  - TEST-0011
+  - TEST-0020
+evidence:
+  - EVID-0001
+  - EVID-0003
+quality:
+  completeness: 65
+  confidence: production_verified

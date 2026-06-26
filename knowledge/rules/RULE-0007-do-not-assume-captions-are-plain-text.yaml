@@ -1,0 +1,22 @@
+id: RULE-0007
+kind: Rule
+title: Do not assume captions are plain text
+status: Draft
+severity: High
+summary: AI agents must distinguish SRT-like text workflows from Premiere caption objects and internal caption serialization.
+applies_to:
+  - CAP-0002
+  - OBJ-0009
+rationale: Treating every caption workflow as plain text can destroy style data, timing metadata, and internal references.
+forbidden:
+  - Claiming all caption edits can be done by simple string replacement.
+  - Ignoring style runs or text runs when present.
+required:
+  - Identify input format before editing.
+  - State limitations when API access is incomplete.
+evidence:
+  - EVID-0002
+tests:
+  - TEST-0023
+quality:
+  confidence: experimental

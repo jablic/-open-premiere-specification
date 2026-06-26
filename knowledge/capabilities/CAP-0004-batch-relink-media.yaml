@@ -1,0 +1,67 @@
+id: CAP-0004
+kind: Capability
+title: Batch Relink Media
+status: Draft
+summary: Safely relink offline ProjectItems to replacement media while preserving timeline edit decisions.
+intent: Provide AI agents with a structured safety model for relinking without confusing source media, ProjectItems, and TrackItems.
+scope:
+  includes:
+    - Detect offline ProjectItems.
+    - Match candidate media.
+    - Relink source references.
+    - Preserve TrackItem timing and edit decisions.
+  excludes:
+    - Recutting a timeline.
+    - Replacing clips by timeline instance unless explicitly requested.
+inputs:
+  - name: project_inventory
+    type: ProjectInventory
+    required: true
+    description: ProjectItem list with media status.
+  - name: relink_candidates
+    type: FolderPath|MediaManifest
+    required: true
+    description: Candidate media locations or manifest.
+outputs:
+  - name: relink_plan
+    type: StructuredPlan
+    description: Proposed ProjectItem-to-media mappings.
+  - name: relink_report
+    type: StructuredReport
+    description: Results and unresolved items.
+workflow:
+  - Identify offline ProjectItems.
+  - Build candidate matching table.
+  - Check media duration, name, reel, timecode and format where available.
+  - Relink ProjectItems, not TrackItems.
+  - Validate that timeline edits remain intact.
+knowledge_dependencies:
+  objects:
+    - OBJ-0002
+    - OBJ-0004
+    - OBJ-0005
+  rules:
+    - RULE-0002
+    - RULE-0004
+    - RULE-0009
+  recipes:
+    - REC-0004
+safety_rules:
+  - RULE-0004
+  - RULE-0009
+failure_modes:
+  - Multiple candidate files match one ProjectItem.
+  - Relink changes duration or timecode assumptions.
+  - Proxy/original media relationship is confused.
+validation:
+  - Relink plan must be reviewable before execution.
+  - Ambiguous matches must not be applied automatically.
+  - Sequence timing must remain unchanged.
+tests:
+  - TEST-0040
+  - TEST-0041
+evidence:
+  - EVID-0003
+quality:
+  completeness: 35
+  confidence: production_verified

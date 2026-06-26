@@ -1,0 +1,13 @@
+id: TEST-0020
+kind: Test
+title: Read Project capability is non-destructive
+status: Draft
+given: Active project containing bins, project items and sequences.
+when: CAP-0001 Read Premiere Project is executed.
+then: No project state is modified and a project graph is produced.
+expected:
+  - No write operation is performed.
+  - Project, Bin, ProjectItem and Sequence nodes are present.
+  - TrackItem nodes are not invented unless sequence timeline data is explicitly read.
+evidence:
+  - EVID-0003

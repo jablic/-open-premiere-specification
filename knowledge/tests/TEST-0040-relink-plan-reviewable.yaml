@@ -1,0 +1,11 @@
+id: TEST-0040
+kind: Test
+title: Relink plan must be reviewable
+given: Offline ProjectItems and candidate media files.
+when: CAP-0004 creates a relink plan.
+then: The plan lists proposed mappings before execution.
+expected:
+  - No ambiguous match applied automatically.
+  - Each mapping has match rationale.
+evidence:
+  - EVID-0003

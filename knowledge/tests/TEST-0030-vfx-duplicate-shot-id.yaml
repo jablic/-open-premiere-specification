@@ -1,0 +1,11 @@
+id: TEST-0030
+kind: Test
+title: Duplicate VFX shot IDs are rejected
+given: Two VFX markers with the same shot ID.
+when: CAP-0003 generates a VFX list.
+then: The output flags the duplicate and does not silently merge rows.
+expected:
+  - Duplicate listed in validation report.
+  - Both original marker references preserved.
+evidence:
+  - EVID-0003

@@ -1,0 +1,12 @@
+id: TEST-0051
+kind: Test
+title: XML roundtrip risk report is generated
+given: A sequence containing effects, captions or MOGRT.
+when: CAP-0005 is used for roundtrip workflow.
+then: Capability emits a risk report before recommending reimport.
+expected:
+  - Risk report includes unsupported or lossy features.
+  - Agent does not claim universal lossless XML roundtrip.
+evidence:
+  - EVID-0001
+  - EVID-0002

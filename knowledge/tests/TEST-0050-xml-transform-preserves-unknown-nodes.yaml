@@ -1,0 +1,11 @@
+id: TEST-0050
+kind: Test
+title: XML transform preserves unknown nodes
+given: Premiere XML containing unknown nodes or attributes.
+when: CAP-0005 performs a transform.
+then: Unknown XML structures are preserved unless explicitly removed by a declared operation.
+expected:
+  - Unknown nodes retained.
+  - Unsupported constructs appear in risk report.
+evidence:
+  - EVID-0002
