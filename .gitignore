@@ -1,0 +1,7 @@
+build/
+site/
+dist/
+.cache/
+__pycache__/
+*.pyc
+.DS_Store
