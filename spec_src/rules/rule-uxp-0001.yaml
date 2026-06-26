@@ -1,0 +1,17 @@
+kind: rule
+id: RULE-UXP-0001
+title: Account For Async Method Calls
+status: active
+confidence: high
+severity: error
+rule: UXP code must await asynchronous Premiere methods when required and must not assume ExtendScript synchronous behavior.
+purpose: Prevent unsafe or hallucinated AI behavior when developing Premiere Pro automation.
+prevents:
+- Unsupported code generation
+- Data loss
+- Wrong API-layer assumptions
+validation:
+- Check generated answer for rule compliance.
+related:
+- FOUND-0001
+- FOUND-0002

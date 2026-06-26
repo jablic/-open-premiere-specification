@@ -1,0 +1,184 @@
+[
+  {
+    "id": "RULE-AI-0001",
+    "title": "No Fake APIs",
+    "severity": "critical",
+    "rule": "AI MUST NOT invent Premiere API methods such as sequence.captions or project.exportCaptions().",
+    "prevents": [
+      "hallucination",
+      "destructive_editing"
+    ]
+  },
+  {
+    "id": "RULE-AI-0002",
+    "title": "Preserve Object Identity",
+    "severity": "critical",
+    "rule": "AI MUST preserve object identity and must not equate objects by display name.",
+    "prevents": [
+      "hallucination",
+      "destructive_editing"
+    ]
+  },
+  {
+    "id": "RULE-AI-0003",
+    "title": "Declare API Layer",
+    "severity": "error",
+    "rule": "Every code answer must explicitly identify the API layer: UXP, ExtendScript, CEP, QE, XML, Python, ffmpeg, or hybrid.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-AI-0004",
+    "title": "Do Not Port AE Assumptions",
+    "severity": "error",
+    "rule": "Premiere scripting must not inherit After Effects scripting assumptions unless explicitly verified.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-AI-0005",
+    "title": "Prefer Official API Before QE",
+    "severity": "warning",
+    "rule": "QE-dependent workflows must be treated as fallback or user-approved experimental paths.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-AI-0006",
+    "title": "Preserve Timeline Instance vs Source Distinction",
+    "severity": "error",
+    "rule": "AI must distinguish ProjectItem/source changes from TrackItem/timeline instance changes.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-AI-0007",
+    "title": "Version Gate API Usage",
+    "severity": "error",
+    "rule": "When a method is version-dependent, generated code must include compatibility notes or checks.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-AI-0008",
+    "title": "No Silent Destructive Timeline Edits",
+    "severity": "error",
+    "rule": "Any batch timeline edit must include backup, duplicate sequence, XML export, or explicit rollback guidance.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-CAP-0001",
+    "title": "Caption Is Not Plain Text",
+    "severity": "critical",
+    "rule": "Caption editing MUST preserve timing, style runs, metadata and run lengths.",
+    "prevents": [
+      "hallucination",
+      "destructive_editing"
+    ]
+  },
+  {
+    "id": "RULE-CAP-0002",
+    "title": "Validate Caption Run Lengths",
+    "severity": "error",
+    "rule": "When editing rich caption JSON, text length and style/font run lengths must remain consistent.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-CAP-0003",
+    "title": "Do Not Flatten Caption Formatting",
+    "severity": "warning",
+    "rule": "Caption text replacement must not flatten unknown style runs unless the user explicitly requests plain text output.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-EXT-0001",
+    "title": "Do Not Promise Future ExtendScript Development",
+    "severity": "warning",
+    "rule": "ExtendScript should be treated as legacy/maintenance-oriented when planning new long-lived Premiere extensions.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-MOGRT-0001",
+    "title": "Distinguish MOGRT Source and Instance",
+    "severity": "error",
+    "rule": "AI must distinguish a MOGRT file/source from a timeline instance with editable parameters.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-SAFE-0001",
+    "title": "Backup Before Destructive Operations",
+    "severity": "critical",
+    "rule": "Production workflows MUST create backup or duplicate sequence before batch mutation.",
+    "prevents": [
+      "hallucination",
+      "destructive_editing"
+    ]
+  },
+  {
+    "id": "RULE-SER-0001",
+    "title": "Preserve Unknown Fields",
+    "severity": "critical",
+    "rule": "Serializers MUST preserve unknown fields and ordering when modifying structured data.",
+    "prevents": [
+      "hallucination",
+      "destructive_editing"
+    ]
+  },
+  {
+    "id": "RULE-UXP-0001",
+    "title": "Account For Async Method Calls",
+    "severity": "error",
+    "rule": "UXP code must await asynchronous Premiere methods when required and must not assume ExtendScript synchronous behavior.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  },
+  {
+    "id": "RULE-XML-0001",
+    "title": "XML Is Not Full Fidelity",
+    "severity": "warning",
+    "rule": "Premiere XML export can omit or transform project state; do not treat XML as a full project backup.",
+    "prevents": [
+      "Unsupported code generation",
+      "Data loss",
+      "Wrong API-layer assumptions"
+    ]
+  }
+]

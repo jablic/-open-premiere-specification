@@ -1,0 +1,15 @@
+kind: recipe
+id: REC-0001
+title: Create VFX List from Premiere Markers
+purpose: Generate a VFX spreadsheet from locked Premiere edit markers.
+steps:
+  - Export sequence XML.
+  - Parse marker names and timecodes.
+  - Use ffmpeg to extract thumbnails and previews.
+  - Generate XLSX with shot id, thumbnail, preview path, task and status.
+uses:
+  - OBJ-0004
+  - OBJ-0010
+validation:
+  - Every marker must have unique CG shot id.
+  - Every preview file must exist.

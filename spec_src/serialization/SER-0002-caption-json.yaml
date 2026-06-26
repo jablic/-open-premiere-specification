@@ -1,0 +1,14 @@
+kind: serialization
+id: SER-0002
+title: Caption JSON Serialization
+purpose: Defines constraints for caption JSON and text/style run preservation.
+confidence: reverse_engineered
+uses:
+  - OBJ-0009
+constraints:
+  - Text run lengths MUST match text content.
+  - Unknown JSON nodes MUST be preserved.
+  - Style ranges MUST remain internally consistent.
+ai_rules:
+  - Never regenerate full caption JSON from plain text.
+  - Edit the smallest possible node set.

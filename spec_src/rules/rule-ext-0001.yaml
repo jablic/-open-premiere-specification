@@ -1,0 +1,17 @@
+kind: rule
+id: RULE-EXT-0001
+title: Do Not Promise Future ExtendScript Development
+status: active
+confidence: high
+severity: warning
+rule: ExtendScript should be treated as legacy/maintenance-oriented when planning new long-lived Premiere extensions.
+purpose: Prevent unsafe or hallucinated AI behavior when developing Premiere Pro automation.
+prevents:
+- Unsupported code generation
+- Data loss
+- Wrong API-layer assumptions
+validation:
+- Check generated answer for rule compliance.
+related:
+- FOUND-0001
+- FOUND-0002

@@ -1,0 +1,17 @@
+kind: api
+id: API-UXP-0014
+title: UXP Track API Surface
+status: draft
+confidence: documented_or_pending_verification
+purpose: Capture the UXP Premiere DOM surface related to Track.
+summary: Structured placeholder for method/property inventory, version matrix, examples and failure modes. Populate only from official UXP docs, official samples, or reproducible local tests.
+uses:
+- API-UXP-0001
+constraints:
+- Minimum version must be recorded per member when known.
+- Async/sync behavior must be recorded per method/property.
+validation:
+- No method may be used in generated code unless it appears in this API surface or is confirmed by a cited experiment.
+related:
+- API-UXP-0001
+- RULE-AI-0001

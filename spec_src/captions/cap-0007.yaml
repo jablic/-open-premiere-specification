@@ -1,0 +1,19 @@
+kind: spec
+id: CAP-0007
+title: Caption Import Protocol
+status: draft
+confidence: medium
+purpose: Define Caption Import Protocol for safe AI-assisted caption automation.
+summary: Import workflows must declare source format, encoding, frame rate and timing conversion assumptions.
+constraints:
+- Preserve unknown fields.
+- Validate after every write.
+- Do not infer undocumented serializer behavior.
+ai_rules:
+- When unsure whether captions are plain text or rich serialized structures, assume rich structures and avoid destructive edits.
+related:
+- OBJ-0009
+- SER-0002
+- RULE-CAP-0001
+- RULE-CAP-0002
+- RULE-SER-0001

@@ -1,0 +1,2526 @@
+{
+  "nodes": [
+    {
+      "id": "API-CEP-0001",
+      "label": "CEP Boundary",
+      "kind": "api"
+    },
+    {
+      "id": "API-ENC-0001",
+      "label": "Encoder Boundary",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0001",
+      "label": "ExtendScript Boundary",
+      "kind": "api"
+    },
+    {
+      "id": "API-QE-0001",
+      "label": "QE Boundary",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0001",
+      "label": "UXP Boundary",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0011",
+      "label": "ExtendScript App API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0012",
+      "label": "ExtendScript Project API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0013",
+      "label": "ExtendScript ProjectItem API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0014",
+      "label": "ExtendScript Sequence API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0015",
+      "label": "ExtendScript Track API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0016",
+      "label": "ExtendScript TrackItem API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0017",
+      "label": "ExtendScript Component API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0018",
+      "label": "ExtendScript ComponentParam API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0019",
+      "label": "ExtendScript Marker API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0020",
+      "label": "ExtendScript Encoder API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0021",
+      "label": "ExtendScript Metadata API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0022",
+      "label": "ExtendScript Anywhere API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0023",
+      "label": "ExtendScript Time API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0024",
+      "label": "ExtendScript QEProject API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0025",
+      "label": "ExtendScript QESequence API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0026",
+      "label": "ExtendScript QETrack API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-EXT-0027",
+      "label": "ExtendScript QEClip API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0011",
+      "label": "UXP Application API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0012",
+      "label": "UXP Project API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0013",
+      "label": "UXP Sequence API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0014",
+      "label": "UXP Track API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0015",
+      "label": "UXP TrackItem API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0016",
+      "label": "UXP ProjectItem API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0017",
+      "label": "UXP Component API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0018",
+      "label": "UXP ComponentParam API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0019",
+      "label": "UXP Marker API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0020",
+      "label": "UXP Metadata API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0021",
+      "label": "UXP Encoder API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0022",
+      "label": "UXP ExportController API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0023",
+      "label": "UXP CaptionTrack API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0024",
+      "label": "UXP Transcript API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0025",
+      "label": "UXP Color API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "API-UXP-0026",
+      "label": "UXP Time API Surface",
+      "kind": "api"
+    },
+    {
+      "id": "BENCH-0002",
+      "label": "Premiere Extension Coding Benchmark",
+      "kind": "benchmark"
+    },
+    {
+      "id": "CAP-0001",
+      "label": "Caption Internal Model",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0002",
+      "label": "Caption Timing Contract",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0003",
+      "label": "Caption Text Run Contract",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0004",
+      "label": "Caption Style Run Contract",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0005",
+      "label": "Caption Font Run Contract",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0006",
+      "label": "fontTextRunLength Contract",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0007",
+      "label": "Caption Import Protocol",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0008",
+      "label": "Caption Export Protocol",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0009",
+      "label": "Caption Translation Protocol",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0010",
+      "label": "Caption Safe Replacement Protocol",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0011",
+      "label": "Caption Plain Text Downgrade",
+      "kind": "spec"
+    },
+    {
+      "id": "CAP-0012",
+      "label": "Caption QC Protocol",
+      "kind": "spec"
+    },
+    {
+      "id": "FOUND-0001",
+      "label": "Knowledge Source and Confidence Policy",
+      "kind": "policy"
+    },
+    {
+      "id": "FOUND-0002",
+      "label": "AI Agent Ingestion Contract",
+      "kind": "policy"
+    },
+    {
+      "id": "OBJ-0001",
+      "label": "Application Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0002",
+      "label": "Project Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0003",
+      "label": "ProjectItem Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0004",
+      "label": "Sequence Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0005",
+      "label": "Track Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0006",
+      "label": "TrackItem Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0007",
+      "label": "Component Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0008",
+      "label": "Property Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0009",
+      "label": "Caption Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0010",
+      "label": "Marker Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0011",
+      "label": "Bin Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0012",
+      "label": "Media Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0013",
+      "label": "MediaStream Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0014",
+      "label": "VideoTrack Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0015",
+      "label": "AudioTrack Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0016",
+      "label": "CaptionTrack Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0017",
+      "label": "MarkerCollection Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0018",
+      "label": "Time Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0019",
+      "label": "Transition Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0020",
+      "label": "Effect Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0021",
+      "label": "MOGRT Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0022",
+      "label": "EssentialGraphicsClip Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0023",
+      "label": "ProjectMetadata Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0024",
+      "label": "ClipMetadata Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0025",
+      "label": "EncoderJob Object",
+      "kind": "object"
+    },
+    {
+      "id": "OBJ-0026",
+      "label": "Transcript Object",
+      "kind": "object"
+    },
+    {
+      "id": "REC-0001",
+      "label": "Create VFX List from Premiere Markers",
+      "kind": "recipe"
+    },
+    {
+      "id": "REC-0002",
+      "label": "Replace Caption Text Safely",
+      "kind": "recipe"
+    },
+    {
+      "id": "REC-0003",
+      "label": "Create Premiere Extension API Plan",
+      "kind": "recipe"
+    },
+    {
+      "id": "REC-0004",
+      "label": "Extract Markers To Spreadsheet",
+      "kind": "recipe"
+    },
+    {
+      "id": "REC-0005",
+      "label": "Generate RAG Pack For AI Agent",
+      "kind": "recipe"
+    },
+    {
+      "id": "REC-0006",
+      "label": "Evaluate AI Premiere Code Answer",
+      "kind": "recipe"
+    },
+    {
+      "id": "REC-0007",
+      "label": "Plan UXP Panel",
+      "kind": "recipe"
+    },
+    {
+      "id": "REC-0008",
+      "label": "Plan CEP Maintenance Script",
+      "kind": "recipe"
+    },
+    {
+      "id": "RULE-AI-0001",
+      "label": "No Fake APIs",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-AI-0002",
+      "label": "Preserve Object Identity",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-AI-0003",
+      "label": "Declare API Layer",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-AI-0004",
+      "label": "Do Not Port AE Assumptions",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-AI-0005",
+      "label": "Prefer Official API Before QE",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-AI-0006",
+      "label": "Preserve Timeline Instance vs Source Distinction",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-AI-0007",
+      "label": "Version Gate API Usage",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-AI-0008",
+      "label": "No Silent Destructive Timeline Edits",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-CAP-0001",
+      "label": "Caption Is Not Plain Text",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-CAP-0002",
+      "label": "Validate Caption Run Lengths",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-CAP-0003",
+      "label": "Do Not Flatten Caption Formatting",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-EXT-0001",
+      "label": "Do Not Promise Future ExtendScript Development",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-MOGRT-0001",
+      "label": "Distinguish MOGRT Source and Instance",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-SAFE-0001",
+      "label": "Backup Before Destructive Operations",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-SER-0001",
+      "label": "Preserve Unknown Fields",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-UXP-0001",
+      "label": "Account For Async Method Calls",
+      "kind": "rule"
+    },
+    {
+      "id": "RULE-XML-0001",
+      "label": "XML Is Not Full Fidelity",
+      "kind": "rule"
+    },
+    {
+      "id": "SER-0001",
+      "label": "Premiere XML Serialization",
+      "kind": "serialization"
+    },
+    {
+      "id": "SER-0002",
+      "label": "Caption JSON Serialization",
+      "kind": "serialization"
+    },
+    {
+      "id": "BENCH-0001",
+      "label": "Premiere AI Safety Benchmark",
+      "kind": "benchmark"
+    },
+    {
+      "id": "TEST-0001",
+      "label": "Detect Fake Premiere API",
+      "kind": "test"
+    },
+    {
+      "id": "TEST-0002",
+      "label": "Reject sequence.captions Fake API",
+      "kind": "test"
+    },
+    {
+      "id": "TEST-0003",
+      "label": "Detect AE Scripting Leakage",
+      "kind": "test"
+    },
+    {
+      "id": "TEST-0004",
+      "label": "Caption Run Length Preservation",
+      "kind": "test"
+    },
+    {
+      "id": "TEST-0005",
+      "label": "UXP Async Awareness",
+      "kind": "test"
+    },
+    {
+      "id": "TEST-0006",
+      "label": "QE Experimental Warning",
+      "kind": "test"
+    },
+    {
+      "id": "TEST-0007",
+      "label": "Timeline Instance Distinction",
+      "kind": "test"
+    },
+    {
+      "id": "TEST-0008",
+      "label": "Backup Before Batch Edit",
+      "kind": "test"
+    },
+    {
+      "id": "TEST-0009",
+      "label": "XML Full Fidelity Warning",
+      "kind": "test"
+    },
+    {
+      "id": "TEST-0010",
+      "label": "MOGRT Instance Distinction",
+      "kind": "test"
+    },
+    {
+      "id": "TEST-0011",
+      "label": "Source Confidence Reporting",
+      "kind": "test"
+    }
+  ],
+  "edges": [
+    {
+      "source": "API-CEP-0001",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-CEP-0001",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-ENC-0001",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-ENC-0001",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0001",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0001",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-QE-0001",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-QE-0001",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0001",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0001",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0011",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0011",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0011",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0012",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0012",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0012",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0013",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0013",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0013",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0014",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0014",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0014",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0015",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0015",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0015",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0016",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0016",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0016",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0017",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0017",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0017",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0018",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0018",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0018",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0019",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0019",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0019",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0020",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0020",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0020",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0021",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0021",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0021",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0022",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0022",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0022",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0023",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0023",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0023",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0024",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0024",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0024",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0025",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0025",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0025",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0026",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0026",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0026",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0027",
+      "target": "API-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-EXT-0027",
+      "target": "API-EXT-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-EXT-0027",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0011",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0011",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0011",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0012",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0012",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0012",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0013",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0013",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0013",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0014",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0014",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0014",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0015",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0015",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0015",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0016",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0016",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0016",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0017",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0017",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0017",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0018",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0018",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0018",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0019",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0019",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0019",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0020",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0020",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0020",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0021",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0021",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0021",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0022",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0022",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0022",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0023",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0023",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0023",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0024",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0024",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0024",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0025",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0025",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0025",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0026",
+      "target": "API-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "API-UXP-0026",
+      "target": "API-UXP-0001",
+      "type": "related"
+    },
+    {
+      "source": "API-UXP-0026",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "BENCH-0002",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "BENCH-0002",
+      "target": "RULE-AI-0003",
+      "type": "uses"
+    },
+    {
+      "source": "BENCH-0002",
+      "target": "RULE-UXP-0001",
+      "type": "uses"
+    },
+    {
+      "source": "BENCH-0002",
+      "target": "RULE-EXT-0001",
+      "type": "uses"
+    },
+    {
+      "source": "BENCH-0002",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0001",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0001",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0001",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0001",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0001",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0002",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0002",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0002",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0002",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0002",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0003",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0003",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0003",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0003",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0003",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0004",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0004",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0004",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0004",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0004",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0005",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0005",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0005",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0005",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0005",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0006",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0006",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0006",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0006",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0006",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0007",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0007",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0007",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0007",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0007",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0008",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0008",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0008",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0008",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0008",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0009",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0009",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0009",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0009",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0009",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0010",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0010",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0010",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0010",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0010",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0011",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0011",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0011",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0011",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0011",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0012",
+      "target": "OBJ-0009",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0012",
+      "target": "SER-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0012",
+      "target": "RULE-CAP-0001",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0012",
+      "target": "RULE-CAP-0002",
+      "type": "related"
+    },
+    {
+      "source": "CAP-0012",
+      "target": "RULE-SER-0001",
+      "type": "related"
+    },
+    {
+      "source": "FOUND-0001",
+      "target": "Adobe UXP for Premiere Pro official documentation",
+      "type": "references"
+    },
+    {
+      "source": "FOUND-0001",
+      "target": "Premiere Pro Scripting Guide public compendium",
+      "type": "references"
+    },
+    {
+      "source": "FOUND-0001",
+      "target": "AdobeDocs UXP Premiere samples",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0001",
+      "target": "Project",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0001",
+      "target": "Project",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0002",
+      "target": "Project",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0002",
+      "target": "ProjectItem",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0003",
+      "target": "Project",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0003",
+      "target": "Media",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0004",
+      "target": "Project",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0004",
+      "target": "Track",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0005",
+      "target": "Project",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0005",
+      "target": "TrackItem",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0006",
+      "target": "Project",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0006",
+      "target": "Component",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0007",
+      "target": "Project",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0007",
+      "target": "Property",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0008",
+      "target": "Project",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0008",
+      "target": "Value",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0009",
+      "target": "Project",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0009",
+      "target": "TextRun",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0010",
+      "target": "Project",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0010",
+      "target": "Metadata",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0011",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0011",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0011",
+      "target": "Project",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0011",
+      "target": "ProjectItem",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0011",
+      "target": "Bin",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0012",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0012",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0013",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0013",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0013",
+      "target": "Media",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0013",
+      "target": "VideoStream",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0013",
+      "target": "AudioStream",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0013",
+      "target": "TimecodeTrack",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0014",
+      "target": "TrackItem",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0014",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0014",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0014",
+      "target": "Sequence",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0014",
+      "target": "TrackItem",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0015",
+      "target": "TrackItem",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0015",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0015",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0015",
+      "target": "Sequence",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0015",
+      "target": "TrackItem",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0016",
+      "target": "Caption",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0016",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0016",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0016",
+      "target": "Sequence",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0016",
+      "target": "Caption",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0017",
+      "target": "Marker",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0017",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0017",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0017",
+      "target": "Sequence",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0017",
+      "target": "Marker",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0018",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0018",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0019",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0019",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0019",
+      "target": "TrackItem",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0019",
+      "target": "Component",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0019",
+      "target": "Property",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0020",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0020",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0020",
+      "target": "TrackItem",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0020",
+      "target": "Component",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0020",
+      "target": "Property",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0021",
+      "target": "TrackItem",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0021",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0021",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0021",
+      "target": "ProjectItem",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0021",
+      "target": "Component",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0021",
+      "target": "Property",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0022",
+      "target": "ProjectItem",
+      "type": "references"
+    },
+    {
+      "source": "OBJ-0022",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0022",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0022",
+      "target": "TrackItem",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0022",
+      "target": "Component",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0022",
+      "target": "Property",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0023",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0023",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0023",
+      "target": "Project",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0024",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0024",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0024",
+      "target": "ProjectItem",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0025",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0025",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0025",
+      "target": "Application",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0026",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0026",
+      "target": "RULE-AI-0001",
+      "type": "related"
+    },
+    {
+      "source": "OBJ-0026",
+      "target": "Sequence",
+      "type": "ownership"
+    },
+    {
+      "source": "OBJ-0026",
+      "target": "Caption",
+      "type": "ownership"
+    },
+    {
+      "source": "REC-0001",
+      "target": "OBJ-0004",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0001",
+      "target": "OBJ-0010",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0002",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0002",
+      "target": "RULE-AI-0008",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0002",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "REC-0003",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0003",
+      "target": "RULE-AI-0008",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0003",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "REC-0004",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0004",
+      "target": "RULE-AI-0008",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0004",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "REC-0005",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0005",
+      "target": "RULE-AI-0008",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0005",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "REC-0006",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0006",
+      "target": "RULE-AI-0008",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0006",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "REC-0007",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0007",
+      "target": "RULE-AI-0008",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0007",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "REC-0008",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0008",
+      "target": "RULE-AI-0008",
+      "type": "uses"
+    },
+    {
+      "source": "REC-0008",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0001",
+      "target": "hallucination",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0001",
+      "target": "destructive_editing",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0002",
+      "target": "hallucination",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0002",
+      "target": "destructive_editing",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0003",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0003",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0003",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0003",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0003",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0004",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0004",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0004",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0004",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0004",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0005",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0005",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0005",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0005",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0005",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0006",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0006",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0006",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0006",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0006",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0007",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0007",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0007",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0007",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0007",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0008",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0008",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-AI-0008",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0008",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-AI-0008",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-CAP-0001",
+      "target": "hallucination",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-CAP-0001",
+      "target": "destructive_editing",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-CAP-0002",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-CAP-0002",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-CAP-0002",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-CAP-0002",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-CAP-0002",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-CAP-0003",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-CAP-0003",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-CAP-0003",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-CAP-0003",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-CAP-0003",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-EXT-0001",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-EXT-0001",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-EXT-0001",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-EXT-0001",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-EXT-0001",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-MOGRT-0001",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-MOGRT-0001",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-MOGRT-0001",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-MOGRT-0001",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-MOGRT-0001",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-SAFE-0001",
+      "target": "hallucination",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-SAFE-0001",
+      "target": "destructive_editing",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-SER-0001",
+      "target": "hallucination",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-SER-0001",
+      "target": "destructive_editing",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-UXP-0001",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-UXP-0001",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-UXP-0001",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-UXP-0001",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-UXP-0001",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-XML-0001",
+      "target": "FOUND-0001",
+      "type": "related"
+    },
+    {
+      "source": "RULE-XML-0001",
+      "target": "FOUND-0002",
+      "type": "related"
+    },
+    {
+      "source": "RULE-XML-0001",
+      "target": "Unsupported code generation",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-XML-0001",
+      "target": "Data loss",
+      "type": "prevents"
+    },
+    {
+      "source": "RULE-XML-0001",
+      "target": "Wrong API-layer assumptions",
+      "type": "prevents"
+    },
+    {
+      "source": "SER-0001",
+      "target": "OBJ-0004",
+      "type": "uses"
+    },
+    {
+      "source": "SER-0001",
+      "target": "OBJ-0006",
+      "type": "uses"
+    },
+    {
+      "source": "SER-0002",
+      "target": "OBJ-0009",
+      "type": "uses"
+    },
+    {
+      "source": "BENCH-0001",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "BENCH-0001",
+      "target": "RULE-SER-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0001",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0002",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0002",
+      "target": "BENCH-0001",
+      "type": "related"
+    },
+    {
+      "source": "TEST-0003",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0003",
+      "target": "BENCH-0001",
+      "type": "related"
+    },
+    {
+      "source": "TEST-0004",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0004",
+      "target": "BENCH-0001",
+      "type": "related"
+    },
+    {
+      "source": "TEST-0005",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0005",
+      "target": "BENCH-0001",
+      "type": "related"
+    },
+    {
+      "source": "TEST-0006",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0006",
+      "target": "BENCH-0001",
+      "type": "related"
+    },
+    {
+      "source": "TEST-0007",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0007",
+      "target": "BENCH-0001",
+      "type": "related"
+    },
+    {
+      "source": "TEST-0008",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0008",
+      "target": "BENCH-0001",
+      "type": "related"
+    },
+    {
+      "source": "TEST-0009",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0009",
+      "target": "BENCH-0001",
+      "type": "related"
+    },
+    {
+      "source": "TEST-0010",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0010",
+      "target": "BENCH-0001",
+      "type": "related"
+    },
+    {
+      "source": "TEST-0011",
+      "target": "RULE-AI-0001",
+      "type": "uses"
+    },
+    {
+      "source": "TEST-0011",
+      "target": "BENCH-0001",
+      "type": "related"
+    }
+  ]
+}

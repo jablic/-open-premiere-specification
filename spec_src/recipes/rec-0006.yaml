@@ -1,0 +1,22 @@
+kind: recipe
+id: REC-0006
+title: Evaluate AI Premiere Code Answer
+status: draft
+confidence: medium
+purpose: 'Provide a safe production workflow for: Evaluate AI Premiere Code Answer.'
+steps:
+- Identify API layer
+- Check methods against API specs
+- Check safety rules
+- Check backup/rollback
+- Check version assumptions
+- Score against rubric
+validation:
+- Expected output exists.
+- No fake API method is used.
+- User can rollback changes.
+uses:
+- RULE-AI-0001
+- RULE-AI-0008
+related:
+- FOUND-0002

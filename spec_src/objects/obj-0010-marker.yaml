@@ -1,0 +1,22 @@
+kind: object
+id: OBJ-0010
+title: Marker Object
+purpose: A timed annotation owned by project, sequence or clip scope.
+confidence: high
+status: draft
+ownership:
+  owns:
+    - Metadata
+  does_not_own:
+    - MediaFile
+references:
+  - Project
+constraints:
+  - Identity MUST NOT be inferred from display name.
+  - Unknown fields MUST survive serialization.
+ai_rules:
+  - Determine object scope before editing.
+  - Do not fabricate unsupported API methods.
+validation:
+  - Validate identity.
+  - Validate ownership.

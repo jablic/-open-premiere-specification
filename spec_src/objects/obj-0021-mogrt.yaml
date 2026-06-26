@@ -1,0 +1,23 @@
+kind: object
+id: OBJ-0021
+title: MOGRT Object
+status: draft
+confidence: medium
+purpose: Define the MOGRT entity in the Premiere knowledge model for AI reasoning and automation planning.
+summary: MOGRT is modeled as a distinct Premiere knowledge entity. AI must not collapse it into adjacent concepts.
+constraints:
+- Object identity must not be inferred from display name alone.
+- AI must distinguish source-level objects from timeline-instance objects.
+validation:
+- Check owner scope before editing.
+- Check whether operation changes source object, timeline instance, or serialized export.
+related:
+- FOUND-0001
+- RULE-AI-0001
+ownership:
+  owner: ProjectItem
+  children:
+  - Component
+  - Property
+references:
+- TrackItem

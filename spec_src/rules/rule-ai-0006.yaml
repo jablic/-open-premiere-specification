@@ -1,0 +1,17 @@
+kind: rule
+id: RULE-AI-0006
+title: Preserve Timeline Instance vs Source Distinction
+status: active
+confidence: high
+severity: error
+rule: AI must distinguish ProjectItem/source changes from TrackItem/timeline instance changes.
+purpose: Prevent unsafe or hallucinated AI behavior when developing Premiere Pro automation.
+prevents:
+- Unsupported code generation
+- Data loss
+- Wrong API-layer assumptions
+validation:
+- Check generated answer for rule compliance.
+related:
+- FOUND-0001
+- FOUND-0002

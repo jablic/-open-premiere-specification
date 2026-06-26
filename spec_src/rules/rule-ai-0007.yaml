@@ -1,0 +1,17 @@
+kind: rule
+id: RULE-AI-0007
+title: Version Gate API Usage
+status: active
+confidence: high
+severity: error
+rule: When a method is version-dependent, generated code must include compatibility notes or checks.
+purpose: Prevent unsafe or hallucinated AI behavior when developing Premiere Pro automation.
+prevents:
+- Unsupported code generation
+- Data loss
+- Wrong API-layer assumptions
+validation:
+- Check generated answer for rule compliance.
+related:
+- FOUND-0001
+- FOUND-0002

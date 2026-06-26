@@ -1,0 +1,14 @@
+kind: serialization
+id: SER-0001
+title: Premiere XML Serialization
+purpose: Defines a safe XML interchange layer for Premiere automation.
+confidence: medium
+uses:
+  - OBJ-0004
+  - OBJ-0006
+constraints:
+  - XML export can lose Premiere-internal information.
+  - XML MUST be validated before reimport.
+ai_rules:
+  - Prefer official API when available.
+  - Use XML as controlled interchange, not as full project truth.

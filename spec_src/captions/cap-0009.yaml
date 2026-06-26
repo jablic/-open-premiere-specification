@@ -1,0 +1,19 @@
+kind: spec
+id: CAP-0009
+title: Caption Translation Protocol
+status: draft
+confidence: medium
+purpose: Define Caption Translation Protocol for safe AI-assisted caption automation.
+summary: Translation must preserve caption identity and timing unless retiming is requested.
+constraints:
+- Preserve unknown fields.
+- Validate after every write.
+- Do not infer undocumented serializer behavior.
+ai_rules:
+- When unsure whether captions are plain text or rich serialized structures, assume rich structures and avoid destructive edits.
+related:
+- OBJ-0009
+- SER-0002
+- RULE-CAP-0001
+- RULE-CAP-0002
+- RULE-SER-0001
