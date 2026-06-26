@@ -37,6 +37,12 @@ jobs:
       - name: Validate OPS knowledge graph
         run: python3 tools/ops_graph.py validate
 
+      - name: Build OPS coverage report
+        run: python3 tools/ops_coverage.py build
+
+      - name: Validate OPS coverage report
+        run: python3 tools/ops_coverage.py validate
+
       - name: Run Python tests
         run: pytest -q
 
