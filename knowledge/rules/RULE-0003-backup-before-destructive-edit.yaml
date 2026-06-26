@@ -1,0 +1,21 @@
+id: RULE-0003
+kind: rule
+title: Backup before destructive edit
+severity: high
+statement: >
+  Any operation that can change project structure, timeline structure, serialization, or media references must require a backup, duplicate sequence, or explicit rollback path.
+rationale: >
+  Premiere automation can cause irreversible project-level changes when performed directly on active project data.
+applies_to:
+  - OBJ-0002
+  - OBJ-0005
+violation_examples:
+  - Batch deleting clips without duplicating the sequence.
+  - Rewriting XML without preserving the source file.
+safe_pattern: >
+  Save project, duplicate sequence when timeline edits are involved, export interchange copy if applicable, then apply modifications.
+tests:
+  - TEST-0005
+  - TEST-0012
+evidence:
+  - EVID-0003

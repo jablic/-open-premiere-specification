@@ -1,0 +1,22 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: OPS Test Knowledge Card
+kind: schema
+version: 1.0.0
+required: [id, kind, title, given, when, then, expected, applies_to]
+properties:
+  id:
+    type: string
+    pattern: "^TEST-[0-9]{4}$"
+  kind:
+    const: test
+  title:
+    type: string
+  given: { type: string }
+  when: { type: string }
+  then: { type: string }
+  expected: { type: string }
+  applies_to:
+    type: array
+    items: { type: string }
+  automation_level:
+    enum: [manual, semi_automated, automated]

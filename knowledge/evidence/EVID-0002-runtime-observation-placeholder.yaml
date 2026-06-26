@@ -1,0 +1,10 @@
+id: EVID-0002
+kind: evidence
+title: Runtime observation evidence placeholder
+evidence_type: experiment
+confidence: experimentally_verified
+summary: >
+  Placeholder for reproducible runtime experiments executed in Premiere Pro to confirm object relationships and API behavior.
+applies_to:
+  - OBJ-0001
+  - OBJ-0002

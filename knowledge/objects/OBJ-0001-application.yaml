@@ -1,0 +1,67 @@
+id: OBJ-0001
+kind: object
+name: Application
+status: draft
+summary: >
+  The top-level runtime context of Adobe Premiere Pro. It exposes the currently active project context and acts as the entry point for scripting and extension workflows.
+aliases:
+  - app
+  - Premiere Application
+ownership:
+  owned_by: []
+  owns:
+    - Project
+  does_not_own:
+    - Media
+    - Sequence content directly
+relationships:
+  references:
+    - Project
+  referenced_by:
+    - Extension Runtime
+    - Script Runtime
+  contains:
+    - Active Project Context
+  related:
+    - ExtendScript Runtime
+    - UXP Runtime
+    - CEP Runtime
+lifecycle:
+  - launched
+  - project_context_created_or_opened
+  - automation_session_started
+  - automation_session_ended
+  - application_closed
+serialization:
+  formats: []
+  roundtrip_risk: unknown
+  notes:
+    - Application itself is not serialized as a project asset.
+    - Application state may influence automation but is not equivalent to project data.
+api_surface:
+  extendscript: supported
+  uxp: partial
+  cep: supported
+  qe: partial
+constraints:
+  - Do not treat Application as a project container for timeline objects.
+  - The active project context must be resolved before modifying project data.
+  - Automation must not assume that every runtime exposes the same API surface.
+anti_patterns:
+  - Inventing global methods that do not exist in Premiere scripting APIs.
+  - Assuming Application directly owns sequences, tracks, clips, or media.
+ai_rules:
+  - RULE-0001
+  - RULE-0002
+  - RULE-0003
+tests:
+  - TEST-0001
+  - TEST-0002
+evidence:
+  - EVID-0001
+  - EVID-0002
+quality:
+  completeness: 65
+  confidence: official
+  ai_ready: true
+  production_ready: false

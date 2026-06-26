@@ -1,0 +1,23 @@
+id: RULE-0001
+kind: rule
+title: Never invent Premiere APIs
+severity: critical
+statement: >
+  AI systems must never fabricate Premiere Pro API methods, properties, classes, or runtime capabilities.
+rationale: >
+  Fabricated API calls are one of the highest-risk failure modes for coding agents working with Premiere Pro automation.
+applies_to:
+  - OBJ-0001
+  - OBJ-0002
+  - OBJ-0004
+  - OBJ-0005
+violation_examples:
+  - sequence.captions
+  - project.exportCaptions()
+  - app.project.getAllSequences()
+safe_pattern: >
+  State uncertainty explicitly, select the relevant API surface, and verify the method against known API knowledge before generating code.
+tests:
+  - TEST-0001
+evidence:
+  - EVID-0001

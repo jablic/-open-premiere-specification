@@ -1,0 +1,22 @@
+id: RULE-0004
+kind: rule
+title: Do not confuse ProjectItem and TrackItem
+severity: critical
+statement: >
+  AI systems must distinguish project-level source objects from timeline-level instances.
+rationale: >
+  A TrackItem is an edit instance in a sequence, while a ProjectItem is an item in the project database that may be referenced by many timeline instances.
+applies_to:
+  - OBJ-0004
+  - OBJ-0005
+violation_examples:
+  - Renaming a TrackItem when the user asked to rename a ProjectItem.
+  - Applying source relink logic to a timeline instance.
+safe_pattern: >
+  Identify whether the user request targets the project panel, a timeline instance, or the underlying media reference.
+tests:
+  - TEST-0008
+  - TEST-0011
+evidence:
+  - EVID-0001
+  - EVID-0003

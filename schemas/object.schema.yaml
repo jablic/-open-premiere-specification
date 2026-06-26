@@ -1,0 +1,86 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: OPS Object Knowledge Card
+kind: schema
+version: 1.0.0
+required:
+  - id
+  - kind
+  - name
+  - status
+  - summary
+  - ownership
+  - relationships
+  - lifecycle
+  - serialization
+  - api_surface
+  - constraints
+  - ai_rules
+  - tests
+  - evidence
+  - quality
+properties:
+  id:
+    type: string
+    pattern: "^OBJ-[0-9]{4}$"
+  kind:
+    const: object
+  name:
+    type: string
+  status:
+    enum: [draft, reviewed, stable, deprecated]
+  summary:
+    type: string
+  aliases:
+    type: array
+    items: { type: string }
+  ownership:
+    type: object
+    properties:
+      owned_by: { type: array, items: { type: string } }
+      owns: { type: array, items: { type: string } }
+      does_not_own: { type: array, items: { type: string } }
+  relationships:
+    type: object
+    properties:
+      references: { type: array, items: { type: string } }
+      referenced_by: { type: array, items: { type: string } }
+      contains: { type: array, items: { type: string } }
+      related: { type: array, items: { type: string } }
+  lifecycle:
+    type: array
+    items: { type: string }
+  serialization:
+    type: object
+    properties:
+      formats: { type: array, items: { type: string } }
+      roundtrip_risk: { enum: [low, medium, high, unknown] }
+      notes: { type: array, items: { type: string } }
+  api_surface:
+    type: object
+    properties:
+      extendscript: { enum: [supported, partial, unsupported, unknown] }
+      uxp: { enum: [supported, partial, unsupported, unknown] }
+      cep: { enum: [supported, partial, unsupported, unknown] }
+      qe: { enum: [supported, partial, unsupported, unknown] }
+  constraints:
+    type: array
+    items: { type: string }
+  anti_patterns:
+    type: array
+    items: { type: string }
+  ai_rules:
+    type: array
+    items: { type: string }
+  tests:
+    type: array
+    items: { type: string }
+  evidence:
+    type: array
+    items: { type: string }
+  quality:
+    type: object
+    properties:
+      completeness: { type: integer, minimum: 0, maximum: 100 }
+      confidence: { enum: [official, experimentally_verified, production_verified, community_verified, hypothesis, unknown] }
+      ai_ready: { type: boolean }
+      production_ready: { type: boolean }

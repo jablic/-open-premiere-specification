@@ -1,0 +1,20 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: OPS Evidence Knowledge Card
+kind: schema
+version: 1.0.0
+required: [id, kind, title, evidence_type, confidence, summary]
+properties:
+  id:
+    type: string
+    pattern: "^EVID-[0-9]{4}$"
+  kind:
+    const: evidence
+  title: { type: string }
+  evidence_type:
+    enum: [official_docs, sdk_reference, experiment, production_case, community_source, hypothesis]
+  confidence:
+    enum: [official, experimentally_verified, production_verified, community_verified, hypothesis, unknown]
+  summary: { type: string }
+  applies_to:
+    type: array
+    items: { type: string }
