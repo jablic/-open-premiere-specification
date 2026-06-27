@@ -1,0 +1,4 @@
+id,surface,kind,name,status,reference_status,evidence,notes
+CEP.CORE.CSInterface,cep,class,CSInterface,official,planned,A-CEP-RESOURCES-001,Main CEP JavaScript interface for host communication.
+CEP.METHOD.CSInterface.evalScript,cep,method,CSInterface.evalScript,official,planned,A-CEP-RESOURCES-001;B-PPROPANEL-001,Bridge from panel JavaScript to ExtendScript host context.
+CEP.FILE.manifest,cep,file,manifest.xml,official,planned,A-CEP-RESOURCES-001,Manifest configures host targeting and extension metadata.

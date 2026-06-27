@@ -1,0 +1,4 @@
+id,surface,kind,name,status,reference_status,evidence,notes
+UXP.MODULE.premierepro,uxp,module,premierepro,official,planned,A-UXP-001,Premiere API module accessed with require("premierepro").
+UXP.ENTRY.requirePremierePro,uxp,entry_point,require("premierepro"),official,planned,A-UXP-001,Entry point to Premiere DOM through UXP.
+UXP.FEATURE.hybrid_plugins,uxp,feature,UXP Hybrid Plugins,official,planned,A-UXP-CHANGELOG-001,Native C++ integration for UXP plugins; version-specific.
