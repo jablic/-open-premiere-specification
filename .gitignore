@@ -3,11 +3,13 @@ build/
 site/
 dist/
 .cache/
+graphify-out/
 
 # Python
 __pycache__/
 *.pyc
 .pytest_cache/
+.venv/
 
 # macOS
 .DS_Store
