@@ -1,6 +1,0 @@
-id,surface,owner,kind,name,status,reference_status,evidence,contract_status,notes
-ES.METHOD.Application.enableQE,extendscript,Application,method,enableQE,official_or_sample,planned,B-PPROPANEL-001,missing_contract,Enables QE access; behaviour and stability must be separated from public DOM.
-ES.METHOD.Project.importFiles,extendscript,Project,method,importFiles,official,planned,D-SCRIPTING-GUIDE-001,missing_contract,Import semantics and side effects require contract documentation.
-ES.METHOD.Project.save,extendscript,Project,method,save,official,planned,D-SCRIPTING-GUIDE-001,missing_contract,Persistence behaviour requires version and failure documentation.
-ES.METHOD.Sequence.insertClip,extendscript,Sequence,method,insertClip,official,planned,D-SCRIPTING-GUIDE-001,missing_contract,Must document TrackItem creation and non-mutation of source media.
-ES.METHOD.Sequence.exportAsMediaDirect,extendscript,Sequence,method,exportAsMediaDirect,official,planned,D-SCRIPTING-GUIDE-001,missing_contract,Export side effects and AME relation must be verified.
