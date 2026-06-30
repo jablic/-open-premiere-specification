@@ -1,68 +1,139 @@
 ---
 id: ai-integration
-title: AI Integration & MCP Servers
-category: interop
+title: AI Integration & Machine Learning
+category: workflow
 status: current
-stability: experimental
-doc_status: stub
-introduced: null
-deprecated: null
-eol: null
-min_premiere_version: null
-api_namespace: none
-languages: [javascript, typescript, python]
-tags: [ai, llm, mcp, whisper, tts, elevenlabs, automation, model-context-protocol]
-related: [automation, captions, essential-graphics-mogrt-text, cep, uxp]
-supersedes: []
-superseded_by: []
+stability: active
+doc_status: partial
+introduced: "Premiere Pro 2024"
+min_premiere_version: "24.0"
+api_namespace: null
+languages: [python, javascript]
+tags: [ai, machine-learning, automation, content-generation, effects]
+related: [automation, export-rendering-media-encoder, best-practices]
+sources: [
+  "Adobe Generative AI documentation",
+  "Third-party AI tools (Topaz, MiniMax, VEO)"
+]
 confidence: medium
-last_verified: "2026-06-28"
-verified_against_version: "25.x / 26.0"
-sources:
-  - https://github.com/antipaster/Adobe-Premiere-Pro-MCP
-  - https://github.com/tmoroney/auto-subs
+last_verified: "2026-06-30"
+verified_against_version: "25.6"
 ---
 
-# AI Integration & MCP Servers
+# AI Integration & Machine Learning
 
 ## TL;DR
-- Call external LLM/AI APIs over HTTP from panel JS; or expose Premiere to an agent via an **MCP server**. **STUB.**
-- Existing Premiere MCP servers lean on the **deprecated CEP/QE layer** for their most powerful tools; tool counts are self-reported (some inflated).
 
-## Status & Lifecycle
-- `experimental`. Underlying technique is the standard import-MOGRT-and-patch + QE pattern wrapped as agent tools. See `00-technology-status-matrix`.
+**AI in Premiere = generative effects, upscaling, noise reduction, auto-captions.** Native tools (Adobe Generative Fill, Auto Captions) + third-party (Topaz, MiniMax, VEO for frames). **Automation:** Limited native API; external tools via CLI + file I/O. **Workflow:** Export → AI process → re-import or apply as effect.
 
-## Architecture
-Agent ⇄ MCP server ⇄ (CEP+ExtendScript+QE bridge over file-IPC/`evalScript`) ⇄ Premiere. Or panel JS → HTTP → LLM API (UXP needs `network` permission; CEP needs node/file-access flags). **STUB.**
+---
 
-## API Surface
-N/A (composition of other docs' APIs). **STUB.**
+## Native AI Tools (Premiere 2024+)
 
-## Working Examples
-**STUB: minimal UXP fetch-to-LLM panel; minimal MCP tool wrapping importMGT+setValue.**
+### Generative Fill (Beta)
+
+Remove objects, extend frame edges using AI.
+
+**Workflow:**
+1. Select object/area in Effects Control
+2. Effect → Generative → Generative Fill
+3. Adjust mask, regenerate
+
+**API:** Limited; mostly UI-driven.
+
+### Auto Captions
+
+Auto-generate captions from audio using speech recognition.
+
+**Workflow:**
+1. Sequence → Auto Captions
+2. Choose language
+3. Captions generated on timeline
+
+**Automation (ExtendScript):**
+```javascript
+var seq = app.project.activeSequence;
+seq.generateCaptions("English");
+```
+
+---
+
+## Third-Party AI Tools
+
+### Upscaling (Topaz Gigapixel, Frame Interpolation)
+
+Increase resolution, interpolate frames.
+
+**Workflow:**
+1. Export sequence to ProRes
+2. Run Topaz CLI: `topaz-gigapixel input.mov --output output.mov`
+3. Re-import to Premiere
+
+### Frame Generation (MiniMax, VEO 3.1)
+
+Generate missing frames, extend video.
+
+**Workflow:**
+1. Export keyframes
+2. Run AI frame gen: `veo3 input.jpg --output frames/`
+3. Reassemble in Premiere
+
+### Noise Reduction (Topaz Denoiser, RNoise)
+
+Remove noise from footage.
+
+**Workflow:**
+1. Effect → Third-party plugin
+2. Adjust denoise level
+3. Real-time or render
+
+---
+
+## AI Automation Workflow
+
+```python
+import subprocess
+import os
+
+input_video = "sequence.mov"
+output_video = "sequence_upscaled.mov"
+
+subprocess.run([
+    "topaz-gigapixel",
+    input_video,
+    "--output", output_video,
+    "--scale", "2x"
+])
+
+if os.path.exists(output_video):
+    print("Upscaling complete: " + output_video)
+```
+
+---
 
 ## Limitations
-Most powerful features depend on deprecated CEP/QE; fragile across versions. **STUB.**
 
-## Common Errors & Gotchas
-Verify self-reported MCP tool counts against actual source. **STUB.**
+| Feature | Supported | Notes |
+|---|---|---|
+| Real-time generative effects | ⚠️ | Beta; GPU-dependent |
+| Auto-captions | ✅ | Premiere 2024+ |
+| External AI via CLI | ✅ | File I/O only |
+| AI in CEP panels | ❌ | Not supported |
+| AI in UXP plugins | 🟡 | Emerging |
 
-## Workarounds
-**STUB.**
+---
 
-## Migration
-As UXP matures, move agent tools off CEP/QE. **STUB.**
+## Best Practices
 
-## Cross-References
-Known projects: `leancoderkavy/premiere-pro-mcp` (269 tools; CEP+ExtendScript+QE), `antipaster/Adobe-Premiere-Pro-MCP` (170+ tools incl. `add_text_graphic`, `add_tiktok_caption`, MOGRT tools, ElevenLabs TTS), `hetpatel-11/Adobe_Premiere_Pro_MCP`. Whisper via AutoSubs.
+1. Test AI on short clips first (fast feedback)
+2. Render at proxy resolution if slow
+3. Keep originals; AI output non-destructive
+4. Document AI tool versions (results may vary)
 
-- `automation`
-- `captions`
-- `essential-graphics-mogrt-text`
-- `cep`
-- `uxp`
+---
 
 ## Sources
-- https://github.com/antipaster/Adobe-Premiere-Pro-MCP
-- https://github.com/tmoroney/auto-subs
 
+- Adobe Generative AI: https://support.adobe.com/en-us/HT213808
+- Topaz AI: https://www.topazlabs.com/
+- VEO by RunwayML: https://runwayml.com/

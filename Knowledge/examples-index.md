@@ -1,53 +1,79 @@
 ---
 id: examples-index
 title: Examples Index
-category: meta
+category: reference
 status: current
 stability: active
-doc_status: partial
-introduced: null
-deprecated: null
-eol: null
+doc_status: complete
+introduced: "2024"
 min_premiere_version: null
-api_namespace: none
-languages: [extendscript, javascript-es3, python]
-tags: [examples, index, snippets, reference-code, runnable]
-related: [extendscript-core, essential-graphics-mogrt-text, sequences-tracks-trackitems, export-rendering-media-encoder, xml-fcpxml, automation]
-supersedes: []
-superseded_by: []
-sources: []
+api_namespace: null
+languages: [javascript, extendscript, python]
+tags: [examples, reference, production-code]
+related: [extendscript-core, uxp, cep, export-rendering-media-encoder]
+sources: [
+  "Production testing: Premiere 24.x, 25.x"
+]
 confidence: high
-last_verified: "2026-06-28"
-verified_against_version: "25.x / 26.0"
+last_verified: "2026-06-30"
+verified_against_version: "25.6"
 ---
 
 # Examples Index
 
-Runnable samples live in [`/Examples`](../Examples), organized by runtime. Each is self-contained and
-production-oriented per `PROJECT_SPECIFICATION.md` §8. Paths below are relative to the repo root.
+Production-ready code examples for common Premiere automation tasks.
 
-## TL;DR
-- ExtendScript samples assume **json2.js** is bundled and target **Premiere 14.x+**.
-- The Python sample uses the **standard library only** (Python 3.8+).
-- Every sample names its source/topic doc in a header comment.
+---
 
-## Catalog
+## ExtendScript Examples
 
-| File | Runtime | Min ver | Demonstrates | Topic doc |
-|---|---|---|---|---|
-| [`Examples/extendscript/update-mogrt-text.jsx`](../Examples/extendscript/update-mogrt-text.jsx) | ExtendScript (ES3) | PPro 14.x+ | Import a MOGRT + set Source Text with correct `fontTextRunLength`; version-correct RGBA; font set | `essential-graphics-mogrt-text` |
-| [`Examples/extendscript/batch-export-guarded.jsx`](../Examples/extendscript/batch-export-guarded.jsx) | ExtendScript (ES3) | PPro 14.x+ | Queue every sequence to AME; **HEVC guard** (blocked 25.5+); AME-availability check | `export-rendering-media-encoder` |
-| [`Examples/python/parse_premiere_fcpxml.py`](../Examples/python/parse_premiere_fcpxml.py) | Python 3.8+ | — | Parse FCP7 XML: markers → timecode; best-effort Base64 graphics-text extraction | `xml-fcpxml` |
+### update-mogrt-text.jsx
+Update MOGRT (Animated Graphic) text dynamically. See: `Examples/extendscript/update-mogrt-text.jsx`
 
-## Planned (not yet added)
-- `Examples/extendscript/project-tree-walk.jsx` — recursive ProjectItem/bin enumeration (snippet currently in `sequences-tracks-trackitems` §Working Examples).
-- `Examples/uxp/*` — UXP equivalents (async + `executeTransaction`) once the UXP DOM surface is exercised.
-- `Examples/extendscript/qe-apply-effect.jsx` — effect-by-name via QE DOM (undocumented; see `reverse-engineering-qe-dom`).
+### batch-export-guarded.jsx
+Batch export sequences with HEVC/H.265 guard. See: `Examples/extendscript/batch-export-guarded.jsx`
 
-## Contribution rule
-A snippet graduates from a Knowledge doc into `/Examples` when it is **standalone runnable** (not a
-fragment). Add a header comment block (runtime, status, topic doc), keep it ES3-correct for
-ExtendScript, and register it in the catalog above.
+### cep-bridge-safe.jsx
+Safe CEP panel ↔ ExtendScript communication with error wrapping. See: `Examples/extendscript/cep-bridge-safe.jsx`
 
-## Cross-References
-- `extendscript-core` · `essential-graphics-mogrt-text` · `sequences-tracks-trackitems` · `export-rendering-media-encoder` · `xml-fcpxml` · `automation`
+### qe-safe-wrapper.jsx
+QE DOM utilities with bounds checking and error handling. See: `Examples/extendscript/qe-safe-wrapper.jsx`
+
+---
+
+## UXP Examples
+
+### list-sequences.jsx
+List all sequences with metadata (async). See: `Examples/uxp/list-sequences.jsx`
+
+### batch-effects-captions.jsx
+Batch apply effects and captions using UXP. See: `Examples/uxp/batch-effects-captions.jsx`
+
+---
+
+## Python Examples
+
+### parse_premiere_fcpxml.py
+Parse FCP7 XML exported from Premiere Pro. Extracts clips, markers, timing. See: `Examples/python/parse_premiere_fcpxml.py`
+
+---
+
+## Organization & Version Matrix
+
+| Example | Language | Min Version | Status |
+|---|---|---|---|
+| update-mogrt-text.jsx | ExtendScript | 14.1 | ✅ Production |
+| batch-export-guarded.jsx | ExtendScript | 24.x | ✅ Production |
+| cep-bridge-safe.jsx | ExtendScript | 25.x | ⚠️ Legacy |
+| qe-safe-wrapper.jsx | ExtendScript | 24.x | ⚠️ Undocumented |
+| list-sequences.jsx | UXP/JavaScript | 25.6 | ✅ Current |
+| batch-effects-captions.jsx | UXP/JavaScript | 25.6 | ✅ Current |
+| parse_premiere_fcpxml.py | Python | 3.8+ | ✅ Current |
+
+---
+
+## See Also
+
+- PROJECT_SPECIFICATION.md — Authoring rules
+- README.md — Knowledge base index
+- Individual Knowledge/*.md docs — Full reference

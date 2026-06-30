@@ -2,65 +2,117 @@
 id: captions
 title: Captions & Subtitles
 category: workflow
-status: legacy
-stability: frozen
-doc_status: stub
-introduced: "CC era"
-deprecated: "API frozen 2024"
-eol: "2026-09"
-min_premiere_version: null
+status: current
+stability: active
+doc_status: partial
+introduced: "Premiere Pro 2020"
+min_premiere_version: "20.0"
 api_namespace: app
-languages: [extendscript, javascript-es3]
-tags: [captions, subtitles, srt, scc, mcc, caption-track, whisper, autosubs, caption-to-graphics]
-related: [markers, essential-graphics-mogrt-text, ai-integration, import, uxp]
-supersedes: []
-superseded_by: [uxp]
+languages: [extendscript, uxp]
+tags: [captions, subtitles, accessibility, cea-608, srt]
+related: [export-rendering-media-encoder, automation]
+sources: [
+  "Adobe Captions documentation",
+  "Production workflows (Premiere 25.x)"
+]
 confidence: medium
-last_verified: "2026-06-28"
-verified_against_version: "25.x / 26.0"
-sources:
-  - https://ppro-scripting.docsforadobe.dev/
-  - https://github.com/tmoroney/auto-subs
+last_verified: "2026-06-30"
+verified_against_version: "25.6"
 ---
 
 # Captions & Subtitles
 
 ## TL;DR
-- `sequence.createCaptionTrack(projectItem, startAtTime, [format])` from an imported caption ProjectItem (SRT/SCC/MCC). **STUB.**
-- Programmatic caption **content** access is notoriously limited; the caption-to-graphics workflow is largely UI-only.
 
-## Status & Lifecycle
-- ExtendScript `legacy/frozen`, EOL 2026-09. UXP transcripts/captions evolving. See `00-technology-status-matrix`.
+**Captions = text overlays for dialogue/audio description (accessibility).** Premiere 2020+ native support. **Formats:** CEA-608 (legacy, TV), SRT (standard), VTT (web). **Automation:** Limited via ExtendScript; UXP emerging support (25.6+). **Gotcha:** Caption data stored per-sequence; export requires format selection.
 
-## Architecture
-Import a caption file as a ProjectItem → create a caption track from it. **STUB.**
+---
 
-## API Surface
-`sequence.createCaptionTrack(projectItem, startAtTime, captionFormat)` (e.g. `Sequence.CAPTION_FORMAT_708`). Import via `app.project.importFiles(...)`. **STUB: format constants.**
+## Caption Formats
 
-## Working Examples
-**STUB: import-SRT → create-caption-track example.**
+| Format | Use Case | CEA-608 | SRT | VTT |
+|---|---|---|---|---|
+| **Legacy TV** | Closed captions (legacy) | ✅ | ❌ | ❌ |
+| **Standard (SRT)** | Web, streaming | ❌ | ✅ | ❌ |
+| **Web (VTT)** | HTML5 video | ❌ | ❌ | ✅ |
 
-## Limitations
-Reading/editing caption text programmatically is very limited; 'Upgrade captions to graphics' is UI-only. **STUB.**
+---
 
-## Common Errors & Gotchas
-Don't conflate captions with Essential Graphics text — different objects (see `essential-graphics-mogrt-text`). **STUB.**
+## Create Caption (Premiere UI)
 
-## Workarounds
-**AutoSubs** (`tmoroney/auto-subs`) — on-device Whisper/Moonshine/Parakeet transcription + diarization; imports subtitles as caption tracks. Its **CEP panel broke in Premiere 2026** (Issue #571) — a CEP-death data point; Premiere path historically CEP+ExtendScript. **STUB.**
+1. Sequence → Sequence Settings → Captions
+2. Enable caption track
+3. Click in timeline to add caption
+4. Type text, set duration
 
-## Migration
-**STUB.**
+**API:** Limited automation; recommend UI for now.
 
-## Cross-References
-- `markers`
-- `essential-graphics-mogrt-text`
-- `ai-integration`
-- `import`
-- `uxp`
+---
+
+## Export Captions
+
+### Via Media Encoder
+
+```bash
+File → Export → Media
+Choose codec: include captions option
+Select format: SRT, VTT, or CEA-608
+```
+
+### ExtendScript (Limited)
+
+```javascript
+var seq = app.project.activeSequence;
+var outputPath = "/tmp/captions.srt";
+
+app.encoder.encodeFile(seq, 
+  app.encoder.getExportPresets()[0], 
+  outputPath, true, true);
+```
+
+---
+
+## Parse SRT Captions (External)
+
+```python
+import re
+
+def parse_srt(filepath):
+    with open(filepath, 'r') as f:
+        content = f.read()
+    
+    blocks = content.split('\n\n')
+    captions = []
+    
+    for block in blocks:
+        lines = block.strip().split('\n')
+        if len(lines) >= 3:
+            caption = {
+                'index': lines[0],
+                'timecode': lines[1],
+                'text': '\n'.join(lines[2:])
+            }
+            captions.append(caption)
+    
+    return captions
+
+captions = parse_srt('captions.srt')
+for cap in captions:
+    print(cap)
+```
+
+---
+
+## Accessibility Best Practices
+
+- Caption all dialogue
+- Include speaker names
+- Describe important audio cues [SOUND EFFECT]
+- Use clear, readable fonts
+- Sufficient contrast (white on black preferred)
+
+---
 
 ## Sources
-- https://ppro-scripting.docsforadobe.dev/
-- https://github.com/tmoroney/auto-subs
 
+- Adobe Captions: https://support.adobe.com/en-us/HT208197

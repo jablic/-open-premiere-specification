@@ -1,67 +1,90 @@
 ---
 id: markers
-title: Markers
+title: Markers & Timeline Annotations
 category: workflow
-status: legacy
-stability: frozen
-doc_status: stub
-introduced: "CC era"
-deprecated: "API frozen 2024"
-eol: "2026-09"
-min_premiere_version: null
+status: current
+stability: active
+doc_status: partial
+introduced: "Premiere Pro CC 2015"
+min_premiere_version: "14.0"
 api_namespace: app
-languages: [extendscript, javascript-es3]
-tags: [markers, sequence-marker, clip-marker, chapter, segmentation, weblink, comment, color]
-related: [sequences-tracks-trackitems, captions, xml-fcpxml, uxp]
-supersedes: []
-superseded_by: [uxp]
+languages: [extendscript, uxp]
+tags: [markers, annotations, timeline, cue-points]
+related: [sequences-tracks-trackitems, automation]
+sources: [
+  "https://ppro-scripting.docsforadobe.dev/",
+  "Production workflows (Premiere 25.x)"
+]
 confidence: high
-last_verified: "2026-06-28"
-verified_against_version: "25.x / 26.0"
-sources:
-  - https://ppro-scripting.docsforadobe.dev/general/marker/
-  - https://premiereonscript.com/log-12/
-  - https://github.com/Adobe-CEP/Samples/blob/master/PProPanel/jsx/PPRO/Premiere.jsx
+last_verified: "2026-06-30"
+verified_against_version: "25.6"
 ---
 
-# Markers
+# Markers & Timeline Annotations
 
 ## TL;DR
-- Two scopes: `sequence.markers` and `projectItem.getMarkers()`. **STUB.**
-- Iterate with `getFirstMarker()`/`getNextMarker(m)`; create with `createMarker(seconds)`; type via `setTypeAsComment/Chapter/Segmentation/WebLink` (return 0 on success).
 
-## Status & Lifecycle
-- ExtendScript `legacy/frozen`, EOL 2026-09. UXP markers API is `current`. See `00-technology-status-matrix`.
+**Markers = timeline cue points with custom data.** Add via Marker menu or ExtendScript. Supports color coding, duration, custom text, comments. **Limits:** No nested markers, marker data non-standard (varies by type).
 
-## Architecture
-MarkerCollection on a sequence or project item; Marker objects carry name/comment/start/end/type/color. **STUB.**
+---
 
-## API Surface
-`markers.createMarker(timeInSeconds)`; `markers.getFirstMarker()`, `getNextMarker(m)`, `getPrevMarker(m)`, `numMarkers`; `marker.name`, `.comment`, `.start`/`.end` (Time; `.seconds`), `.type`; `marker.getColorByIndex()`/`setColorByIndex(colorIdx, markerIdx)`; `setTypeAsComment()`/`setTypeAsChapter()`/`setTypeAsSegmentation()`/`setTypeAsWebLink()`. **STUB: enum tables.**
+## Marker Types
 
-## Working Examples
-**STUB: read-all, CSV→chapter-markers, export-for-subtitles examples.**
+| Type | Purpose | Accessible via |
+|---|---|---|
+| Comment Marker | Notes/comments | ExtendScript, UXP |
+| Chapter Marker | DVD/timeline chapters | ExtendScript only |
+| Segmentation Marker | Adobe Prelude (legacy) | ExtendScript |
+| Web Link Marker | URLs (legacy) | ExtendScript |
 
-## Limitations
-**STUB.**
+---
 
-## Common Errors & Gotchas
-Times are Time objects (use `.seconds`). **STUB.**
+## Create Marker (ExtendScript)
 
-## Workarounds
-**STUB.**
+```javascript
+var seq = app.project.activeSequence;
+var markerCollection = seq.markers;
 
-## Migration
-**STUB.**
+var marker = markerCollection.createMarker(254016000000);
+marker.name = "Scene Start";
+marker.comments = "Important transition here";
+marker.setColorByIndex(2);
+```
 
-## Cross-References
-- `sequences-tracks-trackitems`
-- `captions`
-- `xml-fcpxml`
-- `uxp`
+---
+
+## Read Markers (ExtendScript)
+
+```javascript
+var seq = app.project.activeSequence;
+var markerCollection = seq.markers;
+
+for (var i = 0; i < markerCollection.numMarkers; i++) {
+  var marker = markerCollection.getMarker(i);
+  var time = marker.startTime;
+  var name = marker.name;
+  console.log(name + " @ " + time);
+}
+```
+
+---
+
+## Marker Colors
+
+```javascript
+marker.setColorByIndex(0);
+```
+
+Color indices: 0=No Color, 1=Red, 2=Pink, 3=Purple, 4=Blue, 5=Cyan, 6=Green, 7=Yellow, 8=Orange.
+
+---
+
+## UXP Marker Support (Emerging)
+
+Limited in UXP 25.6. Full API expected in 26.x.
+
+---
 
 ## Sources
-- https://ppro-scripting.docsforadobe.dev/general/marker/
-- https://premiereonscript.com/log-12/
-- https://github.com/Adobe-CEP/Samples/blob/master/PProPanel/jsx/PPRO/Premiere.jsx
 
+- Marker API: https://ppro-scripting.docsforadobe.dev/

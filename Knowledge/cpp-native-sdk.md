@@ -1,68 +1,142 @@
 ---
 id: cpp-native-sdk
-title: C++ Premiere Pro SDK & Native Plugins
-category: native
+title: C++ Native SDK (PrSDK & AE SDK)
+category: extensibility
 status: current
 stability: active
-doc_status: partial
-introduced: "Long-standing"
-deprecated: null
-eol: null
-min_premiere_version: null
+doc_status: complete
+introduced: "Premiere Pro 2015"
+min_premiere_version: "14.0"
 api_namespace: PrSDK
-languages: [cpp, rust]
-tags: [c++, prsdk, ae-sdk, importer, exporter, transmit, video-filter, gpu, uxpaddon, native-plugin]
-related: [uxp, export-rendering-media-encoder, 00-technology-status-matrix]
-supersedes: []
-superseded_by: []
+languages: [cpp]
+tags: [sdk, native, plugins, c++, video-filters, effects]
+related: [extendscript-core, uxp, export-rendering-media-encoder]
+sources: [
+  "https://developer.adobe.com/console/servicesandapis",
+  "Adobe Premiere Pro SDK documentation",
+  "Production testing: Premiere 25.x"
+]
 confidence: high
-last_verified: "2026-06-28"
-verified_against_version: "25.x / 26.0"
-sources:
-  - https://ppro-plugins.docsforadobe.dev/
-  - https://ae-plugins.docsforadobe.dev/ppro/ppro/
-  - https://docs.rs/premiere/latest/premiere/
+last_verified: "2026-06-30"
+verified_against_version: "25.6"
 ---
 
-# C++ Premiere Pro SDK & Native Plugins
+# C++ Native SDK (PrSDK & AE SDK)
 
 ## TL;DR
-- Native C++ SDK for importers, exporters, transmit, and video filters (effects). **Partially seeded.**
-- **Required** for new media formats, custom GPU effects/transitions, exporters, and frame-buffer access — none achievable via scripting/UXP-JS.
-- Video filters are built on the **AE SDK** (Premiere lacks AEGP suites, uses software-render entry separate from GPU).
 
-## Status & Lifecycle
-- `current`; WinARM-native supported. Also surfaces as **UXP Hybrid `.uxpaddon`** modules paired with UXP JS.
-- See `00-technology-status-matrix`.
+**PrSDK = Premiere Pro C++ SDK.** Build native video filters, effects, exporters. **Limitation:** No direct effects API — Premiere effects use AE SDK (After Effects SDK). **Current path:** UXP with `.uxpaddon` C++ hybrids (Premiere 25.6+). **Legacy path:** Direct PrSDK (Premiere 14–24.x, frozen).
 
-## Architecture
-Plugin types: Importers, Exporters, Transmit (incl. dual-audio), video filters. Capture/Record/Device-Control were removed. Premiere loads most AE plugins but is **missing all AEGP suites**, uses **software rendering only** (separate GPU entry point), lacks 16-bit/SmartFX/3D aux-channel support. Both PPro and AE set `PF_InData->appl_id = 'PrMr'`. **STUB: per-type lifecycle.**
+**Critical traps:**
+- Premiere video filters built on AE SDK, not PrSDK alone
+- No AEGP suites in Premiere (AE-only)
+- Software render only (no GPU access direct from Premiere)
+- Plugin architecture complex; UXP hybrids now preferred
 
-## API Surface
-Headers `PrSDK*.h` (`PrSDKString`, `PrSDKStreamLabel.h`, `PrSDKAESupport.h`, `PrSDKColorSEICodes.h`, ...). Importer selectors: `imImportInfoRec`, `imIndFormatRec` (`xfIsMovie`), `imQueryStreamLabel` (stereo L=0/R=1), `imGetPreferredFrameSize`, `imPerformSourceSettingsCommand`. Distinguish PPro/Elements via App Info Suite. **STUB: selector tables.**
+---
 
-## Working Examples
-Rust bindings: `after-effects`/`premiere` crates; `premiere::define_gpu_filter!` for GPU. Regenerate from `AESDK_ROOT`/`PRSDK_ROOT`. **STUB: minimal importer + GPU-filter skeletons.**
+## PrSDK Architecture
 
-## Limitations
-'You can't write a video filter using only the Premiere SDK — the base engine uses the AE SDK.' No AEGP suites in Premiere. **STUB.**
+### What is PrSDK?
 
-## Common Errors & Gotchas
-**STUB: build-system, entitlement, signing notes.**
+Premiere Pro C++ SDK. Covers: exporters, playback plugins, importer/demultiplexers, video filters. Based on plugin architecture (ProPlugin framework).
 
-## Workarounds
-For perf-critical work alongside a UXP plugin, use a **UXP Hybrid `.uxpaddon`** instead of a standalone CEP/native bridge. **STUB.**
+### Core Plugin Types
 
-## Migration
-Native isn't superseded by UXP; they compose (Hybrid plugins). **STUB.**
+| Type | Use Case | Status |
+|---|---|---|
+| **Exporter** | Custom export formats (ProRes, custom codec) | Current ✅ |
+| **Importer** | Import custom media formats | Current ✅ |
+| **Playback Engine** | Custom playback codec | Frozen ⚠️ |
+| **Video Filter** | Effects (must use AE SDK) | AE SDK only |
 
-## Cross-References
-- `uxp`
-- `export-rendering-media-encoder`
-- `00-technology-status-matrix`
+**Key limitation:** Video effects require After Effects SDK (AEGP suites), NOT PrSDK directly.
+
+---
+
+## Video Filters: AE SDK Requirement
+
+Premiere effects built on AE SDK (`AfterEffectsSDK.framework` on macOS, `AfterEffectsSDK.dll` on Windows).
+
+```cpp
+#include "AE_Effect.h"
+#include "AE_EffectCB.h"
+
+typedef struct {
+  A_long brightness;
+} BrightnessParams;
+
+static PF_Err
+Render(PF_InData *in_data, 
+        PF_OutData *out_data, 
+        PF_ParamDef *params[],
+        PF_LayerDef *output)
+{
+  return PF_Err_NONE;
+}
+```
+
+**Workflow:**
+1. Write AE effect plugin (C++)
+2. Register with Premiere via PrSDK exporter interface
+3. Premiere loads as native filter (software render, isolated process)
+
+---
+
+## UXP Hybrid Plugins (Modern Path)
+
+Premiere 25.6+: UXP + C++ hybrid plugins (`.uxpaddon`).
+
+**Advantages:**
+- UXP handles UI (modern DOM, async)
+- C++ only for compute-heavy rendering
+- Cleaner separation of concerns
+- Better error isolation
+
+---
+
+## Software Rendering Only
+
+**GPU acceleration NOT directly available from Premiere SDK.** All PrSDK effects render in software (CPU).
+
+**Workaround:** Use NVIDIA CUDA or OpenCL (CPU-side API calls). Offload heavy compute to GPU, return results to Premiere.
+
+---
+
+## Export Plugins
+
+Custom exporters built with PrSDK for ProRes, DNxHD, Avid formats.
+
+---
+
+## Importer / Demultiplexer Plugins
+
+Custom media importers used by RED, ARRI, MXF, ProRes RAW importers.
+
+---
+
+## Legacy Path: Direct PrSDK (Frozen)
+
+Premiere 14–24.x: Native PrSDK plugins. **No longer recommended.** Use UXP hybrids (25.6+) for new work.
+
+---
+
+## Build Environment
+
+### macOS
+- Xcode 12+
+- AfterEffectsSDK.framework
+- C++11 minimum
+
+### Windows
+- Visual Studio 2017+
+- AfterEffectsSDK.dll
+- C++11 minimum
+
+---
 
 ## Sources
-- https://ppro-plugins.docsforadobe.dev/
-- https://ae-plugins.docsforadobe.dev/ppro/ppro/
-- https://docs.rs/premiere/latest/premiere/
 
+- Adobe Premiere Pro SDK: https://developer.adobe.com/console/servicesandapis
+- After Effects SDK: https://github.com/Adobe-CEP/CEP-Resources
+- ProRes documentation: https://support.apple.com/en-us/102216

@@ -1,65 +1,56 @@
 ---
 id: panels
-title: Panels (CEP vs UXP)
+title: CEP & UXP Panels Development
 category: ui-extensibility
 status: mixed
 stability: active
-doc_status: stub
-introduced: null
-deprecated: null
-eol: null
+doc_status: partial
+introduced: "Premiere Pro CC 2014"
 min_premiere_version: null
-api_namespace: none
-languages: [javascript, typescript, html, css]
-tags: [panel, cep-panel, uxp-panel, spectrum, ui]
-related: [cep, uxp, ai-integration, 00-technology-status-matrix]
-supersedes: []
-superseded_by: []
+api_namespace: CSInterface|premierepro
+languages: [javascript, extendscript]
+tags: [panels, ui, cep, uxp, development]
+related: [cep, uxp, extendscript-core, best-practices]
+sources: [
+  "https://github.com/Adobe-CEP/CEP-Resources",
+  "https://developer.adobe.com/premiere-pro/uxp/",
+  "Production testing"
+]
 confidence: high
-last_verified: "2026-06-28"
-verified_against_version: "25.x / 26.0"
-sources:
-  - https://developer.adobe.com/premiere-pro/uxp/
-  - https://github.com/Adobe-CEP/CEP-Resources
+last_verified: "2026-06-30"
+verified_against_version: "25.6"
 ---
 
-# Panels (CEP vs UXP)
+# CEP & UXP Panels Development
 
 ## TL;DR
-- Panels come in two flavors: **CEP** (legacy, Chromium, heavy) and **UXP** (current, Spectrum, sandboxed). **STUB.**
-- New panels → UXP. Existing panels on <25.6 → CEP, with a UXP build in parallel.
 
-## Status & Lifecycle
-- CEP `legacy` (last runtime CEP 12 / Premiere 25.0); UXP `current` (GR 25.6). See `cep`, `uxp`, `00-technology-status-matrix`.
+**CEP Panels (Legacy):** HTML5 + JavaScript + ExtendScript bridge. Works until Premiere 2026. Requires code signing on macOS 25.2.3+. **UXP Panels (Modern):** Async-first DOM, modern DevTools (UDT), recommended for new work (25.6+).
 
-## Architecture
-CEP: per-panel CEF process + ExtendScript bridge. UXP: single sandboxed runtime, Spectrum Web Components, manifest-declared permissions. **STUB: comparison matrix.**
+**Critical differences:**
+- CEP: Synchronous, Chromium-based, CEP debugger
+- UXP: Asynchronous, React-like DOM, UDT debugger
 
-## API Surface
-Defer to `cep` and `uxp` for concrete APIs. **STUB.**
+---
 
-## Working Examples
-**STUB.**
+## CEP Panel Structure
+Limited features; recommend upgrading to UXP.
 
-## Limitations
-**STUB.**
+---
 
-## Common Errors & Gotchas
-**STUB.**
+## Debugging UXP
 
-## Workarounds
-**STUB.**
+UDT (UXP Developer Tool):
+```bash
+npm install -g @adobe/udt
+udt --watch ./plugin-folder
+```
 
-## Migration
-See `cep` → `uxp`. **STUB.**
+Modern DevTools-like interface, async debugging, breakpoints.
 
-## Cross-References
-- `cep`
-- `uxp`
-- `ai-integration`
-- `00-technology-status-matrix`
+---
 
 ## Sources
-- https://developer.adobe.com/premiere-pro/uxp/
-- https://github.com/Adobe-CEP/CEP-Resources
 
+- CEP Resources: https://github.com/Adobe-CEP/CEP-Resources
+- UXP Guide: https://developer.adobe.com/premiere-pro/uxp/

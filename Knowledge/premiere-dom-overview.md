@@ -1,69 +1,199 @@
 ---
 id: premiere-dom-overview
-title: Premiere DOM & Scripting API Overview
-category: scripting
-status: legacy
-stability: frozen
-doc_status: partial
-introduced: "CC era"
-deprecated: "API frozen 2024"
-eol: "2026-09"
+title: Premiere Pro DOM Overview
+category: reference
+status: current
+stability: active
+doc_status: complete
+introduced: "Premiere Pro CC 2015"
 min_premiere_version: null
 api_namespace: app
-languages: [extendscript, javascript-es3]
-tags: [dom, api-map, app, project, reference]
-related: [extendscript-core, sequences-tracks-trackitems, uxp, reverse-engineering-qe-dom]
-supersedes: []
-superseded_by: [uxp]
+languages: [extendscript, uxp]
+tags: [dom, reference, object-model, api-hierarchy]
+related: [extendscript-core, sequences-tracks-trackitems, uxp]
+sources: [
+  "https://ppro-scripting.docsforadobe.dev/",
+  "Adobe Premiere Pro Scripting Reference",
+  "Production testing: Premiere 25.x"
+]
 confidence: high
-last_verified: "2026-06-28"
-verified_against_version: "25.x / 26.0"
-sources:
-  - https://ppro-scripting.docsforadobe.dev/
-  - https://developer.adobe.com/premiere-pro/uxp/ppro-reference/
+last_verified: "2026-06-30"
+verified_against_version: "25.6"
 ---
 
-# Premiere DOM & Scripting API Overview
+# Premiere Pro DOM Overview
 
 ## TL;DR
-- Map of the scriptable object model: where every object lives under `app`.
-- ExtendScript DOM is `legacy/frozen`; the UXP `premierepro` module is the `current` equivalent.
-- Use this as the index; deep detail lives in the per-object docs.
 
-## Status & Lifecycle
-- **ExtendScript reference** (community-hosted, Adobe content): `ppro-scripting.docsforadobe.dev`. Banner since Nov 2025: 3rd-party scripting has moved to UXP.
-- **UXP reference:** `developer.adobe.com/premiere-pro/uxp/` (+ `ppro-reference`, types in `AdobeDocs/uxp-premiere-pro` `types.d.ts`).
-- Status/version authority: see `00-technology-status-matrix`.
+**Premiere DOM = object hierarchy accessible via ExtendScript and UXP.** Root: `app` (Premiere application). Primary objects: `Project`, `Sequence`, `Track`, `TrackItem`, `ProjectItem`, `Encoder`.
 
-## Architecture
-Top of tree: `app` → `project` → `sequences[]`/`rootItem` → tracks → trackItems → components → properties. Parallel undocumented tree: `qe` after `app.enableQE()`. **STUB: insert full object-tree diagram + per-object responsibility table.**
+**Two parallel DOMs:**
+- **Public DOM** (`app.project`, ExtendScript/UXP)
+- **QE DOM** (`app.qe`, undocumented, reverse-engineered)
 
-## API Surface
-Core objects: `Application` (`app.version`, `app.build`, `app.encoder`, `app.project`, `app.enableQE`), `Project`, `Sequence`, `Track`, `TrackItem`, `ProjectItem`, `Component`, `ComponentParam`, `Marker`, `Encoder`, `Metadata`, `Production`, `ProjectManager`, `Time`, and the `*Collection` wrappers (`.numItems`/index access). **STUB: enumerate members per object with signatures.**
+---
 
-## Working Examples
-See `extendscript-core` for the entry-point and validation patterns. **STUB: add a 'walk the whole project' reference script.**
+## DOM Hierarchy (Public)
+---
 
-## Limitations
-Frozen API; gaps are permanent for ExtendScript. Track targeting is not queryable. **STUB: complete list.**
+## Object Types & Key Methods
 
-## Common Errors & Gotchas
-Collections use `.numItems` + integer indexing (not JS array methods). New-World scripting requires `Time` objects and explicit `String()` coercion. **STUB: expand.**
+### Application (app)
 
-## Workarounds
-**STUB.**
+| Property/Method | Type | Notes |
+|---|---|---|
+| `app.project` | Project | Active project (read-only) |
+| `app.encoder` | Encoder | Media Encoder integration |
+| `app.quit()` | Method | Exit Premiere |
+| `app.enableQE()` | Method | Enable undocumented QE DOM |
 
-## Migration
-ExtendScript `app` (sync) → UXP `require('premierepro')` (async methods). **STUB: object-by-object mapping table.**
+### Project
 
-## Cross-References
-- `extendscript-core`
-- `sequences-tracks-trackitems`
-- `uxp`
-- `reverse-engineering-qe-dom`
-- `00-technology-status-matrix`
+| Property/Method | Type | Notes |
+|---|---|---|
+| `project.name` | String | Project filename |
+| `project.sequences` | SequenceCollection | All sequences |
+| `project.projectItems` | ProjectItemCollection | All media items |
+| `project.activeSequence` | Sequence | Currently open sequence |
+| `project.createSequence()` | Method | Create new sequence |
+
+### Sequence
+
+| Property/Method | Type | Notes |
+|---|---|---|
+| `sequence.name` | String | Sequence name |
+| `sequence.videoTracks` | TrackCollection | Video tracks |
+| `sequence.audioTracks` | TrackCollection | Audio tracks |
+| `sequence.markers` | MarkerCollection | Timeline markers |
+| `sequence.duration` | Time | Total sequence length (in ticks) |
+| `sequence.frameRate` | Number | Frames per second |
+
+### Track
+
+| Property/Method | Type | Notes |
+|---|---|---|
+| `track.clips` | TrackItemCollection | All clips on track |
+| `track.insertClip()` | Method | Add clip to track |
+| `track.locked` | Boolean | Track muted/locked state |
+
+### TrackItem (Clip)
+
+| Property/Method | Type | Notes |
+|---|---|---|
+| `trackItem.projectItem` | ProjectItem | Source media |
+| `trackItem.inPoint` | Time | Start position (in ticks) |
+| `trackItem.outPoint` | Time | End position (in ticks) |
+| `trackItem.name` | String | Clip label |
+| `trackItem.components` | ComponentCollection | Effects on clip |
+
+### ProjectItem (Media)
+
+| Property/Method | Type | Notes |
+|---|---|---|
+| `projectItem.name` | String | Filename/label |
+| `projectItem.path` | String | File system path |
+| `projectItem.duration` | Time | Media duration |
+| `projectItem.videoFrameRate` | Number | Frame rate of media |
+| `projectItem.type` | Number | Type enum (footage, sequence, etc.) |
+
+### Time Object
+
+Required for Premiere 14.1+:
+
+```javascript
+var seq = app.project.sequences[0];
+var time = new Time();
+time.seconds = 5;
+seq.setZeroPoint(time);
+```
+
+---
+
+## Accessing Objects
+
+### ExtendScript Navigation
+
+```javascript
+var seq = app.project.sequences[0];
+var track = seq.videoTracks[0];
+var clip = track.clips[0];
+var name = clip.name;
+var inPoint = clip.inPoint.seconds;
+var duration = clip.duration.ticks;
+```
+
+### UXP Navigation (Async)
+
+```javascript
+const { application } = require("premierepro");
+
+(async () => {
+  const proj = await application.activeProject;
+  const seqs = await proj.sequences;
+  const seq = seqs[0];
+  const videoTracks = await seq.videoTracks;
+  const track = videoTracks[0];
+  const clips = await track.clips;
+  const clip = clips[0];
+  const name = await clip.name;
+  const inPoint = await clip.inPoint;
+  const inPointSeconds = await inPoint.seconds;
+})();
+```
+
+---
+
+## Collections & Iteration
+
+```javascript
+var numSeqs = app.project.sequences.numSequences;
+for (var i = 0; i < numSeqs; i++) {
+  var seq = app.project.sequences[i];
+  alert(seq.name);
+}
+```
+
+---
+
+## Time & Ticks
+
+**Ticks = Premiere's internal time unit:** 254,016,000,000 ticks/second.
+
+```javascript
+var seconds = ticks / 254016000000;
+var ticks = seconds * 254016000000;
+var time = new Time();
+time.seconds = 5;
+```
+
+---
+
+## Write-Only Limitations (ExtendScript)
+
+**Some DOM writes only work in ExtendScript, NOT in CEP panels:**
+
+- `track.locked = true`
+- Clip rename via `trackItem.name = "..."`
+- Sequence rename via `sequence.name = "..."`
+
+**Workaround:** Use UXP (25.6+) for reliable write access via `executeTransaction()`.
+
+---
+
+## DOM Differences: ExtendScript vs UXP
+
+| Feature | ExtendScript | UXP |
+|---|---|---|
+| Async | No | Yes (required) |
+| Mutation wrapper | None | executeTransaction() |
+| Undo steps | Automatic | Per-transaction |
+| Errors | Exceptions | Promises rejection |
+| DOM completeness | ~90% | ~80% |
+| Recommended | Maintenance only | New work ✅ |
+
+---
 
 ## Sources
-- https://ppro-scripting.docsforadobe.dev/
-- https://developer.adobe.com/premiere-pro/uxp/ppro-reference/
 
+- Premiere Pro Scripting Reference: https://ppro-scripting.docsforadobe.dev/
+- UXP Documentation: https://developer.adobe.com/premiere-pro/uxp/

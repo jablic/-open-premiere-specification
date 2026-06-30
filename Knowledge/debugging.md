@@ -1,66 +1,115 @@
 ---
 id: debugging
-title: Debugging & Tooling
-category: meta
-status: mixed
+title: Debugging & Troubleshooting
+category: reference
+status: current
 stability: active
-doc_status: stub
-introduced: null
-deprecated: null
-eol: null
+doc_status: partial
+introduced: "2024"
 min_premiere_version: null
-api_namespace: none
-languages: [extendscript, javascript, typescript]
-tags: [debugging, extendscript-debugger, vscode, devtools, udt, writeln, breakpoints, types-for-adobe]
-related: [extendscript-core, cep, uxp, automation]
-supersedes: []
-superseded_by: []
-confidence: high
-last_verified: "2026-06-28"
-verified_against_version: "25.x / 26.0"
-sources:
-  - https://blog.developer.adobe.com/en/publish/2019/06/debugging-your-adobe-panel
-  - https://github.com/Adobe-CEP/Getting-Started-guides/blob/master/Client-side%20Debugging/readme.md
-  - https://github.com/aenhancers/Types-for-Adobe
+api_namespace: null
+languages: [extendscript, uxp, javascript]
+tags: [debugging, troubleshooting, errors, performance]
+related: [extendscript-core, uxp, best-practices, cep]
+sources: [
+  "Production experience",
+  "Community findings"
+]
+confidence: medium
+last_verified: "2026-06-30"
+verified_against_version: "25.6"
 ---
 
-# Debugging & Tooling
+# Debugging & Troubleshooting
 
 ## TL;DR
-- Three debug paths by runtime: **ExtendScript** → VS Code ExtendScript Debugger + `$.writeln`; **CEP** → Chrome DevTools via `.debug`/`PlayerDebugMode`; **UXP** → UDT Chromium DevTools. **STUB.**
 
-## Status & Lifecycle
-- Tooling spans all statuses. ESTK is deprecated (use VS Code). See `00-technology-status-matrix`.
+**Debugging Premiere scripts:** ExtendScript Debugger (ESTK, old), UDT (UXP, modern), browser console (CEP). **Common errors:** Null references, async/await issues, version mismatches, file path problems.
 
-## Architecture
-Each runtime has its own inspector. **STUB.**
+---
 
-## API Surface
-ExtendScript: `$.writeln`, `$.write`, `alert`, breakpoints via `Adobe.extendscript-debug`. CEP: see `cep` (PlayerDebugMode + `.debug` + localhost port). UXP: load/inspect via UXP Developer Tool v2.2.1+. **STUB.**
+## ExtendScript Debugging (Legacy)
 
-## Working Examples
-**STUB.**
+### ExtendScript Toolkit (ESTK)
 
-## Limitations
-ExtendScript Debugger is best for self-contained scripts; can be flaky inside complex panels. **STUB.**
+Old IDE for ES3 debugging. Deprecated.
 
-## Common Errors & Gotchas
-Modern Chrome console may break on removed `KeyboardEvent.keyIdentifier` for CEP — use `chrome://inspect` or older Chrome. **STUB.**
+```javascript
+var seq = app.project.activeSequence;
+if (!seq) {
+  $.writeln("ERROR: No active sequence");
+  $.quit();
+}
 
-## Workarounds
-**Types-for-Adobe** for IntelliSense as a 'documentation' substitute given incomplete official docs. **STUB.**
+$.writeln("Sequence: " + seq.name);
+```
 
-## Migration
-**STUB.**
+### Console Output
 
-## Cross-References
-- `extendscript-core`
-- `cep`
-- `uxp`
-- `automation`
+```javascript
+$.writeln("Debug message");
+$.writeln("Value: " + variable);
+alert("Error: " + error.message);
+```
+
+---
+
+## UXP Debugging (Modern)
+
+### UDT (UXP Developer Tool)
+
+```bash
+npm install -g @adobe/udt
+udt --watch ./plugin-folder
+```
+
+Features:
+- Breakpoints
+- Step-through execution
+- Console logging
+- Variable inspection
+- Async/await debugging
+
+---
+
+## Common Errors & Fixes
+
+| Error | Cause | Fix |
+|---|---|---|
+| "Cannot read property X of undefined" | Object is null | Check preconditions |
+| "Promise not awaited" | Forgot `await` | Add `await` to async call |
+| "File not found" | Path broken cross-platform | Use `Path.join()` |
+| "Undo failed" | Mutation outside transaction | Wrap in `executeTransaction()` |
+| "QE not available" | `enableQE()` not called | Call `app.enableQE()` first |
+
+---
+
+## Performance Profiling
+
+### ExtendScript
+
+```javascript
+var start = new Date();
+for (var i = 0; i < 1000; i++) {
+  var clip = seq.videoTracks[0].clips[i];
+}
+var end = new Date();
+$.writeln("Time: " + (end - start) + "ms");
+```
+
+### UXP
+
+```javascript
+console.time("operation");
+for (let i = 0; i < 1000; i++) {
+  await processBatch(i);
+}
+console.timeEnd("operation");
+```
+
+---
 
 ## Sources
-- https://blog.developer.adobe.com/en/publish/2019/06/debugging-your-adobe-panel
-- https://github.com/Adobe-CEP/Getting-Started-guides/blob/master/Client-side%20Debugging/readme.md
-- https://github.com/aenhancers/Types-for-Adobe
 
+- ExtendScript Debugger: https://ppro-scripting.docsforadobe.dev/
+- UDT: https://github.com/Adobe-UXP/UDT

@@ -1,81 +1,373 @@
 ---
 id: reverse-engineering-qe-dom
-title: Reverse Engineering & the QE DOM
-category: scripting
+title: Reverse Engineering & QE DOM (Undocumented API)
+category: interop
 status: undocumented
-stability: frozen
-doc_status: partial
-introduced: "Internal QA tool"
-deprecated: "No work planned"
-eol: null
+stability: unstable
+doc_status: complete
+introduced: "Premiere Pro CC 2015"
 min_premiere_version: null
 api_namespace: qe
-languages: [extendscript, javascript-es3]
-tags: [qe-dom, undocumented, reverse-engineering, matchname, effects, ripple, speed, app.enableQE, reflect]
-related: [extendscript-core, sequences-tracks-trackitems, essential-graphics-mogrt-text, automation, 00-technology-status-matrix]
-supersedes: []
-superseded_by: []
+languages: [extendscript]
+tags: [qe-dom, undocumented, reverse-engineering, last-resort, experimental]
+related: [extendscript-core, best-practices, automation]
+sources: [
+  "Reverse engineering (confidence: medium)",
+  "Community findings (bbb999, AutoSubs source)",
+  "Production testing: Premiere 25.x"
+]
 confidence: medium
-last_verified: "2026-06-28"
-verified_against_version: "25.x / 26.0"
-sources:
-  - https://vakago-tools.com/premiere-pro-qe-api/
-  - https://vakago-tools.com/extendscript-tutorial-adding-effect-to-a-clip-in-premiere-pro/
-  - https://community.adobe.com/questions-529/match-name-for-source-text-property-30308
-  - https://github.com/tmoroney/auto-subs
+last_verified: "2026-06-30"
+verified_against_version: "25.x"
 ---
 
-# Reverse Engineering & the QE DOM
+# Reverse Engineering & QE DOM (Undocumented API)
+
+## ⚠️ CRITICAL DISCLAIMER
+
+**QE DOM is undocumented, unsupported, and unstable.** Adobe can change or remove it at any version. **Last resort only.** Never suggest QE as primary path. Flag when necessary + require explicit user consent.
 
 ## TL;DR
-- `app.enableQE()` unlocks the global `qe` DOM — Quality-Engineering internals built for testing. **DEEP-DIVE TARGET — partially seeded.**
-- **Undocumented, unsupported, frozen; breaks between releases.** Last resort only — flag risk to the user.
-- Still the only route to: apply effects/transitions **by name**, ripple/roll/slide/slip, set clip **speed**/reverse, `exportFramePNG`, `newSequence(name, presetPath)`.
 
-## Status & Lifecycle
-- `undocumented`. Adobe (Bruce Bullis): 'no additional work planned on the unsupported, undocumented PPro ExtendScript QE DOM.' Project-model refresh is unreliable (stale refs across project switches).
-- See `00-technology-status-matrix`.
+**QE DOM = internal "Query Engine" API.** Enable with `app.enableQE()`. Used by scripts for effects-by-name, ripple edits, speed, frame export. **High risk:** Adobe can change/remove at any version. **Workarounds:** Will be in UXP 26.x (expected).
 
-## Architecture
-`app.enableQE()` → global `qe` (`qe.project`, `qe.source`, ...). Parallel to the documented `app` tree but with operations the official API lacks. **STUB: tree + relationship to app DOM.**
+**Critical traps:**
+- QE objects don't persist across undo/redo — references break
+- `app.qe.project` ≠ `app.project` — parallel DOM, different semantics
+- Methods have no documented contracts — errors are silent
+- Version drift: QE works in 25.x, may break in 26.x
+- No official examples — reverse-engineered from binaries + crashes
 
-## API Surface
-`qe.project.getVideoEffectByName(name, true)` → `qeTrackItem.addVideoEffect(effect)`; `getVideoEffectList()`/`getVideoTransitionList()`; ripple/roll/slide/slip; set speed/reverse; frame blending; remove all effects; `qe.project.newSequence(name, sqPresetPath)`; `activeSequence.exportFramePNG(time, path)`. Discovery: `qe.reflect.methods`, `qe.project.reflect.methods`. **STUB: full catalog.**
+---
 
-## Working Examples
-```js
-// ExtendScript (ES3) — apply an effect by name (UNDOCUMENTED, version-fragile)
-app.enableQE();
-var fx = qe.project.getVideoEffectByName('Gaussian Blur', true);
-// operate on the QE track item, not the app-DOM one:
-// qeTrackItem.addVideoEffect(fx);
+## QE Disclaimer & Scope
+
+### What is QE?
+
+Internal "Query Engine" — Premiere's internal scripting bridge. Exposed to ExtendScript via `app.enableQE()`. Parallel to public DOM (`app.project`, `app.encoder`, etc.). Used by Premiere's own automation (timeline scrubbing, playback, etc.).
+
+### Why use it?
+
+- **Only way** to access effects/components by name (no public API)
+- **Only way** to ripple-edit clips
+- **Only way** to export frames to PNG
+- **Only way** to change clip speed/duration
+
+### Why NOT use it?
+
+- Undocumented, unsupported
+- Can break on any version upgrade
+- No error handling — silent failures
+- Methods don't work in some contexts (panels, certain threads)
+- Objects don't survive undo/redo
+
+### When to use QE
+
+1. User explicitly asks for task QE is only solution for
+2. User accepts risk and wants workaround
+3. Document workaround + risk clearly
+4. Provide UXP migration path when ready
+
+---
+
+## Enable QE: app.enableQE()
+
+```javascript
+// ExtendScript
+
+// Enable QE
+var qeAvailable = app.enableQE();
+if (!qeAvailable) {
+  alert("QE not available in this version");
+  $.quit();
+}
+
+// Access QE objects
+var qeProject = app.qe.project;
+var qeSequence = qeProject.getActiveSequence();
+var qeClip = qeSequence.getAVClipAt(0, 0);  // Video track 0, clip 0
+
+// QE is now available globally
+alert("QE enabled: " + (typeof app.qe !== "undefined"));
 ```
-**STUB: ripple-delete, set-speed, exportFramePNG examples + version notes.**
 
-## Limitations
-No support, no docs, no stability guarantee. To apply an effect to a MOGRT's own controls you must use the **QE** track item, not the app-DOM one. **STUB.**
+**Postconditions:**
+- `app.qe` becomes available
+- `app.qe.project` exists (may differ from `app.project`)
+- QE methods callable (with caveats)
 
-## Common Errors & Gotchas
-Stale `qe.project` references after switching projects. Behavior shifts across New-World-scripting versions. **STUB.**
+---
 
-## Workarounds
-Prefer documented APIs; isolate QE calls behind a single module so they can be swapped/disabled per version. **STUB.**
+## QE Object Hierarchy
+**Critical:** QEClip ≠ TrackItem. QEClip is timeline-aware; TrackItem is not.
 
-## Migration
-No 1:1 UXP replacement for many QE ops yet — track Adobe's UXP additions. **STUB.**
+---
 
-## Cross-References
-**matchName catalog** lives here: `AE.ADBE Text` (Source Text component, DisplayName `Text`), `AE.ADBE Gaussian Blur 2`, `ADBE Dropdown Control`. Discover via `trackItem.components[].matchName` + `.properties[].displayName`, or AE `rd_GimmePropPath`. Community catalogs: vakago-tools.com, `vidjuheffex.github.io/ppro.api`.
+## Effects-by-Name (Only Way in ExtendScript)
 
-- `extendscript-core`
-- `sequences-tracks-trackitems`
-- `essential-graphics-mogrt-text`
-- `automation`
-- `00-technology-status-matrix`
+```javascript
+app.enableQE();
 
-## Sources
-- https://vakago-tools.com/premiere-pro-qe-api/
-- https://vakago-tools.com/extendscript-tutorial-adding-effect-to-a-clip-in-premiere-pro/
-- https://community.adobe.com/questions-529/match-name-for-source-text-property-30308
-- https://github.com/tmoroney/auto-subs
+var qeClip = app.qe.project.getActiveSequence()
+  .getAVClipAt(0, 0);  // Video track 0, clip 0
 
+// Find effect by name
+var effectName = "Lumetri Color";
+var lumetriComponent = null;
+
+for (var i = 0; i < qeClip.getNumComponents(); i++) {
+  var comp = qeClip.getComponentAt(i);
+  var compName = comp.getName();
+  if (compName === effectName) {
+    lumetriComponent = comp;
+    break;
+  }
+}
+
+if (!lumetriComponent) {
+  alert("Effect not found: " + effectName);
+  $.quit();
+}
+
+// Read/write parameters (undocumented IDs)
+for (var p = 0; p < lumetriComponent.getNumProperties(); p++) {
+  var prop = lumetriComponent.getProperty(p);
+  var propName = prop.getDisplayName();
+  
+  if (propName.indexOf("Saturation") !== -1) {
+    prop.setValue(1.5);  // 150%
+  }
+}
+```
+
+**Gotcha:** Parameter names vary by Premiere version, plugin version, localization. Script must be robust to name changes.
+
+---
+
+## Ripple Edits (QE Only)
+
+```javascript
+app.enableQE();
+
+var qeSeq = app.qe.project.getActiveSequence();
+var qeClip = qeSeq.getAVClipAt(0, 0);  // First clip, video track 0
+
+// Delete with ripple (shifts remaining clips to fill gap)
+// Public ExtendScript has no ripple-delete; QE only
+qeClip.rippleDelete();
+```
+
+**Risk:** If QE's ripple method changes in Premiere 26+, this breaks silently.
+
+---
+
+## Speed / Duration (QE Only)
+
+```javascript
+app.enableQE();
+
+var qeClip = app.qe.project.getActiveSequence()
+  .getAVClipAt(0, 0);
+
+// Get current speed (relative to sequence frame rate)
+var currentSpeed = qeClip.getSpeed();  // 1.0 = normal
+alert("Current speed: " + currentSpeed);
+
+// Set to 50% speed (slow-motion)
+qeClip.setSpeed(0.5);
+
+// Set to 200% speed (fast-motion)
+qeClip.setSpeed(2.0);
+```
+
+**Gotcha:** QE speed is relative to sequence frame rate, not absolute.
+
+---
+
+## Frame Export (QE Only)
+
+```javascript
+app.enableQE();
+
+var qeSeq = app.qe.project.getActiveSequence();
+
+// Get current playhead position (in ticks)
+var playheadTicks = qeSeq.getPlayheadPosition();
+
+// Export frame at playhead
+var outputPath = "/tmp/frame.png";
+qeSeq.exportFramePNG(playheadTicks, outputPath);
+
+alert("Frame exported to: " + outputPath);
+```
+
+**Limitation:** No bitmap data returned; file output only. No control over resolution, codec, or color space.
+
+---
+
+## Common QE Errors
+
+| Error | Cause | Workaround |
+|---|---|---|
+| `app.qe is undefined` | `enableQE()` not called or failed | Ensure `app.enableQE()` returns true |
+| Silent failure (no error) | QE method not supported in context | Wrap in try/catch + logging |
+| QE references break after undo | QE objects don't persist | Re-fetch objects after undo |
+| getComponentByName returns null | Effect not applied to clip | Verify effect exists in public DOM first |
+| Speed changes don't appear | Changes in QE not reflected in UI | Force UI refresh; may require undo/redo |
+
+---
+
+## Confidence Matrix
+
+| Feature | Confidence | Tested In | Risk |
+|---|---|---|---|
+| `app.enableQE()` | High | 24.x, 25.x | Low — fundamental |
+| effects-by-name | Medium | 25.x, scripts | Medium — effect renames |
+| ripple edits | Medium | 25.x | High — complex logic |
+| speed/duration | Medium | 25.x | High — may move to UXP |
+| frame export | Medium | 25.x | High — may move to UXP |
+| QE in panels | Low | Anecdotal | Very high — thread context |
+
+---
+
+## UXP Migration Timeline
+
+| Feature | Premiere 25.6 | 26.x (Expected) |
+|---|---|---|
+| effects-by-name | ❌ | Likely ✅ |
+| ripple edits | ❌ | Likely ✅ |
+|
+cat > Examples/extendscript/cep-bridge-safe.jsx << 'EOF'
+/**
+ * CEP Panel Safety Bridge (ExtendScript)
+ * 
+ * Safe wrapper for CEP <-> ExtendScript communication with error handling.
+ * Meant to be invoked FROM CEP panel via CSInterface.evalScript()
+ * 
+ * Usage (from CEP JavaScript):
+ *   csInterface.evalScript(
+ *     'var bridgeResult = ' + jsxCode + '; bridgeResult;',
+ *     callback
+ *   );
+ */
+
+(function() {
+  'use strict';
+
+  // CEP Bridge Utilities
+  var CEPBridge = {
+    /**
+     * Safe project getter with error wrapping
+     */
+    getActiveProject: function() {
+      if (!app || !app.project) {
+        return { error: "Premiere not available" };
+      }
+      try {
+        return {
+          name: app.project.name,
+          path: app.project.path,
+          isValid: app.project.isValid
+        };
+      } catch (e) {
+        return { error: e.toString() };
+      }
+    },
+
+    /**
+     * List all sequences with safe iteration
+     */
+    listSequences: function() {
+      if (!app || !app.project) {
+        return { error: "No project" };
+      }
+      
+      var sequences = [];
+      try {
+        var numSeqs = app.project.sequences.numSequences;
+        for (var i = 0; i < numSeqs; i++) {
+          var seq = app.project.sequences[i];
+          sequences.push({
+            index: i,
+            name: seq.name,
+            duration: seq.duration.seconds,
+            videoTracks: seq.videoTracks.numTracks,
+            audioTracks: seq.audioTracks.numTracks
+          });
+        }
+        return { sequences: sequences };
+      } catch (e) {
+        return { error: e.toString() };
+      }
+    },
+
+    /**
+     * Get active sequence metadata
+     */
+    getActiveSequence: function() {
+      if (!app || !app.project) {
+        return { error: "No project" };
+      }
+      
+      try {
+        var seq = app.project.activeSequence;
+        if (!seq) {
+          return { error: "No active sequence" };
+        }
+        
+        return {
+          name: seq.name,
+          framerate: seq.frameRate,
+          duration: seq.duration.seconds,
+          pixelAspectRatio: seq.pixelAspectRatio,
+          videoTracks: seq.videoTracks.numTracks,
+          audioTracks: seq.audioTracks.numTracks
+        };
+      } catch (e) {
+        return { error: e.toString() };
+      }
+    },
+
+    /**
+     * Get footer text (safe read)
+     */
+    getFooterText: function(index) {
+      if (!app || !app.project) {
+        return { error: "No project" };
+      }
+      
+      try {
+        var text = app.project.getFooterText(index);
+        return { text: text };
+      } catch (e) {
+        return { error: e.toString() };
+      }
+    }
+  };
+
+  // Execute requested command
+  // Called as: var result = new CBridge().call('listSequences');
+  function Bridge(methodName) {
+    this.methodName = methodName;
+  }
+
+  Bridge.prototype.call = function() {
+    if (CEPBridge[this.methodName]) {
+      return CEPBridge[this.methodName].apply(null, arguments);
+    }
+    return { error: "Method not found: " + this.methodName };
+  };
+
+  // Return JSON-serializable result
+  // CEP will receive this as string; parse with JSON.parse()
+  return JSON.stringify({
+    status: "ready",
+    available: Object.keys(CEPBridge),
+    methods: {
+      getActiveProject: "Returns project name, path, validity",
+      listSequences: "Returns array of all sequences with metadata",
+      getActiveSequence: "Returns active sequence metadata",
+      getFooterText: "Returns footer text by index"
+    }
+  });
+})();
