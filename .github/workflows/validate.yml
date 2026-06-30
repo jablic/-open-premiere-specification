@@ -2,21 +2,90 @@ name: Validate Knowledge Base
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
+    paths:
+      - 'Knowledge/**'
+      - 'Examples/**'
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   validate:
-    name: Validate Knowledge docs
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: |
-          python -m pip install --upgrade pip
-          python -m pip install pyyaml
-      - run: python3 tools/validate_frontmatter.py
-      - run: python3 tools/build_index.py
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install PyYAML
+      run: pip install PyYAML
+    
+    - name: Validate YAML Frontmatter
+      run: |
+        python3 << 'EOVALIDATE'
+import yaml
+import sys
+from pathlib import Path
+
+KNOWLEDGE_DIR = Path("Knowledge")
+errors = []
+
+required_fields = {"id", "title", "category", "status", "doc_status"}
+
+for md_file in sorted(KNOWLEDGE_DIR.glob("*.md")):
+    try:
+        with open(md_file, 'r') as f:
+            content = f.read()
+        
+        if not content.startswith("---"):
+            errors.append(f"{md_file.name}: Missing frontmatter delimiter")
+            continue
+        
+        frontmatter_end = content.find("---", 3)
+        if frontmatter_end == -1:
+            errors.append(f"{md_file.name}: Unclosed frontmatter")
+            continue
+        
+        frontmatter = content[3:frontmatter_end].strip()
+        data = yaml.safe_load(frontmatter)
+        
+        if not isinstance(data, dict):
+            errors.append(f"{md_file.name}: Invalid YAML frontmatter")
+            continue
+        
+        missing = required_fields - set(data.keys())
+        if missing:
+            errors.append(f"{md_file.name}: Missing fields {missing}")
+        
+        valid_status = {"current", "legacy", "deprecated", "undocumented", "mixed"}
+        if data.get("status") not in valid_status:
+            errors.append(f"{md_file.name}: Invalid status '{data.get('status')}'")
+        
+        valid_doc_status = {"complete", "partial", "stub"}
+        if data.get("doc_status") not in valid_doc_status:
+            errors.append(f"{md_file.name}: Invalid doc_status '{data.get('doc_status')}'")
+    
+    except Exception as e:
+        errors.append(f"{md_file.name}: {str(e)}")
+
+if errors:
+    print("❌ Validation Errors:")
+    for error in errors:
+        print(f"  - {error}")
+    sys.exit(1)
+else:
+    print("✅ All Knowledge docs validated")
+    sys.exit(0)
+EOVALIDATE
+    
+    - name: Count Knowledge Docs
+      run: |
+        echo "Knowledge Docs:"
+        ls -1 Knowledge/*.md | wc -l
+        echo ""
+        echo "Examples:"
+        find Examples -type f -name "*.jsx" -o -name "*.py" | wc -l

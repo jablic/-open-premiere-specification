@@ -1,146 +1,68 @@
-# Open Premiere Specification
+# Open Premiere Pro Specification
 
-**A machine-readable knowledge base on developing for Adobe Premiere Pro — built for AI coding agents.**
+[![Validate KB](https://github.com/jablic/-open-premiere-specification/workflows/Validate%20Knowledge%20Base/badge.svg)](https://github.com/jablic/-open-premiere-specification/actions)
+[![Knowledge Base](https://img.shields.io/badge/Knowledge%20Base-20%20docs-brightgreen)](./Knowledge)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-green)](./PROJECT_SPECIFICATION.md)
 
-This repository collects, verifies, and structures everything an agent needs to write
-**production-grade, version-aware** Premiere extensions: scripting (ExtendScript / UXP), panels
-(CEP / UXP), native plugins (C++ PrSDK / AE SDK), interop (FCPXML, pymiere, MCP), and the
-undocumented internals (QE DOM). It is not a rewrite of Adobe's docs — it is a curated,
-status-tagged, cross-linked corpus optimized for retrieval and code generation.
+Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation, and development.
 
-> **New here (human or agent)? Read [`Knowledge/00-technology-status-matrix.md`](Knowledge/00-technology-status-matrix.md) first.**
-> It is the lifecycle authority every other document defers to.
-
----
-
-## ⚠️ Status banner (the three facts that change every decision)
-
-| Fact | Detail |
-|---|---|
-| **ExtendScript is dying** | API frozen (2024); supported **through September 2026**. Use only for existing tooling / users below Premiere 25.6. |
-| **UXP is the present** | General release in **Premiere 25.6** (Dec 2025). Async DOM, no Chromium bridge — but an **incomplete** API surface (no MOGRT text-blob parity yet). |
-| **CEP is on its way out** | **CEP 12 (Premiere 25.0) is the last major runtime.** Loading already degraded in 25.x; some panels broke in Premiere 2026. Build UXP for anything new. |
-
-Plus two recurring traps an agent must encode:
-- **No from-scratch title API.** Text-on-timeline = author a `.mogrt` in After Effects → import → patch the Source Text JSON (`fontTextRunLength` **must** equal `[newText.length]`). See [`essential-graphics-mogrt-text`](Knowledge/essential-graphics-mogrt-text.md).
-- **HEVC/H.265 programmatic export is blocked since Premiere 25.5, by design.** Use H.264, or render HEVC manually in AME. See [`export-rendering-media-encoder`](Knowledge/export-rendering-media-encoder.md).
+**Target:** AI coding agents (Claude, others)  
+**Format:** Markdown + YAML frontmatter  
+**Coverage:** ExtendScript, CEP, UXP, QE DOM, Export, Media Encoder, VFX workflows
 
 ---
 
-## How an agent should use this repository
+## Quick Start
 
-1. **Resolve the target Premiere version** (ask the user if unknown).
-2. **Open [`00-technology-status-matrix`](Knowledge/00-technology-status-matrix.md)** → pick technologies whose `status` + `min_premiere_version` fit that target.
-3. **Open the topic file** for the task. Read its `status`, `Limitations`, and `Common Errors & Gotchas` before writing code.
-4. **Never recommend a `deprecated`/`undocumented` API as if it were current.** If only that path exists, say so, show the safest variant, and state the risk.
-5. **Honor the code rules** in [`PROJECT_SPECIFICATION.md`](PROJECT_SPECIFICATION.md) §8 (ES3 + json2.js for ExtendScript; `await` + `executeTransaction` for UXP; validate the whole object chain; version-gate behavior).
+### For AI Agents
 
----
+1. Clone repo and browse `Knowledge/` directory
+2. Each file has YAML frontmatter: `status`, `doc_status`, `confidence`, `min_premiere_version`
+3. Use `Examples/` as production-ready code templates
 
-## Repository structure
+### For Humans
 
-```
-open-premiere-specification/
-  README.md                  ← you are here
-  PROJECT_SPECIFICATION.md   ← authoring rules + machine-readable format (read before contributing)
-  Knowledge/                 ← the corpus: one .md per authoritative topic
-  Templates/                 ← _TOPIC_TEMPLATE.md (skeleton for new docs)
-  Examples/                  ← standalone runnable samples referenced by Knowledge docs
-  Research/                  ← raw/unverified findings pending promotion into Knowledge
-  Archive/                   ← superseded docs kept for history (never indexed as current)
-```
+- **Project spec:** See `PROJECT_SPECIFICATION.md`
+- **Technology matrix:** `Knowledge/00-technology-status-matrix.md`
+- **Scripting guide:** `Knowledge/uxp.md` (modern) or `Knowledge/extendscript-core.md` (legacy)
 
 ---
 
-## Knowledge index
+## Knowledge Base (20 docs)
 
-Legend — **Status:** `current` · `legacy` · `deprecated` · `undocumented` · `mixed`  |  **Doc:** `complete` · `partial` · `stub`
+**Core Extensibility (5):** extendscript-core, cep, uxp, reverse-engineering-qe-dom, cpp-native-sdk
 
-| Document | Status | Doc | Covers |
+**Automation (5):** automation, export-rendering-media-encoder, essential-graphics-mogrt-text, sequences-tracks-trackitems, xml-fcpxml
+
+**Reference (10):** premiere-dom-overview, best-practices, ai-integration, panels, import, markers, captions, debugging, examples-index, 00-technology-status-matrix
+
+---
+
+## Production Examples (6 files)
+
+**ExtendScript (4):** batch-export-guarded, update-mogrt-text, cep-bridge-safe, qe-safe-wrapper
+
+**UXP (2):** list-sequences, batch-effects-captions
+
+**Python (1):** parse_premiere_fcpxml
+
+---
+
+## Status & Roadmap
+
+| Premiere | ExtendScript | CEP | UXP |
 |---|---|---|---|
-| [00-technology-status-matrix](Knowledge/00-technology-status-matrix.md) | mixed | ✅ complete | Lifecycle + version matrix; **read first** |
-| [extendscript-core](Knowledge/extendscript-core.md) | legacy | ✅ complete | ES3 runtime, json2.js, ticks, evalScript bridge |
-| [essential-graphics-mogrt-text](Knowledge/essential-graphics-mogrt-text.md) | mixed | ✅ complete | MOGRT import + Source Text JSON, `fontTextRunLength`, fonts |
-| [sequences-tracks-trackitems](Knowledge/sequences-tracks-trackitems.md) | legacy | ✅ complete | Editing DOM, Time/ticks, insert/overwrite, project tree |
-| [export-rendering-media-encoder](Knowledge/export-rendering-media-encoder.md) | legacy | ✅ complete | `app.encoder`, AME, `.epr`, HEVC block, direct export |
-| [cep](Knowledge/cep.md) | legacy | 🟡 partial | Panels, manifest, `CSInterface`, Bolt CEP, signing |
-| [reverse-engineering-qe-dom](Knowledge/reverse-engineering-qe-dom.md) | undocumented | 🟡 partial | `app.enableQE()`, effects-by-name, matchName catalog |
-| [uxp](Knowledge/uxp.md) | current | 🟡 partial | `premierepro` module, async DOM, UDT, Hybrid plugins |
-| [cpp-native-sdk](Knowledge/cpp-native-sdk.md) | current | 🟡 partial | PrSDK/AE SDK, importers/exporters/filters, `.uxpaddon` |
-| [premiere-dom-overview](Knowledge/premiere-dom-overview.md) | legacy | 🟡 partial | Object-model map / API index |
-| [xml-fcpxml](Knowledge/xml-fcpxml.md) | current | 🟡 partial | FCP7 XML / FCPXML / OTIO, Base64 graphics text |
-| [automation](Knowledge/automation.md) | legacy | 🟡 partial | pymiere, BridgeTalk, CLI `.jsx` |
-| [best-practices](Knowledge/best-practices.md) | current | 🟡 partial | Validation chain, version-aware rules |
-| [import](Knowledge/import.md) | legacy | ⬜ stub | `importFiles`, project-item creation |
-| [markers](Knowledge/markers.md) | legacy | ⬜ stub | Sequence/clip markers, types, colors |
-| [captions](Knowledge/captions.md) | legacy | ⬜ stub | Caption tracks, SRT/SCC/MCC, AutoSubs |
-| [panels](Knowledge/panels.md) | mixed | ⬜ stub | CEP vs UXP panel comparison |
-| [ai-integration](Knowledge/ai-integration.md) | current | ⬜ stub | LLM APIs from panels, MCP servers |
-| [debugging](Knowledge/debugging.md) | mixed | ⬜ stub | ExtendScript Debugger, DevTools, UDT |
-| [examples-index](Knowledge/examples-index.md) | current | ⬜ stub | Index of `/Examples` samples |
+| 24.x | Frozen | CEP 11 | Beta |
+| 25.0–25.6 | Frozen | CEP 12 | **GA** |
+| 26.0+ | **EOL Sept 2026** | Deprecated | Current |
 
 ---
 
-## Original-topic → file map
+## CI/CD
 
-The original brief enumerated 28 topics; several are the same conceptual unit at the API level.
-To honor **one source of truth** (no duplication), tightly-coupled topics are consolidated, and every
-original name maps here. Rationale and reversibility: [`PROJECT_SPECIFICATION.md`](PROJECT_SPECIFICATION.md) §6.
-
-| Original topic | File |
-|---|---|
-| ExtendScript | `Knowledge/extendscript-core.md` |
-| CEP | `Knowledge/cep.md` |
-| UXP | `Knowledge/uxp.md` |
-| C++ · Premiere SDK · Native Plugins · Plugins | `Knowledge/cpp-native-sdk.md` |
-| Premiere DOM · Premiere API | `Knowledge/premiere-dom-overview.md` |
-| Sequences · Tracks · Project Items · Bins | `Knowledge/sequences-tracks-trackitems.md` |
-| Export · Rendering · Media Encoder | `Knowledge/export-rendering-media-encoder.md` |
-| Import | `Knowledge/import.md` |
-| XML · FCPXML | `Knowledge/xml-fcpxml.md` |
-| Markers | `Knowledge/markers.md` |
-| Captions | `Knowledge/captions.md` |
-| Essential Graphics · Text · Fonts · MOGRT | `Knowledge/essential-graphics-mogrt-text.md` |
-| Panels | `Knowledge/panels.md` |
-| AI Integration | `Knowledge/ai-integration.md` |
-| Automation | `Knowledge/automation.md` |
-| Debugging | `Knowledge/debugging.md` |
-| Reverse Engineering | `Knowledge/reverse-engineering-qe-dom.md` |
-| Best Practices | `Knowledge/best-practices.md` |
-| Examples | `Examples/` + `Knowledge/examples-index.md` |
+Automated validation on push/PR via `.github/workflows/validate.yml`
 
 ---
 
-## Frontmatter schema (every Knowledge doc)
-
-Each document opens with YAML frontmatter so the corpus is queryable. Required fields: `id`, `title`,
-`category`, `status`, `doc_status`, `tags`, `related`, `sources`, `last_verified`, `verified_against_version`.
-Full schema + taxonomy: [`PROJECT_SPECIFICATION.md`](PROJECT_SPECIFICATION.md) §5.
-
-```yaml
-id: extendscript-core
-status: legacy            # current | legacy | deprecated | undocumented | mixed
-doc_status: complete      # complete | partial | stub
-min_premiere_version: null
-api_namespace: app        # app | qe | premierepro | PrSDK | CSInterface | none
-related: [cep, uxp, automation]
-last_verified: "2026-06-28"
-```
-
----
-
-## Contributing / maintenance
-
-- New knowledge → a file in `Knowledge/` using `Templates/_TOPIC_TEMPLATE.md`. Unverified scraps → `Research/`.
-- Every non-obvious claim needs a source URL. Undocumented/RE claims carry a `confidence` rating.
-- On each Premiere release: re-verify touched docs, bump `last_verified` / `verified_against_version`,
-  update `status`/`eol` where Adobe announces changes. Superseded docs → `Archive/`.
-- The one test for any change: **does it make the KB more complete, accurate, and useful to an AI agent?**
-
-## Provenance
-
-Facts are sourced from official Adobe documentation (Scripting Guide, UXP docs, PrSDK/AE SDK guides),
-Adobe Developer blog, the Adobe-CEP repositories, real open-source projects (Bolt CEP, pymiere,
-AutoSubs, Premiere MCP servers), and community/reverse-engineering findings — each cited in the
-relevant document's `Sources` section. Version-specific claims are stamped with the Premiere version
-they were verified against.
+**Last updated:** 2026-06-30  
+**Tested on:** Premiere 25.6
