@@ -1,0 +1,62 @@
+id: RULE-0012-markers-survive-edits-only-if-timecode-preserved
+title: Sequence markers survive edits only if their timecode is still valid
+description: |
+  Markers are anchored to specific timecodes, not to clips. When clips are
+  deleted, moved, or trimmed, markers at that timecode may disappear or shift
+  unexpectedly. Marker references should be validated after sequence changes.
+kind: rule
+tags: [markers, editing, timeline-modification, best-practices, safety]
+domain: rules.timeline-operations
+
+violation_example: |
+  WRONG: Assuming markers survive arbitrary edits
+  ---
+  const vfxMarker = sequence.markers.find(m => m.name === "VFX-SHOT-001");
+  sequence.videoTracks[0].clips[0].delete(); // Remove first clip
+
+  // vfxMarker may now reference incorrect timecode or be deleted!
+  console.log(vfxMarker.timecode); // Undefined or wrong value
+
+consequence: |
+  VFX shot lists become misaligned with actual sequence structure.
+  Batch operations using markers as reference points produce incorrect results.
+  Downstream workflows fail silently with incorrect timecode offsets.
+
+correct_pattern: |
+  CORRECT: Validate markers after sequence modifications
+  ---
+  const vfxMarkers = Array.from(sequence.markers).map(m => ({
+    name: m.name,
+    timecode: m.timecode,
+    expectedClip: null
+  }));
+
+  // Perform sequence edit
+  sequence.videoTracks[0].clips[0].delete();
+
+  // Validate and re-anchor markers
+  vfxMarkers.forEach(marker => {
+    const clip = sequence.getClipAtTime(marker.timecode);
+    if (!clip) {
+      console.warn(`Marker ${marker.name} references deleted clip`);
+      // Optionally delete orphaned marker
+      const orphaned = sequence.markers.find(m => m.timecode === marker.timecode);
+      if (orphaned) orphaned.delete();
+    } else {
+      marker.expectedClip = clip;
+    }
+  });
+
+safety_notes:
+  - Always backup sequence before destructive edits
+  - Document marker timecodes before major restructuring
+  - Consider creating duplicate sequence for validation
+
+impact: high
+
+related_rules:
+  - RULE-0003-backup-before-destructive-edit
+  - RULE-0008-vfx-shot-id-uniqueness
+
+test_coverage:
+  - Need: TEST-MARKER-EDIT-PRESERVATION

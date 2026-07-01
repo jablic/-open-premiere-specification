@@ -1,0 +1,48 @@
+id: CAP-0009-media-search-filter
+title: Search and filter media by metadata properties
+description: |
+  Query project media inventory using flexible filtering on duration,
+  creation date, codec, resolution, frame rate, and custom metadata tags.
+  Returns filtered ProjectItem collection with pagination support.
+kind: capability
+tags: [search, metadata, filtering, inventory, query]
+domain: automation.media-handling
+
+safety:
+  - should: Validate search criteria before execution
+  - should: Implement timeout for large inventory searches
+  - should: Log search queries for audit trail
+
+spec:
+  method: app.project.searchMedia
+  required:
+    - searchCriteria: object<{ property, operator, value }>
+  optional:
+    - logicalOperator: string (default: "AND")
+    - sortBy: string (default: "name")
+    - limit: number (default: 1000)
+    - offset: number (default: 0)
+  returns: object<{ items, totalCount, executionTimeMs }>
+
+examples:
+  - name: Find all ProRes 422 HQ media over 10 minutes duration
+    code: |
+      const query = {
+        searchCriteria: [
+          { property: 'codec', operator: '=', value: 'ProRes 422 HQ' },
+          { property: 'duration', operator: '>', value: 600000 }
+        ],
+        logicalOperator: 'AND',
+        sortBy: 'duration',
+        limit: 100
+      };
+      const result = await app.project.searchMedia(query);
+      console.log(`Found ${result.totalCount} matching clips`);
+      result.items.forEach(item => {
+        console.log(`${item.name}: ${item.duration}ms, ${item.codec}`);
+      });
+
+related:
+  - CAP-0001-read-project
+  - OBJ-0004-project-item
+  - REC-0001-read-project-inventory

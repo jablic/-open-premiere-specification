@@ -1,0 +1,146 @@
+id: REC-0008-vfx-import-from-markers
+title: Generate VFX shot list from timeline markers and create pull sequences
+description: |
+  Parse Sequence markers to extract VFX shot information, correlate with
+  high-resolution media using search filters, and create pre-composed
+  sequences ready for VFX send-off. Demonstrates marker parsing, media
+  search, and nested sequence creation.
+kind: recipe
+tags: [vfx-workflow, markers, shot-lists, automation, finishing]
+domain: workflows.vfx-integration
+
+scope: |
+  Assumes Sequence contains markers with naming convention: VFX-{ShotID}
+  Assumes high-resolution source clips are stored in separate bin
+  Creates nested sequences for each VFX shot with in/out point precision
+
+steps:
+  - title: "Parse VFX Markers"
+    description: "Extract VFX shot information from sequence markers"
+    code: |
+      const sequence = app.project.activeSequence;
+      const vfxMarkers = sequence.markers.filter(m => m.name.startsWith('VFX-'));
+      const vfxShots = [];
+
+      vfxMarkers.forEach(marker => {
+        const shotMatch = marker.name.match(/VFX-(\w+)-(\d+)/);
+        if (shotMatch) {
+          vfxShots.push({
+            shotID: shotMatch[1],
+            shotNum: shotMatch[2],
+            timecode: marker.timecode,
+            duration: marker.duration,
+            comment: marker.comment,
+            color: marker.color
+          });
+        }
+      });
+
+      console.log(`Extracted ${vfxShots.length} VFX shots from markers`);
+
+  - title: "Search for High-Resolution Source Media"
+    description: "Find matching source clips for VFX shots"
+    code: |
+      const sourceClips = {};
+      for (const shot of vfxShots) {
+        // Search for source with matching shot ID
+        const query = {
+          searchCriteria: [
+            { property: 'name', operator: 'contains', value: shot.shotID },
+            { property: 'duration', operator: '>', value: shot.duration }
+          ],
+          logicalOperator: 'AND',
+          limit: 5
+        };
+
+        const result = await app.project.searchMedia(query);
+        if (result.items.length > 0) {
+          sourceClips[shot.shotID] = result.items[0]; // Use best match
+          console.log(`Found source for shot ${shot.shotID}: ${result.items[0].name}`);
+        } else {
+          console.warn(`No source found for shot ${shot.shotID}`);
+        }
+      }
+
+  - title: "Create VFX Pull Sequences"
+    description: "Build nested sequences with precise timecode and handles"
+    code: |
+      const vfxBin = app.project.rootItem.createBin('VFX-Pulls');
+      const vfxPulls = {};
+
+      for (const shot of vfxShots) {
+        const source = sourceClips[shot.shotID];
+        if (!source) continue;
+
+        // Create nested sequence with handles (2sec before/after)
+        const handleMs = 2000;
+        const pullSeq = app.project.createSequence(
+          `VFX-${shot.shotID}-pull`,
+          { type: 'Nested' }
+        );
+
+        // Place source with handles
+        const inPoint = Math.max(0, shot.timecode - handleMs);
+        const outPoint = shot.timecode + shot.duration + handleMs;
+
+        const trackItem = pullSeq.videoTracks[0].addClip(
+          source,
+          inPoint,
+          { duration: outPoint - inPoint }
+        );
+
+        // Add metadata marker for VFX house
+        const marker = pullSeq.addMarker('VFX-START', shot.timecode);
+        marker.comment = shot.comment || `Shot ${shot.shotNum} - Handle: -2s to +2s`;
+
+        vfxPulls[shot.shotID] = pullSeq;
+        vfxBin.addItem(pullSeq);
+      }
+
+  - title: "Generate VFX Delivery Package"
+    description: "Export pull sequences and create shot manifest"
+    code: |
+      const manifest = {
+        project: app.project.name,
+        createdDate: new Date().toISOString(),
+        shots: []
+      };
+
+      for (const [shotID, pullSeq] of Object.entries(vfxPulls)) {
+        // Export to ProRes for VFX house
+        const exportPath = `./vfx-pulls/${shotID}-pull.mov`;
+        await app.project.exportBatch(
+          [pullSeq],
+          [{ codec: 'ProRes', preset: 'ProRes 422 HQ', outputPath: exportPath }],
+          { validatePresets: true }
+        );
+
+        manifest.shots.push({
+          shotID,
+          filename: `${shotID}-pull.mov`,
+          duration: pullSeq.duration,
+          handles: 2000,
+          metadata: pullSeq.markers[0]?.comment
+        });
+      }
+
+      // Save manifest for VFX house
+      const fs = require('fs');
+      fs.writeFileSync('./vfx-pulls/manifest.json', JSON.stringify(manifest, null, 2));
+
+safety_considerations:
+  - Validate marker naming convention before script execution
+  - Create backup sequences before nesting operations
+  - Document handle duration for VFX house specifications
+  - Verify all source clips exist before creating pull sequences
+  - Test on single shot before batch operation
+
+expected_outcome: |
+  Organized VFX pull directory with frame-accurate nested sequences,
+  high-res source media, and JSON manifest for seamless VFX integration.
+
+related:
+  - OBJ-0009-marker
+  - CAP-0003-generate-vfx-list
+  - CAP-0009-media-search-filter
+  - REC-0003-vfx-pull-list-from-markers

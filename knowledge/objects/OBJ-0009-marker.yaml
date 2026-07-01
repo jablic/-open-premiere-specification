@@ -1,0 +1,62 @@
+id: OBJ-0009-marker
+title: Marker object model
+description: |
+  A Marker is a named annotation at a specific timecode on a Sequence or
+  Track. Markers support custom colors, durations, and comments for workflow
+  organization and review comments.
+kind: object
+tags: [markers, annotations, timeline, metadata, object-model]
+domain: object-model
+
+identity:
+  - Marker is scoped to Sequence or Track
+  - Marker identity determined by (parent, timecode)
+  - Duplicate markers at same timecode are allowed
+  - Marker references survive clip deletion if timecode is preserved
+
+properties:
+  name: { type: "string", mutable: true }
+  timecode: { type: "number", mutable: true, unit: "milliseconds", significance: "high" }
+  duration: { type: "number", mutable: true, unit: "milliseconds", default: 0 }
+  comment: { type: "string", mutable: true }
+  color: { type: "enum:Red|Blue|Green|Yellow|Purple|Orange|Brown", mutable: true }
+  type: { type: "enum:Comment|Subdivision|Chapter", mutable: true, default: "Comment" }
+  parent: { type: "Sequence|Track", mutable: false, reference: true }
+
+operations:
+  - method: setName
+    parameters: [name: string]
+    safety: preserves_marker_identity
+  - method: setComment
+    parameters: [comment: string]
+    safety: non_destructive
+  - method: setColor
+    parameters: [color: ColorEnum]
+    safety: non_destructive
+  - method: move
+    parameters: [newTimecode: number]
+    safety: may_affect_clip_boundaries
+  - method: delete
+    parameters: []
+    returns: void
+    safety: does_not_affect_clips
+
+marker_types:
+  - Comment: General annotation, preserved in XML export
+  - Subdivision: Timeline subdivision marker, used for rough cut structure
+  - Chapter: Chapter marker for export and navigation
+
+guarantees:
+  - Marker timecode is preserved across undo/redo
+  - Marker color is preserved in XML export
+  - Markers do not affect media or clip content
+
+antipatterns:
+  - Do not assume markers are unique per timecode
+  - Do not delete markers during sequence structure changes
+  - Do not assume marker names are preserved across trim operations
+
+related:
+  - OBJ-0005-sequence
+  - OBJ-0006-track
+  - REC-0003-vfx-pull-list-from-markers
