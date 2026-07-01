@@ -10,7 +10,7 @@ min_premiere_version: null
 api_namespace: app
 languages: [extendscript, uxp]
 tags: [import, ingestion, media, linked-vs-proxy]
-related: [export-rendering-media-encoder, automation, xml-fcpxml]
+related: [media-linking-batch-operations, export-rendering-media-encoder, automation, xml-fcpxml]
 sources: [
   "Production workflows",
   "Adobe documentation"

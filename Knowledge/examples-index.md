@@ -10,7 +10,7 @@ min_premiere_version: null
 api_namespace: null
 languages: [javascript, extendscript, python]
 tags: [examples, reference, production-code]
-related: [extendscript-core, uxp, cep, export-rendering-media-encoder]
+related: [extendscript-core, uxp, cep, export-rendering-media-encoder, markers-and-annotations, media-linking-batch-operations, ui-theming-and-responsive-panels]
 sources: [
   "Production testing: Premiere 24.x, 25.x"
 ]
@@ -39,6 +39,12 @@ Safe CEP panel ↔ ExtendScript communication with error wrapping. See: `Example
 ### qe-safe-wrapper.jsx
 QE DOM utilities with bounds checking and error handling. See: `Examples/extendscript/qe-safe-wrapper.jsx`
 
+### markers-batch-add.jsx
+Batch create timeline markers with colors and metadata from JSON spec. See: `Examples/markers-batch-add.jsx`
+
+### media-batch-relink.jsx
+Batch relink offline media, import new files, generate report. See: `Examples/media-batch-relink.jsx`
+
 ---
 
 ## UXP Examples
@@ -48,6 +54,9 @@ List all sequences with metadata (async). See: `Examples/uxp/list-sequences.jsx`
 
 ### batch-effects-captions.jsx
 Batch apply effects and captions using UXP. See: `Examples/uxp/batch-effects-captions.jsx`
+
+### uxp-async-patterns.js
+Comprehensive async/await patterns, createSequenceFromMedia, batch markers, error handling. See: `Examples/uxp-async-patterns.js`
 
 ---
 
@@ -64,10 +73,15 @@ Parse FCP7 XML exported from Premiere Pro. Extracts clips, markers, timing. See:
 |---|---|---|---|
 | update-mogrt-text.jsx | ExtendScript | 14.1 | ✅ Production |
 | batch-export-guarded.jsx | ExtendScript | 24.x | ✅ Production |
+| markers-batch-add.jsx | ExtendScript | 14.x | ✅ Production |
+| media-batch-relink.jsx | ExtendScript | 14.x | ✅ Production |
 | cep-bridge-safe.jsx | ExtendScript | 25.x | ⚠️ Legacy |
 | qe-safe-wrapper.jsx | ExtendScript | 24.x | ⚠️ Undocumented |
+| cep-theme-sync-panel.jsx+html | CEP (HTML/JS) | 14.x | ✅ Production |
+| uxp-responsive-rubber-panel.html | UXP panel | 25.6 | ✅ Current |
 | list-sequences.jsx | UXP/JavaScript | 25.6 | ✅ Current |
 | batch-effects-captions.jsx | UXP/JavaScript | 25.6 | ✅ Current |
+| uxp-async-patterns.js | UXP/JavaScript | 25.6 | ✅ Current |
 | parse_premiere_fcpxml.py | Python | 3.8+ | ✅ Current |
 
 ---

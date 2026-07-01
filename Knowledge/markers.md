@@ -10,7 +10,7 @@ min_premiere_version: "14.0"
 api_namespace: app
 languages: [extendscript, uxp]
 tags: [markers, annotations, timeline, cue-points]
-related: [sequences-tracks-trackitems, automation]
+related: [markers-and-annotations, sequences-tracks-trackitems, automation, export-rendering-media-encoder]
 sources: [
   "https://ppro-scripting.docsforadobe.dev/",
   "Production workflows (Premiere 25.x)"

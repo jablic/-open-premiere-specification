@@ -1,7 +1,7 @@
 # Open Premiere Pro Specification
 
 [![Validate KB](https://github.com/jablic/-open-premiere-specification/workflows/Validate%20Knowledge%20Base/badge.svg)](https://github.com/jablic/-open-premiere-specification/actions)
-[![Knowledge Base](https://img.shields.io/badge/Knowledge%20Base-20%20docs-brightgreen)](./Knowledge)
+[![Knowledge Base](https://img.shields.io/badge/Knowledge%20Base-37%20docs-brightgreen)](./Knowledge)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-green)](./PROJECT_SPECIFICATION.md)
 
 Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation, and development.
@@ -38,11 +38,15 @@ Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation
 
 ---
 
-## Production Examples (6 files)
+## Production Examples (13 files)
 
-**ExtendScript (4):** batch-export-guarded, update-mogrt-text, cep-bridge-safe, qe-safe-wrapper
+**ExtendScript (5):** batch-export-guarded, update-mogrt-text, cep-bridge-safe, qe-safe-wrapper, markers-batch-add, media-batch-relink
 
-**UXP (2):** list-sequences, batch-effects-captions
+**UXP (3):** list-sequences, batch-effects-captions, uxp-async-patterns
+
+**CEP (2):** cep-theme-sync-panel.jsx, cep-theme-sync-panel.html
+
+**UXP Panel (1):** uxp-responsive-rubber-panel.html
 
 **Python (1):** parse_premiere_fcpxml
 
