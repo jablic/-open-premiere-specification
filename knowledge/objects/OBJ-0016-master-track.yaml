@@ -1,0 +1,84 @@
+id: OBJ-0016-master-track
+title: MasterTrack object model (output bus)
+description: |
+  MasterTrack represents the final audio/video output bus of a Sequence.
+  The video master applies composite effects and color correction to final
+  output. The audio master receives all submix signals.
+kind: object
+tags: [master-output, final-mix, broadcast-safe, object-model]
+domain: object-model
+
+identity:
+  - MasterTrack is unique per Sequence (one audio master, one video master)
+  - MasterTrack has fixed identity (not deleted/recreated)
+  - MasterTrack receives all routed signals (submixes, tracks)
+  - MasterTrack properties affect entire sequence output
+
+properties:
+  type: { type: "constant:MasterAudio|MasterVideo", immutable: true }
+  gain: { type: "number", mutable: true, unit: "dB", default: 0 }
+  effects: { type: "array<Effect>", mutable: true, ordered: true }
+  solo: { type: "boolean", mutable: true, default: false }
+  muted: { type: "boolean", mutable: true, default: false }
+  meterInputLevel: { type: "number", unit: "dB", readonly: true }
+  meterOutputLevel: { type: "number", unit: "dB", readonly: true }
+  colorProfile: { type: "string", mutable: true }
+  lumaRange: { type: "enum:Legal|Full", mutable: true, default: "Legal" }
+
+master_audio_properties:
+  - Receives all submix signals
+  - Final loudness metering point
+  - Master gain affects all audio levels
+  - Common effects: Loudness Radar, LUFS meter, limiter
+
+master_video_properties:
+  - Receives composite video from all video tracks
+  - Common effects: broadcast-safe limiter, color correction
+  - lumaRange: Legal (16-235) for broadcast, Full (0-255) for digital
+  - Color space and LUT application at master level
+
+operations:
+  - method: setGain
+    parameters: [gaindB: number]
+    safety: affects_final_output_level
+  - method: addEffect
+    parameters: [effect: Effect, position?: number]
+    safety: affects_entire_sequence_output
+  - method: setColorProfile
+    parameters: [profileName: string]
+    safety: affects_color_output
+  - method: meterPeak
+    parameters: []
+    returns: number
+    safety: readonly_measurement
+  - method: meterLUFS
+    parameters: [gatingMode?: enum:short|full]
+    returns: object<{ integrated, shortTerm, momentary }>
+    safety: readonly_measurement
+
+guarantees:
+  - Master gain applies to all input signals before output
+  - Master effects are always last in signal chain
+  - Master meter readings are accurate for final output levels
+  - Color profile changes affect export and preview rendering
+
+antipatterns:
+  - Do not mix gain/compression between master and submixes (unpredictable)
+  - Do not apply creative effects on master (use submixes instead)
+  - Do not set master gain > 0 for broadcast (risk of clipping)
+  - Do not assume master effects are bypassed in preview
+
+broadcast_safe_pattern: |
+  Recommended master setup for broadcast delivery:
+    1. All audio tracks → submixes (dialogue/music/effects)
+    2. All submixes → Master Audio
+    3. Master Audio effects: Loudness Radar + Limiter at -1dB
+    4. Video Master: Color limiter + Broadcast Safe effect
+    5. Validate LUFS -23dB ±1 for broadcast
+    6. Validate luma range: 16-235 (Legal) for SDI output
+
+related:
+  - OBJ-0011-audio-track
+  - OBJ-0014-submix
+  - OBJ-0008-effect
+  - CAP-0013-audio-submix-routing
