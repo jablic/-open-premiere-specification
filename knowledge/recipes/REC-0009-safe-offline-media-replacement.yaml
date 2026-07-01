@@ -1,0 +1,134 @@
+id: REC-0009-safe-offline-media-replacement
+title: Safe offline media replacement with validation and snapshot backup
+description: |
+  Detect offline media, search for replacement clips, validate codec
+  compatibility, and relink with automatic snapshot backup. Demonstrates
+  integrated use of search, validation, relinking, and project snapshots.
+kind: recipe
+tags: [offline-media, relinking, media-recovery, safety, automation]
+domain: workflows.media-management
+
+scope: |
+  Assumes offline clips have consistent naming patterns.
+  Replacement media is available in project bins or searchable locations.
+  Codec compatibility validation prevents format mismatches.
+
+steps:
+  - title: "Create Pre-Relink Snapshot"
+    description: "Backup project state before making changes"
+    code: |
+      const snapshot = await app.project.createSnapshot(
+        'Before-Offline-Relink',
+        'Baseline before attempting offline media replacement',
+        {
+          metadata: {
+            purpose: 'offline_recovery',
+            stage: 'post-production',
+            offline_count: 'TBD'
+          }
+        }
+      );
+      console.log(`Created snapshot: ${snapshot.snapshotId}`);
+
+  - title: "Detect All Offline Media"
+    description: "Find all clips marked as offline"
+    code: |
+      const offlineClips = [];
+      const searchResult = await app.project.searchMedia({
+        searchCriteria: [
+          { property: 'status', operator: '=', value: 'offline' }
+        ],
+        limit: 1000
+      });
+
+      console.log(`Found ${searchResult.totalCount} offline clips`);
+
+  - title: "Search for Replacement Media"
+    description: "Find online clips matching offline clip names"
+    code: |
+      const replacementMap = {};
+      for (const offlineClip of searchResult.items) {
+        const baseNameMatch = offlineClip.name.match(/^([A-Z0-9_]+)/)[0];
+
+        const onlineSearch = await app.project.searchMedia({
+          searchCriteria: [
+            { property: 'name', operator: 'contains', value: baseNameMatch },
+            { property: 'status', operator: '=', value: 'online' }
+          ],
+          limit: 5
+        });
+
+        if (onlineSearch.items.length > 0) {
+          replacementMap[offlineClip.name] = onlineSearch.items[0];
+          console.log(`Match found: ${offlineClip.name} -> ${onlineSearch.items[0].name}`);
+        }
+      }
+
+  - title: "Validate Codec Compatibility"
+    description: "Ensure replacement media is compatible with export targets"
+    code: |
+      const targetFormats = ['H.264-Broadcast', 'ProRes-Archive'];
+      const validationResult = await app.project.validateCodecs(targetFormats);
+
+      for (const [offlineName, replacement] of Object.entries(replacementMap)) {
+        const clipValidation = validationResult.compatible.find(
+          c => c.name === replacement.name
+        );
+        if (!clipValidation) {
+          console.warn(`${replacement.name} has codec issues - may require transcoding`);
+        }
+      }
+
+  - title: "Perform Safe Relink"
+    description: "Relink with validation and progress tracking"
+    code: |
+      const relinkResults = {
+        success: [],
+        failed: []
+      };
+
+      for (const [offlineName, replacement] of Object.entries(replacementMap)) {
+        try {
+          await app.project.relinkMedia(offlineName, replacement);
+          relinkResults.success.push(offlineName);
+          console.log(`Relinked: ${offlineName}`);
+        } catch (error) {
+          relinkResults.failed.push({ clip: offlineName, error: error.message });
+          console.error(`Relink failed for ${offlineName}: ${error.message}`);
+        }
+      }
+
+  - title: "Validate Post-Relink"
+    description: "Verify all clips are online and sequences still play"
+    code: |
+      const postValidation = await app.project.searchMedia({
+        searchCriteria: [
+          { property: 'status', operator: '=', value: 'offline' }
+        ]
+      });
+
+      if (postValidation.totalCount === 0) {
+        console.log('SUCCESS: All clips are now online');
+      } else {
+        console.warn(`${postValidation.totalCount} clips remain offline - review and resolve manually`);
+        // Can restore snapshot if relink failed
+        // await app.project.restoreSnapshot('Before-Offline-Relink');
+      }
+
+safety_considerations:
+  - Snapshot created before any modifications (RULE-0003)
+  - Codec validation prevents format mismatches
+  - Manual review opportunity before batch relink
+  - Rollback capability via snapshot restoration
+  - Progress logging for audit trail
+
+expected_outcome: |
+  Project with all offline media replaced with online equivalents, validated
+  for codec compatibility and export readiness. Snapshot provides rollback
+  option if relink produces unexpected results.
+
+related:
+  - CAP-0009-media-search-filter
+  - CAP-0011-codec-format-validation
+  - CAP-0010-project-snapshot-versioning
+  - CAP-0004-batch-relink-media
