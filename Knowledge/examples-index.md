@@ -8,14 +8,14 @@ doc_status: complete
 introduced: "2024"
 min_premiere_version: null
 api_namespace: null
-languages: [javascript, extendscript, python]
-tags: [examples, reference, production-code]
-related: [extendscript-core, uxp, cep, export-rendering-media-encoder, markers-and-annotations, media-linking-batch-operations, ui-theming-and-responsive-panels]
+languages: [javascript, extendscript, python, html, css]
+tags: [examples, reference, production-code, batch-operations, automation]
+related: [extendscript-core, uxp, cep, export-rendering-media-encoder, markers-and-annotations, media-linking-batch-operations, captions, panels, debugging]
 sources: [
   "Production testing: Premiere 24.x, 25.x"
 ]
 confidence: high
-last_verified: "2026-06-30"
+last_verified: "2026-07-01"
 verified_against_version: "25.6"
 ---
 
@@ -44,6 +44,9 @@ Batch create timeline markers with colors and metadata from JSON spec. See: `Exa
 
 ### media-batch-relink.jsx
 Batch relink offline media, import new files, generate report. See: `Examples/media-batch-relink.jsx`
+
+### captions-batch-read.jsx
+Extract captions from timeline, export to SRT/CSV, analyze statistics. See: `Examples/captions-batch-read.jsx`
 
 ---
 
@@ -75,6 +78,7 @@ Parse FCP7 XML exported from Premiere Pro. Extracts clips, markers, timing. See:
 | batch-export-guarded.jsx | ExtendScript | 24.x | ✅ Production |
 | markers-batch-add.jsx | ExtendScript | 14.x | ✅ Production |
 | media-batch-relink.jsx | ExtendScript | 14.x | ✅ Production |
+| captions-batch-read.jsx | ExtendScript | 20.x | ✅ Production |
 | cep-bridge-safe.jsx | ExtendScript | 25.x | ⚠️ Legacy |
 | qe-safe-wrapper.jsx | ExtendScript | 24.x | ⚠️ Undocumented |
 | cep-theme-sync-panel.jsx+html | CEP (HTML/JS) | 14.x | ✅ Production |

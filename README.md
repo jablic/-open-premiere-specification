@@ -28,19 +28,21 @@ Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation
 
 ---
 
-## Knowledge Base (20 docs)
+## Knowledge Base (40 docs)
 
 **Core Extensibility (5):** extendscript-core, cep, uxp, reverse-engineering-qe-dom, cpp-native-sdk
 
-**Automation (5):** automation, export-rendering-media-encoder, essential-graphics-mogrt-text, sequences-tracks-trackitems, xml-fcpxml
+**Automation (6):** automation, export-rendering-media-encoder, essential-graphics-mogrt-text, sequences-tracks-trackitems, xml-fcpxml, captions
 
-**Reference (10):** premiere-dom-overview, best-practices, ai-integration, panels, import, markers, captions, debugging, examples-index, 00-technology-status-matrix
+**Reference (12):** premiere-dom-overview, best-practices, ai-integration, panels, import, markers, debugging, examples-index, 00-technology-status-matrix, markers-and-annotations, media-linking-batch-operations, ui-theming-and-responsive-panels
+
+**Deep Dives & Advanced (7+):** performance-optimization, migration-extendscript-to-uxp, migration-cep-to-uxp, security-signing, audio-api, multicam-api, menu-command-execution, [+ 7 more]
 
 ---
 
-## Production Examples (13 files)
+## Production Examples (14 files)
 
-**ExtendScript (5):** batch-export-guarded, update-mogrt-text, cep-bridge-safe, qe-safe-wrapper, markers-batch-add, media-batch-relink
+**ExtendScript (6):** batch-export-guarded, update-mogrt-text, cep-bridge-safe, qe-safe-wrapper, markers-batch-add, media-batch-relink, captions-batch-read
 
 **UXP (3):** list-sequences, batch-effects-captions, uxp-async-patterns
 
@@ -68,5 +70,5 @@ Automated validation on push/PR via `.github/workflows/validate.yml`
 
 ---
 
-**Last updated:** 2026-06-30  
+**Last updated:** 2026-07-01  
 **Tested on:** Premiere 25.6
