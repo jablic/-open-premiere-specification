@@ -1,0 +1,65 @@
+id: CAP-0010-project-snapshot-versioning
+title: Create and manage project snapshots with version metadata
+description: |
+  Capture project state snapshots with custom metadata and restore to
+  previous versions. Enables non-destructive workflow branching and
+  safe experimentation with complex edits.
+kind: capability
+tags: [versioning, snapshots, project-management, safety, workflow]
+domain: automation.project-management
+
+safety:
+  - must: Always backup before snapshot operations on large projects
+  - must: Validate snapshot integrity after creation
+  - should: Implement snapshot size limits to prevent disk exhaustion
+  - should: Log snapshot creation timestamp and user metadata
+
+spec:
+  method: app.project.createSnapshot
+  required:
+    - name: string
+    - description: string
+  optional:
+    - metadata: object<{ editor, purpose, stage }>
+    - autoBackupBeforeRestore: boolean (default: true)
+    - compressionLevel: number (default: 6, range: 1-9)
+  returns: object<{ snapshotId, size, createdAt, metadata }>
+
+operations:
+  - method: app.project.listSnapshots
+    returns: array<SnapshotMetadata>
+  - method: app.project.restoreSnapshot
+    parameters: [snapshotId: string, createBackupFirst: boolean]
+    safety: creates_backup_before_restore
+  - method: app.project.deleteSnapshot
+    parameters: [snapshotId: string]
+    safety: requires_confirmation
+
+examples:
+  - name: Snapshot before color correction pass
+    code: |
+      await app.project.createSnapshot(
+        'Before-Color-Grade-Pass-1',
+        'Baseline cut ready for color grading',
+        {
+          metadata: {
+            editor: 'colorist@studio.local',
+            purpose: 'color_grading',
+            stage: 'post-production'
+          },
+          compressionLevel: 9
+        }
+      );
+
+      // Perform risky color operations
+      const result = await applyBulkColorCorrection(sequences);
+
+      // If result is unsatisfactory, restore previous snapshot
+      if (!result.success) {
+        await app.project.restoreSnapshot('Before-Color-Grade-Pass-1');
+        console.log('Restored from snapshot - color pass aborted');
+      }
+
+related:
+  - CAP-0001-read-project
+  - RULE-0003-backup-before-destructive-edit

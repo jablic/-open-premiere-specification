@@ -1,0 +1,52 @@
+id: CAP-0012-timeline-ripple-smart-delete
+title: Smart delete with ripple options and gap detection
+description: |
+  Delete clips with options for ripple delete (close gaps), leave gaps,
+  or selective ripple on specific tracks. Detects problematic gaps and
+  validates sequence timing after deletion.
+kind: capability
+tags: [editing, timeline-operations, deletion, ripple, automation]
+domain: automation.timeline
+
+safety:
+  - must: Create backup before bulk deletions (see RULE-0003)
+  - must: Validate sequence timing consistency after deletion
+  - should: Report gap information before ripple operations
+  - should: Prevent accidental deletion of protected tracks
+
+spec:
+  method: app.sequence.deleteClips
+  required:
+    - clips: array<TrackItem>
+  optional:
+    - rippleMode: enum:ripple|leave_gaps|selective_ripple (default: ripple)
+    - selectedTracks: array<Track> (required if rippleMode: selective_ripple)
+    - validateAfter: boolean (default: true)
+  returns: object<{ deletedCount, gapsClosed, gapsLeft, issues }>
+
+examples:
+  - name: Delete all offline clips with ripple on video tracks only
+    code: |
+      const offlineClips = sequence.videoTracks.flatMap(t =>
+        t.clips.filter(c => c.projectItem.isOffline)
+      );
+
+      const result = await sequence.deleteClips(
+        offlineClips,
+        {
+          rippleMode: 'selective_ripple',
+          selectedTracks: sequence.videoTracks,
+          validateAfter: true
+        }
+      );
+
+      console.log(`Deleted ${result.deletedCount} offline clips`);
+      console.log(`Gaps closed: ${result.gapsClosed}`);
+      if (result.issues.length > 0) {
+        console.warn('Post-deletion issues:', result.issues);
+      }
+
+related:
+  - OBJ-0006-track
+  - OBJ-0007-track-item
+  - RULE-0003-backup-before-destructive-edit

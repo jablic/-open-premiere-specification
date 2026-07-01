@@ -1,0 +1,52 @@
+id: CAP-0011-codec-format-validation
+title: Validate media codecs against export format requirements
+description: |
+  Pre-flight check for media codec compatibility with target export formats.
+  Analyzes project media, identifies codec mismatches, and recommends
+  transcoding or format adjustments.
+kind: capability
+tags: [codec, validation, format-compatibility, export, quality-assurance]
+domain: automation.export
+
+safety:
+  - should: Validate all media before batch export
+  - should: Report incompatibilities with suggested remediation
+  - should: Document codec support matrix by Premiere version
+
+spec:
+  method: app.project.validateCodecs
+  required:
+    - targetFormats: array<string>
+  optional:
+    - strictMode: boolean (default: false)
+    - reportLevel: enum:warnings_only|full_report (default: full_report)
+  returns: object<{ compatible, incompatible, warnings, recommendations }>
+
+compatibility_check:
+  - HEVC (H.265): Requires GPU acceleration on most systems
+  - ProRes: All variants supported natively
+  - H.264: Wide compatibility, lower quality than ProRes for archival
+  - DNxHD: Avid-compatible format, good for VFX workflow
+  - GoPro: Camera-native, may need transcoding for editing
+
+examples:
+  - name: Validate project for broadcast delivery
+    code: |
+      const result = await app.project.validateCodecs(
+        ['H.264-Broadcast', 'ProRes-Archive'],
+        { strictMode: true }
+      );
+
+      console.log(`Compatible clips: ${result.compatible.length}`);
+      console.log(`Incompatible clips: ${result.incompatible.length}`);
+
+      if (result.incompatible.length > 0) {
+        result.recommendations.forEach(rec => {
+          console.log(`${rec.clip}: Recommend ${rec.action}`);
+        });
+      }
+
+related:
+  - CAP-0006-batch-export-formats
+  - OBJ-0004-project-item
+  - CAP-0009-media-search-filter

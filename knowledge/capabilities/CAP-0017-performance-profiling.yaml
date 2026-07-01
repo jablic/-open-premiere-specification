@@ -1,0 +1,53 @@
+id: CAP-0017-performance-profiling
+title: Profile performance metrics and identify bottlenecks
+description: |
+  Measure render time, preview latency, and timeline responsiveness. Identify
+  expensive clips, effects, and sequences. Generate performance reports with
+  optimization recommendations.
+kind: capability
+tags: [performance, profiling, optimization, benchmarking, diagnostics]
+domain: automation.performance
+
+safety:
+  - should: Run profiling during idle periods
+  - should: Generate reports without modifying project
+  - should: Document system specs alongside performance metrics
+
+spec:
+  method: app.project.profilePerformance
+  required:
+    - targets: enum:project|sequences|clips|effects (default: project)
+  optional:
+    - includeRender: boolean (default: true)
+    - includePreview: boolean (default: true)
+    - sampleDuration: number (default: 60000, unit: ms)
+  returns: object<{ metrics, bottlenecks, recommendations }>
+
+metrics_collected:
+  - Render time per clip (frames per second)
+  - Preview latency (scrub responsiveness)
+  - Memory usage (peaks and averages)
+  - Cache hit rates
+  - Effect performance rankings
+  - GPU vs CPU usage
+
+examples:
+  - name: Profile project and identify expensive effects
+    code: |
+      const report = await app.project.profilePerformance('effects');
+
+      const bottlenecks = report.bottlenecks.sort((a, b) =>
+        b.renderTimeMs - a.renderTimeMs
+      );
+
+      bottlenecks.slice(0, 5).forEach(item => {
+        console.log(`${item.effectName}: ${item.renderTimeMs}ms per frame`);
+        if (item.recommendation) {
+          console.log(`  → ${item.recommendation}`);
+        }
+      });
+
+related:
+  - OBJ-0008-effect
+  - OBJ-0005-sequence
+  - CAP-0014-color-space-management

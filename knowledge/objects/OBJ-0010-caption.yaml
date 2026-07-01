@@ -1,0 +1,65 @@
+id: OBJ-0010-caption
+title: Caption object model
+description: |
+  A Caption is a text element with timing, styling, and positioning metadata
+  stored in the caption track. Captions support multiple formats (CEA-608,
+  SRT, VTT, TTML) and carry format-specific unknown fields through round-trip.
+kind: object
+tags: [captions, subtitles, text, accessibility, object-model]
+domain: object-model
+
+identity:
+  - Caption is scoped to CaptionTrack within Sequence
+  - Caption identity determined by (track, startTime)
+  - Caption timing and content are independent from TrackItems
+  - Caption data format affects round-trip preservation (see RULE-0006)
+
+properties:
+  content: { type: "string", mutable: true, preservation: "critical" }
+  startTime: { type: "number", mutable: true, unit: "milliseconds", significance: "high" }
+  endTime: { type: "number", mutable: true, unit: "milliseconds", significance: "high" }
+  speaker: { type: "string", mutable: true }
+  style: { type: "object<CaptionStyle>", mutable: true }
+  type: { type: "enum:Subtitle|Caption|SoftCaption", mutable: true }
+  unknownFields: { type: "object<unknown>", mutable: false, preservation: "critical" }
+
+caption_style:
+  - fontSize: number (points)
+  - fontFamily: string (e.g., "Helvetica", "Arial")
+  - foreground: Color { r, g, b, alpha }
+  - background: Color { r, g, b, alpha }
+  - alignment: enum:Left|Center|Right|Justified
+  - fontStyle: enum:Normal|Bold|Italic|BoldItalic
+  - outline: { enabled: boolean, width: number, color: Color }
+
+operations:
+  - method: setText
+    parameters: [text: string]
+    safety: preserves_timing
+  - method: setTiming
+    parameters: [startTime: number, endTime: number]
+    safety: non_destructive
+  - method: setStyle
+    parameters: [style: CaptionStyle]
+    safety: non_destructive
+  - method: delete
+    parameters: []
+    returns: void
+    safety: does_not_affect_media
+
+guarantees:
+  - Unknown fields survive text/style modifications (see RULE-0006)
+  - Caption format is preserved during round-trip (see RULE-0007)
+  - Caption text is never auto-modified without explicit operation
+
+antipatterns:
+  - Do not assume captions are plain text (see RULE-0007)
+  - Do not discard unknownFields during format conversion
+  - Do not modify caption during sequence restructuring
+  - Do not assume SRT format preserves all metadata
+
+related:
+  - OBJ-0005-sequence
+  - CAP-0002-replace-caption-text
+  - RULE-0006-preserve-caption-serialization
+  - RULE-0007-do-not-assume-captions-are-plain-text

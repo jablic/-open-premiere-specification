@@ -1,0 +1,65 @@
+id: OBJ-0011-audio-track
+title: AudioTrack object model
+description: |
+  An AudioTrack is a specialized Track that contains audio clips and audio
+  effects. AudioTracks support channel mapping (mono, stereo, 5.1, 7.1) and
+  audio-specific properties like gain, pan, and submix routing.
+kind: object
+tags: [audio, track, timeline, audio-processing, object-model]
+domain: object-model
+
+identity:
+  - AudioTrack is scoped to parent Sequence
+  - AudioTrack has fixed track index within Sequence
+  - AudioTrack channel configuration is immutable
+  - Multiple AudioTracks can route to single submix
+
+properties:
+  trackType: { type: "constant:AudioTrack", immutable: true }
+  trackIndex: { type: "number", immutable: true, significance: "high" }
+  channelFormat: { type: "enum:Mono|Stereo|5.1|7.1", immutable: true }
+  clips: { type: "array<TrackItem>", mutable: true, ordered: true }
+  effects: { type: "array<Effect>", mutable: true, ordered: true }
+  gain: { type: "number", mutable: true, unit: "dB", default: 0 }
+  pan: { type: "number", mutable: true, range: -100 to 100, default: 0 }
+  solo: { type: "boolean", mutable: true, default: false }
+  muted: { type: "boolean", mutable: true, default: false }
+  locked: { type: "boolean", mutable: true, default: false }
+  submix: { type: "Submix|null", mutable: true, reference: true }
+
+audio_properties:
+  - Gain/Trim: Audio level in decibels
+  - Pan: Stereo positioning for stereo/mono tracks
+  - Compressor/EQ: Common audio effects
+  - Audio meters: Peak/RMS level monitoring
+  - Keyframe support: Gain/pan can be keyframed over time
+
+operations:
+  - method: setGain
+    parameters: [gaindB: number]
+    safety: affects_export_audio_level
+  - method: setPan
+    parameters: [panValue: number]
+    safety: affects_stereo_positioning
+  - method: addEffect
+    parameters: [effect: Effect, position?: number]
+    safety: preserves_clip_references
+  - method: routeToSubmix
+    parameters: [submix: Submix]
+    safety: affects_mix_topology
+
+guarantees:
+  - All TrackItems in clips array are audio-type references
+  - Channel format determines available pan/routing options
+  - Audio effects apply to entire track signal chain
+
+antipatterns:
+  - Do not assume audio track always has stereo format
+  - Do not set pan on mono audio tracks (no effect)
+  - Do not delete AudioTrack while recording is active
+  - Do not modify routing during audio playback
+
+related:
+  - OBJ-0006-track
+  - OBJ-0007-track-item
+  - OBJ-0008-effect

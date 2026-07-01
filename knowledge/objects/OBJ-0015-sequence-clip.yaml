@@ -1,0 +1,68 @@
+id: OBJ-0015-sequence-clip
+title: SequenceClip object model (nested sequence reference)
+description: |
+  A SequenceClip (nested sequence) is a TrackItem that references another
+  Sequence as media. SequenceClips support dynamic link (live updates) and
+  can be treated as single clips for effects/transitions.
+kind: object
+tags: [nesting, dynamic-link, timeline, object-model]
+domain: object-model
+
+identity:
+  - SequenceClip is a TrackItem subtype
+  - SequenceClip.projectItem references a Sequence (not a media file)
+  - SequenceClip inherits TrackItem properties (position, in/out points)
+  - SequenceClip identity is temporal: (track, startTime)
+
+properties:
+  projectItem: { type: "Sequence", mutable: false, reference: true }
+  track: { type: "Track", mutable: false, reference: true }
+  startTime: { type: "number", mutable: true, unit: "milliseconds" }
+  duration: { type: "number", mutable: true, unit: "milliseconds" }
+  inPoint: { type: "number", mutable: true, unit: "milliseconds" }
+  outPoint: { type: "number", mutable: true, unit: "milliseconds" }
+  effects: { type: "array<Effect>", mutable: true, ordered: true }
+  dynamicLink: { type: "boolean", mutable: true, default: true }
+  timeRemapped: { type: "boolean", readonly: true }
+
+nesting_properties:
+  - SequenceClip can be any resolution/frame rate (dynamic scaling)
+  - Nested sequence edits affect all instances if dynamicLink=true
+  - Effects on SequenceClip apply to entire nested sequence
+  - Transitions at SequenceClip boundaries work like regular clips
+
+operations:
+  - method: setDynamicLink
+    parameters: [enabled: boolean]
+    safety: affects_live_link_behavior
+  - method: move
+    parameters: [newStartTime: number]
+    safety: preserves_sequence_reference
+  - method: addEffect
+    parameters: [effect: Effect]
+    safety: affects_entire_nested_sequence
+  - method: breakLink
+    parameters: []
+    returns: void
+    safety: creates_frozen_snapshot
+
+guarantees:
+  - SequenceClip visual updates immediately when source Sequence is edited (if dynamicLink=true)
+  - Nesting depth is supported (sequence containing nested sequence containing nested sequence)
+  - SequenceClip can be moved, trimmed, extended like regular clip
+
+antipatterns:
+  - Do not create circular nesting (Seq A contains nested Seq A)
+  - Do not assume nested sequence duration matches SequenceClip duration
+  - Do not disable dynamicLink if source Sequence is actively edited
+  - Do not apply complex time remapping to nested sequences (use master timeline instead)
+
+performance_notes:
+  - Deeply nested sequences (3+ levels) impact performance
+  - Dynamic link updates can introduce render queue delays
+  - Consider breaking link for final delivery (freeze snapshot)
+
+related:
+  - OBJ-0005-sequence
+  - OBJ-0007-track-item
+  - OBJ-0006-track

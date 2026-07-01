@@ -1,0 +1,46 @@
+id: CAP-0008-effects-preset-bulk-apply
+title: Bulk apply effects with preset inheritance
+description: |
+  Apply effects presets across multiple clips or tracks with parameter
+  override capability. Supports conditional application based on clip properties.
+kind: capability
+tags: [effects, automation, presets, batch-operations, video-processing]
+domain: automation.effects
+
+safety:
+  - must: Validate effect preset exists and is compatible
+  - must: Preserve original clip properties before applying effects
+  - should: Create undo group for batch effect operations
+  - should: Report which clips had effects applied vs skipped
+
+spec:
+  method: app.project.applyEffectPreset
+  required:
+    - items: array<TrackItem | Sequence>
+    - effectName: string
+    - presetPath: string
+  optional:
+    - parameterOverrides: object (default: {})
+    - conditional: object<{ property, operator, value }> (default: null)
+    - includeAudio: boolean (default: false)
+  returns: object<{ appliedCount, skippedCount, errors }>
+
+examples:
+  - name: Apply color correction to all video clips
+    code: |
+      const allClips = sequence.videoTracks.flatMap(t => t.clips);
+      const result = await app.project.applyEffectPreset(
+        allClips,
+        'Lumetri Color',
+        '/presets/cinema-print.preset',
+        {
+          parameterOverrides: { saturation: 1.2 },
+          conditional: { property: 'duration', operator: '>', value: 1000 }
+        }
+      );
+      console.log(`Applied to ${result.appliedCount} clips`);
+
+related:
+  - OBJ-0005-sequence
+  - REC-0005-safe-premiere-xml-workflow
+  - RULE-0003-backup-before-destructive-edit

@@ -1,0 +1,66 @@
+id: RULE-0013-effect-parameters-must-exist-before-access
+title: Effect parameters must be validated before read or write operations
+description: |
+  Effect parameters vary by Premiere version, plugin version, and system
+  locale. Accessing non-existent parameters fails silently in some cases
+  and throws errors in others. Always validate parameter existence before
+  operations.
+kind: rule
+tags: [effects, parameters, validation, cross-version, compatibility]
+domain: rules.effects-workflow
+
+violation_example: |
+  WRONG: Assuming effect parameter exists without validation
+  ---
+  const effect = trackItem.effects[0]; // Lumetri Color
+  effect.setParameterValue("Saturation", 1.5); // May fail silently!
+
+  // This works in Premiere 25.x but not in 24.x or on some systems
+  console.log(effect.getParameter("Saturation").value); // Undefined
+
+consequence: |
+  Color correction workflows fail inconsistently across versions.
+  Batch operations produce incorrect results on some systems.
+  Debugging becomes difficult because no error is thrown.
+
+correct_pattern: |
+  CORRECT: Validate parameter before access
+  ---
+  const effect = trackItem.effects.find(e => e.effectName === "Lumetri Color");
+  if (!effect) {
+    console.error("Lumetri Color not available");
+    return;
+  }
+
+  // Validate parameter exists and is accessible
+  const satParam = effect.parameters.find(p => p.matchName === "saturation");
+  if (!satParam) {
+    console.warn("Saturation parameter not found in this Premiere version");
+    return;
+  }
+
+  // Safe to access after validation
+  satParam.setValue(1.5);
+  console.log(`Set saturation to ${satParam.value}`);
+
+compatibility_notes:
+  - Lumetri Color parameters differ between Premiere 24 and 25
+  - Third-party plugins may use localized parameter names
+  - Effect availability depends on system GPU capabilities
+  - Parameter data types vary (number, checkbox, dropdown)
+
+safety_measures:
+  - Log available parameters before batch effect operations
+  - Test effect operations on sample clip first
+  - Implement fallback behaviors for missing parameters
+  - Document minimum Premiere version for each effect operation
+
+impact: high
+
+related_rules:
+  - RULE-0001-no-hallucinated-api
+  - RULE-0003-backup-before-destructive-edit
+
+test_coverage:
+  - Need: TEST-EFFECT-PARAMETER-VALIDATION
+  - Need: TEST-CROSS-VERSION-EFFECT-COMPATIBILITY

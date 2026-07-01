@@ -1,0 +1,270 @@
+id: REC-0012-team-workflow-with-review-cycle
+title: Team-based editing with automated review cycle and approvals
+description: |
+  Multi-editor workflow with automated tagging, version snapshots, review
+  cycles, and approval tracking. Demonstrates integration of snapshots,
+  metadata tagging, and workflow organization across team members.
+kind: recipe
+tags: [team-workflow, review-cycle, approvals, versioning, collaboration]
+domain: workflows.team-collaboration
+
+scope: |
+  Assumes team uses shared Premiere project with multiple editors.
+  Review cycle: rough-cut → editorial review → sound review → color review → final approval.
+  Uses platform-abstract paths for cross-platform team setup.
+
+steps:
+  - title: "Initialize Project Workflow Structure"
+    description: "Create bins and versioning structure for team"
+    code: |
+      const project = app.project;
+
+      // Create workflow bins
+      const bins = {
+        roughCuts: project.rootItem.createBin('01-Rough-Cuts'),
+        inReview: project.rootItem.createBin('02-In-Review'),
+        approved: project.rootItem.createBin('03-Approved'),
+        archive: project.rootItem.createBin('04-Archive')
+      };
+
+      // Create editor-specific bins
+      const editors = ['Editor-A', 'Editor-B', 'Editor-C'];
+      const editorBins = {};
+      editors.forEach(editor => {
+        editorBins[editor] = bins.roughCuts.createBin(editor);
+      });
+
+      console.log('Project workflow structure initialized');
+
+  - title: "Create Initial Snapshot Before Review"
+    description: "Snapshot each editor's rough cut before passing to reviewers"
+    code: |
+      const sequences = app.project.sequences.filter(s => s.name.includes('v1'));
+
+      for (const seq of sequences) {
+        const editorMatch = seq.name.match(/(Editor-\w)/)[1];
+
+        // Create timestamped snapshot
+        const snapshot = await app.project.createSnapshot(
+          `${seq.name}-review-start`,
+          `Rough cut ready for review`,
+          {
+            metadata: {
+              editor: editorMatch,
+              version: 1,
+              stage: 'editorial_review',
+              createdAt: new Date().toISOString()
+            }
+          }
+        );
+
+        // Tag sequence for tracking
+        app.project.tagItem(seq, ['in_review', 'editorial_review'], {
+          metadata: {
+            snapshotId: snapshot.snapshotId,
+            submittedBy: editorMatch,
+            reviewers: ['Lead-Editor', 'Director']
+          }
+        });
+
+        console.log(`Snapshot created for ${seq.name}: ${snapshot.snapshotId}`);
+      }
+
+  - title: "Implement Editorial Review Notes"
+    description: "Apply feedback using markers for tracked changes"
+    code: |
+      // Simulate reviewer feedback
+      const reviewNotes = [
+        { timecode: 30000, comment: 'EDIT: Trim dialogue pause', color: 'Red' },
+        { timecode: 45000, comment: 'REVIEW: Check color timing', color: 'Yellow' },
+        { timecode: 60000, comment: 'APPROVE: Strong sequence', color: 'Green' }
+      ];
+
+      const seq = app.project.activeSequence;
+
+      // Add review markers
+      reviewNotes.forEach(note => {
+        const marker = seq.addMarker(note.comment, note.timecode);
+        marker.color = note.color;
+      });
+
+      // Tag sequence as revised
+      app.project.tagItem(seq, ['revising', 'editorial_feedback'], {
+        metadata: {
+          feedbackCount: reviewNotes.length,
+          revisedAt: new Date().toISOString()
+        }
+      });
+
+  - title: "Create Revision Snapshot After Edits"
+    description: "Snapshot after implementing editorial feedback"
+    code: |
+      const seq = app.project.activeSequence;
+      const revisionSnapshot = await app.project.createSnapshot(
+        `${seq.name}-v2-edited`,
+        'Editorial revisions applied',
+        {
+          metadata: {
+            revision: 2,
+            stage: 'sound_review_ready',
+            editChanges: 3
+          }
+        }
+      );
+
+      // Tag for next review stage
+      app.project.tagItem(seq,
+        ['pending_review', 'sound_design', 'revising-complete'],
+        {
+          metadata: {
+            lastSnapshot: revisionSnapshot.snapshotId,
+            readyForSoundDesign: true
+          }
+        }
+      );
+
+  - title: "Sound Design Review Pass"
+    description: "Implement sound design requirements with audio organization"
+    code: |
+      const seq = app.project.activeSequence;
+
+      // Create sound design submixes
+      const soundSubmixes = {
+        dialogue: await seq.createSubmix('Dialogue', 'Stereo'),
+        ambience: await seq.createSubmix('Ambience', 'Stereo'),
+        soundDesign: await seq.createSubmix('Sound-Design', 'Stereo')
+      };
+
+      // Route audio tracks to appropriate submixes
+      seq.audioTracks.forEach(track => {
+        if (track.name.includes('DIAL')) {
+          soundSubmixes.dialogue.addTrack(track);
+        } else if (track.name.includes('AMB')) {
+          soundSubmixes.ambience.addTrack(track);
+        } else if (track.name.includes('SFX')) {
+          soundSubmixes.soundDesign.addTrack(track);
+        }
+      });
+
+      // Tag as ready for color
+      app.project.tagItem(seq,
+        ['sound_design_complete', 'pending_review'],
+        {
+          metadata: {
+            stage: 'color_review_ready',
+            soundDesignNotes: 'Dialogue levels normalized, ambience added'
+          }
+        }
+      );
+
+  - title: "Color Grading Review and Approval"
+    description: "Apply base color correction and prepare for final approval"
+    code: |
+      const seq = app.project.activeSequence;
+      const videoClips = seq.videoTracks.flatMap(t => t.clips);
+
+      // Apply documentary color preset
+      const colorResult = await app.project.applyEffectPreset(
+        videoClips,
+        'Lumetri Color',
+        '/presets/documentary-final-look.preset'
+      );
+
+      // Validate codec for final delivery
+      const validation = await app.project.validateCodecs(['H.264-Broadcast']);
+
+      if (validation.compatible.length === videoClips.length) {
+        // All clips are broadcast-safe - ready for final approval
+        app.project.tagItem(seq,
+          ['color_complete', 'ready_for_approval'],
+          {
+            metadata: {
+              stage: 'final_approval',
+              broadcastSafe: true,
+              colorGrader: 'Colorist-Name'
+            }
+          }
+        );
+      }
+
+  - title: "Final Approval and Archive"
+    description: "Create final snapshot and move to approved bin"
+    code: |
+      const seq = app.project.activeSequence;
+
+      // Create final approval snapshot
+      const finalSnapshot = await app.project.createSnapshot(
+        `${seq.name}-final-approved`,
+        'Final approved for delivery',
+        {
+          metadata: {
+            stage: 'approved_for_delivery',
+            approvedBy: 'Director',
+            approvalDate: new Date().toISOString()
+          }
+        }
+      );
+
+      // Tag as final approved
+      app.project.tagItem(seq,
+        ['final_approved', 'ready_for_export'],
+        {
+          metadata: {
+            finalSnapshotId: finalSnapshot.snapshotId,
+            deliveryDeadline: '2026-07-20'
+          }
+        }
+      );
+
+      // Move to approved bin (keeping original in workflow bin)
+      app.project.rootItem.moveItem(seq, bins.approved);
+
+      console.log(`${seq.name} approved and archived`);
+
+  - title: "Export Final Deliverables"
+    description: "Multi-format export for approved sequences"
+    code: |
+      const approvedSequences = bins.approved.items.filter(
+        item => item.type === 'sequence'
+      );
+
+      for (const seq of approvedSequences) {
+        // Export broadcast and archive masters
+        const exports = await app.project.exportBatch(
+          [seq],
+          [
+            { codec: 'H.264', preset: 'Broadcast-HD', outputPath: './deliverables/broadcast/' },
+            { codec: 'ProRes', preset: 'ProRes 422 HQ', outputPath: './deliverables/archive/' }
+          ],
+          { validatePresets: true }
+        );
+
+        console.log(`Exported ${seq.name}: ${exports.successCount} formats`);
+
+        // Tag as exported
+        app.project.tagItem(seq, ['exported'], {
+          metadata: {
+            exportDate: new Date().toISOString(),
+            formatsExported: 2
+          }
+        });
+      }
+
+safety_considerations:
+  - Snapshots created at each workflow stage provide rollback points
+  - Metadata tags provide audit trail of approval workflow
+  - Review markers document feedback without modifying sequences
+  - Separate bins organize project by workflow status
+  - Cross-platform paths support multi-site team collaboration
+
+expected_outcome: |
+  Well-organized project with documented review cycle, snapshot backups
+  at each stage, metadata tracking of approvals, and final deliverables
+  ready for distribution.
+
+related:
+  - CAP-0010-project-snapshot-versioning
+  - CAP-0020-workflow-metadata-tags
+  - CAP-0019-platform-path-abstraction
+  - CAP-0013-audio-submix-routing
+  - OBJ-0009-marker

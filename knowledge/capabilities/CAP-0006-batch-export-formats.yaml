@@ -1,0 +1,46 @@
+id: CAP-0006-batch-export-formats
+title: Batch export sequences to multiple formats
+description: |
+  Export sequences across multiple codec formats (H.264, ProRes, HEVC) with
+  quality parameter mapping. Handles preset inheritance and format-specific
+  export settings.
+kind: capability
+tags: [export, batch, formats, automation, video-encoding]
+domain: automation.export
+
+safety:
+  - must: Validate all export presets exist before executing batch
+  - must: Create backup of project before batch operations
+  - should: Implement progress reporting with cancellation support
+  - should: Log all export parameters to audit trail
+
+spec:
+  method: app.project.exportBatch
+  required:
+    - sequences: array<Sequence>
+    - formats: array<{ codec, preset, outputPath }>
+  optional:
+    - validatePresets: boolean (default: true)
+    - preserveAudio: boolean (default: true)
+    - audioCodec: string (default: AAC)
+  returns: object<{ successCount, failureCount, exportLog }>
+
+examples:
+  - name: Multi-format export with quality mapping
+    code: |
+      const formats = [
+        { codec: 'H.264', preset: 'YouTube HD', outputPath: './exports/youtube/' },
+        { codec: 'ProRes', preset: 'ProRes 422 HQ', outputPath: './exports/archive/' },
+        { codec: 'HEVC', preset: 'H.265 Match Source', outputPath: './exports/h265/' }
+      ];
+      const result = await app.project.exportBatch(
+        app.project.sequences,
+        formats,
+        { validatePresets: true, preserveAudio: true }
+      );
+      console.log(`Exported: ${result.successCount}, Failed: ${result.failureCount}`);
+
+related:
+  - CAP-0005-export-xml
+  - OBJ-0005-sequence
+  - REC-0001-read-project-inventory

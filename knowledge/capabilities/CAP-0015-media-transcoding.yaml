@@ -1,0 +1,63 @@
+id: CAP-0015-media-transcoding
+title: Batch transcode media with proxy/archive format generation
+description: |
+  Create proxy clips (low-resolution editing copies) or archive masters
+  (high-quality long-term storage) from source media. Supports format
+  conversion, codec transformation, and resolution downsampling.
+kind: capability
+tags: [transcoding, proxies, archive, media-optimization, workflow]
+domain: automation.media-handling
+
+safety:
+  - must: Preserve original source media during transcoding
+  - should: Validate transcoded files before removing source
+  - should: Implement progress reporting for long-running operations
+
+spec:
+  method: app.project.transcodeMedia
+  required:
+    - sourceClips: array<ProjectItem>
+    - targetFormat: enum:proxy_1080p|proxy_720p|archive_prores|archive_dnxhd
+  optional:
+    - outputPath: string (default: project folder)
+    - preserveSource: boolean (default: true)
+    - linkToProxy: boolean (default: true)
+  returns: object<{ transcodedCount, outputFiles, linkMap }>
+
+proxy_formats:
+  - proxy_1080p: H.264 1080p for standard HD editing
+  - proxy_720p: H.264 720p for bandwidth-constrained environments
+  - proxy_4k_25pct: H.264 1/4 resolution for 4K editing
+  - proxy_dnxhd_145: DNxHD for VFX workflows
+
+archive_formats:
+  - archive_prores_hq: ProRes 422 HQ for editing archive
+  - archive_dnxhd_220: DNxHD 220x for long-term storage
+  - archive_lossless_ffv1: FFV1 lossless for archival (file-based)
+
+examples:
+  - name: Create proxies for 4K footage
+    code: |
+      const sourceClips = await app.project.searchMedia({
+        searchCriteria: [
+          { property: 'resolution', operator: '=', value: '4K' }
+        ]
+      });
+
+      const transcodeResult = await app.project.transcodeMedia(
+        sourceClips.items,
+        'proxy_1080p',
+        {
+          outputPath: './proxies/',
+          preserveSource: true,
+          linkToProxy: true
+        }
+      );
+
+      console.log(`Transcoded ${transcodeResult.transcodedCount} clips to proxy`);
+      console.log(`Proxy files: ${transcodeResult.outputFiles.length}`);
+
+related:
+  - CAP-0004-batch-relink-media
+  - CAP-0009-media-search-filter
+  - OBJ-0004-project-item

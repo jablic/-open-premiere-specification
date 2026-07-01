@@ -1,0 +1,55 @@
+id: CAP-0014-color-space-management
+title: Manage color space and apply LUT transformations
+description: |
+  Set project color space (Rec.709, DCI-P3, Rec.2020), apply Look-Up Tables
+  (LUTs) to clips or sequences, and generate preview/delivery LUTs for
+  different color spaces.
+kind: capability
+tags: [color-management, lut, color-space, finishing, automation]
+domain: automation.color-correction
+
+safety:
+  - must: Test LUT application on sample clips before batch operations
+  - should: Validate LUT file integrity before application
+  - should: Document source and delivery color spaces clearly
+
+spec:
+  method: app.project.setColorSpace
+  required:
+    - colorSpace: enum:Rec709|DCI-P3|Rec2020|ACES
+  optional:
+    - applyToExistingClips: boolean (default: false)
+  returns: void
+
+lut_operations:
+  - method: app.sequence.applyLUT
+    parameters: [lutPath: string, clips: array<TrackItem>]
+    returns: object<{ appliedCount, failureCount }>
+  - method: app.sequence.generateLUT
+    parameters: [fromColorSpace: string, toColorSpace: string, outputPath: string]
+    returns: void
+
+examples:
+  - name: Apply log-to-linear LUT for Rec.709 delivery
+    code: |
+      // Set project color space for editing
+      await app.project.setColorSpace('Rec709', { applyToExistingClips: false });
+
+      // Apply LOG-to-REC709 LUT for delivery
+      const sequence = app.project.activeSequence;
+      const allClips = sequence.videoTracks.flatMap(t => t.clips);
+
+      const result = await sequence.applyLUT(
+        '/luts/LOG-to-Rec709.cube',
+        allClips
+      );
+
+      console.log(`Applied LUT to ${result.appliedCount} clips`);
+
+      // Generate DCI-P3 variant for cinema
+      await sequence.generateLUT('Rec709', 'DCI-P3', '/exports/DCI-P3-lut.cube');
+
+related:
+  - CAP-0006-batch-export-formats
+  - OBJ-0008-effect
+  - REC-0007-bulk-color-grade-delivery

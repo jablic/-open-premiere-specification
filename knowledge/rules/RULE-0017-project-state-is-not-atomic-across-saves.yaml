@@ -1,0 +1,116 @@
+id: RULE-0017-project-state-is-not-atomic-across-saves
+title: Project state mutations are not atomic - save failures can corrupt state
+description: |
+  Premiere project saves are not atomic transactions. A failed save can leave
+  project in inconsistent state (partial updates, missing clips, corrupted
+  XML). Always validate project integrity after save operations, especially
+  in automation workflows.
+kind: rule
+tags: [data-integrity, save-operations, backup-strategy, safety, production]
+domain: rules.data-persistence
+
+violation_example: |
+  WRONG: Assuming save operation completes atomically
+  ---
+  // Batch operation on large project
+  await applyBulkEffects(sequences);
+  await applyColorCorrection(sequences);
+
+  // Save project (no validation after)
+  app.project.save();
+
+  // If save fails midway, project may be partially updated
+  // Undo/redo also affected, sequences may be incomplete
+  // No way to know state is corrupted until playback fails
+
+consequence: |
+  Project becomes unusable after partial save failure.
+  Media references may be lost or corrupted.
+  Sequences may be incomplete or have missing clips.
+  Recovery requires reverting to backup (if available).
+
+correct_pattern: |
+  CORRECT: Validate project state before and after save
+  ---
+  // Before batch operations
+  const preSnapshot = await app.project.createSnapshot(
+    'before-batch-ops',
+    'Baseline before batch operations'
+  );
+
+  try {
+    // Perform batch operations
+    await applyBulkEffects(sequences);
+    await applyColorCorrection(sequences);
+
+    // Validate state before save
+    const validation = await app.project.validateMedia(
+      app.project.rootItem.items,
+      { checkIntegrity: true }
+    );
+
+    if (validation.errorClips.length > 0) {
+      console.error('Project has validation errors - aborting save');
+      await app.project.restoreSnapshot(preSnapshot.snapshotId);
+      return;
+    }
+
+    // Save with error handling
+    const saveResult = app.project.save();
+    if (!saveResult.success) {
+      console.error('Save failed - restoring snapshot');
+      await app.project.restoreSnapshot(preSnapshot.snapshotId);
+      throw new Error('Project save failed');
+    }
+
+    // Validate state after save
+    const postValidation = await app.project.validateMedia(
+      app.project.rootItem.items,
+      { checkIntegrity: true }
+    );
+
+    if (postValidation.errorClips.length > 0) {
+      console.warn('Post-save validation found errors - project may be corrupted');
+      await app.project.restoreSnapshot(preSnapshot.snapshotId);
+    }
+
+  } catch (error) {
+    // Always restore on failure
+    await app.project.restoreSnapshot(preSnapshot.snapshotId);
+    throw error;
+  }
+
+save_operation_best_practices:
+  1. Create snapshot before any batch modifications
+  2. Validate project integrity before save
+  3. Check save result for success status
+  4. Validate integrity after save completes
+  5. Have rollback strategy (snapshot restoration)
+  6. Log save operations with timestamp
+  7. Keep multiple backup snapshots across time
+
+state_corruption_indicators:
+  - Missing clips in sequences
+  - Broken media links that weren't broken before
+  - Sequences with gaps where clips should be
+  - Audio/video sync issues appearing after save
+  - Project file size changes unexpectedly
+
+backup_strategy_recommendations:
+  - Create snapshot before every major operation
+  - Maintain rolling window of 5-10 recent snapshots
+  - Archive old snapshots to external storage monthly
+  - Test snapshot restoration periodically
+  - Document snapshot purpose clearly for recovery
+
+impact: critical
+
+related_rules:
+  - RULE-0003-backup-before-destructive-edit
+  - RULE-0014-undo-redo-state-is-not-persistent
+  - CAP-0010-project-snapshot-versioning
+
+test_coverage:
+  - Need: TEST-SAVE-OPERATION-ATOMICITY
+  - Need: TEST-CORRUPTION-DETECTION
+  - Need: TEST-SNAPSHOT-RECOVERY-AFTER-FAILED-SAVE
