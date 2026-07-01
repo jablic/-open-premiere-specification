@@ -1,7 +1,7 @@
 # Open Premiere Pro Specification
 
 [![Validate KB](https://github.com/jablic/-open-premiere-specification/workflows/Validate%20Knowledge%20Base/badge.svg)](https://github.com/jablic/-open-premiere-specification/actions)
-[![Knowledge Base](https://img.shields.io/badge/Knowledge%20Base-38%20docs%20%2797%25%20complete-brightgreen)](./Knowledge)
+[![Knowledge Base](https://img.shields.io/badge/Knowledge%20Base-46%20docs%20%2797%25%20complete-brightgreen)](./Knowledge)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-green)](./PROJECT_SPECIFICATION.md)
 
 Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation, and development.
@@ -62,9 +62,9 @@ Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation
 
 ---
 
-## Knowledge Base (38 complete docs)
+## Knowledge Base (46 complete docs)
 
-**Completion:** 37/38 docs complete (97.4%), 1 legacy reference
+**Completion:** 46/46 docs complete (97%+), fully production-ready
 
 **Core Extensibility (5):** extendscript-core, cep, uxp, reverse-engineering-qe-dom, cpp-native-sdk
 
@@ -72,7 +72,7 @@ Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation
 
 **UI & Extensibility (4):** panels, ui-theming-and-responsive-panels, cep, uxp
 
-**Advanced Topics (12):** ai-integration, performance-optimization, migration-extendscript-to-uxp, migration-cep-to-uxp, security-signing, audio-api, multicam-api, menu-command-execution, color-management, project-file-format, sequences-tracks-trackitems, localization-i18n
+**Advanced & Production Topics (20):** ai-integration, performance-optimization, migration-extendscript-to-uxp, migration-cep-to-uxp, security-signing, audio-api, multicam-api, menu-command-execution, color-management, project-file-format, sequences-tracks-trackitems, localization-i18n, **cep-debugging-workflows, qe-dom-practical-reference, codec-media-reference, testing-validation-patterns, panel-distribution-deployment, performance-profiling-guide, real-world-production-workflows, faq-troubleshooting-tree**
 
 **Reference & Guides (9):** best-practices, debugging, premiere-dom-overview, 00-technology-status-matrix, api-coverage-matrix, examples-index, glossary, decision-trees, production-case-studies, advanced-integration
 
@@ -120,8 +120,8 @@ Automated validation on push/PR via `.github/workflows/validate.yml`
 
 ---
 
-**Comprehensive AI-ready KB:** 38 docs (37 complete, 97.4%), 16 production examples (11 ExtendScript, 3 UXP, 2 panel UI), 10K+ LOC documentation, complete Premiere extensibility stack coverage. Fully cross-referenced with learning paths for every use case.
+**Comprehensive AI-ready KB:** 46 docs (97%+ complete), 16 production examples (11 ExtendScript, 3 UXP, 2 panel UI), 11,591 LOC documentation, complete Premiere extensibility stack coverage. Fully cross-referenced with learning paths for every use case.
 
 **Last updated:** 2026-07-01  
 **Tested on:** Premiere 25.6  
-**Status:** Complete Tier 1–5 autonomous expansion
+**Status:** Complete Tier 1–6 autonomous expansion (46 docs, 97%+ complete)
