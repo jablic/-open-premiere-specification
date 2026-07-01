@@ -32,21 +32,25 @@ Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation
 
 **Core Extensibility (5):** extendscript-core, cep, uxp, reverse-engineering-qe-dom, cpp-native-sdk
 
-**Automation (6):** automation, export-rendering-media-encoder, essential-graphics-mogrt-text, sequences-tracks-trackitems, xml-fcpxml, captions
+**Automation (7):** automation, export-rendering-media-encoder, essential-graphics-mogrt-text, sequences-tracks-trackitems, xml-fcpxml, captions, import
 
-**Reference (12):** premiere-dom-overview, best-practices, ai-integration, panels, import, markers, debugging, examples-index, 00-technology-status-matrix, markers-and-annotations, media-linking-batch-operations, ui-theming-and-responsive-panels
+**Workflow & Integration (5):** ai-integration, markers-and-annotations, media-linking-batch-operations, ui-theming-and-responsive-panels, best-practices
 
-**Deep Dives & Advanced (7+):** performance-optimization, migration-extendscript-to-uxp, migration-cep-to-uxp, security-signing, audio-api, multicam-api, menu-command-execution, [+ 7 more]
+**Reference (8):** premiere-dom-overview, panels, debugging, examples-index, 00-technology-status-matrix, markers, captions (legacy stub), decision-trees
+
+**Deep Dives & Advanced (15):** performance-optimization, migration-extendscript-to-uxp, migration-cep-to-uxp, security-signing, audio-api, multicam-api, menu-command-execution, api-coverage-matrix, localization-i18n, color-management, advanced-integration, production-case-studies, glossary, project-file-format, reverse-engineering-qe-dom
 
 ---
 
-## Production Examples (14 files)
+## Production Examples (15 files)
 
-**ExtendScript (6):** batch-export-guarded, update-mogrt-text, cep-bridge-safe, qe-safe-wrapper, markers-batch-add, media-batch-relink, captions-batch-read
+**ExtendScript (7):** batch-export-guarded, update-mogrt-text, cep-bridge-safe, qe-safe-wrapper, markers-batch-add, media-batch-relink, captions-batch-read, batch-import-organize
 
 **UXP (3):** list-sequences, batch-effects-captions, uxp-async-patterns
 
 **CEP (2):** cep-theme-sync-panel.jsx, cep-theme-sync-panel.html
+
+**UXP (3):** list-sequences, batch-effects-captions, uxp-async-patterns
 
 **UXP Panel (1):** uxp-responsive-rubber-panel.html
 

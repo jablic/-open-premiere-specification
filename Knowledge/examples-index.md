@@ -48,6 +48,9 @@ Batch relink offline media, import new files, generate report. See: `Examples/me
 ### captions-batch-read.jsx
 Extract captions from timeline, export to SRT/CSV, analyze statistics. See: `Examples/captions-batch-read.jsx`
 
+### batch-import-organize.jsx
+Intelligent batch media import with auto-organization by type/resolution, proxy generation. See: `Examples/batch-import-organize.jsx`
+
 ---
 
 ## UXP Examples
@@ -79,6 +82,7 @@ Parse FCP7 XML exported from Premiere Pro. Extracts clips, markers, timing. See:
 | markers-batch-add.jsx | ExtendScript | 14.x | ✅ Production |
 | media-batch-relink.jsx | ExtendScript | 14.x | ✅ Production |
 | captions-batch-read.jsx | ExtendScript | 20.x | ✅ Production |
+| batch-import-organize.jsx | ExtendScript | 14.x | ✅ Production |
 | cep-bridge-safe.jsx | ExtendScript | 25.x | ⚠️ Legacy |
 | qe-safe-wrapper.jsx | ExtendScript | 24.x | ⚠️ Undocumented |
 | cep-theme-sync-panel.jsx+html | CEP (HTML/JS) | 14.x | ✅ Production |
