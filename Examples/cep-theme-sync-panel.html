@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CEP Theme-Aware Panel Example</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 12px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .panel-header {
+      font-weight: bold;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid currentColor;
+      opacity: 0.7;
+    }
+
+    .control-group {
+      margin-bottom: 16px;
+    }
+
+    .control-label {
+      display: block;
+      font-size: 0.9em;
+      margin-bottom: 4px;
+      opacity: 0.8;
+    }
+
+    button, input {
+      padding: 6px 12px;
+      border: 1px solid currentColor;
+      border-radius: 2px;
+      background-color: transparent;
+      color: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    button:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    .theme-status {
+      font-size: 0.85em;
+      opacity: 0.6;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel-header">Theme-Sync Panel</div>
+
+  <div class="control-group">
+    <label class="control-label">Panel Status:</label>
+    <div id="status">Loading theme info...</div>
+  </div>
+
+  <div class="control-group">
+    <button id="refresh-btn">Refresh Theme</button>
+  </div>
+
+  <div class="theme-status">
+    This panel's colors sync with Premiere's native Appearance setting.<br>
+    Try: Edit > Preferences > Appearance → adjust the brightness slider.
+  </div>
+
+  <script src="CSInterface.js"></script>
+  <script>
+    const csInterface = new CSInterface();
+
+    // Apply theme colors to the panel's DOM
+    function applyTheme(themeData) {
+      if (!themeData.success) {
+        document.getElementById('status').textContent = 'Error: ' + themeData.error;
+        return;
+      }
+
+      // Set body background and text color from host theme
+      document.body.style.backgroundColor = themeData.panelBackgroundColor;
+      document.body.style.color = 'inherit'; // CSS will inherit from host text color
+
+      // Optionally set font size and family if needed (though usually inherited)
+      if (themeData.fontSize) {
+        document.body.style.fontSize = themeData.fontSize + 'px';
+      }
+
+      document.getElementById('status').textContent =
+        'Theme applied. BG: ' + themeData.panelBackgroundColor + ' | Font: ' + themeData.fontSize + 'px';
+    }
+
+    // Request theme info from the host via evalScript (synchronous bridge)
+    function updateTheme() {
+      // Load and execute the host script (cep-theme-sync-panel.jsx)
+      // In a real panel, you would embed or reference this file via the manifest
+      csInterface.evalScript('getPanelThemeInfo()', function(result) {
+        try {
+          const themeData = JSON.parse(result);
+          applyTheme(themeData);
+        } catch (e) {
+          document.getElementById('status').textContent = 'JSON parse error: ' + e.message;
+        }
+      });
+    }
+
+    // Listen for Premiere's theme change event
+    csInterface.addEventListener(CSInterface.THEME_COLOR_CHANGED_EVENT, function() {
+      console.log('Host theme changed, reapplying...');
+      updateTheme();
+    });
+
+    // Load theme on panel startup
+    window.addEventListener('load', function() {
+      updateTheme();
+    });
+
+    // Manual refresh button
+    document.getElementById('refresh-btn').addEventListener('click', updateTheme);
+  </script>
+</body>
+</html>
