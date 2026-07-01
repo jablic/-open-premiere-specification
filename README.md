@@ -42,9 +42,9 @@ Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation
 
 ---
 
-## Production Examples (15 files)
+## Production Examples (16 files)
 
-**ExtendScript (7):** batch-export-guarded, update-mogrt-text, cep-bridge-safe, qe-safe-wrapper, markers-batch-add, media-batch-relink, captions-batch-read, batch-import-organize
+**ExtendScript (8):** batch-export-guarded, update-mogrt-text, cep-bridge-safe, qe-safe-wrapper, markers-batch-add, media-batch-relink, captions-batch-read, batch-import-organize, batch-effects-filters
 
 **UXP (3):** list-sequences, batch-effects-captions, uxp-async-patterns
 
@@ -73,6 +73,8 @@ Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation
 Automated validation on push/PR via `.github/workflows/validate.yml`
 
 ---
+
+**Complete Knowledge Base with 40 docs (36/40 complete, 90%), 16 production examples, comprehensive coverage of Premiere extensibility stack.**
 
 **Last updated:** 2026-07-01  
 **Tested on:** Premiere 25.6

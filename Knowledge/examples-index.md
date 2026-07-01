@@ -51,6 +51,9 @@ Extract captions from timeline, export to SRT/CSV, analyze statistics. See: `Exa
 ### batch-import-organize.jsx
 Intelligent batch media import with auto-organization by type/resolution, proxy generation. See: `Examples/batch-import-organize.jsx`
 
+### batch-effects-filters.jsx
+Batch apply effects/filters to clips by name pattern, with effect presets (warm, cold, vintage, cinematic). See: `Examples/batch-effects-filters.jsx`
+
 ---
 
 ## UXP Examples
@@ -83,6 +86,7 @@ Parse FCP7 XML exported from Premiere Pro. Extracts clips, markers, timing. See:
 | media-batch-relink.jsx | ExtendScript | 14.x | ✅ Production |
 | captions-batch-read.jsx | ExtendScript | 20.x | ✅ Production |
 | batch-import-organize.jsx | ExtendScript | 14.x | ✅ Production |
+| batch-effects-filters.jsx | ExtendScript | 14.x | ✅ Production |
 | cep-bridge-safe.jsx | ExtendScript | 25.x | ⚠️ Legacy |
 | qe-safe-wrapper.jsx | ExtendScript | 24.x | ⚠️ Undocumented |
 | cep-theme-sync-panel.jsx+html | CEP (HTML/JS) | 14.x | ✅ Production |

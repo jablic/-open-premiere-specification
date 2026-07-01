@@ -4,7 +4,7 @@ title: Media Linking, Relinking & Batch Ingestion
 category: workflow
 status: current
 stability: active
-doc_status: partial
+doc_status: complete
 introduced: "Premiere Pro CC"
 deprecated: null
 eol: null

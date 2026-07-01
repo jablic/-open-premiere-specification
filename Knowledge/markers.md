@@ -1,26 +1,29 @@
 ---
 id: markers
-title: Markers & Timeline Annotations
+title: Markers & Timeline Annotations (Legacy Reference)
 category: workflow
-status: current
+status: legacy
 stability: active
-doc_status: partial
+doc_status: reference
 introduced: "Premiere Pro CC 2015"
 min_premiere_version: "14.0"
 api_namespace: app
 languages: [extendscript, uxp]
-tags: [markers, annotations, timeline, cue-points]
-related: [markers-and-annotations, sequences-tracks-trackitems, automation, export-rendering-media-encoder]
+tags: [markers, annotations, timeline, cue-points, legacy-reference]
+related: [markers-and-annotations]
+superseded_by: [markers-and-annotations]
 sources: [
   "https://ppro-scripting.docsforadobe.dev/",
   "Production workflows (Premiere 25.x)"
 ]
 confidence: high
-last_verified: "2026-06-30"
+last_verified: "2026-07-01"
 verified_against_version: "25.6"
 ---
 
-# Markers & Timeline Annotations
+# Markers & Timeline Annotations (Legacy Reference)
+
+> **See markers-and-annotations.md for comprehensive, current documentation.** This document is a lightweight legacy reference. New projects should use the full markers-and-annotations guide.
 
 ## TL;DR
 

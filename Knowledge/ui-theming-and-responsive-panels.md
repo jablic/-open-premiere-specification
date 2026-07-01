@@ -2,10 +2,10 @@
 id: ui-theming-and-responsive-panels
 title: UI Theming & Responsive ("Rubber") Panel Layout
 category: ui-extensibility
-status: mixed
+status: current
 stability: active
-doc_status: partial
-introduced: null
+doc_status: complete
+introduced: "Premiere Pro 14.0"
 deprecated: null
 eol: null
 min_premiere_version: null
