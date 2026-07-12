@@ -1,7 +1,7 @@
 # Open Premiere Pro Specification
 
 [![Validate KB](https://github.com/jablic/-open-premiere-specification/workflows/Validate%20Knowledge%20Base/badge.svg)](https://github.com/jablic/-open-premiere-specification/actions)
-[![Knowledge Base](https://img.shields.io/badge/Knowledge%20Base-25%20docs-brightgreen)](./Knowledge)
+[![Knowledge Base](https://img.shields.io/badge/Knowledge%20Base-30%20docs-brightgreen)](./Knowledge)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-green)](./PROJECT_SPECIFICATION.md)
 
 Machine-readable knowledge base for Adobe Premiere Pro extensibility, automation, and development.
