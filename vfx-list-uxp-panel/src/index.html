@@ -51,8 +51,16 @@
 
       <div id="captionList" class="item-list"></div>
 
+      <!-- Caption Editor Container -->
+      <div id="captionEditorContainer" class="caption-editor" style="display: none; margin-top: 12px;"></div>
+
+      <!-- Caption Editor Controls -->
+      <div class="button-group" style="margin-top: 8px;">
+        <button id="startCaptionEditBtn" class="secondary">✎ Edit Captions</button>
+      </div>
+
       <div class="pattern-input">
-        <label>Rename Pattern:</label>
+        <label>Rename Pattern (Batch - Experimental):</label>
         <input id="captionPattern" type="text" placeholder="CAP_{shot}" value="CAP_{shot}">
         <span class="hint">Use {shot} for sequential numbering</span>
       </div>
@@ -129,6 +137,6 @@
     </div>
   </div>
 
-  <script src="index.js"></script>
+  <script src="index-v4-manual-editing.js"></script>
 </body>
 </html>
