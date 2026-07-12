@@ -1,0 +1,24 @@
+{
+  "name": "VFX List Export Tool",
+  "version": "1.0.0",
+  "uapVersion": "1.0",
+  "description": "Batch rename markers, captions, and text plates with full automation",
+  "requiredPermissions": [],
+  "requiredApis": [
+    "application"
+  ],
+  "uiModes": [
+    "panel"
+  ],
+  "hostList": [
+    "PrME"
+  ],
+  "requiredVersion": "25.6",
+  "requiredRuntimeVersion": "1.0",
+  "entryPoints": [
+    {
+      "type": "panel",
+      "name": "VFX List Export"
+    }
+  ]
+}
