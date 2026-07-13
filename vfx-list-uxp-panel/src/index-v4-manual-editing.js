@@ -373,6 +373,7 @@ class VFXListToolV4Manual {
    */
   async executeAll() {
     const markerPattern = document.getElementById("markerPattern").value;
+    const limitToRange = document.getElementById("limitToRange").checked;
 
     if (!markerPattern) {
       this.status("⚠️ No marker pattern specified", "error");
@@ -384,12 +385,25 @@ class VFXListToolV4Manual {
     try {
       let results = [];
 
+      // Get TC range if limited
+      let inOutRange = null;
+      if (limitToRange) {
+        inOutRange = await this.getTCRange();
+        if (!inOutRange) {
+          this.status("⚠️ TC Range limiting enabled but IN/OUT markers not found", "error");
+          return;
+        }
+      }
+
       await application.executeTransaction(async () => {
         // Rename markers
         if (markerPattern) {
-          const markerResults = await this.renameMarkers(markerPattern);
+          const markerResults = await this.renameMarkers(markerPattern, inOutRange);
           if (markerResults > 0) {
             results.push(`✓ Renamed ${markerResults} markers`);
+            if (limitToRange && inOutRange) {
+              results.push(`   (Limited to TC: ${inOutRange.inTime} - ${inOutRange.outTime})`);
+            }
           }
         }
       });
@@ -410,18 +424,97 @@ class VFXListToolV4Manual {
   }
 
   /**
+   * Get TC range from IN/OUT markers
+   */
+  async getTCRange() {
+    try {
+      let inMarker = null;
+      let outMarker = null;
+
+      for (let m of this.markers) {
+        const name = await m.name;
+        const start = await m.start;
+
+        if (name.toUpperCase() === "IN") {
+          inMarker = { name, start };
+        } else if (name.toUpperCase() === "OUT") {
+          outMarker = { name, start };
+        }
+      }
+
+      if (!inMarker || !outMarker) {
+        return null;
+      }
+
+      // Convert ticks to timecode string
+      const inTime = this.ticksToTimecode(inMarker.start);
+      const outTime = this.ticksToTimecode(outMarker.start);
+
+      return {
+        inTicks: inMarker.start,
+        outTicks: outMarker.start,
+        inTime,
+        outTime
+      };
+    } catch (e) {
+      this.log("Error getting TC range:", e);
+      return null;
+    }
+  }
+
+  /**
+   * Convert ticks to timecode string (HH:MM:SS:FF)
+   */
+  ticksToTimecode(ticks) {
+    try {
+      const seq = this.sequence;
+      if (!seq) return "00:00:00:00";
+
+      // Basic conversion (simplified - real implementation would use sequence settings)
+      const frameRate = 30; // Default, should read from sequence
+      const totalFrames = Math.floor(ticks / (254016000 / frameRate)); // 254016000 ticks per second
+
+      const hours = Math.floor(totalFrames / (frameRate * 3600));
+      const minutes = Math.floor((totalFrames % (frameRate * 3600)) / (frameRate * 60));
+      const seconds = Math.floor((totalFrames % (frameRate * 60)) / frameRate);
+      const frames = totalFrames % frameRate;
+
+      return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}:${String(frames).padStart(2, "0")}`;
+    } catch (e) {
+      return "00:00:00:00";
+    }
+  }
+
+  /**
+   * Check if marker is within TC range
+   */
+  isMarkerInRange(markerStart, tcRange) {
+    if (!tcRange) return true;
+    return markerStart >= tcRange.inTicks && markerStart <= tcRange.outTicks;
+  }
+
+  /**
    * Rename markers only
    */
-  async renameMarkers(pattern) {
+  async renameMarkers(pattern, tcRange) {
     let count = 0;
     let counter = 1;
+    let skipped = 0;
 
     for (let m of this.markers) {
       try {
         const name = await m.name;
+        const start = await m.start;
 
         // Skip IN/OUT markers
         if (name.toUpperCase().includes("IN") || name.toUpperCase().includes("OUT")) {
+          continue;
+        }
+
+        // Check TC range if enabled
+        if (tcRange && !this.isMarkerInRange(start, tcRange)) {
+          skipped++;
+          this.log(`Skipped marker (outside TC range): ${name}`);
           continue;
         }
 
@@ -433,6 +526,10 @@ class VFXListToolV4Manual {
       } catch (e) {
         this.log(`Error renaming marker:`, e);
       }
+    }
+
+    if (skipped > 0) {
+      this.log(`Skipped ${skipped} markers outside TC range`);
     }
 
     return count;
