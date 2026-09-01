@@ -42,3 +42,13 @@ Canonical source register for the developer reference. Source priority and evide
 - AAF Object Specification: <https://aafassociation.org/specs/object_spec.html>
 - Avid AAF export guidance: <https://kb.avid.com/pkb/articles/en_US/How_To/How-to-export-an-AAF>
 - Blackmagic Resolve scripting release notes: <https://documents.blackmagicdesign.com/SupportNotes/DaVinci_Resolve_17_New_Features_Guide.pdf>
+
+## Premiere Pro and DaVinci Resolve round-trip
+
+- Adobe Premiere XML export: <https://helpx.adobe.com/premiere/desktop/render-and-export/export-files/export-a-project-as-a-final-cut-pro-xml-file.html>
+- Adobe supported export formats: <https://helpx.adobe.com/premiere/desktop/render-and-export/export-files/supported-export-file-formats.html>
+- Adobe UXP ProjectConverter: <https://developer.adobe.com/premiere-pro/uxp/ppro-reference/classes/projectconverter>
+- Resolve conforming projects reference: <https://documents.blackmagicdesign.com/UserManuals/DaVinci_Resolve_10_Reference_Manual.pdf>
+- Resolve AAF/XML export reference: <https://documents.blackmagicdesign.com/UserManuals/DaVinci_Resolve_11_Reference_Manual.pdf>
+- Resolve community round-trip observations: <https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=185245>
+- Resolve community relinking observations: <https://forum.blackmagicdesign.com/viewtopic.php?f=3&t=112614>
