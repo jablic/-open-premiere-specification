@@ -4,7 +4,7 @@ title: Markers & Timeline Annotations (Legacy Reference)
 category: workflow
 status: legacy
 stability: active
-doc_status: reference
+doc_status: partial
 introduced: "Premiere Pro CC 2015"
 min_premiere_version: "14.0"
 api_namespace: app
