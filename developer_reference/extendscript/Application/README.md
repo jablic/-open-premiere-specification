@@ -131,12 +131,12 @@ The following index is inventory-level. Method-specific contract pages will be a
 | `app.getWorkspaces()` | `Array<String>` or `null` | Returns available workspace names. | A |
 | `app.isDocument(path)` | `Boolean` | Tests whether a file can be opened as a Premiere project. | A |
 | `app.isDocumentOpen()` | `Boolean` | Tests whether at least one project is open. | A |
-| `app.newProject(path)` | `Boolean` | Creates a new `.prproj` project at the specified path. | A |
-| `app.openDocument(path, suppressConversionDialog, bypassLocateFileDialog, bypassWarningDialog, doNotAddToMRUList)` | `Boolean` | Opens a Premiere project file. | A |
+| [`app.newProject(path)`](Methods/newProject.md) | `Boolean` | Creates a new project at the specified path. | A |
+| [`app.openDocument(path, suppressConversionDialog, bypassLocateFileDialog, bypassWarningDialog, doNotAddToMRUList)`](Methods/openDocument.md) | `Boolean` | Opens a Premiere project file. | A |
 | `app.openFCPXML(path, projPath)` | `Boolean` | Opens/imports an FCP XML into a Premiere project path. | A |
 | `app.quit()` | Nothing | Quits Premiere Pro; user may be prompted to save. | A |
-| `app.setEnableProxies(enabled)` | `1` if changed | Sets global proxy usage state. | A |
-| `app.setExtensionPersistent(extensionID, persistent)` | `Boolean` | Controls whether a CEP extension remains loaded during session. | A |
+| [`app.setEnableProxies(enabled)`](Methods/setEnableProxies.md) | Integer/Boolean-compatible | Sets proxy usage state; exact success codes are not documented. | A/B |
+| [`app.setExtensionPersistent(extensionID, persistent)`](Methods/setExtensionPersistent.md) | `Boolean` | Controls whether a CEP extension remains loaded during session. | A |
 | `app.setScratchDiskPath(path, scratchDiskType)` | `Boolean` | Sets a scratch disk path for a specified scratch disk type. | A |
 | `app.setSDKEventMessage(message, decorator)` | Varies by implementation/docs | Writes a message to the Events panel. | A |
 | `app.setWorkspace(workspace)` | `Boolean` | Switches active workspace. | A |
