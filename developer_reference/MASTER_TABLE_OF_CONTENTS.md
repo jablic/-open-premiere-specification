@@ -260,6 +260,8 @@ Purpose: define the complete editorial map for technical documentation about Ado
 - Roundtrip risk.
 - Unsupported nodes.
 - Safe transformations.
+- OpenTimelineIO model and FCP7 XML adapter interoperability.
+- Premiere UXP `ProjectConverter.exportAsOpenTimelineIO()`.
 
 ### 7.2 Captions
 - Caption tracks.
