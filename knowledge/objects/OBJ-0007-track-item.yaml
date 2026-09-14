@@ -1,0 +1,60 @@
+id: OBJ-0007-track-item
+title: TrackItem object model
+description: |
+  A TrackItem is a clip instance on a timeline track. Unlike ProjectItem
+  (bin clips), TrackItems have temporal properties (in/out points, position)
+  and may have independent effects and adjustments.
+kind: object
+tags: [timeline, clip-instance, track-item, temporal, object-model]
+domain: object-model
+
+identity:
+  - TrackItem is scoped to a Track within a Sequence
+  - TrackItem identity is temporal: (track, startTime) forms unique key
+  - Multiple TrackItems can reference same ProjectItem
+  - TrackItem does not own media; ProjectItem does (see RULE-0005)
+
+properties:
+  projectItem: { type: "ProjectItem", mutable: false, reference: true }
+  track: { type: "Track", mutable: false, reference: true, significance: "high" }
+  startTime: { type: "number", mutable: true, unit: "milliseconds", significance: "high" }
+  duration: { type: "number", mutable: true, unit: "milliseconds" }
+  inPoint: { type: "number", mutable: true, unit: "milliseconds" }
+  outPoint: { type: "number", mutable: true, unit: "milliseconds" }
+  effects: { type: "array<Effect>", mutable: true, ordered: true }
+  enabled: { type: "boolean", mutable: true, default: true }
+  linkedClips: { type: "array<TrackItem>", mutable: false, reference: true }
+
+operations:
+  - method: move
+    parameters: [newStartTime: number]
+    safety: preserves_track_references
+  - method: setInPoint
+    parameters: [time: number]
+    safety: may_affect_visible_duration
+  - method: setOutPoint
+    parameters: [time: number]
+    safety: may_affect_visible_duration
+  - method: stretch
+    parameters: [factor: number]
+    safety: may_affect_downstream_clips
+  - method: addEffect
+    parameters: [effect: Effect]
+    safety: preserves_clip_identity
+
+guarantees:
+  - outPoint > inPoint always
+  - duration = outPoint - inPoint always
+  - linked TrackItems maintain sync or explicitly break link
+
+antipatterns:
+  - Do not confuse TrackItem properties with ProjectItem properties
+  - Do not assume in/outPoints are the same as track startTime/duration
+  - Do not modify TrackItem during track clip iteration
+  - Do not delete ProjectItem while TrackItems reference it (see RULE-0005)
+
+related:
+  - OBJ-0004-project-item
+  - OBJ-0006-track
+  - RULE-0004-do-not-confuse-projectitem-trackitem
+  - RULE-0009-relink-projectitems-not-trackitems

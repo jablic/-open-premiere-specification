@@ -1,0 +1,70 @@
+id: CAP-0013-audio-submix-routing
+title: Configure audio submix routing and gain/pan automation
+description: |
+  Create submix groups, route AudioTracks to submixes, and apply gain/pan
+  automation with keyframes. Supports multi-level routing (submaster → master).
+kind: capability
+tags: [audio, mixing, routing, submix, automation, sound-design]
+domain: automation.audio-mixing
+
+safety:
+  - should: Validate routing before audio playback
+  - should: Test submix solo/mute functionality
+  - should: Document submix topology for mix review
+
+spec:
+  method: app.sequence.createSubmix
+  required:
+    - name: string
+    - channelFormat: enum:Stereo|5.1|7.1
+  optional:
+    - parentSubmix: Submix (default: null - routes to master)
+    - color: Color
+  returns: Submix
+
+submix_operations:
+  - method: addTrack
+    parameters: [audioTrack: AudioTrack]
+    safety: updates_routing_topology
+  - method: removeTrack
+    parameters: [audioTrack: AudioTrack]
+    safety: updates_routing_topology
+  - method: setGain
+    parameters: [gaindB: number, time?: number]
+    safety: may_add_keyframe
+  - method: setPan
+    parameters: [panValue: number, time?: number]
+    safety: affects_stereo_positioning
+
+examples:
+  - name: Create dialogue/music/effects submix hierarchy
+    code: |
+      // Create main submixes
+      const dialogueSubmix = await app.sequence.createSubmix('Dialogue', 'Stereo');
+      const musicSubmix = await app.sequence.createSubmix('Music', 'Stereo');
+      const effectsSubmix = await app.sequence.createSubmix('Effects', 'Stereo');
+
+      // Create master bus submix
+      const masterSubmix = await app.sequence.createSubmix('Master', 'Stereo');
+
+      // Route audio tracks to appropriate submixes
+      sequence.audioTracks.forEach(track => {
+        if (track.name.includes('DIAL')) {
+          await dialogueSubmix.addTrack(track);
+        } else if (track.name.includes('MUS')) {
+          await musicSubmix.addTrack(track);
+        } else if (track.name.includes('FX')) {
+          await effectsSubmix.addTrack(track);
+        }
+      });
+
+      // Route submixes to master with level automation
+      await masterSubmix.addTrack(dialogueSubmix, { initialGain: -3 });
+      await masterSubmix.addTrack(musicSubmix, { initialGain: -6 });
+      await masterSubmix.addTrack(effectsSubmix, { initialGain: -9 });
+
+      console.log('Audio routing hierarchy established');
+
+related:
+  - OBJ-0011-audio-track
+  - CAP-0008-effects-preset-bulk-apply

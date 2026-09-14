@@ -1,0 +1,58 @@
+id: CAP-0018-linked-clip-management
+title: Manage linked clips (audio/video synchronization)
+description: |
+  Create, break, and validate linked audio/video clip pairs. Linked clips
+  move and trim together, maintaining sync. Useful for multi-track synced
+  recordings and dialogue/VO pairs.
+kind: capability
+tags: [linked-clips, synchronization, audio-sync, video-sync, automation]
+domain: automation.media-handling
+
+safety:
+  - should: Validate sync after breaking links
+  - should: Report sync offset information
+  - should: Preserve original timing relationships
+
+spec:
+  method: app.sequence.createLink
+  required:
+    - videoClip: TrackItem
+    - audioClip: TrackItem
+  optional:
+    - validateSync: boolean (default: true)
+  returns: object<{ linked, syncOffset }>
+
+link_operations:
+  - method: app.sequence.breakLink
+    parameters: [clips: array<TrackItem>]
+    returns: object<{ brokenCount, orphanedClips }>
+  - method: app.sequence.validateLinks
+    parameters: [clips?: array<TrackItem>]
+    returns: object<{ validLinks, desyncedLinks, syncOffsets }>
+
+examples:
+  - name: Link synchronized camera and audio tracks
+    code: |
+      const videoClips = sequence.videoTracks[0].clips;
+      const audioClips = sequence.audioTracks[0].clips;
+
+      const linkResults = [];
+      for (let i = 0; i < videoClips.length; i++) {
+        if (i < audioClips.length) {
+          const result = await sequence.createLink(
+            videoClips[i],
+            audioClips[i],
+            { validateSync: true }
+          );
+          linkResults.push(result);
+          console.log(`Linked: ${videoClips[i].name} ↔ ${audioClips[i].name}`);
+          if (result.syncOffset > 100) { // > 100ms offset
+            console.warn(`  Sync offset: ${result.syncOffset}ms`);
+          }
+        }
+      }
+
+related:
+  - OBJ-0007-track-item
+  - CAP-0007-audio-analysis-sync
+  - RULE-0004-do-not-confuse-projectitem-trackitem

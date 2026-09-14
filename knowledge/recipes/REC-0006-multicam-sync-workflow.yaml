@@ -1,0 +1,88 @@
+id: REC-0006-multicam-sync-workflow
+title: Multi-camera shoot automatic synchronization workflow
+description: |
+  Ingest multi-camera footage, analyze audio to find sync points, and create
+  organized Multicam sequences. Demonstrates audio analysis capability and
+  track management for large-scale productions.
+kind: recipe
+tags: [multicam, audio-sync, automation, production, synchronization]
+domain: workflows.production
+
+scope: |
+  Assumes imported camera clips are organized in a single bin.
+  Requires audio tracks with overlapping recording from all cameras.
+  Produces one Multicam sequence per scene with synchronized angle variants.
+
+steps:
+  - title: "Organize Camera Clips"
+    description: "Filter imported clips by scene and camera angle"
+    code: |
+      const cameraClips = bin.items.filter(i => i.name.match(/CAM\d+/));
+      const sceneGroups = {};
+      cameraClips.forEach(clip => {
+        const scene = clip.name.match(/SCENE(\d+)/)[1];
+        if (!sceneGroups[scene]) sceneGroups[scene] = [];
+        sceneGroups[scene].push(clip);
+      });
+
+  - title: "Analyze Audio for Sync Points"
+    description: "Use audio fingerprinting to find sync timecode offset"
+    code: |
+      const syncResults = {};
+      for (const [scene, clips] of Object.entries(sceneGroups)) {
+        const reference = clips[0]; // Use first camera as reference
+        const analysis = await app.project.audioAnalyze(
+          clips.slice(1),
+          reference,
+          { confidenceThreshold: 0.92 }
+        );
+        syncResults[scene] = analysis;
+      }
+
+  - title: "Create Multicam Sequences"
+    description: "Build Multicam sequence with synchronized angles"
+    code: |
+      for (const [scene, syncData] of Object.entries(syncResults)) {
+        const sequence = app.project.createSequence(
+          `MULTICAM-${scene}`,
+          { type: 'Multicam' }
+        );
+
+        // Apply sync offsets when placing clips
+        const clipGroup = sceneGroups[scene];
+        clipGroup.forEach((clip, index) => {
+          const offset = syncData.syncMap[index];
+          const startTime = offset ? clip.duration - offset : 0;
+          sequence.addClip(clip, startTime);
+        });
+
+        console.log(`Created Multicam sequence: ${sequence.name}`);
+      }
+
+  - title: "Validate Synchronization"
+    description: "Visual inspection and confidence score reporting"
+    code: |
+      Object.entries(syncResults).forEach(([scene, data]) => {
+        console.log(`Scene ${scene} sync confidence:`, data.confidenceScores);
+        data.confidenceScores.forEach((score, idx) => {
+          if (score < 0.90) {
+            console.warn(`Camera ${idx}: ${score} - manual review recommended`);
+          }
+        });
+      });
+
+safety_considerations:
+  - Create backup before multicam sequence creation (see RULE-0003)
+  - Preserve original clips in bin; do not delete after sync
+  - Document confidence thresholds used for sync decisions
+  - Save project frequently during large multicam operations
+
+expected_outcome: |
+  Well-organized Multicam sequences with synchronized angles ready for
+  angle switching during rough cut. Confidence scores logged for QA review.
+
+related:
+  - CAP-0007-audio-analysis-sync
+  - OBJ-0006-track
+  - OBJ-0007-track-item
+  - RULE-0003-backup-before-destructive-edit

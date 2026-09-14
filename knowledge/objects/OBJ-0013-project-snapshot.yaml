@@ -1,0 +1,74 @@
+id: OBJ-0013-project-snapshot
+title: ProjectSnapshot object model
+description: |
+  ProjectSnapshot represents a saved state of the project at a specific point
+  in time. Snapshots contain project data, timelines, metadata, and can be
+  restored non-destructively with automatic backup creation.
+kind: object
+tags: [versioning, snapshots, project-management, safety, object-model]
+domain: object-model
+
+identity:
+  - Snapshot is identified by snapshotId (UUID or timestamp-based)
+  - Snapshot scope: per-project
+  - Snapshot identity persists in snapshot database
+  - Snapshots are immutable after creation
+
+properties:
+  snapshotId: { type: "string", immutable: true, significance: "high" }
+  projectName: { type: "string", immutable: true }
+  name: { type: "string", immutable: true }
+  description: { type: "string", immutable: true }
+  createdAt: { type: "timestamp", immutable: true, significance: "high" }
+  size: { type: "number", immutable: true, unit: "bytes" }
+  metadata: { type: "object<unknown>", immutable: true }
+  compression: { type: "enum:none|gzip|zstd", immutable: true }
+  hash: { type: "string", immutable: true, significance: "high" }
+  status: { type: "enum:valid|corrupted|orphaned", mutable: false }
+
+snapshot_metadata:
+  - editor: string (creator identifier)
+  - purpose: string (why snapshot was created)
+  - stage: string (production stage: pre-production, editing, finishing)
+  - notes: string (additional context for restoration)
+  - source_version: string (Premiere version used to create)
+
+operations:
+  - method: restore
+    parameters: [createBackupFirst: boolean]
+    returns: void
+    safety: creates_backup_before_restore
+  - method: validate
+    parameters: []
+    returns: object<{ valid, checksumMatch, missingFiles }>
+    safety: non_destructive
+  - method: export
+    parameters: [outputPath: string]
+    returns: void
+    safety: creates_archive_copy
+  - method: delete
+    parameters: []
+    returns: void
+    safety: requires_explicit_confirmation
+
+guarantees:
+  - Snapshot data is checksummed and validated on restore
+  - Snapshot is immutable after creation (forensics trail)
+  - Restore operation creates automatic backup (see CAP-0010)
+  - Snapshot can be inspected without modifying project
+
+antipatterns:
+  - Do not restore snapshot without reading description first
+  - Do not delete snapshots without understanding their purpose
+  - Do not assume snapshot is smaller than full project
+  - Do not rely on snapshots for version control (use git instead)
+
+safety_notes:
+  - Snapshots support recovery from catastrophic edits
+  - Snapshots are compressed for storage efficiency
+  - Regular snapshots recommended before major operations
+  - Archive old snapshots to external storage
+
+related:
+  - CAP-0010-project-snapshot-versioning
+  - RULE-0003-backup-before-destructive-edit

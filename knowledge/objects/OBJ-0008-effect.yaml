@@ -1,0 +1,61 @@
+id: OBJ-0008-effect
+title: Effect object model
+description: |
+  An Effect is a video or audio processing operation applied to a Track,
+  TrackItem, or master bus. Effects have parameters that can be keyframed
+  and organized in effect chains.
+kind: object
+tags: [effects, video-processing, audio-processing, parameters, object-model]
+domain: object-model
+
+identity:
+  - Effect is scoped to parent (Track or TrackItem)
+  - Effect has effect slot index within parent
+  - Effect identity determined by (parent, slotIndex)
+  - Same effect type can appear multiple times in chain
+
+properties:
+  effectName: { type: "string", immutable: true }
+  slotIndex: { type: "number", immutable: true, significance: "high" }
+  enabled: { type: "boolean", mutable: true, default: true }
+  matchName: { type: "string", immutable: true }
+  parameters: { type: "object<EffectParameter>", mutable: true }
+  parent: { type: "Track|TrackItem", mutable: false, reference: true }
+
+effect_parameters:
+  - Common video effects: Lumetri Color, Ultra Key, Fisheye, Mosaic
+  - Common audio effects: EQ, Reverb, Compressor, Graphic EQ
+  - Parameter types: number range, boolean, dropdown, text
+  - Parameters support keyframing with temporal interpolation
+
+operations:
+  - method: setParameterValue
+    parameters: [paramName: string, value: any, time?: number]
+    safety: may_add_keyframe
+  - method: removeEffect
+    parameters: []
+    returns: void
+    safety: preserves_downstream_effects
+  - method: move
+    parameters: [newSlotIndex: number]
+    safety: preserves_effect_identity
+  - method: duplicate
+    parameters: []
+    returns: Effect
+    safety: creates_new_effect
+
+guarantees:
+  - Effect parameter changes are immediately applied
+  - Effect slot index is stable during session
+  - Effect keyframes persist across undo/redo
+
+antipatterns:
+  - Do not assume effect names are stable across Premiere versions
+  - Do not assume custom effects are available on all systems
+  - Do not set non-existent parameters (will fail silently)
+  - Do not access disabled effects; enable before reading parameters
+
+related:
+  - OBJ-0006-track
+  - OBJ-0007-track-item
+  - CAP-0008-effects-preset-bulk-apply

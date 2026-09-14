@@ -1,0 +1,73 @@
+id: OBJ-0014-submix
+title: Submix object model
+description: |
+  A Submix is a virtual audio bus that collects audio from multiple tracks
+  and routes to another submix or the master output. Submixes support gain,
+  pan, effects, and multi-level hierarchical routing.
+kind: object
+tags: [audio, mixing, submix, routing, master-bus, object-model]
+domain: object-model
+
+identity:
+  - Submix is scoped to parent Sequence
+  - Submix has unique name within Sequence
+  - Submix can have parent (another Submix) or route to Master
+  - Submix identity persists across session until deleted
+
+properties:
+  name: { type: "string", mutable: true, significance: "high" }
+  channelFormat: { type: "enum:Stereo|5.1|7.1|Mono", immutable: true }
+  gain: { type: "number", mutable: true, unit: "dB", default: 0 }
+  pan: { type: "number", mutable: true, range: -100 to 100, default: 0 }
+  parentSubmix: { type: "Submix|Master", mutable: true, reference: true }
+  tracks: { type: "array<AudioTrack>", mutable: true, ordered: false }
+  effects: { type: "array<Effect>", mutable: true, ordered: true }
+  solo: { type: "boolean", mutable: true, default: false }
+  muted: { type: "boolean", mutable: true, default: false }
+  meterInputLevel: { type: "number", unit: "dB", readonly: true }
+  meterOutputLevel: { type: "number", unit: "dB", readonly: true }
+
+operations:
+  - method: addTrack
+    parameters: [track: AudioTrack | Submix]
+    safety: updates_routing_topology
+  - method: removeTrack
+    parameters: [track: AudioTrack | Submix]
+    safety: updates_routing_topology
+  - method: setGain
+    parameters: [gaindB: number, time?: number]
+    safety: may_add_keyframe
+  - method: addEffect
+    parameters: [effect: Effect]
+    safety: preserves_track_references
+  - method: routeToSubmix
+    parameters: [parentSubmix: Submix]
+    safety: validates_no_circular_routing
+  - method: delete
+    parameters: []
+    returns: void
+    safety: orphans_routed_tracks_to_master
+
+guarantees:
+  - Submix cannot route to itself (prevents circular routing)
+  - All routed tracks flow through submix before master
+  - Gain/pan changes apply immediately to audio stream
+  - Effects apply to combined signal of all routed inputs
+
+antipatterns:
+  - Do not create circular submix chains (A→B→A)
+  - Do not delete submix while tracks are soloed within it
+  - Do not assume submix effects are on master output; they're before mix
+  - Do not modify submix routing during playback
+
+mix_architecture_example: |
+  Recommended layout for complex mixes:
+    - Dialogue Track → Dialogue Submix → Master
+    - Music Track → Music Submix → Master
+    - Effect Tracks → Effects Submix → Master
+    - (optional) Dialogue + Music + Effects → Mix Submix → Master
+
+related:
+  - OBJ-0011-audio-track
+  - CAP-0013-audio-submix-routing
+  - OBJ-0008-effect

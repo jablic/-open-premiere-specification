@@ -1,0 +1,179 @@
+id: REC-0011-documentary-finishing-pipeline
+title: Complete documentary finishing pipeline with audio mix and color grade
+description: |
+  Full finishing workflow from rough cut to delivery: audio organization,
+  submix creation, color grading, LUT application, codec validation, and
+  multi-format export. Demonstrates integrated use of all audio and color
+  capabilities.
+kind: recipe
+tags: [finishing, audio-mix, color-grade, lut, delivery, production]
+domain: workflows.finishing
+
+scope: |
+  Assumes sequences have been rough cut with dialogue/music/effects on
+  separate tracks. Requires Lumetri Color presets and LUT files available.
+  Produces broadcast and web-ready deliverables.
+
+steps:
+  - title: "Organize Audio Tracks by Category"
+    description: "Prepare tracks for submix routing"
+    code: |
+      const sequence = app.project.activeSequence;
+      const audioTracks = sequence.audioTracks;
+
+      // Identify track categories
+      const tracksByCategory = {
+        dialogue: [],
+        music: [],
+        effects: [],
+        ambience: []
+      };
+
+      audioTracks.forEach(track => {
+        if (track.name.includes('DIAL')) tracksByCategory.dialogue.push(track);
+        else if (track.name.includes('MUS')) tracksByCategory.music.push(track);
+        else if (track.name.includes('FX')) tracksByCategory.effects.push(track);
+        else tracksByCategory.ambience.push(track);
+      });
+
+      console.log('Audio track organization complete');
+
+  - title: "Create Submix Hierarchy"
+    description: "Build 3-level mix hierarchy"
+    code: |
+      // Create primary submixes
+      const dialogueSubmix = await sequence.createSubmix('Dialogue', 'Stereo');
+      const musicSubmix = await sequence.createSubmix('Music', 'Stereo');
+      const effectsSubmix = await sequence.createSubmix('Effects', 'Stereo');
+      const ambienceSubmix = await sequence.createSubmix('Ambience', 'Stereo');
+
+      // Route tracks to submixes
+      tracksByCategory.dialogue.forEach(t => dialogueSubmix.addTrack(t));
+      tracksByCategory.music.forEach(t => musicSubmix.addTrack(t));
+      tracksByCategory.effects.forEach(t => effectsSubmix.addTrack(t));
+      tracksByCategory.ambience.forEach(t => ambienceSubmix.addTrack(t));
+
+      // Create master with routing
+      const masterSubmix = sequence.masterAudio;
+      await dialogueSubmix.routeToSubmix(masterSubmix);
+      await musicSubmix.routeToSubmix(masterSubmix);
+      await effectsSubmix.routeToSubmix(masterSubmix);
+      await ambienceSubmix.routeToSubmix(masterSubmix);
+
+      console.log('Submix hierarchy created');
+
+  - title: "Apply Base Loudness Normalization"
+    description: "Set submix levels to standard loudness targets"
+    code: |
+      // Documentary loudness targets (EBU R128 standard)
+      // Dialogue: -19 LUFS, Music: -18 LUFS, Effects: -20 LUFS
+      const loudnessMap = {
+        'Dialogue': -19,
+        'Music': -18,
+        'Effects': -20,
+        'Ambience': -22
+      };
+
+      for (const [category, targetLUFS] of Object.entries(loudnessMap)) {
+        const submix = sequence[`${category}Submix`];
+        // Initial gain estimate (refined during final mix)
+        const initialGain = targetLUFS - (-23); // Assume peak at -23 LUFS
+        submix.setGain(initialGain);
+        console.log(`${category} submix: ${initialGain.toFixed(1)} dB`);
+      }
+
+  - title: "Apply Color Correction Base Grade"
+    description: "Apply Lumetri Color preset to establish look"
+    code: |
+      const videoClips = sequence.videoTracks.flatMap(t => t.clips);
+
+      // Apply documentary look preset
+      const colorResult = await app.project.applyEffectPreset(
+        videoClips,
+        'Lumetri Color',
+        '/presets/documentary-warm-look.preset',
+        {
+          parameterOverrides: {},
+          validatePresets: true
+        }
+      );
+
+      console.log(`Applied color preset to ${colorResult.appliedCount} clips`);
+
+  - title: "Set Project Color Space and Apply LUT"
+    description: "Configure for Rec.709 broadcast delivery"
+    code: |
+      // Set project to Rec.709 (standard broadcast)
+      await app.project.setColorSpace('Rec709');
+
+      // Apply broadcast LUT to prepare for delivery
+      const lutResult = await sequence.applyLUT(
+        '/luts/log-to-rec709-broadcast.cube',
+        videoClips
+      );
+
+      console.log(`Applied Rec.709 LUT to ${lutResult.appliedCount} clips`);
+
+  - title: "Validate Codec Compatibility for Delivery"
+    description: "Pre-flight check for export formats"
+    code: |
+      const targetFormats = ['H.264-Broadcast', 'ProRes-Archive'];
+
+      const validation = await app.project.validateCodecs(targetFormats);
+
+      console.log(`Compatible for delivery: ${validation.compatible.length}`);
+      if (validation.incompatible.length > 0) {
+        console.warn(`Incompatible clips (require transcoding):`);
+        validation.incompatible.forEach(clip => {
+          console.warn(`  - ${clip.name}: ${clip.reason}`);
+        });
+      }
+
+  - title: "Export Broadcast Delivery Master"
+    description: "Export H.264 for streaming and broadcast"
+    code: |
+      const broadcastExport = await app.project.exportBatch(
+        [sequence],
+        [{
+          codec: 'H.264',
+          preset: 'Broadcast-1080p',
+          outputPath: './deliverables/broadcast.mp4'
+        }],
+        { validatePresets: true }
+      );
+
+      console.log(`Broadcast export: ${broadcastExport.successCount} succeeded`);
+
+  - title: "Export Archive Master"
+    description: "Export ProRes for long-term archival"
+    code: |
+      const archiveExport = await app.project.exportBatch(
+        [sequence],
+        [{
+          codec: 'ProRes',
+          preset: 'ProRes 422 HQ',
+          outputPath: './deliverables/archive.mov'
+        }],
+        { validatePresets: true }
+      );
+
+      console.log(`Archive export: ${archiveExport.successCount} succeeded`);
+
+safety_considerations:
+  - Create project snapshot before starting final mix
+  - Validate all audio for sync drift (RULE-0004)
+  - Test master loudness at broadcast-safe levels
+  - Backup project frequently during finishing
+  - Review final mix on calibrated monitors if possible
+
+expected_outcome: |
+  Production-ready documentary with professional audio mix, color-graded
+  footage, and multiple delivery formats (broadcast H.264, archive ProRes).
+
+related:
+  - CAP-0013-audio-submix-routing
+  - CAP-0014-color-space-management
+  - CAP-0011-codec-format-validation
+  - CAP-0006-batch-export-formats
+  - OBJ-0014-submix
+  - OBJ-0016-master-track

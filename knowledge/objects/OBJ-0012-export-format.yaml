@@ -1,0 +1,68 @@
+id: OBJ-0012-export-format
+title: ExportFormat object model
+description: |
+  ExportFormat represents a named export preset that contains codec,
+  container, quality, and metadata settings. Formats can be system presets,
+  user-created, or project-specific, and support parameter overrides.
+kind: object
+tags: [export, format, preset, configuration, object-model]
+domain: object-model
+
+identity:
+  - ExportFormat is identified by formatId (e.g., "H.264-YouTube-1080p")
+  - Format scope: system-wide, user-created, or project-local
+  - Format identity persists across sessions if saved
+  - Duplicate formatIds are not allowed within same scope
+
+properties:
+  formatId: { type: "string", immutable: true, significance: "high" }
+  displayName: { type: "string", mutable: false }
+  codec: { type: "string", mutable: false }
+  container: { type: "string", mutable: false }
+  scope: { type: "enum:system|user|project", immutable: true }
+  quality: { type: "enum:low|medium|high|maximum", mutable: true }
+  bitrate: { type: "number|string", mutable: true }
+  frameRate: { type: "number|null", mutable: true }
+  resolution: { type: "object<{ width, height }>", mutable: true }
+  audioCodec: { type: "string", mutable: true }
+  audioSampleRate: { type: "number", mutable: true, unit: "Hz" }
+  parameters: { type: "object<ExportParameter>", mutable: true }
+
+export_parameters:
+  - Common video: bitrate, quality, frame rate, resolution, codec profile
+  - Common audio: sample rate, bit depth, channels, codec
+  - Advanced: color space, metadata flags, closed captions handling
+  - Platform-specific: hardware acceleration, GPU options
+
+operations:
+  - method: save
+    parameters: []
+    returns: void
+    safety: persists_to_disk
+  - method: clone
+    parameters: [newFormatId: string]
+    returns: ExportFormat
+    safety: creates_new_format
+  - method: validate
+    parameters: [sequence: Sequence]
+    returns: object<{ compatible, warnings }>
+    safety: non_destructive
+  - method: delete
+    parameters: []
+    returns: void
+    safety: requires_confirmation_if_in_use
+
+guarantees:
+  - Format parameters are validated before export
+  - Quality/bitrate presets follow broadcast standards
+  - Audio codec compatibility verified with video codec
+
+antipatterns:
+  - Do not create format without testing on sample media
+  - Do not assume format availability across Premiere versions
+  - Do not use format parameters without validation
+  - Do not modify system presets; clone instead
+
+related:
+  - CAP-0006-batch-export-formats
+  - CAP-0011-codec-format-validation

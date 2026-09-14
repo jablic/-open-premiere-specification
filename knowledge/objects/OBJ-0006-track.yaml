@@ -1,0 +1,56 @@
+id: OBJ-0006-track
+title: Track object model
+description: |
+  A Track represents a single video or audio track within a Sequence.
+  Tracks contain ordered clips (TrackItems) and support effects, locks,
+  and visibility states.
+kind: object
+tags: [timeline, sequence, track, video, audio, object-model]
+domain: object-model
+
+identity:
+  - Track is scoped to a parent Sequence
+  - Track index position is significant and stable during session
+  - Track type (video vs audio) is immutable
+  - Track identity persists across undo/redo boundaries
+
+properties:
+  trackType: { type: "enum:VideoTrack|AudioTrack", immutable: true }
+  trackIndex: { type: "number", immutable: true, significance: "high" }
+  clips: { type: "array<TrackItem>", mutable: true, ordered: true }
+  locked: { type: "boolean", mutable: true, default: false }
+  hidden: { type: "boolean", mutable: true, default: false }
+  muted: { type: "boolean", mutable: true, default: false }
+  solo: { type: "boolean", mutable: true, default: false }
+  effects: { type: "array<Effect>", mutable: true, ordered: true }
+  height: { type: "number", mutable: true }
+
+operations:
+  - method: addClip
+    parameters: [clip: TrackItem, position: number]
+    safety: preserves_track_identity
+  - method: removeClip
+    parameters: [clip: TrackItem]
+    safety: preserves_track_identity
+  - method: addEffect
+    parameters: [effect: Effect, position?: number]
+    safety: preserves_clip_references
+  - method: split
+    parameters: [position: number]
+    returns: void
+    safety: may_affect_trackitem_positions
+
+guarantees:
+  - All TrackItems in clips array maintain parent Track reference
+  - Track index remains constant within session
+  - Effects apply to all clips in track sequentially
+
+antipatterns:
+  - Do not assume TrackItem retains references when moved between tracks
+  - Do not modify track array during iteration
+  - Do not assume hidden tracks are excluded from exports (check export settings)
+
+related:
+  - OBJ-0005-sequence
+  - OBJ-0010-track-item
+  - OBJ-0011-effect

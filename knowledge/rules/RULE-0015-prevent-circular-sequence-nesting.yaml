@@ -1,0 +1,89 @@
+id: RULE-0015-prevent-circular-sequence-nesting
+title: Prevent circular nesting dependencies (A→B→A creates infinite loop)
+description: |
+  Nesting sequences is allowed (sequence within sequence), but circular
+  dependencies are catastrophic. Never create situations where a Sequence
+  contains a nested reference to itself, directly or indirectly.
+kind: rule
+tags: [nesting, sequence-structure, data-integrity, safety]
+domain: rules.object-structure
+
+violation_example: |
+  WRONG: Creating circular nesting (catastrophic)
+  ---
+  const masterSeq = app.project.sequences[0]; // "Master-Edit"
+  const nestedSeq = app.project.sequences[1]; // "Act1-Nest"
+
+  // Scenario 1: Direct circular reference
+  const masterTrack = masterSeq.videoTracks[0];
+  masterTrack.addClip(nestedSeq); // nestedSeq is added to masterSeq
+
+  // Later, accidentally adding masterSeq into nestedSeq:
+  const nestedTrack = nestedSeq.videoTracks[0];
+  nestedTrack.addClip(masterSeq); // CIRCULAR: Master→Nested→Master
+
+  // Result: Infinite loop, project corruption, crash on preview
+
+consequence: |
+  Circular nesting creates:
+  - Infinite expansion loops (preview playback crashes)
+  - Memory exhaustion (Premiere tries to expand nested sequences infinitely)
+  - Project corruption (XML becomes unwritable)
+  - Undo/redo system locks up
+  - File becomes unusable even after forced quit
+
+correct_pattern: |
+  CORRECT: Validate nesting hierarchy before adding nested clips
+  ---
+  function canNestSequence(parent: Sequence, child: Sequence): boolean {
+    // Build ancestry chain: Who contains what?
+    const ancestry = new Set([parent.name]);
+    let current = parent;
+
+    // Walk up parent chain
+    while (current.parent instanceof Sequence) {
+      if (current.parent.name === child.name) {
+        return false; // child is ancestor of parent - would be circular
+      }
+      ancestry.add(current.parent.name);
+      current = current.parent;
+    }
+
+    // Check if child contains parent (would create cycle)
+    const childDescendants = getSequenceDescendants(child);
+    if (childDescendants.has(parent.name)) {
+      return false; // parent is descendant of child - would be circular
+    }
+
+    return true;
+  }
+
+  // Safe nesting
+  if (canNestSequence(masterSeq, nestedSeq)) {
+    masterSeq.videoTracks[0].addClip(nestedSeq);
+  } else {
+    console.error('Circular nesting prevented');
+  }
+
+nesting_hierarchy_guidelines:
+  - Maximum nesting depth: 3-4 levels (performance degrades beyond)
+  - Recommended structure: Master → Act → Scene (not circular)
+  - Track nesting direction: always unidirectional
+  - Validate before every nested clip addition
+
+detection_pattern: |
+  Always implement nesting validation helper:
+  - Before adding nested clip, verify child doesn't contain parent
+  - Build dependency graph before batch operations
+  - Use UI dialogs to prevent accidental circular nesting
+  - Add project validation check before save
+
+impact: critical
+
+related_rules:
+  - RULE-0003-backup-before-destructive-edit
+
+test_coverage:
+  - TEST-0009-projectitem-can-represent-sequence
+  - Need: TEST-CIRCULAR-NESTING-PREVENTION
+  - Need: TEST-NESTING-DEPTH-LIMITS

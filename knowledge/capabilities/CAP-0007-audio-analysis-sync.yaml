@@ -1,0 +1,46 @@
+id: CAP-0007-audio-analysis-sync
+title: Audio analysis and auto-sync clips to reference track
+description: |
+  Analyze audio waveform characteristics and automatically synchronize clips
+  based on matching audio fingerprints. Supports multi-camera sync and
+  temporal offset detection.
+kind: capability
+tags: [audio, synchronization, automation, analysis, multicam]
+domain: automation.media-handling
+
+safety:
+  - must: Preserve original clips without modification
+  - must: Create separate timeline for sync validation before committing
+  - should: Report confidence scores for each sync operation
+  - should: Allow manual override of auto-sync decisions
+
+spec:
+  method: app.project.audioAnalyze
+  required:
+    - clips: array<ProjectItem>
+    - referenceTrack: AudioTrack | TrackItem
+  optional:
+    - confidenceThreshold: number (default: 0.85)
+    - maxOffsetMs: number (default: 5000)
+    - analyzeFrequency: string (default: "full")
+  returns: object<{ syncMap, confidenceScores, analysisMetadata }>
+
+examples:
+  - name: Multi-camera sync from timecode reference
+    code: |
+      const cameraClips = bin.items.filter(i => i.name.includes('CAM'));
+      const referenceAudio = sequence.audioTracks[0].clips[0];
+      const analysis = await app.project.audioAnalyze(
+        cameraClips,
+        referenceAudio,
+        { confidenceThreshold: 0.90 }
+      );
+      console.log(`Synced ${analysis.syncMap.length} clips`);
+      analysis.confidenceScores.forEach(score => {
+        if (score < 0.90) console.warn(`Low confidence: ${score}`);
+      });
+
+related:
+  - OBJ-0004-project-item
+  - CAP-0004-batch-relink-media
+  - RULE-0005-sequence-does-not-own-media

@@ -1,0 +1,75 @@
+id: RULE-0016-gpu-acceleration-varies-by-platform-and-codec
+title: GPU acceleration availability is platform-specific and codec-dependent
+description: |
+  GPU acceleration for codecs and effects varies significantly by GPU model,
+  driver version, Premiere version, and codec. H.264 and HEVC may or may not
+  be GPU-accelerated on the same system across software versions.
+kind: rule
+tags: [performance, gpu, acceleration, cross-platform, compatibility]
+domain: rules.platform-engineering
+
+violation_example: |
+  WRONG: Assuming GPU acceleration is always available
+  ---
+  // Script assumes HEVC decode is GPU-accelerated
+  const hevcClips = await searchMedia({
+    searchCriteria: [
+      { property: 'codec', operator: '=', value: 'HEVC' }
+    ]
+  });
+
+  // Attempt real-time preview without checking GPU capability
+  await sequence.setPlaybackResolution('Full Resolution');
+  // May result in dropped frames, stalls, or system hang
+
+consequence: |
+  Real-time playback stalls or drops frames unexpectedly.
+  Batch operations take far longer than expected.
+  System becomes unresponsive during rendering.
+  Batch automation fails with timeout errors.
+
+correct_pattern: |
+  CORRECT: Query system capabilities before performance-critical operations
+  ---
+  const systemCapabilities = {
+    gpu: {
+      vendor: app.getSystemInfo().gpuVendor, // "NVIDIA", "AMD", "Intel"
+      model: app.getSystemInfo().gpuModel,
+      driverVersion: app.getSystemInfo().driverVersion,
+      maxMemory: app.getSystemInfo().gpuMemory
+    },
+    hevcSupport: app.getSystemInfo().hevcGPUSupport,
+    h264Support: app.getSystemInfo().h264GPUSupport,
+    gpuEffectsEnabled: app.getSystemInfo().gpuEffectsEnabled
+  };
+
+  // Validate codec support before heavy operations
+  if (systemCapabilities.hevcSupport === false) {
+    console.warn('HEVC not GPU-accelerated on this system - may be slow');
+    // Use proxy strategy or force software decode
+    const proxyResult = await transcodeToProxy(hevcClips, 'h264');
+  }
+
+platform_variations:
+  - Windows NVIDIA: H.264, HEVC, VP9 GPU decode available
+  - Windows AMD: H.264 limited, HEVC variable by driver
+  - Mac with Apple Silicon: ProRes, H.264, HEVC all GPU-native
+  - Mac with Intel: ProRes Metal-accelerated, H.264/HEVC limited
+  - Linux: Very limited GPU acceleration (depends on codec support)
+
+practical_guidelines:
+  - Always query system before assuming GPU feature availability
+  - Have fallback strategy for software decode (proxy generation)
+  - Test on actual hardware before automating performance-critical tasks
+  - Document system specs when reporting performance issues
+  - GPU memory exhaustion can cause entire system hang
+
+impact: high
+
+related_rules:
+  - RULE-0001-no-hallucinated-api
+  - CAP-0017-performance-profiling
+
+test_coverage:
+  - Need: TEST-GPU-ACCELERATION-DETECTION
+  - Need: TEST-PERFORMANCE-FALLBACK-STRATEGY

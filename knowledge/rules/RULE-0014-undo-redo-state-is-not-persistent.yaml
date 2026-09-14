@@ -1,0 +1,79 @@
+id: RULE-0014-undo-redo-state-is-not-persistent
+title: Undo/redo state is session-specific and not persisted to disk
+description: |
+  The undo stack exists only in the current session. Closing and reopening
+  a project clears all undo history. Relying on undo/redo for production
+  workflows is unsafe; use project snapshots instead for persistent recovery.
+kind: rule
+tags: [undo-redo, session-state, safety, project-management, best-practices]
+domain: rules.workflow-safety
+
+violation_example: |
+  WRONG: Relying on undo for production safety
+  ---
+  // Perform bulk edit operation
+  await applyBulkColorCorrection(sequences);
+
+  // Assume undo is available if there's a problem
+  if (something_goes_wrong) {
+    editor.undo(); // This will fail if project is closed/reopened!
+  }
+
+consequence: |
+  If project is closed before problem is discovered, undo history is lost.
+  Batch automation scripts cannot assume undo stack is available.
+  Production workflows become brittle and unpredictable.
+
+correct_pattern: |
+  CORRECT: Use snapshots for persistent recovery points
+  ---
+  // Create snapshot BEFORE batch operation
+  const beforeSnapshot = await app.project.createSnapshot(
+    'Before-Color-Correction',
+    'Baseline before bulk color correction'
+  );
+
+  try {
+    // Perform bulk edit operation
+    const result = await applyBulkColorCorrection(sequences);
+
+    // Validate results
+    if (!validateResult(result)) {
+      // SAFE: Can restore snapshot even if project is reopened
+      await app.project.restoreSnapshot(beforeSnapshot.snapshotId);
+      console.log('Restored from snapshot - operation rolled back');
+    }
+  } catch (error) {
+    // Always have persistent backup
+    await app.project.restoreSnapshot(beforeSnapshot.snapshotId);
+    throw error;
+  }
+
+session_state_constraints:
+  - Undo stack is cleared on project close
+  - Undo stack is cleared on project save (to some degree)
+  - Undo stack size is limited (configurable in preferences)
+  - Undo history is not available in automated workflows
+
+practical_implications:
+  - Automation scripts cannot rely on undo for error recovery
+  - Batch operations need explicit validation and rollback
+  - User-facing workflows can use undo; scripted workflows cannot
+  - Project snapshots are the only persistent recovery mechanism
+
+recommended_pattern:
+  1. Create snapshot before batch operation
+  2. Perform operation with error handling
+  3. Validate results and side effects
+  4. Restore snapshot on failure or unexpected results
+  5. Log operation success/failure for audit trail
+
+impact: high
+
+related_rules:
+  - RULE-0003-backup-before-destructive-edit
+  - CAP-0010-project-snapshot-versioning
+
+test_coverage:
+  - Need: TEST-UNDO-PERSISTENCE-ACROSS-SESSIONS
+  - Need: TEST-SNAPSHOT-RESTORE-AFTER-BATCH-OPERATION

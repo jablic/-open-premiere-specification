@@ -1,0 +1,64 @@
+id: CAP-0016-error-recovery-validation
+title: Error detection and automated recovery from corrupt media
+description: |
+  Detect media errors (corrupt files, missing frames, audio sync issues),
+  generate validation reports, and attempt automated recovery using cached
+  data or re-ingesting media.
+kind: capability
+tags: [error-detection, validation, recovery, quality-assurance, automation]
+domain: automation.error-handling
+
+safety:
+  - must: Never modify source media during recovery attempts
+  - must: Create detailed error reports for manual review
+  - should: Implement staged recovery (cache → re-ingest → fallback)
+  - should: Preserve error logs for forensics
+
+spec:
+  method: app.project.validateMedia
+  required:
+    - clips: array<ProjectItem>
+  optional:
+    - checkIntegrity: boolean (default: true)
+    - checkAudioSync: boolean (default: false)
+    - autoRecovery: boolean (default: false)
+  returns: object<{ validClips, errorClips, recoveryReport }>
+
+error_types:
+  - FileNotFound: Source file missing or moved
+  - CorruptFrames: Video frames unreadable
+  - AudioMisalignment: Audio sync drift detected
+  - CodecUnsupported: Codec not available on system
+  - IncompatibleFrameRate: Frame rate mismatch with sequence
+
+recovery_strategies:
+  - Cache Restore: Use cached preview frames
+  - Re-ingest: Reload file from source disk
+  - Format Fallback: Use proxy if available
+  - Manual Review: Require user intervention
+
+examples:
+  - name: Validate and recover project media
+    code: |
+      const validation = await app.project.validateMedia(
+        app.project.rootItem.items,
+        {
+          checkIntegrity: true,
+          checkAudioSync: true,
+          autoRecovery: true
+        }
+      );
+
+      console.log(`Valid clips: ${validation.validClips.length}`);
+      console.log(`Error clips: ${validation.errorClips.length}`);
+
+      if (validation.errorClips.length > 0) {
+        validation.recoveryReport.forEach(report => {
+          console.log(`${report.clip}: ${report.error} → ${report.recovery}`);
+        });
+      }
+
+related:
+  - CAP-0009-media-search-filter
+  - CAP-0010-project-snapshot-versioning
+  - RULE-0003-backup-before-destructive-edit

@@ -1,0 +1,111 @@
+id: REC-0007-bulk-color-grade-delivery
+title: Bulk color grading across sequences with format variants
+description: |
+  Apply consistent color correction using Lumetri presets across all sequences,
+  then export multiple format variants (cinema, broadcast, web) with
+  format-specific adjustments.
+kind: recipe
+tags: [color-grading, effects, batch-export, delivery, automation]
+domain: workflows.finishing
+
+scope: |
+  Assumes Lumetri Color presets are already created and stored.
+  Handles video tracks only; does not modify audio.
+  Exports to multiple codecs with quality presets.
+
+steps:
+  - title: "Load Lumetri Presets"
+    description: "Discover available color grading presets"
+    code: |
+      const colorPresets = [
+        '/presets/DCI-P3-cinema.preset',
+        '/presets/Rec709-broadcast.preset',
+        '/presets/sRGB-web.preset'
+      ];
+
+  - title: "Apply Master Color Correction"
+    description: "Apply base Lumetri preset to all sequences"
+    code: |
+      const sequences = app.project.sequences;
+      const basePreset = colorPresets[0]; // DCI-P3 as master
+
+      const result = await app.project.applyEffectPreset(
+        sequences,
+        'Lumetri Color',
+        basePreset,
+        {
+          validatePresets: true,
+          conditional: { property: 'trackType', operator: '=', value: 'VideoTrack' }
+        }
+      );
+
+      console.log(`Applied base grading to ${result.appliedCount} sequences`);
+
+  - title: "Create Format-Specific Adjustments"
+    description: "Create duplicate sequences for each delivery format"
+    code: |
+      const formats = [
+        { name: 'Cinema DCI-P3', preset: colorPresets[0], colorSpace: 'DCI-P3' },
+        { name: 'Broadcast Rec709', preset: colorPresets[1], colorSpace: 'Rec709' },
+        { name: 'Web sRGB', preset: colorPresets[2], colorSpace: 'sRGB' }
+      ];
+
+      const deliverySequences = {};
+      for (const seq of sequences) {
+        for (const format of formats) {
+          const dupSeq = seq.duplicate();
+          dupSeq.name = `${seq.name}-${format.name}`;
+          deliverySequences[dupSeq.name] = { sequence: dupSeq, format };
+        }
+      }
+
+  - title: "Export All Format Variants"
+    description: "Batch export with codec-specific parameters"
+    code: |
+      const exportSettings = {
+        'Cinema DCI-P3': {
+          codec: 'ProRes',
+          preset: 'ProRes 422 HQ',
+          bitrate: 'max',
+          path: './exports/cinema/'
+        },
+        'Broadcast Rec709': {
+          codec: 'H.264',
+          preset: 'Broadcast HD',
+          bitrate: '50 mbps',
+          path: './exports/broadcast/'
+        },
+        'Web sRGB': {
+          codec: 'H.264',
+          preset: 'YouTube 1080p',
+          bitrate: '8 mbps',
+          path: './exports/web/'
+        }
+      };
+
+      for (const [name, config] of Object.entries(deliverySequences)) {
+        const settings = exportSettings[config.format.name];
+        const result = await app.project.exportBatch(
+          [config.sequence],
+          [{ codec: settings.codec, preset: settings.preset, outputPath: settings.path }],
+          { validatePresets: true }
+        );
+        console.log(`Exported ${name}: ${result.successCount} succeeded`);
+      }
+
+safety_considerations:
+  - Backup project before duplicating sequences (see RULE-0003)
+  - Validate all presets exist before batch operations
+  - Implement progress logging with timestamps
+  - Test one sequence before bulk operations
+  - Keep original sequences for archival
+
+expected_outcome: |
+  Project with color-corrected master sequences and format-specific delivery
+  variants, all exported to organized directories ready for distribution.
+
+related:
+  - CAP-0008-effects-preset-bulk-apply
+  - CAP-0006-batch-export-formats
+  - OBJ-0008-effect
+  - RULE-0003-backup-before-destructive-edit

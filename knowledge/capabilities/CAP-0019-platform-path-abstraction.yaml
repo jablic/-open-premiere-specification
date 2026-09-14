@@ -1,0 +1,58 @@
+id: CAP-0019-platform-path-abstraction
+title: Cross-platform file path handling with platform detection
+description: |
+  Abstract file paths to handle Windows/Mac path differences transparently.
+  Converts between native paths (C:\footage vs /Volumes/footage) and
+  validates path accessibility across network mounts.
+kind: capability
+tags: [cross-platform, paths, file-system, network-storage, automation]
+domain: automation.platform-engineering
+
+safety:
+  - must: Validate path accessibility before file operations
+  - must: Handle network path delays and timeouts
+  - should: Preserve UNC paths on Windows and SMB mounts
+  - should: Document path mapping for team workflows
+
+spec:
+  method: app.utilities.normalizePath
+  required:
+    - inputPath: string
+  optional:
+    - targetPlatform: enum:windows|mac|auto (default: auto)
+    - validateAccessible: boolean (default: true)
+  returns: string
+
+path_abstractions:
+  - Windows: C:\Projects\footage\A001.mxf
+  - Mac: /Volumes/Projects/footage/A001.mxf
+  - SMB mount: //server/Projects/footage/A001.mxf
+  - Network: afp://server/Projects/footage/A001.mxf
+
+examples:
+  - name: Portable path handling for team projects
+    code: |
+      // Team uses shared NAS with different mount paths per platform
+      const sourcePathByPlatform = {
+        windows: 'Z:\\Projects\\Documentary\\A-Roll',
+        mac: '/Volumes/Shared/Projects/Documentary/A-Roll'
+      };
+
+      // Get platform-appropriate path
+      const currentPlatform = app.getSystemInfo().platform; // "Windows" or "Mac"
+      const sourcePath = sourcePathByPlatform[currentPlatform.toLowerCase()];
+
+      // Normalize for consistency
+      const normalized = app.utilities.normalizePath(sourcePath, {
+        targetPlatform: 'auto',
+        validateAccessible: true
+      });
+
+      console.log(`Using path: ${normalized}`);
+
+      // Now safe to use in file operations
+      const clips = await app.project.importMedia(normalized);
+
+related:
+  - CAP-0004-batch-relink-media
+  - CAP-0001-read-project

@@ -1,0 +1,47 @@
+id: RULE-0011-trackitem-temporal-properties-are-session-relative
+title: TrackItem temporal properties are relative to session, not absolute timecode
+description: |
+  TrackItem startTime, inPoint, and outPoint are measured relative to the
+  session start time (frame 0 = 00:00:00), not absolute timecode. This is
+  critical when working with clips that have recorded timecode values.
+kind: rule
+tags: [trackitem, temporal, timecode, best-practices, antipattern]
+domain: rules.object-identity
+
+violation_example: |
+  WRONG: Assuming TrackItem.startTime = Recorded timecode
+  ---
+  const clip = sequence.videoTracks[0].clips[0];
+  const recordedTimecode = clip.projectItem.timecodeStart; // e.g., "01:00:00:00"
+  if (clip.startTime !== recordedTimecode) {
+    console.error("Timecode mismatch!");
+  }
+  // This will ALWAYS fail if clips don't start at session 00:00:00
+
+consequence: |
+  Scripts fail when working with out-of-order clips or multiple takes placed
+  sequentially. Timecode-based workflow automation becomes unreliable.
+
+correct_pattern: |
+  CORRECT: Use explicit timecode conversion
+  ---
+  const clip = sequence.videoTracks[0].clips[0];
+  const recordedTimecode = clip.projectItem.timecodeStart;
+  const sessionStartTime = clip.startTime - clip.inPoint;
+
+  // Now convert recorded timecode to session offset
+  const recordedMs = timecodeToMs(recordedTimecode);
+  const expectedStartTime = sessionStartTime + recordedMs;
+
+  if (Math.abs(clip.startTime - expectedStartTime) > 100) {
+    console.warn("Unexpected timecode offset");
+  }
+
+impact: high
+
+related_rules:
+  - RULE-0004-do-not-confuse-projectitem-trackitem
+  - RULE-0009-relink-projectitems-not-trackitems
+
+test_coverage:
+  - TEST-0008-projectitem-vs-trackitem

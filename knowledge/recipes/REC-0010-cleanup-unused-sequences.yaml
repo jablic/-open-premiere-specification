@@ -1,0 +1,152 @@
+id: REC-0010-cleanup-unused-sequences
+title: Clean up and consolidate unused sequences and orphaned clips
+description: |
+  Identify sequences with no references, delete with smart ripple options,
+  consolidate orphaned media into archive bin, and validate project
+  integrity. Demonstrates search, smart delete, and project reorganization.
+kind: recipe
+tags: [project-cleanup, optimization, storage, organization, maintenance]
+domain: workflows.project-management
+
+scope: |
+  Assumes project has accumulated sequences during editing iterations.
+  Assumes naming conventions for sequence types (rough-cut, temp, etc).
+  Validates no critical sequences are referenced before deletion.
+
+steps:
+  - title: "Inventory All Sequences"
+    description: "List sequences and their usage status"
+    code: |
+      const sequences = app.project.sequences;
+      const sequenceUsage = {};
+
+      sequences.forEach(seq => {
+        sequenceUsage[seq.name] = {
+          sequence: seq,
+          duration: seq.duration,
+          clipCount: seq.videoTracks.flatMap(t => t.clips).length,
+          isNested: false,
+          referenceCount: 0
+        };
+      });
+
+      console.log(`Total sequences: ${sequences.length}`);
+
+  - title: "Detect Orphaned Sequences"
+    description: "Find sequences with no nested references"
+    code: |
+      const allClips = sequences.flatMap(seq =>
+        seq.videoTracks.flatMap(t => t.clips)
+      );
+
+      for (const [seqName, usage] of Object.entries(sequenceUsage)) {
+        const nestedRefs = allClips.filter(clip =>
+          clip.projectItem.name === seqName && clip.projectItem.type === 'sequence'
+        );
+        usage.referenceCount = nestedRefs.length;
+        usage.isOrphaned = nestedRefs.length === 0 && seqName.includes('temp');
+
+        if (usage.isOrphaned) {
+          console.log(`Orphaned: ${seqName} (${usage.clipCount} clips, ${usage.duration}ms)`);
+        }
+      }
+
+  - title: "Search for Unused Media"
+    description: "Find clips not referenced in any sequence"
+    code: |
+      const allUsedMedia = new Set();
+      sequences.forEach(seq => {
+        seq.videoTracks.forEach(track => {
+          track.clips.forEach(clip => {
+            allUsedMedia.add(clip.projectItem.name);
+          });
+        });
+        seq.audioTracks.forEach(track => {
+          track.clips.forEach(clip => {
+            allUsedMedia.add(clip.projectItem.name);
+          });
+        });
+      });
+
+      const unusedMedia = await app.project.searchMedia({
+        searchCriteria: [] // Returns all media
+      });
+
+      const orphanedMedia = unusedMedia.items.filter(item =>
+        !allUsedMedia.has(item.name)
+      );
+
+      console.log(`Found ${orphanedMedia.length} unused clips`);
+
+  - title: "Create Archive Bins"
+    description: "Organize unused sequences and media for archival"
+    code: |
+      const archiveBin = app.project.rootItem.createBin('Archive-Unused');
+      const orphanedSeqBin = archiveBin.createBin('Sequences');
+      const orphanedMediaBin = archiveBin.createBin('Media');
+
+      // Move orphaned sequences
+      for (const [seqName, usage] of Object.entries(sequenceUsage)) {
+        if (usage.isOrphaned) {
+          app.project.rootItem.moveItem(usage.sequence, orphanedSeqBin);
+          console.log(`Archived sequence: ${seqName}`);
+        }
+      }
+
+      // Move orphaned media
+      orphanedMedia.forEach(clip => {
+        app.project.rootItem.moveItem(clip, orphanedMediaBin);
+      });
+
+      console.log(`Archived ${orphanedMedia.length} unused clips`);
+
+  - title: "Optional: Delete Archived Items"
+    description: "Delete if space is critical (requires confirmation)"
+    code: |
+      const deleteArchived = false; // Set to true after review
+
+      if (deleteArchived && orphanedMedia.length > 0) {
+        const deleteResult = await app.project.deleteClips(
+          orphanedMedia,
+          { rippleMode: 'leave_gaps', validateAfter: true }
+        );
+
+        console.log(`Deleted ${deleteResult.deletedCount} clips, freed space`);
+      }
+
+  - title: "Project Integrity Check"
+    description: "Validate sequences and media consistency"
+    code: |
+      const integrityReport = {
+        totalSequences: sequences.length,
+        orphanedSequences: Object.values(sequenceUsage).filter(u => u.isOrphaned).length,
+        archivedMedia: orphanedMedia.length,
+        projectSize: app.project.projectSize,
+        issues: []
+      };
+
+      // Check for missing files
+      for (const clip of unusedMedia.items) {
+        if (clip.isOffline) {
+          integrityReport.issues.push(`Offline media in project: ${clip.name}`);
+        }
+      }
+
+      console.log('Project Integrity Report:', integrityReport);
+
+safety_considerations:
+  - Review orphaned items before deletion
+  - Archive to separate bin before final deletion
+  - Do not delete sequences with active references
+  - Validate project structure after major cleanup
+  - Save project frequently during cleanup operations
+
+expected_outcome: |
+  Cleaned project with unused sequences and media organized in archive bin,
+  ready for safe deletion or archival to external storage. Project size
+  optimized and integrity validated.
+
+related:
+  - CAP-0009-media-search-filter
+  - CAP-0012-timeline-ripple-smart-delete
+  - RULE-0003-backup-before-destructive-edit

@@ -1,0 +1,56 @@
+id: CAP-0020-workflow-metadata-tags
+title: Tag and query project items with custom workflow metadata
+description: |
+  Attach custom metadata tags to clips, sequences, and bins for workflow
+  organization. Query by tags to find related items, track status, and
+  maintain production metadata.
+kind: capability
+tags: [metadata, tagging, workflow-organization, automation, search]
+domain: automation.project-management
+
+safety:
+  - should: Use consistent tagging conventions across team
+  - should: Document tag meanings in project notes
+  - should: Backup metadata before bulk tag operations
+
+spec:
+  method: app.project.tagItem
+  required:
+    - item: ProjectItem | Sequence | Bin
+    - tags: array<string>
+  optional:
+    - metadata: object<unknown>
+    - overwrite: boolean (default: false)
+  returns: void
+
+tag_conventions:
+  - Status tags: pending_review, approved, final, archived
+  - Department tags: sound_design, color_grade, vfx, editorial
+  - Version tags: v1, v2, final, alt_take
+  - Purpose tags: master, proxy, reference, temp
+
+examples:
+  - name: Tag clips for workflow review and approval
+    code: |
+      const clips = bin.items;
+      clips.forEach(clip => {
+        // Tag with status and reviewer info
+        app.project.tagItem(clip, ['pending_review', 'sound_design'], {
+          metadata: {
+            assignedTo: 'sound_engineer@studio.local',
+            deadline: '2026-07-15',
+            notes: 'Check dialogue sync issues'
+          }
+        });
+      });
+
+      // Later, find all pending review items for sound design
+      const pendingReview = await app.project.searchByTag(
+        ['pending_review', 'sound_design']
+      );
+
+      console.log(`Found ${pendingReview.length} items pending sound design review`);
+
+related:
+  - CAP-0009-media-search-filter
+  - CAP-0001-read-project
