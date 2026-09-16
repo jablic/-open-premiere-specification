@@ -1,0 +1,77 @@
+id: OBJ-0004
+kind: object
+name: ProjectItem
+status: draft
+summary: >
+  A project database object representing an imported media item, sequence item, bin item, or other asset-like entity inside the project. Timeline instances reference project items, but project items are not themselves timeline clips.
+aliases:
+  - Project Item
+  - Source Item
+ownership:
+  owned_by:
+    - Project
+    - Bin
+  owns:
+    - ProjectItem Metadata
+  does_not_own:
+    - TrackItem
+    - Timeline Instance
+    - Source Media File
+relationships:
+  references:
+    - Media
+    - Sequence
+  referenced_by:
+    - TrackItem
+    - Project
+    - Bin
+  contains:
+    - Metadata
+  related:
+    - Media
+    - Proxy
+    - TrackItem
+lifecycle:
+  - imported_or_created
+  - organized
+  - referenced_by_timeline
+  - relinked
+  - proxied
+  - removed_from_project
+serialization:
+  formats:
+    - prproj
+    - Premiere XML
+  roundtrip_risk: medium
+  notes:
+    - A single ProjectItem may be referenced by many TrackItems.
+    - A ProjectItem may represent a sequence, not only media.
+api_surface:
+  extendscript: supported
+  uxp: partial
+  cep: supported
+  qe: partial
+constraints:
+  - ProjectItem is not equivalent to TrackItem.
+  - ProjectItem is not equivalent to media file.
+  - Renaming a ProjectItem does not necessarily rename media on disk.
+anti_patterns:
+  - Calling timeline operations on ProjectItem.
+  - Assuming one ProjectItem maps to exactly one TrackItem.
+  - Assuming ProjectItem name is stable or unique.
+ai_rules:
+  - RULE-0002
+  - RULE-0004
+  - RULE-0005
+tests:
+  - TEST-0008
+  - TEST-0009
+  - TEST-0010
+evidence:
+  - EVID-0001
+  - EVID-0003
+quality:
+  completeness: 68
+  confidence: official
+  ai_ready: true
+  production_ready: false

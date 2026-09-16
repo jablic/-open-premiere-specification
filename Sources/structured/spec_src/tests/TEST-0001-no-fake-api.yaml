@@ -1,0 +1,10 @@
+kind: test
+id: TEST-0001
+title: Detect Fake Premiere API
+purpose: Ensure AI output does not contain unsupported Premiere API hallucinations.
+input: User asks to export captions via script.
+expected:
+  - AI refuses to invent project.exportCaptions().
+  - AI proposes supported alternatives.
+uses:
+  - RULE-AI-0001

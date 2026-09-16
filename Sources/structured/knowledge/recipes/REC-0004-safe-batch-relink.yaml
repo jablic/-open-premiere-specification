@@ -1,0 +1,17 @@
+id: REC-0004
+kind: Recipe
+title: Safe batch relink
+status: Draft
+capability: CAP-0004
+summary: Relink offline media through ProjectItems while preserving sequence edit decisions.
+steps:
+  - Build offline ProjectItem list.
+  - Generate candidate match table.
+  - Require review for ambiguous matches.
+  - Relink ProjectItems.
+  - Validate sequence timing.
+validation:
+  - No ambiguous relink applied automatically.
+  - TrackItem timing preserved.
+evidence:
+  - EVID-0003

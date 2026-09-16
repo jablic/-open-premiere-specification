@@ -1,0 +1,11 @@
+id: TEST-0013
+kind: test
+title: Sequence does not own source media files
+given: A Sequence containing visible timeline clips that reference ProjectItems.
+when: The AI agent describes or modifies the sequence.
+then: It must model the sequence as owning timeline structure and tracks, not source media files.
+expected: Source media deletion, relink, or filesystem operations are not inferred from sequence edits unless explicitly requested.
+applies_to:
+  - OBJ-0005
+  - RULE-0005
+automation_level: semi_automated

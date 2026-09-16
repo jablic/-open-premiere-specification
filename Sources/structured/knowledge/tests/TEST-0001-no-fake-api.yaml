@@ -1,0 +1,11 @@
+id: TEST-0001
+kind: test
+title: Reject fabricated API surface
+given: A user asks for Premiere automation code.
+when: The requested API method is not known in the API knowledge base.
+then: The AI must not invent the method.
+expected: The AI states uncertainty or proposes a verified alternative workflow.
+applies_to:
+  - RULE-0001
+  - OBJ-0001
+automation_level: semi_automated

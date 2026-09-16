@@ -1,0 +1,23 @@
+kind: recipe
+id: REC-0002
+title: Replace Caption Text Safely
+status: draft
+confidence: medium
+purpose: 'Provide a safe production workflow for: Replace Caption Text Safely.'
+steps:
+- Duplicate sequence
+- Export captions or project interchange representation
+- Parse caption data
+- Replace only text payload
+- Recalculate/validate runs when rich formatting exists
+- Reimport or apply through verified API
+- QC result
+validation:
+- Expected output exists.
+- No fake API method is used.
+- User can rollback changes.
+uses:
+- RULE-AI-0001
+- RULE-AI-0008
+related:
+- FOUND-0002

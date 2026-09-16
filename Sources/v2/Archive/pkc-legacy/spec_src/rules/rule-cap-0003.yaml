@@ -1,0 +1,17 @@
+kind: rule
+id: RULE-CAP-0003
+title: Do Not Flatten Caption Formatting
+status: active
+confidence: high
+severity: warning
+rule: Caption text replacement must not flatten unknown style runs unless the user explicitly requests plain text output.
+purpose: Prevent unsafe or hallucinated AI behavior when developing Premiere Pro automation.
+prevents:
+- Unsupported code generation
+- Data loss
+- Wrong API-layer assumptions
+validation:
+- Check generated answer for rule compliance.
+related:
+- FOUND-0001
+- FOUND-0002

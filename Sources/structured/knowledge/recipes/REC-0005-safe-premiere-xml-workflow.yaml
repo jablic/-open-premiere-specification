@@ -1,0 +1,18 @@
+id: REC-0005
+kind: Recipe
+title: Safe Premiere XML workflow
+status: Draft
+capability: CAP-0005
+summary: Use Premiere XML for inspection or controlled transformations while accounting for loss and unsupported features.
+steps:
+  - Export XML from controlled project/sequence state.
+  - Parse XML without discarding unknown structures.
+  - Apply minimal transformation.
+  - Validate references and structure.
+  - Emit roundtrip risk report.
+validation:
+  - XML remains well-formed.
+  - Unknown structures preserved where possible.
+evidence:
+  - EVID-0001
+  - EVID-0002

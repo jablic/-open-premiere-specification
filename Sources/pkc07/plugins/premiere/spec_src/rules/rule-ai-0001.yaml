@@ -1,0 +1,12 @@
+kind: rule
+id: RULE-AI-0001
+title: No Fake APIs
+rule: AI MUST NOT invent Premiere API methods such as sequence.captions or project.exportCaptions().
+severity: critical
+confidence: high
+prevents:
+  - hallucination
+  - destructive_editing
+validation:
+  - Check generated code for unsupported members.
+  - Check output against object model.

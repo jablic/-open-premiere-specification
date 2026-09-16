@@ -1,0 +1,16 @@
+id: REC-0001
+kind: Recipe
+title: Build a read-only project inventory
+status: Draft
+capability: CAP-0001
+summary: Generate a structured inventory of bins, project items and sequences before any automation operation.
+steps:
+  - Confirm active project exists.
+  - Enumerate root bin recursively.
+  - Classify ProjectItems by media, bin or sequence role.
+  - Emit object graph and unresolved reference list.
+validation:
+  - No write operations are performed.
+  - ProjectItem and TrackItem concepts remain separate.
+evidence:
+  - EVID-0003

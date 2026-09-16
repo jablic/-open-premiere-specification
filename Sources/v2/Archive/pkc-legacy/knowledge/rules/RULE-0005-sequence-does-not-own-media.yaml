@@ -1,0 +1,21 @@
+id: RULE-0005
+kind: rule
+title: Sequence does not own source media
+severity: high
+statement: >
+  A Sequence owns tracks and timeline structure, but it does not own source media files directly.
+rationale: >
+  Timeline edits are non-destructive references to project items and source media.
+applies_to:
+  - OBJ-0004
+  - OBJ-0005
+violation_examples:
+  - Describing a sequence as containing raw media files.
+  - Deleting source media because a sequence clip was removed.
+safe_pattern: >
+  Treat sequence operations as edits to references unless a separate media management operation is explicitly requested.
+tests:
+  - TEST-0011
+  - TEST-0013
+evidence:
+  - EVID-0003

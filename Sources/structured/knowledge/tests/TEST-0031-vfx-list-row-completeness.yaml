@@ -1,0 +1,11 @@
+id: TEST-0031
+kind: Test
+title: VFX list row contains required production fields
+given: A VFX marker with valid shot ID and timing.
+when: CAP-0003 generates spreadsheet data.
+then: Row includes shot ID, sequence timecode, task, status, thumbnail reference and preview reference fields.
+expected:
+  - Required columns present.
+  - Missing assets explicitly marked.
+evidence:
+  - EVID-0003

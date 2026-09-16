@@ -1,0 +1,12 @@
+kind: rule
+id: RULE-CAP-0001
+title: Caption Is Not Plain Text
+rule: Caption editing MUST preserve timing, style runs, metadata and run lengths.
+severity: critical
+confidence: high
+prevents:
+  - hallucination
+  - destructive_editing
+validation:
+  - Check generated code for unsupported members.
+  - Check output against object model.

@@ -1,0 +1,11 @@
+id: TEST-0041
+kind: Test
+title: Relink preserves sequence timing
+given: A sequence using offline ProjectItems.
+when: ProjectItems are relinked.
+then: TrackItem in/out points and sequence timing remain unchanged.
+expected:
+  - TrackItem timing unchanged.
+  - Duration mismatches are reported.
+evidence:
+  - EVID-0003

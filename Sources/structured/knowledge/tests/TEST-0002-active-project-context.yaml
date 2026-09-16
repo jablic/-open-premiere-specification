@@ -1,0 +1,12 @@
+id: TEST-0002
+kind: test
+title: Active project context must be resolved before mutation
+given: Multiple Premiere runtime contexts may exist, or the active project may not be the intended target.
+when: Automation prepares to modify project data through the Application entry point.
+then: It must first resolve and confirm the intended Project context.
+expected: The plan identifies the active Project explicitly and does not modify timelines, bins, or project items through an ambiguous Application reference.
+applies_to:
+  - OBJ-0001
+  - OBJ-0002
+  - RULE-0002
+automation_level: semi_automated

@@ -1,0 +1,77 @@
+site_name: Premiere Pro Open AI Specification
+site_description: AI-native specification and knowledge base for Adobe Premiere Pro automation.
+site_url: http://127.0.0.1:8000/
+docs_dir: docs
+site_dir: site
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+nav:
+  - Home: index.md
+  - 00 FOUNDATION:
+    - ADR:
+      - ADR 0001 markdown first: 00_FOUNDATION/ADR/ADR-0001-markdown-first.md
+      - ADR 0002 ai native specification: 00_FOUNDATION/ADR/ADR-0002-ai-native-specification.md
+    - Overview: 00_FOUNDATION/README.md
+    - STANDARDS:
+      - DOCUMENT STANDARD: 00_FOUNDATION/STANDARDS/DOCUMENT_STANDARD.md
+  - 01 SPEC:
+    - OBJECTS:
+      - OBJ 0001 application: 01_SPEC/OBJECTS/OBJ-0001-application.md
+      - OBJ 0002 project: 01_SPEC/OBJECTS/OBJ-0002-project.md
+      - OBJ 0003 project item: 01_SPEC/OBJECTS/OBJ-0003-project-item.md
+      - OBJ 0004 sequence: 01_SPEC/OBJECTS/OBJ-0004-sequence.md
+      - OBJ 0005 track item: 01_SPEC/OBJECTS/OBJ-0005-track-item.md
+      - OBJ 0006 track: 01_SPEC/OBJECTS/OBJ-0006-track.md
+      - OBJ 0007 component: 01_SPEC/OBJECTS/OBJ-0007-component.md
+      - OBJ 0008 property: 01_SPEC/OBJECTS/OBJ-0008-property.md
+      - OBJ 0009 caption: 01_SPEC/OBJECTS/OBJ-0009-caption.md
+    - Overview: 01_SPEC/README.md
+    - SERIALIZATION:
+      - SER 0001 premiere xml: 01_SPEC/SERIALIZATION/SER-0001-premiere-xml.md
+      - SER 0002 caption json: 01_SPEC/SERIALIZATION/SER-0002-caption-json.md
+  - 02 KNOWLEDGE:
+    - Overview: 02_KNOWLEDGE/README.md
+  - 03 RULES:
+    - AI:
+      - RULE AI 0001 no fake apis: 03_RULES/AI/RULE-AI-0001-no-fake-apis.md
+      - RULE AI 0002 object identity: 03_RULES/AI/RULE-AI-0002-object-identity.md
+    - Overview: 03_RULES/README.md
+    - SERIALIZATION:
+      - RULE SER 0001 preserve unknown fields: 03_RULES/SERIALIZATION/RULE-SER-0001-preserve-unknown-fields.md
+  - 04 RECIPES:
+    - CAPTIONS:
+      - REC 0002 replace caption text safely: 04_RECIPES/CAPTIONS/REC-0002-replace-caption-text-safely.md
+    - Overview: 04_RECIPES/README.md
+    - VFX:
+      - REC 0001 create vfx list from premiere: 04_RECIPES/VFX/REC-0001-create-vfx-list-from-premiere.md
+  - 05 TESTS:
+    - Overview: 05_TESTS/README.md
+  - 06 ANTI PATTERNS:
+    - AP 0001 caption plain text assumption: 06_ANTI_PATTERNS/AP-0001-caption-plain-text-assumption.md
+    - Overview: 06_ANTI_PATTERNS/README.md
+  - 07 BUG DATABASE:
+    - CAPTIONS:
+      - BUG CAP 0001 caption run length mismatch: 07_BUG_DATABASE/CAPTIONS/BUG-CAP-0001-caption-run-length-mismatch.md
+    - Overview: 07_BUG_DATABASE/README.md
+  - 08 REVERSE ENGINEERING:
+    - EXPERIMENTS:
+      - EXP 0001 caption json editing protocol: 08_REVERSE_ENGINEERING/EXPERIMENTS/EXP-0001-caption-json-editing-protocol.md
+    - Overview: 08_REVERSE_ENGINEERING/README.md
+  - 09 DATASETS:
+    - Overview: 09_DATASETS/README.md
+  - 10 GRAPH:
+    - Overview: 10_GRAPH/README.md
+  - 11 PROMPTS:
+    - PROMPT 0001 generate safe premiere script: 11_PROMPTS/PROMPT-0001-generate-safe-premiere-script.md
+    - Overview: 11_PROMPTS/README.md
+  - Home: INDEX.md
