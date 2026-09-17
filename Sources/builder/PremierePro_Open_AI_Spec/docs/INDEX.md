@@ -1,0 +1,38 @@
+# Repository Index
+
+- [ADR-0001 Markdown First](00_FOUNDATION/ADR/ADR-0001-markdown-first.md) `ADR-0001`
+- [ADR-0002 AI Native Specification](00_FOUNDATION/ADR/ADR-0002-ai-native-specification.md) `ADR-0002`
+- [Foundation Overview](00_FOUNDATION/README.md) `FOUND-0000`
+- [Document Standard](00_FOUNDATION/STANDARDS/DOCUMENT_STANDARD.md) `FOUND-STD-0001`
+- [Application Object](01_SPEC/OBJECTS/OBJ-0001-application.md) `OBJ-0001`
+- [Project Object](01_SPEC/OBJECTS/OBJ-0002-project.md) `OBJ-0002`
+- [Project Item Object](01_SPEC/OBJECTS/OBJ-0003-project-item.md) `OBJ-0003`
+- [Sequence Object](01_SPEC/OBJECTS/OBJ-0004-sequence.md) `OBJ-0004`
+- [Track Item Object](01_SPEC/OBJECTS/OBJ-0005-track-item.md) `OBJ-0005`
+- [Track Object](01_SPEC/OBJECTS/OBJ-0006-track.md) `OBJ-0006`
+- [Component Object](01_SPEC/OBJECTS/OBJ-0007-component.md) `OBJ-0007`
+- [Property Object](01_SPEC/OBJECTS/OBJ-0008-property.md) `OBJ-0008`
+- [Caption Object](01_SPEC/OBJECTS/OBJ-0009-caption.md) `OBJ-0009`
+- [Specification Overview](01_SPEC/README.md) `SPEC-0000`
+- [Premiere XML Serialization](01_SPEC/SERIALIZATION/SER-0001-premiere-xml.md) `SER-0001`
+- [Caption JSON Serialization](01_SPEC/SERIALIZATION/SER-0002-caption-json.md) `SER-0002`
+- [Knowledge Overview](02_KNOWLEDGE/README.md) `KNOW-0000`
+- [No Fake APIs](03_RULES/AI/RULE-AI-0001-no-fake-apis.md) `RULE-AI-0001`
+- [Preserve Object Identity](03_RULES/AI/RULE-AI-0002-object-identity.md) `RULE-AI-0002`
+- [Rules Overview](03_RULES/README.md) `RULE-0000`
+- [Preserve Unknown Fields](03_RULES/SERIALIZATION/RULE-SER-0001-preserve-unknown-fields.md) `RULE-SER-0001`
+- [Replace Caption Text Safely](04_RECIPES/CAPTIONS/REC-0002-replace-caption-text-safely.md) `REC-0002`
+- [Recipes Overview](04_RECIPES/README.md) `REC-0000`
+- [Create VFX List from Premiere](04_RECIPES/VFX/REC-0001-create-vfx-list-from-premiere.md) `REC-0001`
+- [Tests Overview](05_TESTS/README.md) `TEST-0000`
+- [Caption Plain Text Assumption](06_ANTI_PATTERNS/AP-0001-caption-plain-text-assumption.md) `AP-0001`
+- [Anti Patterns Overview](06_ANTI_PATTERNS/README.md) `AP-0000`
+- [Caption Run Length Mismatch](07_BUG_DATABASE/CAPTIONS/BUG-CAP-0001-caption-run-length-mismatch.md) `BUG-CAP-0001`
+- [Bug Database Overview](07_BUG_DATABASE/README.md) `BUG-0000`
+- [Caption JSON Editing Protocol](08_REVERSE_ENGINEERING/EXPERIMENTS/EXP-0001-caption-json-editing-protocol.md) `EXP-0001`
+- [Reverse Engineering Overview](08_REVERSE_ENGINEERING/README.md) `EXP-0000`
+- [Datasets Overview](09_DATASETS/README.md) `DATA-0000`
+- [Knowledge Graph Overview](10_GRAPH/README.md) `GRAPH-0000`
+- [Generate Safe Premiere Script Prompt](11_PROMPTS/PROMPT-0001-generate-safe-premiere-script.md) `PROMPT-0001`
+- [Prompt Library Overview](11_PROMPTS/README.md) `PROMPT-0000`
+- [Premiere Pro Open AI Specification](index.md) ``

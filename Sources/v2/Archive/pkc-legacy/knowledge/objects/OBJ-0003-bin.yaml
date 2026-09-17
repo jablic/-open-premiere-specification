@@ -1,0 +1,68 @@
+id: OBJ-0003
+kind: object
+name: Bin
+status: draft
+summary: >
+  A project-level organizational container that groups project items and nested bins. A bin organizes references inside the project; it is not a filesystem folder and does not own source media files.
+aliases:
+  - Project Bin
+  - Folder
+ownership:
+  owned_by:
+    - Project
+    - Bin
+  owns:
+    - ProjectItem
+    - Bin
+  does_not_own:
+    - Source Media Files
+relationships:
+  references:
+    - ProjectItem
+  referenced_by:
+    - Project
+    - Parent Bin
+  contains:
+    - Child Bins
+    - Child ProjectItems
+  related:
+    - ProjectItem Tree
+lifecycle:
+  - created
+  - renamed
+  - moved
+  - populated
+  - deleted
+serialization:
+  formats:
+    - prproj
+    - Premiere XML
+  roundtrip_risk: medium
+  notes:
+    - Bin hierarchy is project organization and may not match filesystem organization.
+api_surface:
+  extendscript: supported
+  uxp: partial
+  cep: supported
+  qe: unknown
+constraints:
+  - Bin path is not a stable identity.
+  - Bin display name is not globally unique.
+  - Deleting a bin can remove project references without deleting source media files.
+anti_patterns:
+  - Assuming bin hierarchy mirrors media folder hierarchy.
+  - Using bin name as the only identifier in automation.
+ai_rules:
+  - RULE-0002
+  - RULE-0004
+tests:
+  - TEST-0006
+  - TEST-0007
+evidence:
+  - EVID-0001
+  - EVID-0003
+quality:
+  completeness: 62
+  confidence: official
+  ai_ready: true
+  production_ready: false

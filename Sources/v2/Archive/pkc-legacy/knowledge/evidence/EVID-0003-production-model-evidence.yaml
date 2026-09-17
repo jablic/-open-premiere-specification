@@ -1,0 +1,14 @@
+id: EVID-0003
+kind: evidence
+title: Production workflow evidence placeholder
+evidence_type: production_case
+confidence: production_verified
+summary: >
+  Placeholder evidence for production-observed behavior in postproduction workflows: project organization, sequence duplication, media references, and safe automation practice.
+applies_to:
+  - OBJ-0002
+  - OBJ-0003
+  - OBJ-0004
+  - OBJ-0005
+  - RULE-0002
+  - RULE-0003

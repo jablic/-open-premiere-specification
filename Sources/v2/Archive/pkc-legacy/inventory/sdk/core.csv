@@ -1,0 +1,4 @@
+id,surface,kind,name,status,reference_status,evidence,notes
+SDK.CPP.importer,sdk_cpp,plugin_type,Importer,official_sdk,planned,A-SDK-001,Native importer plugin type.
+SDK.CPP.exporter,sdk_cpp,plugin_type,Exporter,official_sdk,planned,A-SDK-001,Native exporter plugin type.
+SDK.CPP.effect,sdk_cpp,plugin_type,Effect,official_sdk,planned,A-SDK-001,Native effect plugin type.

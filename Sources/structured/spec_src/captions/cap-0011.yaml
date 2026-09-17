@@ -1,0 +1,19 @@
+kind: spec
+id: CAP-0011
+title: Caption Plain Text Downgrade
+status: draft
+confidence: medium
+purpose: Define Caption Plain Text Downgrade for safe AI-assisted caption automation.
+summary: Plain text downgrade is destructive and must be explicit.
+constraints:
+- Preserve unknown fields.
+- Validate after every write.
+- Do not infer undocumented serializer behavior.
+ai_rules:
+- When unsure whether captions are plain text or rich serialized structures, assume rich structures and avoid destructive edits.
+related:
+- OBJ-0009
+- SER-0002
+- RULE-CAP-0001
+- RULE-CAP-0002
+- RULE-SER-0001

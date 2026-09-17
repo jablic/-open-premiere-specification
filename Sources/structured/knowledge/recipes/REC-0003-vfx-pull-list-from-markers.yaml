@@ -1,0 +1,17 @@
+id: REC-0003
+kind: Recipe
+title: Generate VFX pull list from Premiere markers
+status: Draft
+capability: CAP-0003
+summary: Convert VFX markers into a spreadsheet-ready production pull list.
+steps:
+  - Export sequence metadata or XML.
+  - Parse markers and filter VFX/CG shot IDs.
+  - Validate shot ID uniqueness.
+  - Generate thumbnail and preview references.
+  - Emit spreadsheet rows with status and task fields.
+validation:
+  - Every VFX marker appears in report.
+  - Duplicate shot IDs are flagged.
+evidence:
+  - EVID-0003

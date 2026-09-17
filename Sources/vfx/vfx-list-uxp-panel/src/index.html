@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>VFX List Export Tool</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="header">
+      <h1>VFX List Export Tool</h1>
+      <p class="subtitle">Premiere Pro 2026 | Batch Automation</p>
+    </div>
+
+    <!-- Block 1: Markers -->
+    <div class="block">
+      <div class="block-title">
+        <h2>📍 Block 1: Markers</h2>
+        <span class="count" id="markerCount">(0)</span>
+      </div>
+
+      <div class="filter-group">
+        <label>Filter by Color:</label>
+        <select id="markerColorFilter">
+          <option value="">All Colors</option>
+          <option value="Red">Red</option>
+          <option value="Blue">Blue</option>
+          <option value="Green">Green</option>
+          <option value="Yellow">Yellow</option>
+          <option value="Cyan">Cyan</option>
+          <option value="Magenta">Magenta</option>
+          <option value="White">White</option>
+        </select>
+      </div>
+
+      <div id="markerList" class="item-list"></div>
+
+      <div class="pattern-input">
+        <label>Rename Pattern:</label>
+        <input id="markerPattern" type="text" placeholder="OTV_EP{ep}_CG{shot}" value="CG_{shot}">
+        <span class="hint">Use {shot} for sequential numbering</span>
+      </div>
+    </div>
+
+    <!-- Block 3: Captions -->
+    <div class="block">
+      <div class="block-title">
+        <h2>📝 Block 3: Captions</h2>
+        <span class="count" id="captionCount">(0)</span>
+      </div>
+
+      <div id="captionList" class="item-list"></div>
+
+      <!-- Caption Editor Container -->
+      <div id="captionEditorContainer" class="caption-editor" style="display: none; margin-top: 12px;"></div>
+
+      <!-- Caption Editor Controls -->
+      <div class="button-group" style="margin-top: 8px;">
+        <button id="startCaptionEditBtn" class="secondary">✎ Edit Captions</button>
+      </div>
+
+      <div class="pattern-input">
+        <label>Rename Pattern (Batch - Experimental):</label>
+        <input id="captionPattern" type="text" placeholder="CAP_{shot}" value="CAP_{shot}">
+        <span class="hint">Use {shot} for sequential numbering</span>
+      </div>
+    </div>
+
+    <!-- Block 4: Text Plates/MOGRT -->
+    <div class="block">
+      <div class="block-title">
+        <h2>🎬 Block 4: Text Plates</h2>
+        <span class="count" id="plateCount">(0)</span>
+      </div>
+
+      <div id="plateList" class="item-list"></div>
+
+      <div class="pattern-input">
+        <label>Rename Pattern:</label>
+        <input id="platePattern" type="text" placeholder="PLATE_{shot}" value="PLATE_{shot}">
+        <span class="hint">Use {shot} for sequential numbering</span>
+      </div>
+    </div>
+
+    <!-- Options -->
+    <div class="block options-block">
+      <div class="block-title">
+        <h2>⚙️ Options</h2>
+      </div>
+
+      <div class="option">
+        <label>
+          <input type="checkbox" id="limitToRange">
+          Limit to TC Range (IN-OUT markers)
+        </label>
+      </div>
+
+      <div class="option">
+        <label>
+          <input type="checkbox" id="autoReload" checked>
+          Auto-reload after changes
+        </label>
+      </div>
+
+      <div class="button-group">
+        <button id="reloadBtn" class="secondary">Reload Lists</button>
+        <button id="resetBtn" class="secondary">Reset Patterns</button>
+      </div>
+    </div>
+
+    <!-- Execute -->
+    <div class="block execute-block">
+      <button id="executeBtn" class="primary primary-large">
+        ▶ EXECUTE ALL CHANGES
+      </button>
+      <p class="warning">⚠️ Changes are atomic - single undo step</p>
+    </div>
+
+    <!-- Status -->
+    <div id="status" class="status-area"></div>
+
+    <!-- Presets -->
+    <div class="block presets-block">
+      <div class="block-title">
+        <h2>💾 Presets</h2>
+      </div>
+
+      <div class="preset-group">
+        <select id="presetSelect">
+          <option value="">Load Preset...</option>
+        </select>
+        <button id="savePresetBtn" class="secondary">Save</button>
+        <button id="deletePresetBtn" class="secondary">Delete</button>
+      </div>
+
+      <div id="presetStatus" class="preset-status"></div>
+    </div>
+  </div>
+
+  <script src="index-v4-manual-editing.js"></script>
+</body>
+</html>

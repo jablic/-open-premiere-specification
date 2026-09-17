@@ -1,0 +1,22 @@
+kind: recipe
+id: REC-0005
+title: Generate RAG Pack For AI Agent
+status: draft
+confidence: medium
+purpose: 'Provide a safe production workflow for: Generate RAG Pack For AI Agent.'
+steps:
+- Run PKC all
+- Load AST JSON
+- Load rulepack
+- Load RAG chunks
+- Configure agent retrieval priority
+- Run benchmark prompt set
+validation:
+- Expected output exists.
+- No fake API method is used.
+- User can rollback changes.
+uses:
+- RULE-AI-0001
+- RULE-AI-0008
+related:
+- FOUND-0002

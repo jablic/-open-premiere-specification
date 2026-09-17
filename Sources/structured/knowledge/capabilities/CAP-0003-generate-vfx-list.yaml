@@ -1,0 +1,67 @@
+id: CAP-0003
+kind: Capability
+title: Generate VFX Pull List
+status: Draft
+summary: Generate a production VFX list from Premiere markers, sequence data, thumbnails, previews and task metadata.
+intent: Support post-production workflows where marked shots must be converted into a spreadsheet for VFX production tracking.
+scope:
+  includes:
+    - Read sequence markers.
+    - Identify CG/VFX shot IDs.
+    - Extract shot boundaries or marker-defined ranges.
+    - Generate thumbnails and preview paths.
+    - Produce spreadsheet-ready structured data.
+  excludes:
+    - Creative VFX bidding.
+    - Final conform decisions.
+inputs:
+  - name: sequence_source
+    type: PremiereSequence|PremiereXML
+    required: true
+    description: Sequence with VFX markers or exported XML.
+  - name: media_exports
+    type: FolderPath
+    required: false
+    description: Optional folder containing rendered previews or source media access for ffmpeg extraction.
+outputs:
+  - name: vfx_list
+    type: SpreadsheetData
+    description: Shot list with IDs, thumbnails, preview links, task descriptions and status columns.
+  - name: asset_manifest
+    type: StructuredManifest
+    description: Thumbnails, previews and source references produced for turnover.
+workflow:
+  - Read sequence markers.
+  - Filter markers matching VFX/CG naming convention.
+  - Resolve timing and shot identity.
+  - Generate or reference thumbnail for first frame.
+  - Generate or reference MP4 preview.
+  - Emit spreadsheet rows with status and task fields.
+knowledge_dependencies:
+  objects:
+    - OBJ-0002
+    - OBJ-0005
+  rules:
+    - RULE-0002
+    - RULE-0004
+    - RULE-0008
+  recipes:
+    - REC-0003
+safety_rules:
+  - RULE-0008
+failure_modes:
+  - Marker naming is inconsistent.
+  - Timeline timecode differs from media timecode.
+  - Nested sequences obscure shot boundaries.
+validation:
+  - Every VFX marker must map to one row or be reported.
+  - Shot IDs must be unique.
+  - Preview and thumbnail paths must be resolvable or explicitly marked missing.
+tests:
+  - TEST-0030
+  - TEST-0031
+evidence:
+  - EVID-0003
+quality:
+  completeness: 55
+  confidence: production_verified

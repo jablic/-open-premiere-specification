@@ -1,0 +1,9 @@
+[project]
+name = "knowledge-os-pkc"
+version = "0.6.0"
+description = "Knowledge OS / Premiere Knowledge Compiler"
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6.0", "mkdocs>=1.5", "mkdocs-material>=9.0"]
+
+[tool.knowledge_os]
+default_plugin = "premiere"

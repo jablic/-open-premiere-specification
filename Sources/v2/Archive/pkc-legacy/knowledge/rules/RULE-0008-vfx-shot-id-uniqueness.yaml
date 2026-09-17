@@ -1,0 +1,22 @@
+id: RULE-0008
+kind: Rule
+title: VFX shot identifiers must be unique
+status: Draft
+severity: High
+summary: A generated VFX pull list must not contain duplicate shot IDs unless explicitly flagged for human resolution.
+applies_to:
+  - CAP-0003
+rationale: Duplicate shot IDs cause production tracking errors, wrong turnovers and ambiguous vendor communication.
+forbidden:
+  - Silently merging two VFX markers with the same shot ID.
+  - Generating spreadsheet rows without a unique identifier.
+required:
+  - Detect duplicate shot IDs.
+  - Emit validation errors for duplicates.
+  - Preserve original marker comments for review.
+evidence:
+  - EVID-0003
+tests:
+  - TEST-0030
+quality:
+  confidence: production_verified

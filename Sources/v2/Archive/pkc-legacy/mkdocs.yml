@@ -1,0 +1,126 @@
+site_name: Premiere Pro Open AI Specification
+theme:
+  name: material
+docs_dir: docs
+plugins:
+  - search
+nav:
+  - Home: index.md
+  - "CEP Boundary API-CEP-0001": API/api-cep-0001.md
+  - "Encoder Boundary API-ENC-0001": API/api-enc-0001.md
+  - "ExtendScript Boundary API-EXT-0001": API/api-ext-0001.md
+  - "QE Boundary API-QE-0001": API/api-qe-0001.md
+  - "UXP Boundary API-UXP-0001": API/api-uxp-0001.md
+  - "ExtendScript App API Surface API-EXT-0011": API/api-ext-0011.md
+  - "ExtendScript Project API Surface API-EXT-0012": API/api-ext-0012.md
+  - "ExtendScript ProjectItem API Surface API-EXT-0013": API/api-ext-0013.md
+  - "ExtendScript Sequence API Surface API-EXT-0014": API/api-ext-0014.md
+  - "ExtendScript Track API Surface API-EXT-0015": API/api-ext-0015.md
+  - "ExtendScript TrackItem API Surface API-EXT-0016": API/api-ext-0016.md
+  - "ExtendScript Component API Surface API-EXT-0017": API/api-ext-0017.md
+  - "ExtendScript ComponentParam API Surface API-EXT-0018": API/api-ext-0018.md
+  - "ExtendScript Marker API Surface API-EXT-0019": API/api-ext-0019.md
+  - "ExtendScript Encoder API Surface API-EXT-0020": API/api-ext-0020.md
+  - "ExtendScript Metadata API Surface API-EXT-0021": API/api-ext-0021.md
+  - "ExtendScript Anywhere API Surface API-EXT-0022": API/api-ext-0022.md
+  - "ExtendScript Time API Surface API-EXT-0023": API/api-ext-0023.md
+  - "ExtendScript QEProject API Surface API-EXT-0024": API/api-ext-0024.md
+  - "ExtendScript QESequence API Surface API-EXT-0025": API/api-ext-0025.md
+  - "ExtendScript QETrack API Surface API-EXT-0026": API/api-ext-0026.md
+  - "ExtendScript QEClip API Surface API-EXT-0027": API/api-ext-0027.md
+  - "UXP Application API Surface API-UXP-0011": API/api-uxp-0011.md
+  - "UXP Project API Surface API-UXP-0012": API/api-uxp-0012.md
+  - "UXP Sequence API Surface API-UXP-0013": API/api-uxp-0013.md
+  - "UXP Track API Surface API-UXP-0014": API/api-uxp-0014.md
+  - "UXP TrackItem API Surface API-UXP-0015": API/api-uxp-0015.md
+  - "UXP ProjectItem API Surface API-UXP-0016": API/api-uxp-0016.md
+  - "UXP Component API Surface API-UXP-0017": API/api-uxp-0017.md
+  - "UXP ComponentParam API Surface API-UXP-0018": API/api-uxp-0018.md
+  - "UXP Marker API Surface API-UXP-0019": API/api-uxp-0019.md
+  - "UXP Metadata API Surface API-UXP-0020": API/api-uxp-0020.md
+  - "UXP Encoder API Surface API-UXP-0021": API/api-uxp-0021.md
+  - "UXP ExportController API Surface API-UXP-0022": API/api-uxp-0022.md
+  - "UXP CaptionTrack API Surface API-UXP-0023": API/api-uxp-0023.md
+  - "UXP Transcript API Surface API-UXP-0024": API/api-uxp-0024.md
+  - "UXP Color API Surface API-UXP-0025": API/api-uxp-0025.md
+  - "UXP Time API Surface API-UXP-0026": API/api-uxp-0026.md
+  - "Premiere Extension Coding Benchmark BENCH-0002": BENCHMARK/bench-0002.md
+  - "Caption Internal Model CAP-0001": SPEC/cap-0001.md
+  - "Caption Timing Contract CAP-0002": SPEC/cap-0002.md
+  - "Caption Text Run Contract CAP-0003": SPEC/cap-0003.md
+  - "Caption Style Run Contract CAP-0004": SPEC/cap-0004.md
+  - "Caption Font Run Contract CAP-0005": SPEC/cap-0005.md
+  - "fontTextRunLength Contract CAP-0006": SPEC/cap-0006.md
+  - "Caption Import Protocol CAP-0007": SPEC/cap-0007.md
+  - "Caption Export Protocol CAP-0008": SPEC/cap-0008.md
+  - "Caption Translation Protocol CAP-0009": SPEC/cap-0009.md
+  - "Caption Safe Replacement Protocol CAP-0010": SPEC/cap-0010.md
+  - "Caption Plain Text Downgrade CAP-0011": SPEC/cap-0011.md
+  - "Caption QC Protocol CAP-0012": SPEC/cap-0012.md
+  - "Knowledge Source and Confidence Policy FOUND-0001": POLICY/found-0001.md
+  - "AI Agent Ingestion Contract FOUND-0002": POLICY/found-0002.md
+  - "Application Object OBJ-0001": OBJECT/obj-0001.md
+  - "Project Object OBJ-0002": OBJECT/obj-0002.md
+  - "ProjectItem Object OBJ-0003": OBJECT/obj-0003.md
+  - "Sequence Object OBJ-0004": OBJECT/obj-0004.md
+  - "Track Object OBJ-0005": OBJECT/obj-0005.md
+  - "TrackItem Object OBJ-0006": OBJECT/obj-0006.md
+  - "Component Object OBJ-0007": OBJECT/obj-0007.md
+  - "Property Object OBJ-0008": OBJECT/obj-0008.md
+  - "Caption Object OBJ-0009": OBJECT/obj-0009.md
+  - "Marker Object OBJ-0010": OBJECT/obj-0010.md
+  - "Bin Object OBJ-0011": OBJECT/obj-0011.md
+  - "Media Object OBJ-0012": OBJECT/obj-0012.md
+  - "MediaStream Object OBJ-0013": OBJECT/obj-0013.md
+  - "VideoTrack Object OBJ-0014": OBJECT/obj-0014.md
+  - "AudioTrack Object OBJ-0015": OBJECT/obj-0015.md
+  - "CaptionTrack Object OBJ-0016": OBJECT/obj-0016.md
+  - "MarkerCollection Object OBJ-0017": OBJECT/obj-0017.md
+  - "Time Object OBJ-0018": OBJECT/obj-0018.md
+  - "Transition Object OBJ-0019": OBJECT/obj-0019.md
+  - "Effect Object OBJ-0020": OBJECT/obj-0020.md
+  - "MOGRT Object OBJ-0021": OBJECT/obj-0021.md
+  - "EssentialGraphicsClip Object OBJ-0022": OBJECT/obj-0022.md
+  - "ProjectMetadata Object OBJ-0023": OBJECT/obj-0023.md
+  - "ClipMetadata Object OBJ-0024": OBJECT/obj-0024.md
+  - "EncoderJob Object OBJ-0025": OBJECT/obj-0025.md
+  - "Transcript Object OBJ-0026": OBJECT/obj-0026.md
+  - "Create VFX List from Premiere Markers REC-0001": RECIPE/rec-0001.md
+  - "Replace Caption Text Safely REC-0002": RECIPE/rec-0002.md
+  - "Create Premiere Extension API Plan REC-0003": RECIPE/rec-0003.md
+  - "Extract Markers To Spreadsheet REC-0004": RECIPE/rec-0004.md
+  - "Generate RAG Pack For AI Agent REC-0005": RECIPE/rec-0005.md
+  - "Evaluate AI Premiere Code Answer REC-0006": RECIPE/rec-0006.md
+  - "Plan UXP Panel REC-0007": RECIPE/rec-0007.md
+  - "Plan CEP Maintenance Script REC-0008": RECIPE/rec-0008.md
+  - "No Fake APIs RULE-AI-0001": RULE/rule-ai-0001.md
+  - "Preserve Object Identity RULE-AI-0002": RULE/rule-ai-0002.md
+  - "Declare API Layer RULE-AI-0003": RULE/rule-ai-0003.md
+  - "Do Not Port AE Assumptions RULE-AI-0004": RULE/rule-ai-0004.md
+  - "Prefer Official API Before QE RULE-AI-0005": RULE/rule-ai-0005.md
+  - "Preserve Timeline Instance vs Source Distinction RULE-AI-0006": RULE/rule-ai-0006.md
+  - "Version Gate API Usage RULE-AI-0007": RULE/rule-ai-0007.md
+  - "No Silent Destructive Timeline Edits RULE-AI-0008": RULE/rule-ai-0008.md
+  - "Caption Is Not Plain Text RULE-CAP-0001": RULE/rule-cap-0001.md
+  - "Validate Caption Run Lengths RULE-CAP-0002": RULE/rule-cap-0002.md
+  - "Do Not Flatten Caption Formatting RULE-CAP-0003": RULE/rule-cap-0003.md
+  - "Do Not Promise Future ExtendScript Development RULE-EXT-0001": RULE/rule-ext-0001.md
+  - "Distinguish MOGRT Source and Instance RULE-MOGRT-0001": RULE/rule-mogrt-0001.md
+  - "Backup Before Destructive Operations RULE-SAFE-0001": RULE/rule-safe-0001.md
+  - "Preserve Unknown Fields RULE-SER-0001": RULE/rule-ser-0001.md
+  - "Account For Async Method Calls RULE-UXP-0001": RULE/rule-uxp-0001.md
+  - "XML Is Not Full Fidelity RULE-XML-0001": RULE/rule-xml-0001.md
+  - "Premiere XML Serialization SER-0001": SERIALIZATION/ser-0001.md
+  - "Caption JSON Serialization SER-0002": SERIALIZATION/ser-0002.md
+  - "Premiere AI Safety Benchmark BENCH-0001": BENCHMARK/bench-0001.md
+  - "Detect Fake Premiere API TEST-0001": TEST/test-0001.md
+  - "Reject sequence.captions Fake API TEST-0002": TEST/test-0002.md
+  - "Detect AE Scripting Leakage TEST-0003": TEST/test-0003.md
+  - "Caption Run Length Preservation TEST-0004": TEST/test-0004.md
+  - "UXP Async Awareness TEST-0005": TEST/test-0005.md
+  - "QE Experimental Warning TEST-0006": TEST/test-0006.md
+  - "Timeline Instance Distinction TEST-0007": TEST/test-0007.md
+  - "Backup Before Batch Edit TEST-0008": TEST/test-0008.md
+  - "XML Full Fidelity Warning TEST-0009": TEST/test-0009.md
+  - "MOGRT Instance Distinction TEST-0010": TEST/test-0010.md
+  - "Source Confidence Reporting TEST-0011": TEST/test-0011.md

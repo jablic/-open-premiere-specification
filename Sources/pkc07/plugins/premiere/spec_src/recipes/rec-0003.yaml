@@ -1,0 +1,23 @@
+kind: recipe
+id: REC-0003
+title: Create Premiere Extension API Plan
+status: draft
+confidence: medium
+purpose: 'Provide a safe production workflow for: Create Premiere Extension API Plan.'
+steps:
+- Identify target Premiere version
+- Choose UXP or CEP/ExtendScript
+- List required operations
+- Map each operation to verified API surface
+- Mark unsupported gaps
+- Design fallback/manual workflow
+- Create tests
+validation:
+- Expected output exists.
+- No fake API method is used.
+- User can rollback changes.
+uses:
+- RULE-AI-0001
+- RULE-AI-0008
+related:
+- FOUND-0002

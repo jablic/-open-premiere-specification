@@ -1,0 +1,12 @@
+id: TEST-0009
+kind: test
+title: ProjectItem may represent media or a sequence
+given: A project item tree containing both imported media items and sequence items.
+when: The AI agent reasons about ProjectItem behavior.
+then: It must not assume every ProjectItem is a media file.
+expected: The plan detects or preserves ProjectItem type before relink, export, timeline insertion, or metadata operations.
+applies_to:
+  - OBJ-0004
+  - OBJ-0005
+  - RULE-0004
+automation_level: semi_automated

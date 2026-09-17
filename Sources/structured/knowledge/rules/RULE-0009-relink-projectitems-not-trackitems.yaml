@@ -1,0 +1,22 @@
+id: RULE-0009
+kind: Rule
+title: Relink ProjectItems, not TrackItems
+status: Draft
+severity: Critical
+summary: Batch relink workflows must operate on source ProjectItems and validate timeline instances separately.
+applies_to:
+  - CAP-0004
+  - OBJ-0004
+rationale: TrackItems are timeline instances. Relinking should preserve edits by updating the source media reference attached to the ProjectItem.
+forbidden:
+  - Treating a TrackItem as source media.
+  - Recutting sequence items as a substitute for relinking.
+required:
+  - Identify offline ProjectItems.
+  - Validate affected TrackItems after relink.
+evidence:
+  - EVID-0003
+tests:
+  - TEST-0040
+quality:
+  confidence: production_verified
