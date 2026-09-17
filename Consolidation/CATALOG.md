@@ -1,0 +1,1188 @@
+# Unique source catalog
+
+One entry per SHA-256 content group. Matching bytes are duplicates; matching titles alone are not.
+
+These are preserved historical sources, not independently verified API contracts.
+
+- [Sources/builder/PremierePro_Open_AI_Spec/.github/workflows/validate.yml](../Sources/builder/PremierePro_Open_AI_Spec/.github/workflows/validate.yml) — 1 copies; SHA-256 `ec84ec251ab7edacd5795c75f05ffc6fac9b95eddd62330a022ee6246a5af525`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/00_FOUNDATION/ADR/ADR-0001-markdown-first.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/00_FOUNDATION/ADR/ADR-0001-markdown-first.md) — 1 copies; SHA-256 `a0af26505d88a86ea7d2d80b6694fe973b3d91335c780622e6c129edbf0efef9`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/00_FOUNDATION/ADR/ADR-0002-ai-native-specification.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/00_FOUNDATION/ADR/ADR-0002-ai-native-specification.md) — 1 copies; SHA-256 `e786b8681c1b6e94a3f7deb170137a6cf4de8d84cc80abdfefa04444dc873d73`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/00_FOUNDATION/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/00_FOUNDATION/README.md) — 1 copies; SHA-256 `37a9a184e3327da23afbbbad3d1d9acfa12a989de87660004b86ebdb634d33c2`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/00_FOUNDATION/STANDARDS/DOCUMENT_STANDARD.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/00_FOUNDATION/STANDARDS/DOCUMENT_STANDARD.md) — 1 copies; SHA-256 `d4dd12af871240c2be28e00f2854b0bdfee79b39e6fd0080eecfec35655b7d1b`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0001-application.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0001-application.md) — 1 copies; SHA-256 `45f693f337e74b6702b3df6855c98f4e588717bda16f698735957b8de1ec3690`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0002-project.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0002-project.md) — 1 copies; SHA-256 `1ec8862121e645c4af1a0aa4d3ac098616fcb7deaffbd6eee2dbda536c4e2e72`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0003-project-item.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0003-project-item.md) — 1 copies; SHA-256 `4c32aaaaa26a2d23458cf07317d16942b65f3517741bcad857c6b2eb28a4a2c0`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0004-sequence.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0004-sequence.md) — 1 copies; SHA-256 `14b49888c3cc7a5ca6c7e5415107b42b5cf248ee9dc751745d3b50b8aa05f216`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0005-track-item.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0005-track-item.md) — 1 copies; SHA-256 `ff9d558f4de689fba58244f9e071b4549e6d99c8f926eb450a1c14d854812ca5`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0006-track.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0006-track.md) — 1 copies; SHA-256 `38b991d41cd462a9ce36e9e124dc5292077e6301e7b8a93fc1c2b66004fb4874`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0007-component.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0007-component.md) — 1 copies; SHA-256 `641620a4483fc0f0731e271e6b0d55d5da50cff28771da960d180627ab11f450`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0008-property.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0008-property.md) — 1 copies; SHA-256 `ac1946333d745970b06502f753f23a5dcadbf8ecb59a461f3ce1bd32fb9fcd2f`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0009-caption.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/OBJECTS/OBJ-0009-caption.md) — 1 copies; SHA-256 `834106e9120009abc5f9aa3fdc153ca6e92e9ba9012fc5d5586080fdaf65dbaa`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/README.md) — 1 copies; SHA-256 `6187a23e3bbf36d24b31f332d9bc61b49f61a0eda6cb15c4efb5cd95b9b0d182`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/SERIALIZATION/SER-0001-premiere-xml.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/SERIALIZATION/SER-0001-premiere-xml.md) — 1 copies; SHA-256 `9e8950257826984ea6edb6e84f2a54ef88ecb34b1fef144c92f7343b23d8f4f3`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/SERIALIZATION/SER-0002-caption-json.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/01_SPEC/SERIALIZATION/SER-0002-caption-json.md) — 1 copies; SHA-256 `13515681036df0a2c647165839ab65270a15252666fbae36c232141b664e002e`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/02_KNOWLEDGE/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/02_KNOWLEDGE/README.md) — 1 copies; SHA-256 `e17b0e18708392ed8d1939f37e5d07a524376d863f43cb0138f620e009454afa`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/03_RULES/AI/RULE-AI-0001-no-fake-apis.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/03_RULES/AI/RULE-AI-0001-no-fake-apis.md) — 1 copies; SHA-256 `1b2da6ebd501273f8abe53a30ca22204c51bab89aba956a9afe5a51ab4f771da`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/03_RULES/AI/RULE-AI-0002-object-identity.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/03_RULES/AI/RULE-AI-0002-object-identity.md) — 1 copies; SHA-256 `e0a711ab78f78adf635fdc665586fa5e612bf1e376769e7c0d13076592c6ae6b`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/03_RULES/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/03_RULES/README.md) — 1 copies; SHA-256 `907f4f71ce8659e52bee9c9ebb870d92edd06fd65c756c516a046381fc79d9f0`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/03_RULES/SERIALIZATION/RULE-SER-0001-preserve-unknown-fields.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/03_RULES/SERIALIZATION/RULE-SER-0001-preserve-unknown-fields.md) — 1 copies; SHA-256 `c40901152632a93ac0dd8533801006926d8aefd8924872afeee62dad36d77d77`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/04_RECIPES/CAPTIONS/REC-0002-replace-caption-text-safely.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/04_RECIPES/CAPTIONS/REC-0002-replace-caption-text-safely.md) — 1 copies; SHA-256 `3cdcb6c97612f1a713038f837515c5b7162464dad02213062475e1436070ee98`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/04_RECIPES/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/04_RECIPES/README.md) — 1 copies; SHA-256 `2990a53ea3fe37c864db25648491fb6e07a1c153fa87f244c1bd0b6706764228`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/04_RECIPES/VFX/REC-0001-create-vfx-list-from-premiere.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/04_RECIPES/VFX/REC-0001-create-vfx-list-from-premiere.md) — 1 copies; SHA-256 `9b40732afb69b1f030e759b0d8a5b7fa8b4a10dbc1f3749716da668dc5cc1731`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/05_TESTS/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/05_TESTS/README.md) — 1 copies; SHA-256 `bdb824fadb3d11353cefa1de0e3d573cc4a08a75450e26c6bf5257cfdb00a2a1`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/06_ANTI_PATTERNS/AP-0001-caption-plain-text-assumption.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/06_ANTI_PATTERNS/AP-0001-caption-plain-text-assumption.md) — 1 copies; SHA-256 `e079cc1032642f5e0539a441aa89c19929a309a09e00b4739857bd99d7d15b76`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/06_ANTI_PATTERNS/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/06_ANTI_PATTERNS/README.md) — 1 copies; SHA-256 `f66031151dfe0bed8d19c33427e2cf0f2b946baa68b9be5c8f24aed1e611e62a`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/07_BUG_DATABASE/CAPTIONS/BUG-CAP-0001-caption-run-length-mismatch.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/07_BUG_DATABASE/CAPTIONS/BUG-CAP-0001-caption-run-length-mismatch.md) — 1 copies; SHA-256 `299efb5b1ef762168c476129b4e39cf96c3c04e0ab5e6f4dfe72d4e5b0c26f88`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/07_BUG_DATABASE/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/07_BUG_DATABASE/README.md) — 1 copies; SHA-256 `85d72f68295061aa02d5c003a3e7c1598234c555fce5635bbd7bd4641951ea46`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/08_REVERSE_ENGINEERING/EXPERIMENTS/EXP-0001-caption-json-editing-protocol.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/08_REVERSE_ENGINEERING/EXPERIMENTS/EXP-0001-caption-json-editing-protocol.md) — 1 copies; SHA-256 `d4246d2b71c09e37466b48fceda75b707497e04c35cb9c57590a236c3859d26b`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/08_REVERSE_ENGINEERING/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/08_REVERSE_ENGINEERING/README.md) — 1 copies; SHA-256 `5bd85237c692196f2346b733153a52cec9b1bdc8a6f5b6f8c4cb97a7adeacf54`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/09_DATASETS/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/09_DATASETS/README.md) — 1 copies; SHA-256 `2bf5629105b964b530f3147886d75a9d9b97a749a7b5d6cf744e43970a1b981e`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/10_GRAPH/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/10_GRAPH/README.md) — 1 copies; SHA-256 `1b65fe4978a863131f692138248e1681ec0262b4774bbb33d16305ebc0aa510e`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/11_PROMPTS/PROMPT-0001-generate-safe-premiere-script.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/11_PROMPTS/PROMPT-0001-generate-safe-premiere-script.md) — 1 copies; SHA-256 `bd530b4f218c7ddefd156818c12278462aaf2f5a45d43ba37e611fbfe0a76bc1`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/11_PROMPTS/README.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/11_PROMPTS/README.md) — 1 copies; SHA-256 `e733df993e40c07dd4d5be73ce9cb4b1f75b149d0fed82363d474b7fe5e9fc25`
+- [Sources/builder/PremierePro_Open_AI_Spec/docs/INDEX.md](../Sources/builder/PremierePro_Open_AI_Spec/docs/INDEX.md) — 1 copies; SHA-256 `82ca38bb897e5a6bf476be62970da04989ef915708c47980dc296144c66fa29f`
+- [Sources/builder/PremierePro_Open_AI_Spec/mkdocs.yml](../Sources/builder/PremierePro_Open_AI_Spec/mkdocs.yml) — 1 copies; SHA-256 `d8df04a8eb7c1d116690dbc845f761988f209810a9fb8ae4e6cd076a4235c280`
+- [Sources/builder/PremierePro_Open_AI_Spec/requirements.txt](../Sources/builder/PremierePro_Open_AI_Spec/requirements.txt) — 2 copies; SHA-256 `91ef0ef98525351e0c752efb821b3d1228f8fd260a20be894132a09809318912`
+  - [Sources/builder/requirements-builder.txt](../Sources/builder/requirements-builder.txt)
+- [Sources/builder/PremierePro_Open_AI_Spec/tools/ppaikb.py](../Sources/builder/PremierePro_Open_AI_Spec/tools/ppaikb.py) — 1 copies; SHA-256 `2097490ef28d28176f417db7dd4600989bb370e5cdb9dfe851fb79c3eb4af779`
+- [Sources/builder/PremierePro_Open_AI_Spec/tools/ppaikb_builder/__init__.py](../Sources/builder/PremierePro_Open_AI_Spec/tools/ppaikb_builder/__init__.py) — 1 copies; SHA-256 `3e6710d8f236a0ff22ae72ed24b25bcb661f5bab01bcb0262fe569001cd3ab07`
+- [Sources/builder/PremierePro_Open_AI_Spec/tools/ppaikb_builder/cli.py](../Sources/builder/PremierePro_Open_AI_Spec/tools/ppaikb_builder/cli.py) — 2 copies; SHA-256 `92017a6dc8cfc8d4cf7cab99bba018d773bb7dbf9f309f0329358c89908b1da4`
+  - [Sources/builder/scripts/ppaikb.py](../Sources/builder/scripts/ppaikb.py)
+- [Sources/builder/PremierePro_Open_AI_Spec/tools/ppaikb_builder/seed_docs.json](../Sources/builder/PremierePro_Open_AI_Spec/tools/ppaikb_builder/seed_docs.json) — 2 copies; SHA-256 `88692c86c26e79b126ed759e882a228802151c030a1d308ceb76a2ae81884b74`
+  - [Sources/builder/ppaikb_builder/seed_docs.json](../Sources/builder/ppaikb_builder/seed_docs.json)
+- [Sources/builder/README.md](../Sources/builder/README.md) — 1 copies; SHA-256 `0eb494474986c949977dc8f80fe5217ee7aaedc399d932410a8310f23f908727`
+- [Sources/builder/bootstrap_to_desktop.py](../Sources/builder/bootstrap_to_desktop.py) — 1 copies; SHA-256 `391837202d65290692adc49748a09ded24462f7b6bc82600216d48adc7c8a76f`
+- [Sources/builder/ppaikb_builder/__init__.py](../Sources/builder/ppaikb_builder/__init__.py) — 1 copies; SHA-256 `d0f688d9e48e0a9e6490d7292a95126cb1dfebaacbf714331696322c6a44b723`
+- [Sources/builder/ppaikb_builder/cli.py](../Sources/builder/ppaikb_builder/cli.py) — 1 copies; SHA-256 `008fdd82f00b4701b9bc0fe4687dd833d5f8450b24eff21c6f6740a2384a6455`
+- [Sources/builder/requirements.txt](../Sources/builder/requirements.txt) — 1 copies; SHA-256 `b3b8eefefbf5171050c24b0743f04ff75824fb52d8911d171481551b9fcf481e`
+- [Sources/drafts/imported-notes/open-premiere-specification-review-and-draft.txt](../Sources/drafts/imported-notes/open-premiere-specification-review-and-draft.txt) — 1 copies; SHA-256 `5e818b5a215eebdf3bc5f818254dd729070bc0eed93406fca424df490353a07a`
+- [Sources/drafts/imported-notes/uxp-panel-scaffold-draft.md](../Sources/drafts/imported-notes/uxp-panel-scaffold-draft.md) — 1 copies; SHA-256 `ded3e2e12c82b0c53f14b095ddb40e78d7eebea50740440d58db38f3b327b113`
+- [Sources/imports/imported-copies/files-import-bundle/README.md](../Sources/imports/imported-copies/files-import-bundle/README.md) — 4 copies; SHA-256 `a2c100deb03d1b8a10afe4f93b590473cf014f8cad0346260bdcb7a2d774ed9d`
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/README.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/README.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/README.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/README.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/README.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/README.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Archive/README.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Archive/README.md) — 3 copies; SHA-256 `6bc8568f0967c8b99c98dda9efc540c6617695e5e2c7edee63d56f8c784a26b7`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Archive/README.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Archive/README.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Archive/README.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Archive/README.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/ai-integration.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/ai-integration.md) — 3 copies; SHA-256 `7a265acfd0572066fa3d830d7ed89aac4680bf03468032ed68a70576bb12c6a8`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/ai-integration.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/ai-integration.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/ai-integration.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/ai-integration.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/automation.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/automation.md) — 3 copies; SHA-256 `5f7fe2b122cbdbd14a24b6bf6a1d027b162664222583ab86dd018e728891bf19`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/automation.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/automation.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/automation.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/automation.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/best-practices.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/best-practices.md) — 3 copies; SHA-256 `8251bf8c1f87cc9018c8e6c1e5f103dceed9c2f04a3d95a40280eddec02926c0`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/best-practices.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/best-practices.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/best-practices.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/best-practices.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/captions.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/captions.md) — 3 copies; SHA-256 `df18417696039610cdab9b283d3421bd82007ca5feba9c884f0e884535896788`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/captions.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/captions.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/captions.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/captions.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/cep.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/cep.md) — 3 copies; SHA-256 `dd7ec0ddcc47e2e98ab4411091c1915263d14419c7bb8a01027d5a0586362176`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/cep.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/cep.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/cep.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/cep.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/cpp-native-sdk.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/cpp-native-sdk.md) — 3 copies; SHA-256 `ecee23ff3853098a1d3bece3c44dc24d27961a4d38d443e04ef138bfbf169f36`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/cpp-native-sdk.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/cpp-native-sdk.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/cpp-native-sdk.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/cpp-native-sdk.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/debugging.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/debugging.md) — 3 copies; SHA-256 `382ba62ba8922999ea8106075a27be85cd89853165351fc1ba4ac2e05f4aaed3`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/debugging.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/debugging.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/debugging.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/debugging.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/examples-index.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/examples-index.md) — 3 copies; SHA-256 `5f4aa837dc532b3cf09f1dc076eeb03cf10d85bb7941a883c20ab243bfec3a24`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/examples-index.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/examples-index.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/examples-index.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/examples-index.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/import.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/import.md) — 3 copies; SHA-256 `e1f74a9ca72a182e401929c324a416c1a3e5b2286614dfc92d8703b4bf24903a`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/import.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/import.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/import.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/import.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/markers.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/markers.md) — 3 copies; SHA-256 `2e3d2d0074e3a98432ea90b90cefe16615950f40233f9001aca54d2b8803ff58`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/markers.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/markers.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/markers.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/markers.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/panels.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/panels.md) — 3 copies; SHA-256 `cd4000715cd4b55531208d848ca6fa098c417413d00ee4fe7ea63e11cb21beff`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/panels.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/panels.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/panels.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/panels.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/premiere-dom-overview.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/premiere-dom-overview.md) — 3 copies; SHA-256 `2b963d55a002bc5f6c13083d774acf8bc7d8539ab37581a71f762ac4700af516`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/premiere-dom-overview.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/premiere-dom-overview.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/premiere-dom-overview.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/premiere-dom-overview.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/reverse-engineering-qe-dom.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/reverse-engineering-qe-dom.md) — 3 copies; SHA-256 `14aef1be02a3f5c36a6147d573bac842d90ec9cbe8726958ce9861e59a03f364`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/reverse-engineering-qe-dom.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/reverse-engineering-qe-dom.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/reverse-engineering-qe-dom.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/reverse-engineering-qe-dom.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/uxp.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/uxp.md) — 3 copies; SHA-256 `440815eb4d20427561cd498b0f9e8320bd6469c8685fb7c6cfeabb7e436391cb`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/uxp.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/uxp.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/uxp.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/uxp.md)
+- [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/xml-fcpxml.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/xml-fcpxml.md) — 3 copies; SHA-256 `44577b60ac6a8256a21a9a68ddeffb1c2d07ce75ee9de34024588edddd9da9b9`
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/xml-fcpxml.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/xml-fcpxml.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/xml-fcpxml.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/xml-fcpxml.md)
+- [Sources/pkc06/.github/workflows/validate.yml](../Sources/pkc06/.github/workflows/validate.yml) — 2 copies; SHA-256 `3990da22fea703e3b41692c9d842896febf99fdad6335fb773810e1314ce12c2`
+  - [Sources/pkc07/.github/workflows/validate.yml](../Sources/pkc07/.github/workflows/validate.yml)
+- [Sources/pkc06/README.md](../Sources/pkc06/README.md) — 1 copies; SHA-256 `2a9a771dc22d5e5fa7344b8fceb5556a354bb5aebd1bf0de22ed291285cac7e3`
+- [Sources/pkc06/bootstrap_to_desktop.py](../Sources/pkc06/bootstrap_to_desktop.py) — 1 copies; SHA-256 `2440ca1434c32c285bb4ec6256a67c527262bedb29af1d289ba24f629d468974`
+- [Sources/pkc06/knowledge_os/__init__.py](../Sources/pkc06/knowledge_os/__init__.py) — 1 copies; SHA-256 `7080f58cb9c2fef8f8f0680c37a61bd4503726c43de73366087991604f131616`
+- [Sources/pkc06/knowledge_os/cli.py](../Sources/pkc06/knowledge_os/cli.py) — 1 copies; SHA-256 `e4938bdeae676afe5299a35e44201b51b6d6233821e2873eba799d4fb89158d0`
+- [Sources/pkc06/knowledge_os/compiler/parser.py](../Sources/pkc06/knowledge_os/compiler/parser.py) — 1 copies; SHA-256 `bc8d3aa9a803b90e697193452e8cacda08e41b8057a37f6d8d05d48fdfcec5a8`
+- [Sources/pkc06/knowledge_os/compiler/validator.py](../Sources/pkc06/knowledge_os/compiler/validator.py) — 1 copies; SHA-256 `c508299dc3f1910920ef5e88d343f4d33de1d311d6280a21a8e893feb0700c8b`
+- [Sources/pkc06/knowledge_os/generators/artifacts.py](../Sources/pkc06/knowledge_os/generators/artifacts.py) — 1 copies; SHA-256 `689816c520373b9045ddb119f90bd282056178da3b69ac4bb6259796c0c4df45`
+- [Sources/pkc06/knowledge_os/generators/markdown.py](../Sources/pkc06/knowledge_os/generators/markdown.py) — 1 copies; SHA-256 `0f0522b02c8f940b346c5cb55dc0f67f29daffdc30d620a3342d1d3d1f32eb21`
+- [Sources/pkc06/pyproject.toml](../Sources/pkc06/pyproject.toml) — 2 copies; SHA-256 `7a16f0b5f7d7d6876585317e19754e08a7189a11b5808fc6f7f074fe65abb999`
+  - [Sources/pkc07/pyproject.toml](../Sources/pkc07/pyproject.toml)
+- [Sources/pkc06/tools/pkc.py](../Sources/pkc06/tools/pkc.py) — 1 copies; SHA-256 `1e3d70b9911e669bda776bc0b7eca46f96dd57da2e1b63ef7bced0a938fe2ee7`
+- [Sources/pkc07/README.md](../Sources/pkc07/README.md) — 1 copies; SHA-256 `5bdcab1ae5247847002f3d62bd810b4a73bc5b6c164afbe0f056dc70aaa93b59`
+- [Sources/pkc07/bootstrap_to_desktop.py](../Sources/pkc07/bootstrap_to_desktop.py) — 1 copies; SHA-256 `68d22afc540a6c2958f86f66acabe63a7998e553ec40e2f1542bc1e80de917cd`
+- [Sources/resolve/DAVINCI_RESOLVE_VFX_EXPORT_LIST_SPEC_2026-09-02.md](../Sources/resolve/DAVINCI_RESOLVE_VFX_EXPORT_LIST_SPEC_2026-09-02.md) — 1 copies; SHA-256 `685df6feba96978b46577e7c567a5d9b131e2d283b1343584942d407e8727a46`
+- [Sources/resolve/README.md](../Sources/resolve/README.md) — 1 copies; SHA-256 `36185ab24ab1ab9819c96a3453a1776dac71f83bdb6d57b22d546194c93fc91b`
+- [Sources/resolve/docs/PHASE_0_RESOLVE_FIXTURE_CONTRACT.md](../Sources/resolve/docs/PHASE_0_RESOLVE_FIXTURE_CONTRACT.md) — 1 copies; SHA-256 `18e3b1cc4a13138ba8b8502557acc4c235dfad2b149745f24a4a5d43dc0e69d1`
+- [Sources/resolve/pyproject.toml](../Sources/resolve/pyproject.toml) — 1 copies; SHA-256 `e8c4628ed8f1f109ed9455dff39a67374c0711c7e24e6a5114517abe41fb61db`
+- [Sources/resolve/resolve_adapter/__init__.py](../Sources/resolve/resolve_adapter/__init__.py) — 1 copies; SHA-256 `0b2b06b0d7a2263654bbd3f37419b3f02be3a54565f1b1adb49ad0b4ead1badc`
+- [Sources/resolve/resolve_adapter/fixtures.py](../Sources/resolve/resolve_adapter/fixtures.py) — 1 copies; SHA-256 `964759837243cedf1944f14a9eb4d4c1fe517d6f5ab0790e98c4c6c919dee194`
+- [Sources/resolve/resolve_adapter/readonly.py](../Sources/resolve/resolve_adapter/readonly.py) — 1 copies; SHA-256 `2a6c12f0cc407373158476ae726dbb31e1826376726db6bcd9baf74922a8eee2`
+- [Sources/resolve/tests/conftest.py](../Sources/resolve/tests/conftest.py) — 1 copies; SHA-256 `51c794b0048cf469cd47e02168301037ff0cd221994388dd942da529024fef07`
+- [Sources/resolve/tests/fixtures/resolve/README.md](../Sources/resolve/tests/fixtures/resolve/README.md) — 1 copies; SHA-256 `eae895404cda70abfd6bae479a09827daa43f1fad23e1b512a075c48189bc1f9`
+- [Sources/resolve/tests/fixtures/resolve/active_timeline_23_976_non_drop.json](../Sources/resolve/tests/fixtures/resolve/active_timeline_23_976_non_drop.json) — 1 copies; SHA-256 `aae41d47d1de45294e611921cd02134b693e2e496d91bd1e3eb1b40494542fbc`
+- [Sources/resolve/tests/fixtures/resolve/active_timeline_24fps_start_01h.json](../Sources/resolve/tests/fixtures/resolve/active_timeline_24fps_start_01h.json) — 1 copies; SHA-256 `6748cade5414c866d91462de4c714c6a0484ab99575177eeae5301c247507b0e`
+- [Sources/resolve/tests/fixtures/resolve/active_timeline_24fps_start_03h.json](../Sources/resolve/tests/fixtures/resolve/active_timeline_24fps_start_03h.json) — 1 copies; SHA-256 `238197731fbfe4b74c60a581a1c48f7c451b95dff65454d7baf14ecf1cfae2fe`
+- [Sources/resolve/tests/fixtures/resolve/active_timeline_mixed_tracks_markers.json](../Sources/resolve/tests/fixtures/resolve/active_timeline_mixed_tracks_markers.json) — 1 copies; SHA-256 `007503a5e8b6812dd1c6c11da1944bb2af77fcb3f8b9bd3cd08f624c7a7c5144`
+- [Sources/resolve/tests/test_phase0.py](../Sources/resolve/tests/test_phase0.py) — 1 copies; SHA-256 `3da99ea149b92f0106004baf0699f415cc8f7cb7efb096df416183ca4c4f4f15`
+- [Sources/resolve/tests/test_phase1_core.py](../Sources/resolve/tests/test_phase1_core.py) — 1 copies; SHA-256 `0e604050a5a3073875d0f45d4012d85c978079c8a19a8b79be65046eb4919553`
+- [Sources/resolve/tests/test_phase2_adapter.py](../Sources/resolve/tests/test_phase2_adapter.py) — 1 copies; SHA-256 `4e59471e676119da25fc941012cf8c8a26deca9a21364a86b5a3a1edc826040f`
+- [Sources/resolve/vfx_core/__init__.py](../Sources/resolve/vfx_core/__init__.py) — 1 copies; SHA-256 `a0289eae8b14033006afb1d0c5ce176941eb7ead316331e996834e0312578d84`
+- [Sources/resolve/vfx_core/collisions.py](../Sources/resolve/vfx_core/collisions.py) — 1 copies; SHA-256 `6c812e96e7c173cb9f99c8910ae548adcf0ca4f26849931a0acc71b171ffbef0`
+- [Sources/resolve/vfx_core/config.py](../Sources/resolve/vfx_core/config.py) — 1 copies; SHA-256 `2e7a06ff5fa1e68fa705a6b1ab9704a934f3d61f4a580bfd59c88f8edac1d7d4`
+- [Sources/resolve/vfx_core/manifest.py](../Sources/resolve/vfx_core/manifest.py) — 1 copies; SHA-256 `97072a6fa7b623298afd23c26ce7cf7523a331f8bc0c56a63d86b3dc0a7f4d9d`
+- [Sources/resolve/vfx_core/models.py](../Sources/resolve/vfx_core/models.py) — 1 copies; SHA-256 `7d79c6051848c1829f7848d6b3838bc293adbd22ceae2116df03f1087f91baf3`
+- [Sources/resolve/vfx_core/shot_model.py](../Sources/resolve/vfx_core/shot_model.py) — 1 copies; SHA-256 `b47f4a52a58469e80e200be5d22447ffa62155b51280c1a8982d2b23fa74cdc8`
+- [Sources/resolve/vfx_core/timecode.py](../Sources/resolve/vfx_core/timecode.py) — 1 copies; SHA-256 `15db265987cbf4d59383651e7c005e9c8433956b2f7edbcfa46f6c30e5e261f5`
+- [Sources/structured/.github/workflows/ci.yml](../Sources/structured/.github/workflows/ci.yml) — 1 copies; SHA-256 `b17d2c6103ee586758425e8beec47ca1d2d35b46700f81763d4a46a45e268158`
+- [Sources/structured/.github/workflows/validate.yml](../Sources/structured/.github/workflows/validate.yml) — 1 copies; SHA-256 `0937eeddb3737348d830d050e1646e19833ac9e1c89943f560db04d604edb77a`
+- [Sources/structured/LOCAL_WORKSPACE_INVENTORY.md](../Sources/structured/LOCAL_WORKSPACE_INVENTORY.md) — 1 copies; SHA-256 `d46cfba17122857248580e9dc857e86811469dfd2d5a75949193f31052f2fe1c`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/AI_Integration.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/AI_Integration.md) — 1 copies; SHA-256 `1c20314111a6c8e94914f36b2e1f21452c9816dd699241519e4be267eefa1843`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Automation.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Automation.md) — 1 copies; SHA-256 `403fe07c11e3a94d1f6ba37efe3b616d8b0346fa16a19f4a5428b26e9c7c64ae`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Best_Practices.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Best_Practices.md) — 1 copies; SHA-256 `13ed561a81be0b3541507b6c682e47b45bb0f2df540b37b8fc080011e622ea1f`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Bins.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Bins.md) — 1 copies; SHA-256 `7b25eb0afa299736c4b620de1d96ae548c67c2f0e6a32a06559cdf322bd11d81`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/CEP.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/CEP.md) — 1 copies; SHA-256 `b210d9d3483071a91781ddeb2839d3a290a578aee44181ed82d18ce145eb1064`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/C_Plus_Plus.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/C_Plus_Plus.md) — 1 copies; SHA-256 `8afabec7312879bd42578cb99b583a69a24a080779f82184fa9e8a98fea09760`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Captions.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Captions.md) — 1 copies; SHA-256 `0c372cea2fa14d2bbbbf99166a5a4f085f6160992799025e44ed8ad621c1c21a`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Debugging.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Debugging.md) — 1 copies; SHA-256 `3dbe6a69d9248b30e7eea4654601316258d4dc156ad3b4e6d3ecb7823117c064`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Examples.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Examples.md) — 1 copies; SHA-256 `f8c4789f284af3ea397a2d4eb88612d170c9ca5482202ebec6ea17a2a4bd4e63`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Export.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Export.md) — 1 copies; SHA-256 `14af3c050b48eaaa279b43b1c95456a1b601f0ab8d512fcd84a17299aa152f0b`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/ExtendScript.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/ExtendScript.md) — 1 copies; SHA-256 `a022a8978bb49ddaf22d383e86b1b9843379828585cfdafd4d46eb291fa0e8fa`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/FCPXML.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/FCPXML.md) — 1 copies; SHA-256 `d95dfefd4ec02aaaf7e532084921600a0ca50135f32f04c91b28acc53c764f5a`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Import.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Import.md) — 1 copies; SHA-256 `aafb57a899b9d39fd8df213bb7eb0214f89b24e2d94b893d4ebcfa08796cce67`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Markers.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Markers.md) — 1 copies; SHA-256 `53e0f0d88a4758f3d9f5012bcb2c0e4200f5874e5c79987f109fb6c42e87f6f8`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Media_Encoder.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Media_Encoder.md) — 1 copies; SHA-256 `21b48e90df8c8fe17326550439afad3987d2c9489102ad62024def42fd131045`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Native_Plugins.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Native_Plugins.md) — 1 copies; SHA-256 `31a5311b5ec27968fde3a64894acb1978bc122b98c5fab1f657797f5b340827e`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Panels.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Panels.md) — 1 copies; SHA-256 `b395a4fdd25bb8904703a9229eaeb55acfd4ca820026d71cf566c49d03bb19f2`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Plugins.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Plugins.md) — 1 copies; SHA-256 `aaa8cc4e2fa1654a8d08756b2a661f069977a056ea94fde7aa2dd41cb50683c4`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Premiere_API.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Premiere_API.md) — 1 copies; SHA-256 `f810d679305f34b7e80b00079030a3a884513a6b51d89c346ddaf8d1053d6717`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Premiere_DOM.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Premiere_DOM.md) — 1 copies; SHA-256 `6b7e1483edeb039ad05ba8f6a596d5f25fb761657594c5b1695bf79f8ce71c40`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Premiere_SDK.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Premiere_SDK.md) — 1 copies; SHA-256 `965a3f5b80c4aabe1017aa9912bd40e52cc434ff919c398ca67a6275c9429098`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Project_Items.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Project_Items.md) — 1 copies; SHA-256 `e8f02e454a01de29dbb30618a736240832d1745f23041974322eb0d552acf0da`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Rendering.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Rendering.md) — 1 copies; SHA-256 `7cb0dbca35e54ea0dc939c8b31051063b84994c51ddb8be15bd97217789e18d3`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Reverse_Engineering.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Reverse_Engineering.md) — 1 copies; SHA-256 `2fdd2ae00519a6c0a85a0b3f8841d9a5209699c85d9e4fe212f9081d3f4fe5da`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Sequences.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Sequences.md) — 1 copies; SHA-256 `fdca4d314a49f9a0211e2f8818c99ac090172875c6d3fcb78bd341c7e7fad31c`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Tracks.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/Tracks.md) — 1 copies; SHA-256 `eaf31175cad42fe9f0c3febbf6f3c305a347a9a5171abe46632a4dc19a7deb0c`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/UXP.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/UXP.md) — 1 copies; SHA-256 `74fc87ce8da5845d3e054977763dc5438a8be8716acd00f20ccd5ff0f7876414`
+- [Sources/structured/PremierePro_Text_AI_Agent/Knowledge/XML.md](../Sources/structured/PremierePro_Text_AI_Agent/Knowledge/XML.md) — 1 copies; SHA-256 `0c41964e668a1f302e6cbc794afcb64e16746e62dcb704227ce3ed0261cc2416`
+- [Sources/structured/PremierePro_Text_AI_Agent/PROJECT_SPECIFICATION.md](../Sources/structured/PremierePro_Text_AI_Agent/PROJECT_SPECIFICATION.md) — 1 copies; SHA-256 `4fc96d990ef4b16d4dec4b6301cf9a8c06154d086c20fde1da17ed10808958ea`
+- [Sources/structured/PremierePro_Text_AI_Agent/README.md](../Sources/structured/PremierePro_Text_AI_Agent/README.md) — 1 copies; SHA-256 `70d01e3fd92fe45e7599cc2d83ad56b822c77c6e5031097c94419ceee4fdcad2`
+- [Sources/structured/PremierePro_Text_AI_Agent/Templates/Template_Knowledge.md](../Sources/structured/PremierePro_Text_AI_Agent/Templates/Template_Knowledge.md) — 1 copies; SHA-256 `0667dbb5cd9237fb0f7204f084d21fe689e360bf252a3b140313184966c55fff`
+- [Sources/structured/README.md](../Sources/structured/README.md) — 1 copies; SHA-256 `0393ac00675d76a54ebf29c4d9a128d20bf102c7a10369639d15b27357725c3f`
+- [Sources/structured/developer_reference/03_UXP/PLUGIN_ENGINEERING_CONTRACT.md](../Sources/structured/developer_reference/03_UXP/PLUGIN_ENGINEERING_CONTRACT.md) — 1 copies; SHA-256 `dbdb32b1a833b150566f16e994fc8a470140f51d369427344b0d3b6d0b20278c`
+- [Sources/structured/developer_reference/07_XML/OPEN_TIMELINE_IO_INTEROPERABILITY.md](../Sources/structured/developer_reference/07_XML/OPEN_TIMELINE_IO_INTEROPERABILITY.md) — 1 copies; SHA-256 `a4d233b655d3e1bba010bae0ac00eff7ff6aa5f880664ca6b10d5d91364aaf3f`
+- [Sources/structured/developer_reference/10_MEDIA_PIPELINE/NLE_INTEROPERABILITY_MATRIX.md](../Sources/structured/developer_reference/10_MEDIA_PIPELINE/NLE_INTEROPERABILITY_MATRIX.md) — 1 copies; SHA-256 `7654a9998addef90034998b15f68279472ea3e83cb0167d7585c8f08a69bc09b`
+- [Sources/structured/developer_reference/10_MEDIA_PIPELINE/OTIO_PIPELINE_OPERATIONS.md](../Sources/structured/developer_reference/10_MEDIA_PIPELINE/OTIO_PIPELINE_OPERATIONS.md) — 1 copies; SHA-256 `f5b05da40b58f16961724adc31098c2e89a72adf43d31d5874aa625851f8d431`
+- [Sources/structured/developer_reference/10_MEDIA_PIPELINE/PREMIERE_RESOLVE_ROUNDTRIP.md](../Sources/structured/developer_reference/10_MEDIA_PIPELINE/PREMIERE_RESOLVE_ROUNDTRIP.md) — 1 copies; SHA-256 `e56ebeba80bd332e425c7599bd0d6c0b60ecc60d630e8302c8d360dde327936c`
+- [Sources/structured/developer_reference/99_SOURCES.md](../Sources/structured/developer_reference/99_SOURCES.md) — 1 copies; SHA-256 `0b5cd0b93674c79d4a3f12374d5c4d3955139e9856fc983f6d2ace4a6c41bcd1`
+- [Sources/structured/developer_reference/EVIDENCE_POLICY.md](../Sources/structured/developer_reference/EVIDENCE_POLICY.md) — 2 copies; SHA-256 `13aa8e39b89a7996620d12412c52a4cf90f698e4d4ec397900042735bf4a8641`
+  - [Sources/v2/Archive/pkc-legacy/developer_reference/EVIDENCE_POLICY.md](../Sources/v2/Archive/pkc-legacy/developer_reference/EVIDENCE_POLICY.md)
+- [Sources/structured/developer_reference/INVENTORY_PLAN.md](../Sources/structured/developer_reference/INVENTORY_PLAN.md) — 2 copies; SHA-256 `45b637f98522d38e9f1e2708b59e7e127d8b858c0ed10a2dd0b21af42eefe451`
+  - [Sources/v2/Archive/pkc-legacy/developer_reference/INVENTORY_PLAN.md](../Sources/v2/Archive/pkc-legacy/developer_reference/INVENTORY_PLAN.md)
+- [Sources/structured/developer_reference/MASTER_TABLE_OF_CONTENTS.md](../Sources/structured/developer_reference/MASTER_TABLE_OF_CONTENTS.md) — 1 copies; SHA-256 `e0eba15b96e95d566404da9930cec69c260d6a83ec56d0019bf9cc6fa7c60e87`
+- [Sources/structured/developer_reference/METHOD_CONTRACT_TEMPLATE.md](../Sources/structured/developer_reference/METHOD_CONTRACT_TEMPLATE.md) — 2 copies; SHA-256 `dfffc23f85f2ef99489bfcc12f09eb2cf996209746b139d412d956c3e5a39c88`
+  - [Sources/v2/Archive/pkc-legacy/developer_reference/METHOD_CONTRACT_TEMPLATE.md](../Sources/v2/Archive/pkc-legacy/developer_reference/METHOD_CONTRACT_TEMPLATE.md)
+- [Sources/structured/developer_reference/OBJECT_REFERENCE_TEMPLATE.md](../Sources/structured/developer_reference/OBJECT_REFERENCE_TEMPLATE.md) — 2 copies; SHA-256 `78f1b7b2c3f7dcd93bde11237f171151296a9bf489b501cd7cb60ec0629dc227`
+  - [Sources/v2/Archive/pkc-legacy/developer_reference/OBJECT_REFERENCE_TEMPLATE.md](../Sources/v2/Archive/pkc-legacy/developer_reference/OBJECT_REFERENCE_TEMPLATE.md)
+- [Sources/structured/developer_reference/README.md](../Sources/structured/developer_reference/README.md) — 2 copies; SHA-256 `077884938305329500df83d74fc4943e8d2aa271a9f9e69c8621b2aa821d3ff7`
+  - [Sources/v2/Archive/pkc-legacy/developer_reference/README.md](../Sources/v2/Archive/pkc-legacy/developer_reference/README.md)
+- [Sources/structured/developer_reference/STYLE_GUIDE.md](../Sources/structured/developer_reference/STYLE_GUIDE.md) — 2 copies; SHA-256 `03138839bcf3e3207b974a1769c8ed2ca36e1440f4169310debe7c023dc07897`
+  - [Sources/v2/Archive/pkc-legacy/developer_reference/STYLE_GUIDE.md](../Sources/v2/Archive/pkc-legacy/developer_reference/STYLE_GUIDE.md)
+- [Sources/structured/developer_reference/TERMINOLOGY.md](../Sources/structured/developer_reference/TERMINOLOGY.md) — 2 copies; SHA-256 `d3e78788626fcad66e402ec4983f1726943f23ae58a51ef9c55e0ccb4afee7c1`
+  - [Sources/v2/Archive/pkc-legacy/developer_reference/TERMINOLOGY.md](../Sources/v2/Archive/pkc-legacy/developer_reference/TERMINOLOGY.md)
+- [Sources/structured/developer_reference/VERSION_POLICY.md](../Sources/structured/developer_reference/VERSION_POLICY.md) — 2 copies; SHA-256 `ced73d72878300a092b3e8ebfe1211e761d8f6fa5e3cb7afe284454f05db004a`
+  - [Sources/v2/Archive/pkc-legacy/developer_reference/VERSION_POLICY.md](../Sources/v2/Archive/pkc-legacy/developer_reference/VERSION_POLICY.md)
+- [Sources/structured/developer_reference/extendscript/Application/Methods/enableQE.md](../Sources/structured/developer_reference/extendscript/Application/Methods/enableQE.md) — 2 copies; SHA-256 `0392c74ceea2665a4c0dea32a70a3dd06ff634740308c2eb47c3db7dd44e3a0b`
+  - [Sources/v2/Archive/pkc-legacy/developer_reference/extendscript/Application/Methods/enableQE.md](../Sources/v2/Archive/pkc-legacy/developer_reference/extendscript/Application/Methods/enableQE.md)
+- [Sources/structured/developer_reference/extendscript/Application/Methods/newProject.md](../Sources/structured/developer_reference/extendscript/Application/Methods/newProject.md) — 1 copies; SHA-256 `0f2f4e42032face5b325275db3dab4b57276f295e8e248fb60b16813b41ede61`
+- [Sources/structured/developer_reference/extendscript/Application/Methods/openDocument.md](../Sources/structured/developer_reference/extendscript/Application/Methods/openDocument.md) — 1 copies; SHA-256 `6fc72284486464edc80558dce773a634ad100ff92c30fb72e33868a775c5d810`
+- [Sources/structured/developer_reference/extendscript/Application/Methods/setEnableProxies.md](../Sources/structured/developer_reference/extendscript/Application/Methods/setEnableProxies.md) — 1 copies; SHA-256 `6e6e297f8feb99a50d2895a7969074bc4d96588ab251d3f77af89c1c4c7d54f5`
+- [Sources/structured/developer_reference/extendscript/Application/Methods/setExtensionPersistent.md](../Sources/structured/developer_reference/extendscript/Application/Methods/setExtensionPersistent.md) — 1 copies; SHA-256 `8b804b4ddb45e63e238eed9e19fabdd6a0c5a8ddea5e6ecba256a49783085fd2`
+- [Sources/structured/developer_reference/extendscript/Application/README.md](../Sources/structured/developer_reference/extendscript/Application/README.md) — 1 copies; SHA-256 `49015743d570e36a264a4db9ad687e12de607833047fc522ce0b2348abf9cb08`
+- [Sources/structured/developer_reference/sources/PRIMARY_SOURCES.md](../Sources/structured/developer_reference/sources/PRIMARY_SOURCES.md) — 2 copies; SHA-256 `2f692f7bad6b333125e41046cea8aa5ca1c64b878a71e0ae5646b089cf5c7231`
+  - [Sources/v2/Archive/pkc-legacy/developer_reference/sources/PRIMARY_SOURCES.md](../Sources/v2/Archive/pkc-legacy/developer_reference/sources/PRIMARY_SOURCES.md)
+- [Sources/structured/docs/API/api-cep-0001.md](../Sources/structured/docs/API/api-cep-0001.md) — 2 copies; SHA-256 `8087a6afc62028b5e405b24256685ef54bf4f9809eb746ff7b2c2a2e132d32ca`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-cep-0001.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-cep-0001.md)
+- [Sources/structured/docs/API/api-enc-0001.md](../Sources/structured/docs/API/api-enc-0001.md) — 2 copies; SHA-256 `88933763eb88d68d8721606b8aa18de63c5c7536b565024c543b49f313ef1726`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-enc-0001.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-enc-0001.md)
+- [Sources/structured/docs/API/api-ext-0001.md](../Sources/structured/docs/API/api-ext-0001.md) — 2 copies; SHA-256 `3fdf821a80cb2c03a1eead1028c4c0729e8f2c66b46f5b8b14705f97a78440b2`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0001.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0001.md)
+- [Sources/structured/docs/API/api-ext-0011.md](../Sources/structured/docs/API/api-ext-0011.md) — 2 copies; SHA-256 `a3e9598d43853d3de985aca520886ee23302a852906883540037f6c9321221f0`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0011.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0011.md)
+- [Sources/structured/docs/API/api-ext-0012.md](../Sources/structured/docs/API/api-ext-0012.md) — 2 copies; SHA-256 `e3c79d195731bbcd5eb975b187845a7d282b428c71bfa86c6e7d1ac99ea92221`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0012.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0012.md)
+- [Sources/structured/docs/API/api-ext-0013.md](../Sources/structured/docs/API/api-ext-0013.md) — 2 copies; SHA-256 `18ad56fe858ec5fafed9219c3beafd4aa5c0e141aa803899fc68f252b2776c12`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0013.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0013.md)
+- [Sources/structured/docs/API/api-ext-0014.md](../Sources/structured/docs/API/api-ext-0014.md) — 2 copies; SHA-256 `899bdd700283f76ad8cfa837f9e73c9be63e52175c97462daac847fe20160ea0`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0014.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0014.md)
+- [Sources/structured/docs/API/api-ext-0015.md](../Sources/structured/docs/API/api-ext-0015.md) — 2 copies; SHA-256 `1d04611edb801b858c7d8dc69ac8a9f9b45b503726093edc79107c2fe9758767`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0015.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0015.md)
+- [Sources/structured/docs/API/api-ext-0016.md](../Sources/structured/docs/API/api-ext-0016.md) — 2 copies; SHA-256 `f8cb70023d5c62c54607e67b6e6e26dc7ea63d8d0119e02bd8e0ef853ae752ea`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0016.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0016.md)
+- [Sources/structured/docs/API/api-ext-0017.md](../Sources/structured/docs/API/api-ext-0017.md) — 2 copies; SHA-256 `b9316ec253bd7b1b79a6302a5ed9abe005ab7aaae229440265f7ef6c54898147`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0017.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0017.md)
+- [Sources/structured/docs/API/api-ext-0018.md](../Sources/structured/docs/API/api-ext-0018.md) — 2 copies; SHA-256 `17da4a93dc7f236d5b9b6c337ab89ac92ecfde0ac85a549ad041d8785761ddde`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0018.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0018.md)
+- [Sources/structured/docs/API/api-ext-0019.md](../Sources/structured/docs/API/api-ext-0019.md) — 2 copies; SHA-256 `2838ef97f3c8104965fe0e4532cac3991ac799b3c25d901926a52bd7644cf128`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0019.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0019.md)
+- [Sources/structured/docs/API/api-ext-0020.md](../Sources/structured/docs/API/api-ext-0020.md) — 2 copies; SHA-256 `aaa47d6e4fca2986a3aa51611b6b45890bda52cfadc9d34d0b01d0f69b2b3ae5`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0020.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0020.md)
+- [Sources/structured/docs/API/api-ext-0021.md](../Sources/structured/docs/API/api-ext-0021.md) — 2 copies; SHA-256 `b22c6472d42e5b6da7caf4d60ca3c10ee12081d84a5ea27d0c8d0372fd75b40d`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0021.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0021.md)
+- [Sources/structured/docs/API/api-ext-0022.md](../Sources/structured/docs/API/api-ext-0022.md) — 2 copies; SHA-256 `646630175f770a9a2f422bc558be47792fb8047d04060aedc54a9e6e33bde79f`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0022.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0022.md)
+- [Sources/structured/docs/API/api-ext-0023.md](../Sources/structured/docs/API/api-ext-0023.md) — 2 copies; SHA-256 `e0059fe65d689a90eb7d1443cc57771557064749abc5e2edd5b2385b5d3a063a`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0023.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0023.md)
+- [Sources/structured/docs/API/api-ext-0024.md](../Sources/structured/docs/API/api-ext-0024.md) — 2 copies; SHA-256 `9915c26a1731ce59f1b8a8958527d2177ad1d77f20c588f2d0b3d316b355002d`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0024.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0024.md)
+- [Sources/structured/docs/API/api-ext-0025.md](../Sources/structured/docs/API/api-ext-0025.md) — 2 copies; SHA-256 `62ea8084d79c8bea6c5e9e46ef731d4a3b173d2477ef17545c845999bd65740c`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0025.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0025.md)
+- [Sources/structured/docs/API/api-ext-0026.md](../Sources/structured/docs/API/api-ext-0026.md) — 2 copies; SHA-256 `8d45b8c79f8c3907a66efd4efd349ad49ff943e89de76e9e95b931c4ebaefda4`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0026.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0026.md)
+- [Sources/structured/docs/API/api-ext-0027.md](../Sources/structured/docs/API/api-ext-0027.md) — 2 copies; SHA-256 `17b401211bb960a5a7614057e538e83e636c8e5e6ba0782a9da9b450be7c8596`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0027.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-ext-0027.md)
+- [Sources/structured/docs/API/api-qe-0001.md](../Sources/structured/docs/API/api-qe-0001.md) — 2 copies; SHA-256 `505fd054042758e6407afd6b7ffad6b31ba725b7e7c4b6cbcbbf54c9980c01fc`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-qe-0001.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-qe-0001.md)
+- [Sources/structured/docs/API/api-uxp-0001.md](../Sources/structured/docs/API/api-uxp-0001.md) — 2 copies; SHA-256 `7df34d39d31d5eb55df5aa199bc77f691729902c1a760ce6d9ce6a689e5df8d7`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0001.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0001.md)
+- [Sources/structured/docs/API/api-uxp-0011.md](../Sources/structured/docs/API/api-uxp-0011.md) — 2 copies; SHA-256 `6203db34ed01260625726adb798510311af350ca3a544ced68d73669ca4721ab`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0011.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0011.md)
+- [Sources/structured/docs/API/api-uxp-0012.md](../Sources/structured/docs/API/api-uxp-0012.md) — 2 copies; SHA-256 `fd55480ffab29041fa192df229c9166a7b855ac1568110cb93d351e254f7601f`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0012.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0012.md)
+- [Sources/structured/docs/API/api-uxp-0013.md](../Sources/structured/docs/API/api-uxp-0013.md) — 2 copies; SHA-256 `b16c87618a4f563b32c21d93a86edac66dc0afa99de5b4d50f46cae6618b79f0`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0013.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0013.md)
+- [Sources/structured/docs/API/api-uxp-0014.md](../Sources/structured/docs/API/api-uxp-0014.md) — 2 copies; SHA-256 `ac8827831d3383ef37f2404a5c8211862d970bd3797bf9d9501e83fd45b4b466`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0014.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0014.md)
+- [Sources/structured/docs/API/api-uxp-0015.md](../Sources/structured/docs/API/api-uxp-0015.md) — 2 copies; SHA-256 `84d65e118dfb458976d4af9f4162005a1d311eedbc397624c95130bae053ee6b`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0015.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0015.md)
+- [Sources/structured/docs/API/api-uxp-0016.md](../Sources/structured/docs/API/api-uxp-0016.md) — 2 copies; SHA-256 `84acad6915564922b181cdaad20fed6a7c6ad9616c36c887415acb0c828b47c3`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0016.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0016.md)
+- [Sources/structured/docs/API/api-uxp-0017.md](../Sources/structured/docs/API/api-uxp-0017.md) — 2 copies; SHA-256 `3b37185c0b5f3b6b2f94afd26ebb3f85e8da9b0b633f689323a82a316bd1da92`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0017.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0017.md)
+- [Sources/structured/docs/API/api-uxp-0018.md](../Sources/structured/docs/API/api-uxp-0018.md) — 2 copies; SHA-256 `f5b27dfbc63f5ec5c62c8b1210685900da2c3aa1da3f751fcd46fef404c17d34`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0018.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0018.md)
+- [Sources/structured/docs/API/api-uxp-0019.md](../Sources/structured/docs/API/api-uxp-0019.md) — 2 copies; SHA-256 `7b57bd76ed31871e59f19a5a8151e6810a8789fb7e14dcb2392eac0be670df4e`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0019.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0019.md)
+- [Sources/structured/docs/API/api-uxp-0020.md](../Sources/structured/docs/API/api-uxp-0020.md) — 2 copies; SHA-256 `72ff4e6e4251e1090fb1d545cf878b21a49a651a17e9b66b1350adacc3f2c0ad`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0020.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0020.md)
+- [Sources/structured/docs/API/api-uxp-0021.md](../Sources/structured/docs/API/api-uxp-0021.md) — 2 copies; SHA-256 `47eebed0bec3f293597ec5d4dffd71c68a019a788881e12ce17c38f6555a4d1c`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0021.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0021.md)
+- [Sources/structured/docs/API/api-uxp-0022.md](../Sources/structured/docs/API/api-uxp-0022.md) — 2 copies; SHA-256 `9cb9105985c6c5b47f1612f9a0fc79c24e1ac067aaf29a722bcc0005f75ba915`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0022.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0022.md)
+- [Sources/structured/docs/API/api-uxp-0023.md](../Sources/structured/docs/API/api-uxp-0023.md) — 2 copies; SHA-256 `bb6192e5c5592c835d67e2083bf67fe8df9f3f0671f0797e6fbb5523e156ffeb`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0023.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0023.md)
+- [Sources/structured/docs/API/api-uxp-0024.md](../Sources/structured/docs/API/api-uxp-0024.md) — 2 copies; SHA-256 `cf27923fd867ea753e91248874e7b1a73ccc02cd59f746f349f1226a384d9b5c`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0024.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0024.md)
+- [Sources/structured/docs/API/api-uxp-0025.md](../Sources/structured/docs/API/api-uxp-0025.md) — 2 copies; SHA-256 `5dc938545415da1bce47a4ff5621f50ce46d153d4682d5681fb3af56c85b2e05`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0025.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0025.md)
+- [Sources/structured/docs/API/api-uxp-0026.md](../Sources/structured/docs/API/api-uxp-0026.md) — 2 copies; SHA-256 `15377b4dedbda8b770da824790f1344090bc15af258cd1906ca51c31b99ff8cb`
+  - [Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0026.md](../Sources/v2/Archive/pkc-legacy/docs/API/api-uxp-0026.md)
+- [Sources/structured/docs/BENCHMARK/bench-0001.md](../Sources/structured/docs/BENCHMARK/bench-0001.md) — 2 copies; SHA-256 `4259b97731f04e69c323f8cc8efb711d69a95d99814066c31a829e4714523797`
+  - [Sources/v2/Archive/pkc-legacy/docs/BENCHMARK/bench-0001.md](../Sources/v2/Archive/pkc-legacy/docs/BENCHMARK/bench-0001.md)
+- [Sources/structured/docs/BENCHMARK/bench-0002.md](../Sources/structured/docs/BENCHMARK/bench-0002.md) — 2 copies; SHA-256 `e4e7f3cbfef05ce3bbc600bd46d05af7cae539a3271833c21143f09a98e554bf`
+  - [Sources/v2/Archive/pkc-legacy/docs/BENCHMARK/bench-0002.md](../Sources/v2/Archive/pkc-legacy/docs/BENCHMARK/bench-0002.md)
+- [Sources/structured/docs/OBJECT/obj-0001.md](../Sources/structured/docs/OBJECT/obj-0001.md) — 2 copies; SHA-256 `f2f7b307b75494969cd6e97e74b8d2bb111feae709e92628e1aa98334aee0843`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0001.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0001.md)
+- [Sources/structured/docs/OBJECT/obj-0002.md](../Sources/structured/docs/OBJECT/obj-0002.md) — 2 copies; SHA-256 `d5b723393ead8b8d4f94211eaecb4c0ededf0452fc96eee0e486f06a67fdcc16`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0002.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0002.md)
+- [Sources/structured/docs/OBJECT/obj-0003.md](../Sources/structured/docs/OBJECT/obj-0003.md) — 2 copies; SHA-256 `5f1f06f98892263626dd0acab525ccc4289afeb010c8cc72c014ccf1d69216c6`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0003.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0003.md)
+- [Sources/structured/docs/OBJECT/obj-0004.md](../Sources/structured/docs/OBJECT/obj-0004.md) — 2 copies; SHA-256 `acf742b7d30fd0fa846a6d9633b9d7e6a11aba6bf19b680f88960b0227def088`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0004.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0004.md)
+- [Sources/structured/docs/OBJECT/obj-0005.md](../Sources/structured/docs/OBJECT/obj-0005.md) — 2 copies; SHA-256 `822ef1572baf2a8c89cf48cba7f153968596a0084788b8fc851ac1e13cd64329`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0005.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0005.md)
+- [Sources/structured/docs/OBJECT/obj-0006.md](../Sources/structured/docs/OBJECT/obj-0006.md) — 2 copies; SHA-256 `c25fa2a7553da3df0d43b7594dce92968bc689ae2d66221f76273f9bcd1e66a7`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0006.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0006.md)
+- [Sources/structured/docs/OBJECT/obj-0007.md](../Sources/structured/docs/OBJECT/obj-0007.md) — 2 copies; SHA-256 `487ddfd59395d1228f623abc94aa8d12e599de7098ab68962aa13e969015a10d`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0007.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0007.md)
+- [Sources/structured/docs/OBJECT/obj-0008.md](../Sources/structured/docs/OBJECT/obj-0008.md) — 2 copies; SHA-256 `33ec4e819c7e31f8e0497cad4c4fa0621d9bba73e7b7e1e919759b37246e09be`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0008.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0008.md)
+- [Sources/structured/docs/OBJECT/obj-0009.md](../Sources/structured/docs/OBJECT/obj-0009.md) — 2 copies; SHA-256 `cff65acaca313aefb3a780371a4426a8c47beba30a47f3229445390bf5439a68`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0009.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0009.md)
+- [Sources/structured/docs/OBJECT/obj-0010.md](../Sources/structured/docs/OBJECT/obj-0010.md) — 2 copies; SHA-256 `526b9a7d6916415e01efc0271aefc02a7471abe9e5ee6bccedc056c0229409b1`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0010.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0010.md)
+- [Sources/structured/docs/OBJECT/obj-0011.md](../Sources/structured/docs/OBJECT/obj-0011.md) — 2 copies; SHA-256 `5c05e3c638eb0f85857b0784a8539ac4128c5d668d96a5ed0cf44474ae8c069e`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0011.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0011.md)
+- [Sources/structured/docs/OBJECT/obj-0012.md](../Sources/structured/docs/OBJECT/obj-0012.md) — 2 copies; SHA-256 `6266ab8c63bea665c324254e0af9bdfc124dca78e8cf00e7268c116c4c83903e`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0012.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0012.md)
+- [Sources/structured/docs/OBJECT/obj-0013.md](../Sources/structured/docs/OBJECT/obj-0013.md) — 2 copies; SHA-256 `b5ff049d2141b608db1462f81a459d9da8080de3d9f604a667db004ef7ac9d36`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0013.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0013.md)
+- [Sources/structured/docs/OBJECT/obj-0014.md](../Sources/structured/docs/OBJECT/obj-0014.md) — 2 copies; SHA-256 `db88d362521710cfd78a0201d98d45132d1e872918532f334b9a199c124d2ec7`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0014.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0014.md)
+- [Sources/structured/docs/OBJECT/obj-0015.md](../Sources/structured/docs/OBJECT/obj-0015.md) — 2 copies; SHA-256 `e1ac36eae54d94f0731b43578b67b39c74c345811f61fcde96e3572022255ebd`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0015.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0015.md)
+- [Sources/structured/docs/OBJECT/obj-0016.md](../Sources/structured/docs/OBJECT/obj-0016.md) — 2 copies; SHA-256 `048ac8560efbdd91c38d82575da4b9ad98fbb250099442d713056e7d917d3e63`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0016.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0016.md)
+- [Sources/structured/docs/OBJECT/obj-0017.md](../Sources/structured/docs/OBJECT/obj-0017.md) — 2 copies; SHA-256 `a2289c8629422263f3e1da9e637afe1b514373695a798b9007a0489e5a07ed91`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0017.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0017.md)
+- [Sources/structured/docs/OBJECT/obj-0018.md](../Sources/structured/docs/OBJECT/obj-0018.md) — 2 copies; SHA-256 `f20f5c4e041eb7de0b4e86f7738f11a07f378b71e24c56d0a6144464b0126265`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0018.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0018.md)
+- [Sources/structured/docs/OBJECT/obj-0019.md](../Sources/structured/docs/OBJECT/obj-0019.md) — 2 copies; SHA-256 `7cf1a5f8be41e47bc45d37bc1bd7b1f3c5a469e363dac9cbfa0bce5deadf42c0`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0019.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0019.md)
+- [Sources/structured/docs/OBJECT/obj-0020.md](../Sources/structured/docs/OBJECT/obj-0020.md) — 2 copies; SHA-256 `f6753f15221f23a8b8c6014c5630c37a9e2199a379accf28ec891593c144d4a7`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0020.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0020.md)
+- [Sources/structured/docs/OBJECT/obj-0021.md](../Sources/structured/docs/OBJECT/obj-0021.md) — 2 copies; SHA-256 `eb852c273704167e88323b7cc90f66faa8c112bb9d4d58f6bd378e3ceb22bdb9`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0021.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0021.md)
+- [Sources/structured/docs/OBJECT/obj-0022.md](../Sources/structured/docs/OBJECT/obj-0022.md) — 2 copies; SHA-256 `ba6599aabc700c49da10281e9d9c854decf63103062206a07af542001b882db2`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0022.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0022.md)
+- [Sources/structured/docs/OBJECT/obj-0023.md](../Sources/structured/docs/OBJECT/obj-0023.md) — 2 copies; SHA-256 `1f9e2db94e237f89d6433d00959d1d8f8119f61e7b1ec93026318d33ce6a9d8b`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0023.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0023.md)
+- [Sources/structured/docs/OBJECT/obj-0024.md](../Sources/structured/docs/OBJECT/obj-0024.md) — 2 copies; SHA-256 `74998fd183810136d1c4753659fa00add72fdf3560af5767fe9139fb40e826b2`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0024.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0024.md)
+- [Sources/structured/docs/OBJECT/obj-0025.md](../Sources/structured/docs/OBJECT/obj-0025.md) — 2 copies; SHA-256 `2ce4498e33bc731939fc7f52a1d28b318e72256454c8d71b2f33cd8ac9f2b0b6`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0025.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0025.md)
+- [Sources/structured/docs/OBJECT/obj-0026.md](../Sources/structured/docs/OBJECT/obj-0026.md) — 2 copies; SHA-256 `c1d2ba60ae21342667a21d2e119c083c95f430e8a2377f8e2be387a9bde5a021`
+  - [Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0026.md](../Sources/v2/Archive/pkc-legacy/docs/OBJECT/obj-0026.md)
+- [Sources/structured/docs/POLICY/found-0001.md](../Sources/structured/docs/POLICY/found-0001.md) — 2 copies; SHA-256 `18865d5a5135b3662c6417cdcfa0ac3242ebc564a870ce4981b278ca8dce88c4`
+  - [Sources/v2/Archive/pkc-legacy/docs/POLICY/found-0001.md](../Sources/v2/Archive/pkc-legacy/docs/POLICY/found-0001.md)
+- [Sources/structured/docs/POLICY/found-0002.md](../Sources/structured/docs/POLICY/found-0002.md) — 2 copies; SHA-256 `522296d5a31a3ada11394b416856ad339efebd7336b5eb09687117ce91a4d614`
+  - [Sources/v2/Archive/pkc-legacy/docs/POLICY/found-0002.md](../Sources/v2/Archive/pkc-legacy/docs/POLICY/found-0002.md)
+- [Sources/structured/docs/RECIPE/rec-0001.md](../Sources/structured/docs/RECIPE/rec-0001.md) — 2 copies; SHA-256 `9799158c46c34f0ffd89dcf209a35545fbaa5b4b0be53480a5cc839eb4c47af5`
+  - [Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0001.md](../Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0001.md)
+- [Sources/structured/docs/RECIPE/rec-0002.md](../Sources/structured/docs/RECIPE/rec-0002.md) — 2 copies; SHA-256 `b85f920edf50a519988e6cd625fe57dd38c95fa55bba233f1464e5b349d05ae8`
+  - [Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0002.md](../Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0002.md)
+- [Sources/structured/docs/RECIPE/rec-0003.md](../Sources/structured/docs/RECIPE/rec-0003.md) — 2 copies; SHA-256 `73f4886ec3ead832da2bb14e74f398d8b56cc8cf2be6b3256c705c7948f680f3`
+  - [Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0003.md](../Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0003.md)
+- [Sources/structured/docs/RECIPE/rec-0004.md](../Sources/structured/docs/RECIPE/rec-0004.md) — 2 copies; SHA-256 `8931bab20ccc8020c1602a7d819e60c0eb1891859985e208ca67dd298370e852`
+  - [Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0004.md](../Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0004.md)
+- [Sources/structured/docs/RECIPE/rec-0005.md](../Sources/structured/docs/RECIPE/rec-0005.md) — 2 copies; SHA-256 `9296b8cf328014a728844c4f3b213859a8237ceca38120745cd743fa2b492da0`
+  - [Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0005.md](../Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0005.md)
+- [Sources/structured/docs/RECIPE/rec-0006.md](../Sources/structured/docs/RECIPE/rec-0006.md) — 2 copies; SHA-256 `5f0537a05179b6d9d53505d81825861d101b28025233285214921d354899ea77`
+  - [Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0006.md](../Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0006.md)
+- [Sources/structured/docs/RECIPE/rec-0007.md](../Sources/structured/docs/RECIPE/rec-0007.md) — 2 copies; SHA-256 `7236abe7ba5bf5e672d3a36b5646e62fd983a855a9eb300fc966b897206d45e9`
+  - [Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0007.md](../Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0007.md)
+- [Sources/structured/docs/RECIPE/rec-0008.md](../Sources/structured/docs/RECIPE/rec-0008.md) — 2 copies; SHA-256 `cead6f440dc7ed89a1012d48da74696970f7ec42c59db99f372b20c88ea6a5b1`
+  - [Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0008.md](../Sources/v2/Archive/pkc-legacy/docs/RECIPE/rec-0008.md)
+- [Sources/structured/docs/RULE/rule-ai-0001.md](../Sources/structured/docs/RULE/rule-ai-0001.md) — 2 copies; SHA-256 `dfd04bf6a4d68e90436f2ccef97daa35bdd4437f3c4e64758f3e63a995c92bc8`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0001.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0001.md)
+- [Sources/structured/docs/RULE/rule-ai-0002.md](../Sources/structured/docs/RULE/rule-ai-0002.md) — 2 copies; SHA-256 `e0dde6657994e88f2c0584c9ef3ee51a140461789a574695e96aab9d6fe12d1b`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0002.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0002.md)
+- [Sources/structured/docs/RULE/rule-ai-0003.md](../Sources/structured/docs/RULE/rule-ai-0003.md) — 2 copies; SHA-256 `27c665adcef90ac4bec29ff34c2e30282865634a603a936922385e7a3b79df1a`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0003.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0003.md)
+- [Sources/structured/docs/RULE/rule-ai-0004.md](../Sources/structured/docs/RULE/rule-ai-0004.md) — 2 copies; SHA-256 `9b8340a1de5b22beb42b92ba9602657e9a3119112163fbb1028f2d054d2ea945`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0004.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0004.md)
+- [Sources/structured/docs/RULE/rule-ai-0005.md](../Sources/structured/docs/RULE/rule-ai-0005.md) — 2 copies; SHA-256 `d61df67a793bbbaaa97ff40d20c7d85b206edb2120958bb7c2eb9e58eca0b078`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0005.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0005.md)
+- [Sources/structured/docs/RULE/rule-ai-0006.md](../Sources/structured/docs/RULE/rule-ai-0006.md) — 2 copies; SHA-256 `3c478a011ac624720876903bc46d553f207557c51798a10c0a54d9848033027e`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0006.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0006.md)
+- [Sources/structured/docs/RULE/rule-ai-0007.md](../Sources/structured/docs/RULE/rule-ai-0007.md) — 2 copies; SHA-256 `1c58daa6a52e58df0dcf71a057abf770cf6d783640148f91fb19b229cce6c9ee`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0007.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0007.md)
+- [Sources/structured/docs/RULE/rule-ai-0008.md](../Sources/structured/docs/RULE/rule-ai-0008.md) — 2 copies; SHA-256 `a22483d363bb42d0d3dcd02e355137d56c2c1b79b7eb3f22e0a71c359abec314`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0008.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ai-0008.md)
+- [Sources/structured/docs/RULE/rule-cap-0001.md](../Sources/structured/docs/RULE/rule-cap-0001.md) — 2 copies; SHA-256 `adc559659af506e24de4e2cdbe51be9592baa0c74fb47a22e26b113a3a6829a0`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-cap-0001.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-cap-0001.md)
+- [Sources/structured/docs/RULE/rule-cap-0002.md](../Sources/structured/docs/RULE/rule-cap-0002.md) — 2 copies; SHA-256 `5b41f6c1dcbee16288bff76e54f0b62b1177d6f80bd0b4e12cd305486da48bd7`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-cap-0002.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-cap-0002.md)
+- [Sources/structured/docs/RULE/rule-cap-0003.md](../Sources/structured/docs/RULE/rule-cap-0003.md) — 2 copies; SHA-256 `8dbf3f33624e7b2098ec58434d26915855c0851ff6702b590386f91083da0a64`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-cap-0003.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-cap-0003.md)
+- [Sources/structured/docs/RULE/rule-ext-0001.md](../Sources/structured/docs/RULE/rule-ext-0001.md) — 2 copies; SHA-256 `9c778c7af57ebb34e7ab551ed76975f1a8d9791be2f315b4f90f9d098327f0bb`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ext-0001.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ext-0001.md)
+- [Sources/structured/docs/RULE/rule-mogrt-0001.md](../Sources/structured/docs/RULE/rule-mogrt-0001.md) — 2 copies; SHA-256 `a9d51f6a8e043af29d0889f8974f9e2a9cc78b391a767c40e159038864ef94c9`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-mogrt-0001.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-mogrt-0001.md)
+- [Sources/structured/docs/RULE/rule-safe-0001.md](../Sources/structured/docs/RULE/rule-safe-0001.md) — 2 copies; SHA-256 `13666a0848a6de3580aecd3e540fbb09a4620ac01db1ab6c1351ba5368248c76`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-safe-0001.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-safe-0001.md)
+- [Sources/structured/docs/RULE/rule-ser-0001.md](../Sources/structured/docs/RULE/rule-ser-0001.md) — 2 copies; SHA-256 `a5036b7eaeb9b27840b70a17a49f8a3f040831b6287af6669962c8fddd1821dd`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ser-0001.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-ser-0001.md)
+- [Sources/structured/docs/RULE/rule-uxp-0001.md](../Sources/structured/docs/RULE/rule-uxp-0001.md) — 2 copies; SHA-256 `c39526986856702579690198af6f8e8dc5dbbaf6f39d3edadf836da4b072a682`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-uxp-0001.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-uxp-0001.md)
+- [Sources/structured/docs/RULE/rule-xml-0001.md](../Sources/structured/docs/RULE/rule-xml-0001.md) — 2 copies; SHA-256 `829209eeaff3e157df8ea94e0a1b0293611881f57f35b0123c64ccb3cd333e0b`
+  - [Sources/v2/Archive/pkc-legacy/docs/RULE/rule-xml-0001.md](../Sources/v2/Archive/pkc-legacy/docs/RULE/rule-xml-0001.md)
+- [Sources/structured/docs/SERIALIZATION/ser-0001.md](../Sources/structured/docs/SERIALIZATION/ser-0001.md) — 2 copies; SHA-256 `4775e81a42f7c5db4aec66c8530a334e9935d2fa77865188dea2d356acd5fb10`
+  - [Sources/v2/Archive/pkc-legacy/docs/SERIALIZATION/ser-0001.md](../Sources/v2/Archive/pkc-legacy/docs/SERIALIZATION/ser-0001.md)
+- [Sources/structured/docs/SERIALIZATION/ser-0002.md](../Sources/structured/docs/SERIALIZATION/ser-0002.md) — 2 copies; SHA-256 `10752dc2ba9516f141b05de4759bc1bdfcd7ce73930ec93b4bdb95773a2ee491`
+  - [Sources/v2/Archive/pkc-legacy/docs/SERIALIZATION/ser-0002.md](../Sources/v2/Archive/pkc-legacy/docs/SERIALIZATION/ser-0002.md)
+- [Sources/structured/docs/SPEC/cap-0001.md](../Sources/structured/docs/SPEC/cap-0001.md) — 2 copies; SHA-256 `6c715cd1d9ca6facd781a5b41927b71acf458ba72d631074d35a3389d9fb9bb2`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0001.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0001.md)
+- [Sources/structured/docs/SPEC/cap-0002.md](../Sources/structured/docs/SPEC/cap-0002.md) — 2 copies; SHA-256 `3b747c6b520288226251a1331f5096558904f42f8add923b9538deb600eb59d3`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0002.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0002.md)
+- [Sources/structured/docs/SPEC/cap-0003.md](../Sources/structured/docs/SPEC/cap-0003.md) — 2 copies; SHA-256 `b2bb7b30048152452b5d80afc4dbc8a452791c035495d2b4046fe2bf2f37afd4`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0003.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0003.md)
+- [Sources/structured/docs/SPEC/cap-0004.md](../Sources/structured/docs/SPEC/cap-0004.md) — 2 copies; SHA-256 `a2c3aadbfef761f6ddb4bf02207a9d88220876f41337604a8b1f4e8a3e002ae4`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0004.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0004.md)
+- [Sources/structured/docs/SPEC/cap-0005.md](../Sources/structured/docs/SPEC/cap-0005.md) — 2 copies; SHA-256 `09d8df849abb69bd0fa43e7261d7e5bc1c49696ffe32474bfc7c7bdfeea1de12`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0005.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0005.md)
+- [Sources/structured/docs/SPEC/cap-0006.md](../Sources/structured/docs/SPEC/cap-0006.md) — 2 copies; SHA-256 `7f58724963cb6a900bf4fa9006933e57917ab802961a23899c87d0c6c0c22a45`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0006.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0006.md)
+- [Sources/structured/docs/SPEC/cap-0007.md](../Sources/structured/docs/SPEC/cap-0007.md) — 2 copies; SHA-256 `03e53b9bb3108fdb27d186f299f053315a63f2f3a749225085bba3b93a5eee7c`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0007.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0007.md)
+- [Sources/structured/docs/SPEC/cap-0008.md](../Sources/structured/docs/SPEC/cap-0008.md) — 2 copies; SHA-256 `4167ce5b00b05b2ec5f36da363348925cae2499d586e84724c2e0926e23aad2f`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0008.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0008.md)
+- [Sources/structured/docs/SPEC/cap-0009.md](../Sources/structured/docs/SPEC/cap-0009.md) — 2 copies; SHA-256 `7681927c59ea0197971fdf47bc99e4721308fcc334ef5d44d3a9a1666ec9e0c2`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0009.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0009.md)
+- [Sources/structured/docs/SPEC/cap-0010.md](../Sources/structured/docs/SPEC/cap-0010.md) — 2 copies; SHA-256 `ee3b4af0bf6e62a4d6c99684f80f4a42cff7b992f5a19ca9eb505e5217aaa3ce`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0010.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0010.md)
+- [Sources/structured/docs/SPEC/cap-0011.md](../Sources/structured/docs/SPEC/cap-0011.md) — 2 copies; SHA-256 `c52a76c01a2c2c00ada8032c7eb8c008a824f30c294268a76744c42787cdef4f`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0011.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0011.md)
+- [Sources/structured/docs/SPEC/cap-0012.md](../Sources/structured/docs/SPEC/cap-0012.md) — 2 copies; SHA-256 `e8a81a31eae2a992c373149c903a1b010c8acdb2fc06e68e031fb33fe8a8ec0c`
+  - [Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0012.md](../Sources/v2/Archive/pkc-legacy/docs/SPEC/cap-0012.md)
+- [Sources/structured/docs/TEST/test-0001.md](../Sources/structured/docs/TEST/test-0001.md) — 2 copies; SHA-256 `1692eef2b5057b10996939f8719b817779352e42c6506a001de2720139dc3890`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0001.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0001.md)
+- [Sources/structured/docs/TEST/test-0002.md](../Sources/structured/docs/TEST/test-0002.md) — 2 copies; SHA-256 `552d1eca766f2b20515c218c7ccf727661c40db921b40e800b887b392600dbca`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0002.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0002.md)
+- [Sources/structured/docs/TEST/test-0003.md](../Sources/structured/docs/TEST/test-0003.md) — 2 copies; SHA-256 `706f049348c79b81543858641c349fef6c91f71fc9099a0acecabbd40b4c2344`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0003.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0003.md)
+- [Sources/structured/docs/TEST/test-0004.md](../Sources/structured/docs/TEST/test-0004.md) — 2 copies; SHA-256 `a98b934a049b833ae9ab3487797281f39aeb03b6ad244411ad5d56831fbee1ea`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0004.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0004.md)
+- [Sources/structured/docs/TEST/test-0005.md](../Sources/structured/docs/TEST/test-0005.md) — 2 copies; SHA-256 `6cbfc442c85e52d273f66293d63f3e65b8796264e30602007871b739cdad4e00`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0005.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0005.md)
+- [Sources/structured/docs/TEST/test-0006.md](../Sources/structured/docs/TEST/test-0006.md) — 2 copies; SHA-256 `3efab7826d49149986cd83c6027c89f9ac399e79947324297aeaa0dfb486cc1c`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0006.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0006.md)
+- [Sources/structured/docs/TEST/test-0007.md](../Sources/structured/docs/TEST/test-0007.md) — 2 copies; SHA-256 `42a471108e45c46267fe3031f55609fbb470d87ab8c2bc3d76c55cb1b7bbbd4b`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0007.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0007.md)
+- [Sources/structured/docs/TEST/test-0008.md](../Sources/structured/docs/TEST/test-0008.md) — 2 copies; SHA-256 `aaf48c08f07297c8328b6aa9f2791259ca9288aeeb24a50d7ce39ccd9f6d032b`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0008.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0008.md)
+- [Sources/structured/docs/TEST/test-0009.md](../Sources/structured/docs/TEST/test-0009.md) — 2 copies; SHA-256 `1d70dc883f839abeba3aba36b9d44f01b7d9f4e7eaf69ac6bdfa90f5572d5f10`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0009.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0009.md)
+- [Sources/structured/docs/TEST/test-0010.md](../Sources/structured/docs/TEST/test-0010.md) — 2 copies; SHA-256 `e5e886505b668837e53fdda7aedca6bcdb99c7bb153abfc1bc5a39eaf986eca8`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0010.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0010.md)
+- [Sources/structured/docs/TEST/test-0011.md](../Sources/structured/docs/TEST/test-0011.md) — 2 copies; SHA-256 `fad1f96b0160b90ea0126c42de63bc2fef264d34ab624332cc17f3bed4046005`
+  - [Sources/v2/Archive/pkc-legacy/docs/TEST/test-0011.md](../Sources/v2/Archive/pkc-legacy/docs/TEST/test-0011.md)
+- [Sources/structured/docs/index.md](../Sources/structured/docs/index.md) — 2 copies; SHA-256 `d07eb1a074435f67bd0ef96ec34d62808a4d7f7164352da71ec90d94f11a2976`
+  - [Sources/v2/Archive/pkc-legacy/docs/index.md](../Sources/v2/Archive/pkc-legacy/docs/index.md)
+- [Sources/structured/inventory/README.md](../Sources/structured/inventory/README.md) — 2 copies; SHA-256 `e6c79ee4d879bac84762cff7fc8874b164a47d336424cdbb7403a201b0c5019a`
+  - [Sources/v2/Archive/pkc-legacy/inventory/README.md](../Sources/v2/Archive/pkc-legacy/inventory/README.md)
+- [Sources/structured/inventory/cep/core.csv](../Sources/structured/inventory/cep/core.csv) — 2 copies; SHA-256 `4b33010ea8de37135aaa2f262ef2827f299da997bfd9f92ed1b931a0ddc2c6ac`
+  - [Sources/v2/Archive/pkc-legacy/inventory/cep/core.csv](../Sources/v2/Archive/pkc-legacy/inventory/cep/core.csv)
+- [Sources/structured/inventory/extendscript/application_attributes.csv](../Sources/structured/inventory/extendscript/application_attributes.csv) — 2 copies; SHA-256 `218cad9d74e462fed9747217654c4dae08862c8290df2b829c79f5b9406c12e1`
+  - [Sources/v2/Archive/pkc-legacy/inventory/extendscript/application_attributes.csv](../Sources/v2/Archive/pkc-legacy/inventory/extendscript/application_attributes.csv)
+- [Sources/structured/inventory/extendscript/application_methods.csv](../Sources/structured/inventory/extendscript/application_methods.csv) — 2 copies; SHA-256 `8a16b10eeff426903b37d6b48cfc728d7c605694e230d19e55390302d0dcac45`
+  - [Sources/v2/Archive/pkc-legacy/inventory/extendscript/application_methods.csv](../Sources/v2/Archive/pkc-legacy/inventory/extendscript/application_methods.csv)
+- [Sources/structured/inventory/extendscript/methods.csv](../Sources/structured/inventory/extendscript/methods.csv) — 2 copies; SHA-256 `cf91bb758c306940dfc1c50c7f13fdd13e887970f3ca93bfaea5ff04b44534da`
+  - [Sources/v2/Archive/pkc-legacy/inventory/extendscript/methods.csv](../Sources/v2/Archive/pkc-legacy/inventory/extendscript/methods.csv)
+- [Sources/structured/inventory/extendscript/objects.csv](../Sources/structured/inventory/extendscript/objects.csv) — 2 copies; SHA-256 `0fbb596ef6d28719ffbe98e1358737194dcbb8a710a692635c0781175a30f49b`
+  - [Sources/v2/Archive/pkc-legacy/inventory/extendscript/objects.csv](../Sources/v2/Archive/pkc-legacy/inventory/extendscript/objects.csv)
+- [Sources/structured/inventory/sdk/core.csv](../Sources/structured/inventory/sdk/core.csv) — 2 copies; SHA-256 `ceade66f5e9c2fd9b74728ff268370a8419bf42a932cbe15fe7373c7f04e7274`
+  - [Sources/v2/Archive/pkc-legacy/inventory/sdk/core.csv](../Sources/v2/Archive/pkc-legacy/inventory/sdk/core.csv)
+- [Sources/structured/inventory/surfaces.yaml](../Sources/structured/inventory/surfaces.yaml) — 2 copies; SHA-256 `5727eefe76ff0fa48d883cf2fd5885ac4b04b5893a42290f0e971a729cb1c7df`
+  - [Sources/v2/Archive/pkc-legacy/inventory/surfaces.yaml](../Sources/v2/Archive/pkc-legacy/inventory/surfaces.yaml)
+- [Sources/structured/inventory/uxp/core.csv](../Sources/structured/inventory/uxp/core.csv) — 2 copies; SHA-256 `c6d108ee65cf53b18e035da41e2e70404b6eccbdccd08de4d5a016b6272cb534`
+  - [Sources/v2/Archive/pkc-legacy/inventory/uxp/core.csv](../Sources/v2/Archive/pkc-legacy/inventory/uxp/core.csv)
+- [Sources/structured/knowledge/capabilities/CAP-0001-read-project.yaml](../Sources/structured/knowledge/capabilities/CAP-0001-read-project.yaml) — 2 copies; SHA-256 `0c26241d54ba8c8d1b6dd0bbbca8069d87831e16100ea5f15fded964d2a52bee`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/capabilities/CAP-0001-read-project.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/capabilities/CAP-0001-read-project.yaml)
+- [Sources/structured/knowledge/capabilities/CAP-0002-replace-caption-text.yaml](../Sources/structured/knowledge/capabilities/CAP-0002-replace-caption-text.yaml) — 2 copies; SHA-256 `9fa6cc35cf9ff0a1307adfc4e4465c7572383e5410ed7ae7d53a8f5cd6c25c4e`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/capabilities/CAP-0002-replace-caption-text.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/capabilities/CAP-0002-replace-caption-text.yaml)
+- [Sources/structured/knowledge/capabilities/CAP-0003-generate-vfx-list.yaml](../Sources/structured/knowledge/capabilities/CAP-0003-generate-vfx-list.yaml) — 2 copies; SHA-256 `07a2eb3a7f68cde71e602dd47f7bf9684d98a2200f66b38fd2ecff75c45c884c`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/capabilities/CAP-0003-generate-vfx-list.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/capabilities/CAP-0003-generate-vfx-list.yaml)
+- [Sources/structured/knowledge/capabilities/CAP-0004-batch-relink-media.yaml](../Sources/structured/knowledge/capabilities/CAP-0004-batch-relink-media.yaml) — 2 copies; SHA-256 `a8506db6fa2c9d314bb80cb86c17f392496abdb9b7b254b89a6ea75ebca12452`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/capabilities/CAP-0004-batch-relink-media.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/capabilities/CAP-0004-batch-relink-media.yaml)
+- [Sources/structured/knowledge/capabilities/CAP-0005-export-xml.yaml](../Sources/structured/knowledge/capabilities/CAP-0005-export-xml.yaml) — 2 copies; SHA-256 `e244a41db1ff6150032aa72c8edcefca2c1619f8502693244ffe70004699e44f`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/capabilities/CAP-0005-export-xml.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/capabilities/CAP-0005-export-xml.yaml)
+- [Sources/structured/knowledge/evidence/EVID-0001-adobe-scripting-reference.yaml](../Sources/structured/knowledge/evidence/EVID-0001-adobe-scripting-reference.yaml) — 2 copies; SHA-256 `c025f1d39d079007de6f8281b93a8977cf62e3ca8cc2caac315f21af977a370d`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/evidence/EVID-0001-adobe-scripting-reference.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/evidence/EVID-0001-adobe-scripting-reference.yaml)
+- [Sources/structured/knowledge/evidence/EVID-0002-runtime-observation-placeholder.yaml](../Sources/structured/knowledge/evidence/EVID-0002-runtime-observation-placeholder.yaml) — 2 copies; SHA-256 `4a21a0e8f6906fec20a15ec83ff69300aaece102961f5ae57c3e9ea11f233d06`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/evidence/EVID-0002-runtime-observation-placeholder.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/evidence/EVID-0002-runtime-observation-placeholder.yaml)
+- [Sources/structured/knowledge/evidence/EVID-0003-production-model-evidence.yaml](../Sources/structured/knowledge/evidence/EVID-0003-production-model-evidence.yaml) — 2 copies; SHA-256 `7aecd8c4fdc814ec15a2a42816aa8f6047328a0c59b83162db44a216a4fe012c`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/evidence/EVID-0003-production-model-evidence.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/evidence/EVID-0003-production-model-evidence.yaml)
+- [Sources/structured/knowledge/objects/OBJ-0001-application.yaml](../Sources/structured/knowledge/objects/OBJ-0001-application.yaml) — 2 copies; SHA-256 `a12c52ef719d4d3196520853118372d70abc59231b110425783c1a476836b565`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/objects/OBJ-0001-application.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/objects/OBJ-0001-application.yaml)
+- [Sources/structured/knowledge/objects/OBJ-0002-project.yaml](../Sources/structured/knowledge/objects/OBJ-0002-project.yaml) — 2 copies; SHA-256 `cfc81a8af84af99f99efdd37b84b271dff5229a2cbced08ea1606bc707ec7235`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/objects/OBJ-0002-project.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/objects/OBJ-0002-project.yaml)
+- [Sources/structured/knowledge/objects/OBJ-0003-bin.yaml](../Sources/structured/knowledge/objects/OBJ-0003-bin.yaml) — 2 copies; SHA-256 `acc3a30d2de067d4d52ff6eeb103638c9972f0948f09f07179aec6011d76e0bf`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/objects/OBJ-0003-bin.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/objects/OBJ-0003-bin.yaml)
+- [Sources/structured/knowledge/objects/OBJ-0004-project-item.yaml](../Sources/structured/knowledge/objects/OBJ-0004-project-item.yaml) — 2 copies; SHA-256 `7d3644c5de4077f7037a213fcb94f8801fc08669775249407ae7bd5fec961ed0`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/objects/OBJ-0004-project-item.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/objects/OBJ-0004-project-item.yaml)
+- [Sources/structured/knowledge/objects/OBJ-0005-sequence.yaml](../Sources/structured/knowledge/objects/OBJ-0005-sequence.yaml) — 2 copies; SHA-256 `258adf31ddec09279feb3f37495685bc2cba727f4d8af6d1b34b30990c52220a`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/objects/OBJ-0005-sequence.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/objects/OBJ-0005-sequence.yaml)
+- [Sources/structured/knowledge/recipes/REC-0001-read-project-inventory.yaml](../Sources/structured/knowledge/recipes/REC-0001-read-project-inventory.yaml) — 2 copies; SHA-256 `1a9326a8b37e3c11610869d2324068cf3e13645fa1c868f20670663b927d7050`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/recipes/REC-0001-read-project-inventory.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/recipes/REC-0001-read-project-inventory.yaml)
+- [Sources/structured/knowledge/recipes/REC-0002-safe-caption-text-replacement.yaml](../Sources/structured/knowledge/recipes/REC-0002-safe-caption-text-replacement.yaml) — 2 copies; SHA-256 `b16df266d47780929446a38638e7bae3b2843c888afa7807cee0f0edd729e04b`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/recipes/REC-0002-safe-caption-text-replacement.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/recipes/REC-0002-safe-caption-text-replacement.yaml)
+- [Sources/structured/knowledge/recipes/REC-0003-vfx-pull-list-from-markers.yaml](../Sources/structured/knowledge/recipes/REC-0003-vfx-pull-list-from-markers.yaml) — 2 copies; SHA-256 `2e8b5688f4e6ee7d9b12284851002efcfc90a99c33c27766216471ffc3944557`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/recipes/REC-0003-vfx-pull-list-from-markers.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/recipes/REC-0003-vfx-pull-list-from-markers.yaml)
+- [Sources/structured/knowledge/recipes/REC-0004-safe-batch-relink.yaml](../Sources/structured/knowledge/recipes/REC-0004-safe-batch-relink.yaml) — 2 copies; SHA-256 `ee9f1c73c119344f289904af85e2530d5eb7845809f69b89dcd81e8d9385970c`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/recipes/REC-0004-safe-batch-relink.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/recipes/REC-0004-safe-batch-relink.yaml)
+- [Sources/structured/knowledge/recipes/REC-0005-safe-premiere-xml-workflow.yaml](../Sources/structured/knowledge/recipes/REC-0005-safe-premiere-xml-workflow.yaml) — 2 copies; SHA-256 `7e22420ec591c58663517e56d787931db3d6bdaaddb6e1eb954c4821adae6299`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/recipes/REC-0005-safe-premiere-xml-workflow.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/recipes/REC-0005-safe-premiere-xml-workflow.yaml)
+- [Sources/structured/knowledge/rules/RULE-0001-no-hallucinated-api.yaml](../Sources/structured/knowledge/rules/RULE-0001-no-hallucinated-api.yaml) — 2 copies; SHA-256 `68d46cb61038ade639c327604d734045bddf1c3782099cf5c6f988bf7dc94594`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0001-no-hallucinated-api.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0001-no-hallucinated-api.yaml)
+- [Sources/structured/knowledge/rules/RULE-0002-preserve-object-identity.yaml](../Sources/structured/knowledge/rules/RULE-0002-preserve-object-identity.yaml) — 2 copies; SHA-256 `069222ce66d3c62a101c8ec573af238ecfd3cfc202a0c0c98ecfc4f1856bdd9d`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0002-preserve-object-identity.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0002-preserve-object-identity.yaml)
+- [Sources/structured/knowledge/rules/RULE-0003-backup-before-destructive-edit.yaml](../Sources/structured/knowledge/rules/RULE-0003-backup-before-destructive-edit.yaml) — 2 copies; SHA-256 `e654d13a11576b3534400bb67f6edb1058a8a102a83f2812223b0406661e0c54`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0003-backup-before-destructive-edit.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0003-backup-before-destructive-edit.yaml)
+- [Sources/structured/knowledge/rules/RULE-0004-do-not-confuse-projectitem-trackitem.yaml](../Sources/structured/knowledge/rules/RULE-0004-do-not-confuse-projectitem-trackitem.yaml) — 2 copies; SHA-256 `c31990e1452e7c0fb3422205a6801373709bf9448fbf61969a05e535521f81aa`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0004-do-not-confuse-projectitem-trackitem.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0004-do-not-confuse-projectitem-trackitem.yaml)
+- [Sources/structured/knowledge/rules/RULE-0005-sequence-does-not-own-media.yaml](../Sources/structured/knowledge/rules/RULE-0005-sequence-does-not-own-media.yaml) — 2 copies; SHA-256 `3b1c1caf7ec8b33c51b711613f811a7d6c1b39bd31e8061990fd903265a8c9f7`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0005-sequence-does-not-own-media.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0005-sequence-does-not-own-media.yaml)
+- [Sources/structured/knowledge/rules/RULE-0006-preserve-caption-serialization.yaml](../Sources/structured/knowledge/rules/RULE-0006-preserve-caption-serialization.yaml) — 2 copies; SHA-256 `324d47bbc8b8f4fd53bdd2d0a2d430bff2996ba3357fbecefaee7cd814f55ead`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0006-preserve-caption-serialization.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0006-preserve-caption-serialization.yaml)
+- [Sources/structured/knowledge/rules/RULE-0007-do-not-assume-captions-are-plain-text.yaml](../Sources/structured/knowledge/rules/RULE-0007-do-not-assume-captions-are-plain-text.yaml) — 2 copies; SHA-256 `e59529fc18c43ebd54c5aa5f580ba0e7746db680c48a28924ca809e9dacda6b4`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0007-do-not-assume-captions-are-plain-text.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0007-do-not-assume-captions-are-plain-text.yaml)
+- [Sources/structured/knowledge/rules/RULE-0008-vfx-shot-id-uniqueness.yaml](../Sources/structured/knowledge/rules/RULE-0008-vfx-shot-id-uniqueness.yaml) — 2 copies; SHA-256 `df8b44ff18cd71e3647cfb4031f3e8d64471e40126da7606eeab3d58609810f2`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0008-vfx-shot-id-uniqueness.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0008-vfx-shot-id-uniqueness.yaml)
+- [Sources/structured/knowledge/rules/RULE-0009-relink-projectitems-not-trackitems.yaml](../Sources/structured/knowledge/rules/RULE-0009-relink-projectitems-not-trackitems.yaml) — 2 copies; SHA-256 `65143ad1201cb61cf8609addaf7b47981d43e7fc699897d80808eb1f26be83a3`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0009-relink-projectitems-not-trackitems.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0009-relink-projectitems-not-trackitems.yaml)
+- [Sources/structured/knowledge/rules/RULE-0010-preserve-xml-unknowns.yaml](../Sources/structured/knowledge/rules/RULE-0010-preserve-xml-unknowns.yaml) — 2 copies; SHA-256 `721e2fdcc95a3e90cf16f9598fac4a0d0041a7cbce69a3ef0339cf6d8b84aef6`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0010-preserve-xml-unknowns.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/rules/RULE-0010-preserve-xml-unknowns.yaml)
+- [Sources/structured/knowledge/tests/TEST-0001-no-fake-api.yaml](../Sources/structured/knowledge/tests/TEST-0001-no-fake-api.yaml) — 2 copies; SHA-256 `8ddf7ddf7070442965bcb2ec474567ffa41c821c65fb42b0e6c912f9e49be00d`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0001-no-fake-api.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0001-no-fake-api.yaml)
+- [Sources/structured/knowledge/tests/TEST-0002-active-project-context.yaml](../Sources/structured/knowledge/tests/TEST-0002-active-project-context.yaml) — 2 copies; SHA-256 `f729f26777eeca5cf2a1e9b92f01f330f8db1f73245f80037e46d401082181a9`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0002-active-project-context.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0002-active-project-context.yaml)
+- [Sources/structured/knowledge/tests/TEST-0003-project-identity.yaml](../Sources/structured/knowledge/tests/TEST-0003-project-identity.yaml) — 2 copies; SHA-256 `e9b292b9afbe1f765572b2251f8ceb1230f7e42bda71928b2b98d05668b0bc60`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0003-project-identity.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0003-project-identity.yaml)
+- [Sources/structured/knowledge/tests/TEST-0004-project-root-inventory.yaml](../Sources/structured/knowledge/tests/TEST-0004-project-root-inventory.yaml) — 2 copies; SHA-256 `698aded9eb43f42bb25f45734762c156620612e49df92c7b8148ae8e4c23ccfd`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0004-project-root-inventory.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0004-project-root-inventory.yaml)
+- [Sources/structured/knowledge/tests/TEST-0005-project-backup-before-destructive-edit.yaml](../Sources/structured/knowledge/tests/TEST-0005-project-backup-before-destructive-edit.yaml) — 2 copies; SHA-256 `76defb3059021afb8ca98b5e52450287d2e3fa4993cf691228f0fc3482631e7a`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0005-project-backup-before-destructive-edit.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0005-project-backup-before-destructive-edit.yaml)
+- [Sources/structured/knowledge/tests/TEST-0006-bin-display-name-not-unique.yaml](../Sources/structured/knowledge/tests/TEST-0006-bin-display-name-not-unique.yaml) — 2 copies; SHA-256 `3e786700fdf594a8deb153f8eaf0cad03a28b290fa41949ae5a884352585be07`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0006-bin-display-name-not-unique.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0006-bin-display-name-not-unique.yaml)
+- [Sources/structured/knowledge/tests/TEST-0007-bin-deletion-does-not-delete-source-media.yaml](../Sources/structured/knowledge/tests/TEST-0007-bin-deletion-does-not-delete-source-media.yaml) — 2 copies; SHA-256 `b7153ec90d463991cc33deda91fa1b28184a10d633306c3cd14da735e122b696`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0007-bin-deletion-does-not-delete-source-media.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0007-bin-deletion-does-not-delete-source-media.yaml)
+- [Sources/structured/knowledge/tests/TEST-0008-projectitem-vs-trackitem.yaml](../Sources/structured/knowledge/tests/TEST-0008-projectitem-vs-trackitem.yaml) — 2 copies; SHA-256 `5f7c331dc13201561df39602c898dcf089beb3c4e8536f0af7205e200fe786a6`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0008-projectitem-vs-trackitem.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0008-projectitem-vs-trackitem.yaml)
+- [Sources/structured/knowledge/tests/TEST-0009-projectitem-can-represent-sequence.yaml](../Sources/structured/knowledge/tests/TEST-0009-projectitem-can-represent-sequence.yaml) — 2 copies; SHA-256 `afaf0b1796aac1ff252b93595aed5c633c2ce8f03749d86edcd3d8c103357157`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0009-projectitem-can-represent-sequence.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0009-projectitem-can-represent-sequence.yaml)
+- [Sources/structured/knowledge/tests/TEST-0010-projectitem-relink-scope.yaml](../Sources/structured/knowledge/tests/TEST-0010-projectitem-relink-scope.yaml) — 2 copies; SHA-256 `446db2651ade9e92a64bc7869ea9c5901c03168fcbb9edfbb7b0c5a200e47eb0`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0010-projectitem-relink-scope.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0010-projectitem-relink-scope.yaml)
+- [Sources/structured/knowledge/tests/TEST-0011-sequence-reference-model.yaml](../Sources/structured/knowledge/tests/TEST-0011-sequence-reference-model.yaml) — 2 copies; SHA-256 `b09cf177ce70b6ad77703b7af9ea7004b4548b92ff0d4b807b0c33e31c51110a`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0011-sequence-reference-model.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0011-sequence-reference-model.yaml)
+- [Sources/structured/knowledge/tests/TEST-0012-sequence-destructive-edit-backup.yaml](../Sources/structured/knowledge/tests/TEST-0012-sequence-destructive-edit-backup.yaml) — 2 copies; SHA-256 `f7e98599ba9c9a89be5a570f247980900e4b35fcf8645d5cbf375f6ff2a5b35a`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0012-sequence-destructive-edit-backup.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0012-sequence-destructive-edit-backup.yaml)
+- [Sources/structured/knowledge/tests/TEST-0013-sequence-does-not-own-media.yaml](../Sources/structured/knowledge/tests/TEST-0013-sequence-does-not-own-media.yaml) — 2 copies; SHA-256 `630b44d2e3b8ea80fdb8f13c207d453e2649688275a2ae829956bb9a6e80964b`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0013-sequence-does-not-own-media.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0013-sequence-does-not-own-media.yaml)
+- [Sources/structured/knowledge/tests/TEST-0020-read-project-scope.yaml](../Sources/structured/knowledge/tests/TEST-0020-read-project-scope.yaml) — 2 copies; SHA-256 `fce652c732cf35fc071cf991c9f06639d6f1f4be7b1551cd74418ec5bc3568d4`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0020-read-project-scope.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0020-read-project-scope.yaml)
+- [Sources/structured/knowledge/tests/TEST-0021-caption-text-replacement-preserves-timing.yaml](../Sources/structured/knowledge/tests/TEST-0021-caption-text-replacement-preserves-timing.yaml) — 2 copies; SHA-256 `5840efdace52d442bd4e1ee069d7dca0c0d5a8d47b01919945bcc6047627d392`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0021-caption-text-replacement-preserves-timing.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0021-caption-text-replacement-preserves-timing.yaml)
+- [Sources/structured/knowledge/tests/TEST-0022-caption-unknown-fields-survive.yaml](../Sources/structured/knowledge/tests/TEST-0022-caption-unknown-fields-survive.yaml) — 2 copies; SHA-256 `9e0e662a47dccb9fd2d8958be78bb2b8b5e42f1cb2b9584555bcc8cf42deca99`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0022-caption-unknown-fields-survive.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0022-caption-unknown-fields-survive.yaml)
+- [Sources/structured/knowledge/tests/TEST-0023-caption-format-detection.yaml](../Sources/structured/knowledge/tests/TEST-0023-caption-format-detection.yaml) — 2 copies; SHA-256 `b5d04201ff37be6a36de08f012628ea53ba3905fb0574d89ebb1c8cfe50ac8e2`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0023-caption-format-detection.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0023-caption-format-detection.yaml)
+- [Sources/structured/knowledge/tests/TEST-0030-vfx-duplicate-shot-id.yaml](../Sources/structured/knowledge/tests/TEST-0030-vfx-duplicate-shot-id.yaml) — 2 copies; SHA-256 `7c2caa3fcfd80eec1bb46e1000312b95a149aa0a7715729957af86aedd3f179b`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0030-vfx-duplicate-shot-id.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0030-vfx-duplicate-shot-id.yaml)
+- [Sources/structured/knowledge/tests/TEST-0031-vfx-list-row-completeness.yaml](../Sources/structured/knowledge/tests/TEST-0031-vfx-list-row-completeness.yaml) — 2 copies; SHA-256 `646c340bb1f84e1b79715c212e7ac0cbe994aa59a8ab2d866eeb71bf913180eb`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0031-vfx-list-row-completeness.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0031-vfx-list-row-completeness.yaml)
+- [Sources/structured/knowledge/tests/TEST-0040-relink-plan-reviewable.yaml](../Sources/structured/knowledge/tests/TEST-0040-relink-plan-reviewable.yaml) — 2 copies; SHA-256 `93974c669755d74a69434b4a256a10ff933170673bccc11d68d3ffb6159651b3`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0040-relink-plan-reviewable.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0040-relink-plan-reviewable.yaml)
+- [Sources/structured/knowledge/tests/TEST-0041-relink-preserves-sequence-timing.yaml](../Sources/structured/knowledge/tests/TEST-0041-relink-preserves-sequence-timing.yaml) — 2 copies; SHA-256 `ff685dd67665dea77362bc664ae2a916c9618a273a459d79e8a06fd5bca3713d`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0041-relink-preserves-sequence-timing.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0041-relink-preserves-sequence-timing.yaml)
+- [Sources/structured/knowledge/tests/TEST-0050-xml-transform-preserves-unknown-nodes.yaml](../Sources/structured/knowledge/tests/TEST-0050-xml-transform-preserves-unknown-nodes.yaml) — 2 copies; SHA-256 `1bd01bd723025e5746d23bdeac7294df6d6961ca92563cbc8909b9f7bf454d37`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0050-xml-transform-preserves-unknown-nodes.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0050-xml-transform-preserves-unknown-nodes.yaml)
+- [Sources/structured/knowledge/tests/TEST-0051-xml-roundtrip-risk-report.yaml](../Sources/structured/knowledge/tests/TEST-0051-xml-roundtrip-risk-report.yaml) — 2 copies; SHA-256 `929d7ba9f0d4d890fc26092e1a523d74aa6ebc165ede0c79ac39b8fe893b2d15`
+  - [Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0051-xml-roundtrip-risk-report.yaml](../Sources/v2/Archive/pkc-legacy/knowledge/tests/TEST-0051-xml-roundtrip-risk-report.yaml)
+- [Sources/structured/knowledge_os/__init__.py](../Sources/structured/knowledge_os/__init__.py) — 3 copies; SHA-256 `45a00d19b46ee5efaf7a1c17235f907b68203cf7ecd5341a663d3bd8975b2e4e`
+  - [Sources/v2/Archive/pkc-legacy/knowledge_os/__init__.py](../Sources/v2/Archive/pkc-legacy/knowledge_os/__init__.py)
+  - [Sources/pkc07/knowledge_os/__init__.py](../Sources/pkc07/knowledge_os/__init__.py)
+- [Sources/structured/knowledge_os/cli.py](../Sources/structured/knowledge_os/cli.py) — 3 copies; SHA-256 `6dc6db3564f8d6f19f0bb39135ac404d754d40a3e5360d7e576ea8056ca4475c`
+  - [Sources/v2/Archive/pkc-legacy/knowledge_os/cli.py](../Sources/v2/Archive/pkc-legacy/knowledge_os/cli.py)
+  - [Sources/pkc07/knowledge_os/cli.py](../Sources/pkc07/knowledge_os/cli.py)
+- [Sources/structured/knowledge_os/compiler/parser.py](../Sources/structured/knowledge_os/compiler/parser.py) — 3 copies; SHA-256 `068d57657600f9c4580faccc05381a2bf5cc08158d9bae749da350fc13e21254`
+  - [Sources/v2/Archive/pkc-legacy/knowledge_os/compiler/parser.py](../Sources/v2/Archive/pkc-legacy/knowledge_os/compiler/parser.py)
+  - [Sources/pkc07/knowledge_os/compiler/parser.py](../Sources/pkc07/knowledge_os/compiler/parser.py)
+- [Sources/structured/knowledge_os/compiler/validator.py](../Sources/structured/knowledge_os/compiler/validator.py) — 3 copies; SHA-256 `50dc983f5af08fbda5a3d4f973ca65f94adbcda5570796d5446bf1d01797eb36`
+  - [Sources/v2/Archive/pkc-legacy/knowledge_os/compiler/validator.py](../Sources/v2/Archive/pkc-legacy/knowledge_os/compiler/validator.py)
+  - [Sources/pkc07/knowledge_os/compiler/validator.py](../Sources/pkc07/knowledge_os/compiler/validator.py)
+- [Sources/structured/knowledge_os/generators/artifacts.py](../Sources/structured/knowledge_os/generators/artifacts.py) — 3 copies; SHA-256 `4bc8c9a2a36c0e69ce448a673919f7a2d1ea49ff209e38e11c1008ff6568dcce`
+  - [Sources/v2/Archive/pkc-legacy/knowledge_os/generators/artifacts.py](../Sources/v2/Archive/pkc-legacy/knowledge_os/generators/artifacts.py)
+  - [Sources/pkc07/knowledge_os/generators/artifacts.py](../Sources/pkc07/knowledge_os/generators/artifacts.py)
+- [Sources/structured/knowledge_os/generators/markdown.py](../Sources/structured/knowledge_os/generators/markdown.py) — 3 copies; SHA-256 `1b4ef4d0dd83aa1b11292a18d2dd1077e89f053175491af670a8d801957ae65b`
+  - [Sources/v2/Archive/pkc-legacy/knowledge_os/generators/markdown.py](../Sources/v2/Archive/pkc-legacy/knowledge_os/generators/markdown.py)
+  - [Sources/pkc07/knowledge_os/generators/markdown.py](../Sources/pkc07/knowledge_os/generators/markdown.py)
+- [Sources/structured/knowledge_os/model.py](../Sources/structured/knowledge_os/model.py) — 4 copies; SHA-256 `565490004649c33473581ae0e979f6dee20bb6596c74be13203551d4546edbfb`
+  - [Sources/v2/Archive/pkc-legacy/knowledge_os/model.py](../Sources/v2/Archive/pkc-legacy/knowledge_os/model.py)
+  - [Sources/pkc06/knowledge_os/model.py](../Sources/pkc06/knowledge_os/model.py)
+  - [Sources/pkc07/knowledge_os/model.py](../Sources/pkc07/knowledge_os/model.py)
+- [Sources/structured/mkdocs.yml](../Sources/structured/mkdocs.yml) — 2 copies; SHA-256 `1685af739ae4b450651421f517b1bd351b070ca430c158e60b4c310b802f22fa`
+  - [Sources/v2/Archive/pkc-legacy/mkdocs.yml](../Sources/v2/Archive/pkc-legacy/mkdocs.yml)
+- [Sources/structured/requirements.txt](../Sources/structured/requirements.txt) — 4 copies; SHA-256 `77a327864ba6aa70a51520a5e306ec63febe5770200615a0f30652c6ac170ff4`
+  - [Sources/v2/Archive/pkc-legacy/requirements.txt](../Sources/v2/Archive/pkc-legacy/requirements.txt)
+  - [Sources/pkc06/requirements.txt](../Sources/pkc06/requirements.txt)
+  - [Sources/pkc07/requirements.txt](../Sources/pkc07/requirements.txt)
+- [Sources/structured/roadmap/APDR-PR-003-CANONICAL-DEVELOPER-REFERENCE.md](../Sources/structured/roadmap/APDR-PR-003-CANONICAL-DEVELOPER-REFERENCE.md) — 2 copies; SHA-256 `389c15116cb2ce689c83b1227620bd66c24b62caf19e1411bb724ef61db27dbe`
+  - [Sources/v2/Archive/pkc-legacy/roadmap/APDR-PR-003-CANONICAL-DEVELOPER-REFERENCE.md](../Sources/v2/Archive/pkc-legacy/roadmap/APDR-PR-003-CANONICAL-DEVELOPER-REFERENCE.md)
+- [Sources/structured/roadmap/APDR-PR-004-EXTENDSCRIPT-APPLICATION-REFERENCE.md](../Sources/structured/roadmap/APDR-PR-004-EXTENDSCRIPT-APPLICATION-REFERENCE.md) — 2 copies; SHA-256 `54b17ef115dd12cdf9b68d7d85659a33299a4c60dbd11642933a96eb23c7693a`
+  - [Sources/v2/Archive/pkc-legacy/roadmap/APDR-PR-004-EXTENDSCRIPT-APPLICATION-REFERENCE.md](../Sources/v2/Archive/pkc-legacy/roadmap/APDR-PR-004-EXTENDSCRIPT-APPLICATION-REFERENCE.md)
+- [Sources/structured/roadmap/OPS-PR-001-COVERAGE-ENGINE.md](../Sources/structured/roadmap/OPS-PR-001-COVERAGE-ENGINE.md) — 2 copies; SHA-256 `ffb0e16122a89556c4858dc183c38f997dfae57ee53df2f80dfec43b8a16fd7f`
+  - [Sources/v2/Archive/pkc-legacy/roadmap/OPS-PR-001-COVERAGE-ENGINE.md](../Sources/v2/Archive/pkc-legacy/roadmap/OPS-PR-001-COVERAGE-ENGINE.md)
+- [Sources/structured/roadmap/OPS-SPRINT-1-0-REPORT.md](../Sources/structured/roadmap/OPS-SPRINT-1-0-REPORT.md) — 2 copies; SHA-256 `3a2cb3a31fc830d1fd1c2642e03ee624a0bccf63edd22e89e00ceae0bb1e5020`
+  - [Sources/v2/Archive/pkc-legacy/roadmap/OPS-SPRINT-1-0-REPORT.md](../Sources/v2/Archive/pkc-legacy/roadmap/OPS-SPRINT-1-0-REPORT.md)
+- [Sources/structured/roadmap/OPS-SPRINT-1-1-REPORT.md](../Sources/structured/roadmap/OPS-SPRINT-1-1-REPORT.md) — 2 copies; SHA-256 `b3605f8ae06383a57964bded3b7eccce15f1f9af6d15877b95b65decb6262c4c`
+  - [Sources/v2/Archive/pkc-legacy/roadmap/OPS-SPRINT-1-1-REPORT.md](../Sources/v2/Archive/pkc-legacy/roadmap/OPS-SPRINT-1-1-REPORT.md)
+- [Sources/structured/roadmap/OPS-SPRINT-1-2-REPORT.md](../Sources/structured/roadmap/OPS-SPRINT-1-2-REPORT.md) — 2 copies; SHA-256 `787be11d707ca6935218d2ac4586f9ddc7c202b047bec4da1e51eb7f29f58d27`
+  - [Sources/v2/Archive/pkc-legacy/roadmap/OPS-SPRINT-1-2-REPORT.md](../Sources/v2/Archive/pkc-legacy/roadmap/OPS-SPRINT-1-2-REPORT.md)
+- [Sources/structured/roadmap/OPS-SPRINT-1-3-REPORT.md](../Sources/structured/roadmap/OPS-SPRINT-1-3-REPORT.md) — 2 copies; SHA-256 `437c713267432f1d957051d091ebc3ea484b611a25ba516b1fc1bac373765656`
+  - [Sources/v2/Archive/pkc-legacy/roadmap/OPS-SPRINT-1-3-REPORT.md](../Sources/v2/Archive/pkc-legacy/roadmap/OPS-SPRINT-1-3-REPORT.md)
+- [Sources/structured/schemas/capability.schema.yaml](../Sources/structured/schemas/capability.schema.yaml) — 2 copies; SHA-256 `61385b260ed59e3d34df4dbd3069fc71f9c409fb47ac59e3ef253c66ffefc8c2`
+  - [Sources/v2/Archive/pkc-legacy/schemas/capability.schema.yaml](../Sources/v2/Archive/pkc-legacy/schemas/capability.schema.yaml)
+- [Sources/structured/schemas/evidence.schema.yaml](../Sources/structured/schemas/evidence.schema.yaml) — 2 copies; SHA-256 `081661cd1672f25809023c0792b73a59a01208b0840ad68b04ac226cac05d14e`
+  - [Sources/v2/Archive/pkc-legacy/schemas/evidence.schema.yaml](../Sources/v2/Archive/pkc-legacy/schemas/evidence.schema.yaml)
+- [Sources/structured/schemas/object.schema.yaml](../Sources/structured/schemas/object.schema.yaml) — 2 copies; SHA-256 `b26fe7aa282c3a7b34ae2f7be4cd5a7bedcb11c5b8ecbf176709ed906b9c343a`
+  - [Sources/v2/Archive/pkc-legacy/schemas/object.schema.yaml](../Sources/v2/Archive/pkc-legacy/schemas/object.schema.yaml)
+- [Sources/structured/schemas/rule.schema.yaml](../Sources/structured/schemas/rule.schema.yaml) — 2 copies; SHA-256 `4fbcb68af00aefa7bda6ab31abd32f6492c0f92cf72d71c8464823a004fd3190`
+  - [Sources/v2/Archive/pkc-legacy/schemas/rule.schema.yaml](../Sources/v2/Archive/pkc-legacy/schemas/rule.schema.yaml)
+- [Sources/structured/schemas/test.schema.yaml](../Sources/structured/schemas/test.schema.yaml) — 2 copies; SHA-256 `c913201d22c288e74dca4e82bdf0bd9aa8ba0991c2408647c435a612ee8f16f0`
+  - [Sources/v2/Archive/pkc-legacy/schemas/test.schema.yaml](../Sources/v2/Archive/pkc-legacy/schemas/test.schema.yaml)
+- [Sources/structured/spec_src/api/api-cep-0001.yaml](../Sources/structured/spec_src/api/api-cep-0001.yaml) — 3 copies; SHA-256 `ba4ace425d39b4a51a3c77e7a77929627e9be2f26def1f7daab5b21ee6ab990b`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/api-cep-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/api-cep-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/api-cep-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/api-cep-0001.yaml)
+- [Sources/structured/spec_src/api/api-enc-0001.yaml](../Sources/structured/spec_src/api/api-enc-0001.yaml) — 3 copies; SHA-256 `b24bc1ccd651230552c735d866ef13f7534783814635a0e644d1272c81d489dd`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/api-enc-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/api-enc-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/api-enc-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/api-enc-0001.yaml)
+- [Sources/structured/spec_src/api/api-ext-0001.yaml](../Sources/structured/spec_src/api/api-ext-0001.yaml) — 3 copies; SHA-256 `33695e8cc06b8da3eb3e437c25ba0a946b4933b10a208b03ef0769a61a8b30f6`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/api-ext-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/api-ext-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/api-ext-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/api-ext-0001.yaml)
+- [Sources/structured/spec_src/api/api-qe-0001.yaml](../Sources/structured/spec_src/api/api-qe-0001.yaml) — 3 copies; SHA-256 `21745a6de46888b0ea7cc28c3fa13ef0bb1b7e735b1bb65de8833915b2d1d184`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/api-qe-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/api-qe-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/api-qe-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/api-qe-0001.yaml)
+- [Sources/structured/spec_src/api/api-uxp-0001.yaml](../Sources/structured/spec_src/api/api-uxp-0001.yaml) — 3 copies; SHA-256 `7e7cfe512f925533414570387d7f3ecb91985c9f1f10551a228e82fb6bd8ce1b`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/api-uxp-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/api-uxp-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/api-uxp-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/api-uxp-0001.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0011-app.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0011-app.yaml) — 3 copies; SHA-256 `7e08236e8c05921426168e347bd4fd171cf0d3a151d403bc3878c91e35f15c25`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0011-app.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0011-app.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0011-app.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0011-app.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0012-project.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0012-project.yaml) — 3 copies; SHA-256 `842058e43c0ba287cf93e1f4a84f4d592464fe5201890e30202597b08e87eba7`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0012-project.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0012-project.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0012-project.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0012-project.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0013-projectitem.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0013-projectitem.yaml) — 3 copies; SHA-256 `f278f81a9b6fcc7192868feafd70f8a128c0bc502d1badf974eee77a91ebc8fb`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0013-projectitem.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0013-projectitem.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0013-projectitem.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0013-projectitem.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0014-sequence.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0014-sequence.yaml) — 3 copies; SHA-256 `e12df91e6731c917570b9736d905a0b31f45dfdcacc53afd989985f7b9c47bd5`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0014-sequence.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0014-sequence.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0014-sequence.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0014-sequence.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0015-track.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0015-track.yaml) — 3 copies; SHA-256 `1a75f14c74f988e714aea76b18c197d8295f24a6863653950dc526935af49c53`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0015-track.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0015-track.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0015-track.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0015-track.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0016-trackitem.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0016-trackitem.yaml) — 3 copies; SHA-256 `0cc722428f53df9d7692295b0a19c0bea6550536cfacfdc3ebd026ab4d7e17c1`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0016-trackitem.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0016-trackitem.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0016-trackitem.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0016-trackitem.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0017-component.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0017-component.yaml) — 3 copies; SHA-256 `f8676b92e3f0f451b58aa6c40caf6b9f2d92520f18bc52c21966dc74a3b530a3`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0017-component.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0017-component.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0017-component.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0017-component.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0018-componentparam.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0018-componentparam.yaml) — 3 copies; SHA-256 `14336a488608c71fc4225c67d770d5e392984c9b118f0fbfe51fcefab44b82ac`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0018-componentparam.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0018-componentparam.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0018-componentparam.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0018-componentparam.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0019-marker.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0019-marker.yaml) — 3 copies; SHA-256 `0604e77df99f1eb9aedd5aa2af8bc73517504e4bdaedbf87d882b509a86be111`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0019-marker.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0019-marker.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0019-marker.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0019-marker.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0020-encoder.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0020-encoder.yaml) — 3 copies; SHA-256 `64c408715460e58bfb6a5440cee82640b8c1af4c65684c40951023a3ad101358`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0020-encoder.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0020-encoder.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0020-encoder.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0020-encoder.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0021-metadata.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0021-metadata.yaml) — 3 copies; SHA-256 `ae4e92c6573b431d3e50f65c1ef53d11b136c5faaedd3dc4ddad7111e4dfb99a`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0021-metadata.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0021-metadata.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0021-metadata.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0021-metadata.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0022-anywhere.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0022-anywhere.yaml) — 3 copies; SHA-256 `a4ba88d34c06d35f129b045331a45ebe1b91da332d75174ea2994f8bb57b638f`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0022-anywhere.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0022-anywhere.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0022-anywhere.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0022-anywhere.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0023-time.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0023-time.yaml) — 3 copies; SHA-256 `49ce569022e9854c26ec242f86478662ae506c9a293dd59555c691219f31555c`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0023-time.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0023-time.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0023-time.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0023-time.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0024-qeproject.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0024-qeproject.yaml) — 3 copies; SHA-256 `88a9961c72157d16790c98f557bdd9815744ed228076ffbcdfc3eea7e5c280d9`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0024-qeproject.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0024-qeproject.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0024-qeproject.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0024-qeproject.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0025-qesequence.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0025-qesequence.yaml) — 3 copies; SHA-256 `2a376a9733eb0a4912674c9c0e30fd42e2eb4ec733a5b8fa09c7fd6e06d1b443`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0025-qesequence.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0025-qesequence.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0025-qesequence.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0025-qesequence.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0026-qetrack.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0026-qetrack.yaml) — 3 copies; SHA-256 `fa220cc031732a81b626a17f3f96dc828fa401aae02050ec690c0ee2b86b0edf`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0026-qetrack.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0026-qetrack.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0026-qetrack.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0026-qetrack.yaml)
+- [Sources/structured/spec_src/api/extendscript/api-ext-0027-qeclip.yaml](../Sources/structured/spec_src/api/extendscript/api-ext-0027-qeclip.yaml) — 3 copies; SHA-256 `dd9b7e1f16b807515e2de6470afbd9fa9116bdba4273eb244791f73f854e48b9`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0027-qeclip.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/extendscript/api-ext-0027-qeclip.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0027-qeclip.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/extendscript/api-ext-0027-qeclip.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0011-application.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0011-application.yaml) — 3 copies; SHA-256 `69b0a2181f16e502346899720151285fa0264be587bd081cce41180c422ba580`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0011-application.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0011-application.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0011-application.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0011-application.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0012-project.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0012-project.yaml) — 3 copies; SHA-256 `130ebf966878a91f3696d3b5fd299cfe26b3af2e2ca3d9ea838ec1058f9bde3a`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0012-project.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0012-project.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0012-project.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0012-project.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0013-sequence.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0013-sequence.yaml) — 3 copies; SHA-256 `be3102fedf7820f42b9bec04a8aa2b55e993ba6fa73a10648405d2f9f739257e`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0013-sequence.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0013-sequence.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0013-sequence.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0013-sequence.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0014-track.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0014-track.yaml) — 3 copies; SHA-256 `ac53bf0e0bc4e44b5d193c3862bcb10f69c20a906f528d4a74b1c916d333bb44`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0014-track.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0014-track.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0014-track.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0014-track.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0015-trackitem.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0015-trackitem.yaml) — 3 copies; SHA-256 `75ad990e7d666aace00c4aa21df1b384f80e43ad303e6db6c7190eaca2debb42`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0015-trackitem.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0015-trackitem.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0015-trackitem.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0015-trackitem.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0016-projectitem.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0016-projectitem.yaml) — 3 copies; SHA-256 `06db15036e15b6b369e1db3471148799cd86ac64aacb9bb6c9d0bf3dcb4946af`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0016-projectitem.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0016-projectitem.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0016-projectitem.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0016-projectitem.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0017-component.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0017-component.yaml) — 3 copies; SHA-256 `88fb5980fca3391a356cfac5f3f3e6df7172285f2a5aa53495eb4ba31434bd7e`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0017-component.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0017-component.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0017-component.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0017-component.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0018-componentparam.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0018-componentparam.yaml) — 3 copies; SHA-256 `910bbaeb8bf8f0d4b4c096556f51124646d4ba5e920b12106b819057d9fbc45a`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0018-componentparam.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0018-componentparam.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0018-componentparam.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0018-componentparam.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0019-marker.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0019-marker.yaml) — 3 copies; SHA-256 `8c8df751aa9649429d1430bc8a8213e8f0cc92a41dfb8ff5ba8baeff64f2a652`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0019-marker.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0019-marker.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0019-marker.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0019-marker.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0020-metadata.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0020-metadata.yaml) — 3 copies; SHA-256 `206776f8cd93efaaa632ef9053d16a36a0c0227d4e686344c2c12f2b9e953a7d`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0020-metadata.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0020-metadata.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0020-metadata.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0020-metadata.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0021-encoder.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0021-encoder.yaml) — 3 copies; SHA-256 `065d76383839a604245e5165698c9e3d6b5808fee1e84de345059af6d9fa39e4`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0021-encoder.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0021-encoder.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0021-encoder.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0021-encoder.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0022-exportcontroller.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0022-exportcontroller.yaml) — 3 copies; SHA-256 `2a03bb8ba0511e72fb7f49bd3a147661b133649984b818d5c728617d8b3349a6`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0022-exportcontroller.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0022-exportcontroller.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0022-exportcontroller.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0022-exportcontroller.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0023-captiontrack.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0023-captiontrack.yaml) — 3 copies; SHA-256 `1b17f89ffbaf81384b68ed46d3e58bc7f106e0c1e96ea24b1e34cd8084ec0da4`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0023-captiontrack.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0023-captiontrack.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0023-captiontrack.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0023-captiontrack.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0024-transcript.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0024-transcript.yaml) — 3 copies; SHA-256 `4bca26468eef035cd8a2c72655fc008ba6ce6260a04829b9a83807d0f89ea069`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0024-transcript.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0024-transcript.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0024-transcript.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0024-transcript.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0025-color.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0025-color.yaml) — 3 copies; SHA-256 `6a999c1034d0fc962f4676df571c285f061f36cdb095b9fd503c8d2575fcd6d0`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0025-color.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0025-color.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0025-color.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0025-color.yaml)
+- [Sources/structured/spec_src/api/uxp/api-uxp-0026-time.yaml](../Sources/structured/spec_src/api/uxp/api-uxp-0026-time.yaml) — 3 copies; SHA-256 `d9a3236bd3fae1e413b96ac903fb040b540e577742fec5afa940dc17764949aa`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0026-time.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/api/uxp/api-uxp-0026-time.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0026-time.yaml](../Sources/pkc07/plugins/premiere/spec_src/api/uxp/api-uxp-0026-time.yaml)
+- [Sources/structured/spec_src/benchmarks/bench-0002-premiere-extension-coding.yaml](../Sources/structured/spec_src/benchmarks/bench-0002-premiere-extension-coding.yaml) — 3 copies; SHA-256 `fd0ff748388698d492a3e29d5922c314781608cf1ad43c0492a3b7566dd82b26`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/benchmarks/bench-0002-premiere-extension-coding.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/benchmarks/bench-0002-premiere-extension-coding.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/benchmarks/bench-0002-premiere-extension-coding.yaml](../Sources/pkc07/plugins/premiere/spec_src/benchmarks/bench-0002-premiere-extension-coding.yaml)
+- [Sources/structured/spec_src/captions/cap-0001.yaml](../Sources/structured/spec_src/captions/cap-0001.yaml) — 3 copies; SHA-256 `06273ffb194661cf6d6e24f34a186348a3ce580e180264c057b6f773794c93f4`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0001.yaml)
+- [Sources/structured/spec_src/captions/cap-0002.yaml](../Sources/structured/spec_src/captions/cap-0002.yaml) — 3 copies; SHA-256 `62e1b8dbbfd67c571c87d2df92403050e7ea73ccda85083c21334db9acf6017f`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0002.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0002.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0002.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0002.yaml)
+- [Sources/structured/spec_src/captions/cap-0003.yaml](../Sources/structured/spec_src/captions/cap-0003.yaml) — 3 copies; SHA-256 `c55a4202a3c7ba74291149af67a8320ca284f31e046145d6c66e749c8f3f86e3`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0003.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0003.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0003.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0003.yaml)
+- [Sources/structured/spec_src/captions/cap-0004.yaml](../Sources/structured/spec_src/captions/cap-0004.yaml) — 3 copies; SHA-256 `0a61d524d590a5de80bfa64ebfdefead4a9f36f26d1ae3a033422a8187061d6d`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0004.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0004.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0004.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0004.yaml)
+- [Sources/structured/spec_src/captions/cap-0005.yaml](../Sources/structured/spec_src/captions/cap-0005.yaml) — 3 copies; SHA-256 `49f3f90fb58c3dac6b6d6fce53bf6b3cd882a6afa396ef69859683ef606bda0f`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0005.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0005.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0005.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0005.yaml)
+- [Sources/structured/spec_src/captions/cap-0006.yaml](../Sources/structured/spec_src/captions/cap-0006.yaml) — 3 copies; SHA-256 `998bd433c470f46b2012e83bbde038adb71d96e867aa3a7790339361055009fd`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0006.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0006.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0006.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0006.yaml)
+- [Sources/structured/spec_src/captions/cap-0007.yaml](../Sources/structured/spec_src/captions/cap-0007.yaml) — 3 copies; SHA-256 `45d329f318f81617561790b5c41af3271a058e786a73809a64ddca4ae9a4c860`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0007.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0007.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0007.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0007.yaml)
+- [Sources/structured/spec_src/captions/cap-0008.yaml](../Sources/structured/spec_src/captions/cap-0008.yaml) — 3 copies; SHA-256 `d1978f217ed9fd3e1e629eaecb2194ed13b0a8062a34864b06b30210bf458acc`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0008.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0008.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0008.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0008.yaml)
+- [Sources/structured/spec_src/captions/cap-0009.yaml](../Sources/structured/spec_src/captions/cap-0009.yaml) — 3 copies; SHA-256 `ed86ee1890fbce3fc42b7d3ec884f9b7505a3ce884eedfffc82e1576fdb45250`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0009.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0009.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0009.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0009.yaml)
+- [Sources/structured/spec_src/captions/cap-0010.yaml](../Sources/structured/spec_src/captions/cap-0010.yaml) — 3 copies; SHA-256 `690e918382b55e249a7beb956475c599079e64789699fca3bec139f2c63c2274`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0010.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0010.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0010.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0010.yaml)
+- [Sources/structured/spec_src/captions/cap-0011.yaml](../Sources/structured/spec_src/captions/cap-0011.yaml) — 3 copies; SHA-256 `3c2661fc5baf7398621c4a1cc0244b016cf7d5cdd38d4a0a2e156e9efb9bc411`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0011.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0011.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0011.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0011.yaml)
+- [Sources/structured/spec_src/captions/cap-0012.yaml](../Sources/structured/spec_src/captions/cap-0012.yaml) — 3 copies; SHA-256 `6ed6112af928b4d55cded14d9d0be9eb6ab24b5d81029f93ca8cfa76a58bd195`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0012.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/captions/cap-0012.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/captions/cap-0012.yaml](../Sources/pkc07/plugins/premiere/spec_src/captions/cap-0012.yaml)
+- [Sources/structured/spec_src/foundation/found-0001-source-policy.yaml](../Sources/structured/spec_src/foundation/found-0001-source-policy.yaml) — 3 copies; SHA-256 `cb4e8f80fc5bdeb71bf28ee5b2460ecdb8b81a7f25607e1a4748ab665a95cef5`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/foundation/found-0001-source-policy.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/foundation/found-0001-source-policy.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/foundation/found-0001-source-policy.yaml](../Sources/pkc07/plugins/premiere/spec_src/foundation/found-0001-source-policy.yaml)
+- [Sources/structured/spec_src/foundation/found-0002-agent-ingestion.yaml](../Sources/structured/spec_src/foundation/found-0002-agent-ingestion.yaml) — 3 copies; SHA-256 `91780383d591d0c0990b6a314861c05e88d3d44c3c221635c50f79f1c8429145`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/foundation/found-0002-agent-ingestion.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/foundation/found-0002-agent-ingestion.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/foundation/found-0002-agent-ingestion.yaml](../Sources/pkc07/plugins/premiere/spec_src/foundation/found-0002-agent-ingestion.yaml)
+- [Sources/structured/spec_src/objects/obj-0001-application.yaml](../Sources/structured/spec_src/objects/obj-0001-application.yaml) — 4 copies; SHA-256 `f831691e4cc238e64323ca00dfed1aeedf01a66f025a018eeb47d29ff5308a70`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0001-application.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0001-application.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/objects/obj-0001-application.yaml](../Sources/pkc06/plugins/premiere/spec_src/objects/obj-0001-application.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0001-application.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0001-application.yaml)
+- [Sources/structured/spec_src/objects/obj-0002-project.yaml](../Sources/structured/spec_src/objects/obj-0002-project.yaml) — 4 copies; SHA-256 `09aa04c628d736d622e1c0f48629a6f7a012e71b34fbfad7af115dc5ab8d0df0`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0002-project.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0002-project.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/objects/obj-0002-project.yaml](../Sources/pkc06/plugins/premiere/spec_src/objects/obj-0002-project.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0002-project.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0002-project.yaml)
+- [Sources/structured/spec_src/objects/obj-0003-projectitem.yaml](../Sources/structured/spec_src/objects/obj-0003-projectitem.yaml) — 4 copies; SHA-256 `d97bfc87154f0187f9e2ec86422e74b6784ef7211a8aa778a56fa4663e6a09ac`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0003-projectitem.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0003-projectitem.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/objects/obj-0003-projectitem.yaml](../Sources/pkc06/plugins/premiere/spec_src/objects/obj-0003-projectitem.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0003-projectitem.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0003-projectitem.yaml)
+- [Sources/structured/spec_src/objects/obj-0004-sequence.yaml](../Sources/structured/spec_src/objects/obj-0004-sequence.yaml) — 4 copies; SHA-256 `9851070195a40679ddb1124ec8f5efb8fb9c8cf42fb541487a766347d1671999`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0004-sequence.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0004-sequence.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/objects/obj-0004-sequence.yaml](../Sources/pkc06/plugins/premiere/spec_src/objects/obj-0004-sequence.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0004-sequence.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0004-sequence.yaml)
+- [Sources/structured/spec_src/objects/obj-0005-track.yaml](../Sources/structured/spec_src/objects/obj-0005-track.yaml) — 4 copies; SHA-256 `b62976b24947ab6b489ad4eff261270a49b3e722617f851083e09a1559e843ba`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0005-track.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0005-track.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/objects/obj-0005-track.yaml](../Sources/pkc06/plugins/premiere/spec_src/objects/obj-0005-track.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0005-track.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0005-track.yaml)
+- [Sources/structured/spec_src/objects/obj-0006-trackitem.yaml](../Sources/structured/spec_src/objects/obj-0006-trackitem.yaml) — 4 copies; SHA-256 `b8e13af3b335b7932ea8c306ace029a00c49b8a1573cf6421ad38b3ec88a6ec1`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0006-trackitem.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0006-trackitem.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/objects/obj-0006-trackitem.yaml](../Sources/pkc06/plugins/premiere/spec_src/objects/obj-0006-trackitem.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0006-trackitem.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0006-trackitem.yaml)
+- [Sources/structured/spec_src/objects/obj-0007-component.yaml](../Sources/structured/spec_src/objects/obj-0007-component.yaml) — 4 copies; SHA-256 `fd3b4b6540ba04a9c3cb56d65b0bee257d2436592d08f6f20523f501cc0d29d2`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0007-component.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0007-component.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/objects/obj-0007-component.yaml](../Sources/pkc06/plugins/premiere/spec_src/objects/obj-0007-component.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0007-component.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0007-component.yaml)
+- [Sources/structured/spec_src/objects/obj-0008-property.yaml](../Sources/structured/spec_src/objects/obj-0008-property.yaml) — 4 copies; SHA-256 `db5ff6e57a9bbf4641ca127774c3ba406d8dc61b3f63ef3664acdf0b6bcf8daa`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0008-property.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0008-property.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/objects/obj-0008-property.yaml](../Sources/pkc06/plugins/premiere/spec_src/objects/obj-0008-property.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0008-property.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0008-property.yaml)
+- [Sources/structured/spec_src/objects/obj-0009-caption.yaml](../Sources/structured/spec_src/objects/obj-0009-caption.yaml) — 4 copies; SHA-256 `96af00fb8306c47772885d9926ed240767b94abc3672972fa752163ff666f97e`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0009-caption.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0009-caption.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/objects/obj-0009-caption.yaml](../Sources/pkc06/plugins/premiere/spec_src/objects/obj-0009-caption.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0009-caption.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0009-caption.yaml)
+- [Sources/structured/spec_src/objects/obj-0010-marker.yaml](../Sources/structured/spec_src/objects/obj-0010-marker.yaml) — 4 copies; SHA-256 `d16126d5b4c64da4e49f2d5bbde79e0788d0a325ae508ac3601a3141b6bfeb26`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0010-marker.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0010-marker.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/objects/obj-0010-marker.yaml](../Sources/pkc06/plugins/premiere/spec_src/objects/obj-0010-marker.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0010-marker.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0010-marker.yaml)
+- [Sources/structured/spec_src/objects/obj-0011-bin.yaml](../Sources/structured/spec_src/objects/obj-0011-bin.yaml) — 3 copies; SHA-256 `193f998567d5fbc18e37491926ce4dbc8feb6b3a3b643ff849ed13690a468d6c`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0011-bin.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0011-bin.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0011-bin.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0011-bin.yaml)
+- [Sources/structured/spec_src/objects/obj-0012-media.yaml](../Sources/structured/spec_src/objects/obj-0012-media.yaml) — 3 copies; SHA-256 `2d0de861a82f3138a83cf90aaa62ced22134d4df7349b1c53bae93a7f3b1edf6`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0012-media.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0012-media.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0012-media.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0012-media.yaml)
+- [Sources/structured/spec_src/objects/obj-0013-mediastream.yaml](../Sources/structured/spec_src/objects/obj-0013-mediastream.yaml) — 3 copies; SHA-256 `b10e0ecf3a64d8353e6e915e715d97a4fbe31efcee2d9357ccd6560001de09c0`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0013-mediastream.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0013-mediastream.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0013-mediastream.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0013-mediastream.yaml)
+- [Sources/structured/spec_src/objects/obj-0014-videotrack.yaml](../Sources/structured/spec_src/objects/obj-0014-videotrack.yaml) — 3 copies; SHA-256 `71aaa03731c8daf1c0a093eecb160fccc35925c54bc605f788b2a60c36489f65`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0014-videotrack.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0014-videotrack.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0014-videotrack.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0014-videotrack.yaml)
+- [Sources/structured/spec_src/objects/obj-0015-audiotrack.yaml](../Sources/structured/spec_src/objects/obj-0015-audiotrack.yaml) — 3 copies; SHA-256 `a66489b1a5223dfd6308b0126cb2a35d72c6f49bbe3f12c8862e82714db4f0b7`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0015-audiotrack.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0015-audiotrack.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0015-audiotrack.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0015-audiotrack.yaml)
+- [Sources/structured/spec_src/objects/obj-0016-captiontrack.yaml](../Sources/structured/spec_src/objects/obj-0016-captiontrack.yaml) — 3 copies; SHA-256 `13dab7f069634c1a531adc8f34e7e4a4f74cc09eea4403a6c09d4d8945132eb3`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0016-captiontrack.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0016-captiontrack.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0016-captiontrack.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0016-captiontrack.yaml)
+- [Sources/structured/spec_src/objects/obj-0017-markercollection.yaml](../Sources/structured/spec_src/objects/obj-0017-markercollection.yaml) — 3 copies; SHA-256 `4dc5dc14ca36790ccbad6ef2de8703c64259f409d181d210203d4c499dfb14fc`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0017-markercollection.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0017-markercollection.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0017-markercollection.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0017-markercollection.yaml)
+- [Sources/structured/spec_src/objects/obj-0018-time.yaml](../Sources/structured/spec_src/objects/obj-0018-time.yaml) — 3 copies; SHA-256 `e12c958d6a17903c95c663b651a0d9e333ff4fbbb369f29ac282fc999b9eeb03`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0018-time.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0018-time.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0018-time.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0018-time.yaml)
+- [Sources/structured/spec_src/objects/obj-0019-transition.yaml](../Sources/structured/spec_src/objects/obj-0019-transition.yaml) — 3 copies; SHA-256 `233de1541af7f0b7bbda522b3a9480f408a0c3bfaa16d8304b29ee6d1772de95`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0019-transition.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0019-transition.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0019-transition.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0019-transition.yaml)
+- [Sources/structured/spec_src/objects/obj-0020-effect.yaml](../Sources/structured/spec_src/objects/obj-0020-effect.yaml) — 3 copies; SHA-256 `a07dec42201d2304e6d83e301b8350753ab50310b8386b0901ad7cd10e46e5e8`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0020-effect.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0020-effect.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0020-effect.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0020-effect.yaml)
+- [Sources/structured/spec_src/objects/obj-0021-mogrt.yaml](../Sources/structured/spec_src/objects/obj-0021-mogrt.yaml) — 3 copies; SHA-256 `9a9cf42000e89f2882366072b041742b59d7025cdfef1a809eba265ea6a309f7`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0021-mogrt.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0021-mogrt.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0021-mogrt.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0021-mogrt.yaml)
+- [Sources/structured/spec_src/objects/obj-0022-essentialgraphicsclip.yaml](../Sources/structured/spec_src/objects/obj-0022-essentialgraphicsclip.yaml) — 3 copies; SHA-256 `d9b683acd0f2b95fa68f510ce5406ea798a76160c285b5eacf7f7c54a5be49c1`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0022-essentialgraphicsclip.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0022-essentialgraphicsclip.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0022-essentialgraphicsclip.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0022-essentialgraphicsclip.yaml)
+- [Sources/structured/spec_src/objects/obj-0023-projectmetadata.yaml](../Sources/structured/spec_src/objects/obj-0023-projectmetadata.yaml) — 3 copies; SHA-256 `7de3839b7d2dd3bc41b37cae45f2f1fcf98cda06766205db2a404754820dd425`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0023-projectmetadata.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0023-projectmetadata.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0023-projectmetadata.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0023-projectmetadata.yaml)
+- [Sources/structured/spec_src/objects/obj-0024-clipmetadata.yaml](../Sources/structured/spec_src/objects/obj-0024-clipmetadata.yaml) — 3 copies; SHA-256 `12115d91a3574a2ef064d3a072fe0c7ce3931b10840a51221c8cdfc112c4ba07`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0024-clipmetadata.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0024-clipmetadata.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0024-clipmetadata.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0024-clipmetadata.yaml)
+- [Sources/structured/spec_src/objects/obj-0025-encoderjob.yaml](../Sources/structured/spec_src/objects/obj-0025-encoderjob.yaml) — 3 copies; SHA-256 `36f6a223a1cb4d571dd82b2c77e758859d5f73a729d11420a561b1eb7db49ede`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0025-encoderjob.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0025-encoderjob.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0025-encoderjob.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0025-encoderjob.yaml)
+- [Sources/structured/spec_src/objects/obj-0026-transcript.yaml](../Sources/structured/spec_src/objects/obj-0026-transcript.yaml) — 3 copies; SHA-256 `611aa185e8be914ca50253bf5f35d75de2ed0393d310b25a7d93d05754ac2aa8`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0026-transcript.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/objects/obj-0026-transcript.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/objects/obj-0026-transcript.yaml](../Sources/pkc07/plugins/premiere/spec_src/objects/obj-0026-transcript.yaml)
+- [Sources/structured/spec_src/recipes/REC-0001-vfx-list.yaml](../Sources/structured/spec_src/recipes/REC-0001-vfx-list.yaml) — 4 copies; SHA-256 `7258f84977aae0ad14722b25b83ee8c2d66c227ebb6af1031a8d6e2e2c5ced07`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/recipes/REC-0001-vfx-list.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/recipes/REC-0001-vfx-list.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/recipes/REC-0001-vfx-list.yaml](../Sources/pkc06/plugins/premiere/spec_src/recipes/REC-0001-vfx-list.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/recipes/REC-0001-vfx-list.yaml](../Sources/pkc07/plugins/premiere/spec_src/recipes/REC-0001-vfx-list.yaml)
+- [Sources/structured/spec_src/recipes/rec-0002.yaml](../Sources/structured/spec_src/recipes/rec-0002.yaml) — 3 copies; SHA-256 `e93e13332abe04d95e2490b33e25e71545a60308a0a41af182514392363bcb47`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0002.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0002.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0002.yaml](../Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0002.yaml)
+- [Sources/structured/spec_src/recipes/rec-0003.yaml](../Sources/structured/spec_src/recipes/rec-0003.yaml) — 3 copies; SHA-256 `99492d1988a4e0bb417c9e1697ba3b45fd47cb35c99970fd3548b5294aeb5a28`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0003.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0003.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0003.yaml](../Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0003.yaml)
+- [Sources/structured/spec_src/recipes/rec-0004.yaml](../Sources/structured/spec_src/recipes/rec-0004.yaml) — 3 copies; SHA-256 `b2230c22e4a5356e37f6d10976f56ac3c7e2692cdbc019085e27bd9e8ba76e11`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0004.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0004.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0004.yaml](../Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0004.yaml)
+- [Sources/structured/spec_src/recipes/rec-0005.yaml](../Sources/structured/spec_src/recipes/rec-0005.yaml) — 3 copies; SHA-256 `1e845a82f65df99f4497aa93fcff81cd40d719d201ec6710ddbc0449667e65e1`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0005.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0005.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0005.yaml](../Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0005.yaml)
+- [Sources/structured/spec_src/recipes/rec-0006.yaml](../Sources/structured/spec_src/recipes/rec-0006.yaml) — 3 copies; SHA-256 `46f40b8f45aea3febba4342e2808f0aabbc994ec903f15a3938c6770c644ce7e`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0006.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0006.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0006.yaml](../Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0006.yaml)
+- [Sources/structured/spec_src/recipes/rec-0007.yaml](../Sources/structured/spec_src/recipes/rec-0007.yaml) — 3 copies; SHA-256 `755c35d41afa0aec2db868a5fd033a4afa0f34df9cfb8591efb64cfd292ce406`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0007.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0007.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0007.yaml](../Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0007.yaml)
+- [Sources/structured/spec_src/recipes/rec-0008.yaml](../Sources/structured/spec_src/recipes/rec-0008.yaml) — 3 copies; SHA-256 `01eece00f1fcd8a4dd8309f4cfe7b89a9fe39e396a7d73396027dd7b7b90ea14`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0008.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/recipes/rec-0008.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0008.yaml](../Sources/pkc07/plugins/premiere/spec_src/recipes/rec-0008.yaml)
+- [Sources/structured/spec_src/rules/rule-ai-0001.yaml](../Sources/structured/spec_src/rules/rule-ai-0001.yaml) — 4 copies; SHA-256 `1621107da6fccc325a7b27d92ef76f4fa271ab963083a030b5e6b55da5cae9fb`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0001.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/rules/rule-ai-0001.yaml](../Sources/pkc06/plugins/premiere/spec_src/rules/rule-ai-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0001.yaml)
+- [Sources/structured/spec_src/rules/rule-ai-0002.yaml](../Sources/structured/spec_src/rules/rule-ai-0002.yaml) — 4 copies; SHA-256 `98e9bfe74e91c6d06334c2e6753470b8d656b946a605dc4df0b8d33450510f2f`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0002.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0002.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/rules/rule-ai-0002.yaml](../Sources/pkc06/plugins/premiere/spec_src/rules/rule-ai-0002.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0002.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0002.yaml)
+- [Sources/structured/spec_src/rules/rule-ai-0003.yaml](../Sources/structured/spec_src/rules/rule-ai-0003.yaml) — 3 copies; SHA-256 `33c1794ce54ad58a38e1b2f8f4c5e09c4d8291ede52db3ac7a26f228f7b0db01`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0003.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0003.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0003.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0003.yaml)
+- [Sources/structured/spec_src/rules/rule-ai-0004.yaml](../Sources/structured/spec_src/rules/rule-ai-0004.yaml) — 3 copies; SHA-256 `d6451644419c7776955e17bb8632bd77d72d750426b4821190a3168c2eb33905`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0004.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0004.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0004.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0004.yaml)
+- [Sources/structured/spec_src/rules/rule-ai-0005.yaml](../Sources/structured/spec_src/rules/rule-ai-0005.yaml) — 3 copies; SHA-256 `7855245d57db829f08830c428b6e1e4394026bd8377378b02e6e50db056e4ccd`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0005.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0005.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0005.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0005.yaml)
+- [Sources/structured/spec_src/rules/rule-ai-0006.yaml](../Sources/structured/spec_src/rules/rule-ai-0006.yaml) — 3 copies; SHA-256 `4386d9168b0d407928f1563bdddfb0f1848245ea4588759316a3b30842a8728a`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0006.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0006.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0006.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0006.yaml)
+- [Sources/structured/spec_src/rules/rule-ai-0007.yaml](../Sources/structured/spec_src/rules/rule-ai-0007.yaml) — 3 copies; SHA-256 `e94a9b8a9676817f8181e6354ddf9f75a277cfebe45cc15e33f6352f62ef2c38`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0007.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0007.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0007.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0007.yaml)
+- [Sources/structured/spec_src/rules/rule-ai-0008.yaml](../Sources/structured/spec_src/rules/rule-ai-0008.yaml) — 3 copies; SHA-256 `a8c178cbf40904ea3221de6b311a2cf5cf37112203b423af33436f7481854661`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0008.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ai-0008.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0008.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-ai-0008.yaml)
+- [Sources/structured/spec_src/rules/rule-cap-0001.yaml](../Sources/structured/spec_src/rules/rule-cap-0001.yaml) — 4 copies; SHA-256 `cf777a69462ea4d2f468c010ac1c874646538665f4fe0cf7835cf13804634920`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-cap-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-cap-0001.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/rules/rule-cap-0001.yaml](../Sources/pkc06/plugins/premiere/spec_src/rules/rule-cap-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-cap-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-cap-0001.yaml)
+- [Sources/structured/spec_src/rules/rule-cap-0002.yaml](../Sources/structured/spec_src/rules/rule-cap-0002.yaml) — 3 copies; SHA-256 `a78fe54e4750bd640419b1ae89bc7220450df3fc4179ba68721df4607332d5ad`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-cap-0002.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-cap-0002.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-cap-0002.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-cap-0002.yaml)
+- [Sources/structured/spec_src/rules/rule-cap-0003.yaml](../Sources/structured/spec_src/rules/rule-cap-0003.yaml) — 3 copies; SHA-256 `7124957f3c37f2f3515292b1b0cb7ed437f922171d82e46da31d0815a90e1cd8`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-cap-0003.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-cap-0003.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-cap-0003.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-cap-0003.yaml)
+- [Sources/structured/spec_src/rules/rule-ext-0001.yaml](../Sources/structured/spec_src/rules/rule-ext-0001.yaml) — 3 copies; SHA-256 `1bc3a140b18b0b158142b88a423a0e44ce16d5db167d1cf96db1e0078d7c817b`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ext-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ext-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-ext-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-ext-0001.yaml)
+- [Sources/structured/spec_src/rules/rule-mogrt-0001.yaml](../Sources/structured/spec_src/rules/rule-mogrt-0001.yaml) — 3 copies; SHA-256 `64077eedb378e49ef258db6b6e736d38b8c45376c21114648f0d00ee298fc35e`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-mogrt-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-mogrt-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-mogrt-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-mogrt-0001.yaml)
+- [Sources/structured/spec_src/rules/rule-safe-0001.yaml](../Sources/structured/spec_src/rules/rule-safe-0001.yaml) — 4 copies; SHA-256 `f2f994f133c762ecf477cb7b5f47bc48138b8a69ca7f429e8b4c277fd974c25d`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-safe-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-safe-0001.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/rules/rule-safe-0001.yaml](../Sources/pkc06/plugins/premiere/spec_src/rules/rule-safe-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-safe-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-safe-0001.yaml)
+- [Sources/structured/spec_src/rules/rule-ser-0001.yaml](../Sources/structured/spec_src/rules/rule-ser-0001.yaml) — 4 copies; SHA-256 `182885dc6246e93d9f04702f077e94245b10e2e8cd6c347e1a63b1c5b4cfbe23`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ser-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-ser-0001.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/rules/rule-ser-0001.yaml](../Sources/pkc06/plugins/premiere/spec_src/rules/rule-ser-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-ser-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-ser-0001.yaml)
+- [Sources/structured/spec_src/rules/rule-uxp-0001.yaml](../Sources/structured/spec_src/rules/rule-uxp-0001.yaml) — 3 copies; SHA-256 `2711681d8a4d503728f9097a470039277da666d8a793c1ceefc57db9c008f674`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-uxp-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-uxp-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-uxp-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-uxp-0001.yaml)
+- [Sources/structured/spec_src/rules/rule-xml-0001.yaml](../Sources/structured/spec_src/rules/rule-xml-0001.yaml) — 3 copies; SHA-256 `eb7d16c1523d314ef30a3afb3262e8fabfdc34ccd864b89934d5ff9af35b868b`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-xml-0001.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/rules/rule-xml-0001.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/rules/rule-xml-0001.yaml](../Sources/pkc07/plugins/premiere/spec_src/rules/rule-xml-0001.yaml)
+- [Sources/structured/spec_src/serialization/SER-0001-premiere-xml.yaml](../Sources/structured/spec_src/serialization/SER-0001-premiere-xml.yaml) — 4 copies; SHA-256 `4bed65fadda00c667fc7e136d2af782136de4e9b91a24d8d1a2b2df19375a65a`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/serialization/SER-0001-premiere-xml.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/serialization/SER-0001-premiere-xml.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/serialization/SER-0001-premiere-xml.yaml](../Sources/pkc06/plugins/premiere/spec_src/serialization/SER-0001-premiere-xml.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/serialization/SER-0001-premiere-xml.yaml](../Sources/pkc07/plugins/premiere/spec_src/serialization/SER-0001-premiere-xml.yaml)
+- [Sources/structured/spec_src/serialization/SER-0002-caption-json.yaml](../Sources/structured/spec_src/serialization/SER-0002-caption-json.yaml) — 4 copies; SHA-256 `f127b011b2f0f034477c7b292723c82c05569ed5cdc3043b92cb86a7930408d2`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/serialization/SER-0002-caption-json.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/serialization/SER-0002-caption-json.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/serialization/SER-0002-caption-json.yaml](../Sources/pkc06/plugins/premiere/spec_src/serialization/SER-0002-caption-json.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/serialization/SER-0002-caption-json.yaml](../Sources/pkc07/plugins/premiere/spec_src/serialization/SER-0002-caption-json.yaml)
+- [Sources/structured/spec_src/tests/BENCH-0001-safety.yaml](../Sources/structured/spec_src/tests/BENCH-0001-safety.yaml) — 4 copies; SHA-256 `1d485b7579f5593a659180561a229dee57220caed943c0e6de9564ace21c559d`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/BENCH-0001-safety.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/BENCH-0001-safety.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/tests/BENCH-0001-safety.yaml](../Sources/pkc06/plugins/premiere/spec_src/tests/BENCH-0001-safety.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/BENCH-0001-safety.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/BENCH-0001-safety.yaml)
+- [Sources/structured/spec_src/tests/TEST-0001-no-fake-api.yaml](../Sources/structured/spec_src/tests/TEST-0001-no-fake-api.yaml) — 4 copies; SHA-256 `f55c3d4c4f0f9c99be8c7f1c0a91c4541eb1984a138595fec1089562d5862a04`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/TEST-0001-no-fake-api.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/TEST-0001-no-fake-api.yaml)
+  - [Sources/pkc06/plugins/premiere/spec_src/tests/TEST-0001-no-fake-api.yaml](../Sources/pkc06/plugins/premiere/spec_src/tests/TEST-0001-no-fake-api.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/TEST-0001-no-fake-api.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/TEST-0001-no-fake-api.yaml)
+- [Sources/structured/spec_src/tests/test-0002.yaml](../Sources/structured/spec_src/tests/test-0002.yaml) — 3 copies; SHA-256 `583e7c71a80b251bb2946f011490a85915b50bc8f9863f7abd18d423bd39d32b`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0002.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0002.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/test-0002.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/test-0002.yaml)
+- [Sources/structured/spec_src/tests/test-0003.yaml](../Sources/structured/spec_src/tests/test-0003.yaml) — 3 copies; SHA-256 `06c743e92403f08912b0df36e70c54e7d443586dbda91c78fe7c0560039fb30d`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0003.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0003.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/test-0003.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/test-0003.yaml)
+- [Sources/structured/spec_src/tests/test-0004.yaml](../Sources/structured/spec_src/tests/test-0004.yaml) — 3 copies; SHA-256 `01b39eeb82e0222141278e339a4a5050ea79fa55661b218f68f6e0ddaaacc33e`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0004.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0004.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/test-0004.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/test-0004.yaml)
+- [Sources/structured/spec_src/tests/test-0005.yaml](../Sources/structured/spec_src/tests/test-0005.yaml) — 3 copies; SHA-256 `59039ea382751ffd764169be6b2337238f7f691356edefe9730ebd407207343c`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0005.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0005.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/test-0005.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/test-0005.yaml)
+- [Sources/structured/spec_src/tests/test-0006.yaml](../Sources/structured/spec_src/tests/test-0006.yaml) — 3 copies; SHA-256 `0bad473c96902044441326aea41f82b21cd0727fcbe8ad3863d146fd46a207f2`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0006.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0006.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/test-0006.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/test-0006.yaml)
+- [Sources/structured/spec_src/tests/test-0007.yaml](../Sources/structured/spec_src/tests/test-0007.yaml) — 3 copies; SHA-256 `70e957d49d00c39a37a6b345a3a6969b6ce4f9a9c522de161be0d9be211ffdd0`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0007.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0007.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/test-0007.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/test-0007.yaml)
+- [Sources/structured/spec_src/tests/test-0008.yaml](../Sources/structured/spec_src/tests/test-0008.yaml) — 3 copies; SHA-256 `c4fe2303e488f403d226e0fc78aafc718300707a5358d6d8cf3c1eee5a667747`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0008.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0008.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/test-0008.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/test-0008.yaml)
+- [Sources/structured/spec_src/tests/test-0009.yaml](../Sources/structured/spec_src/tests/test-0009.yaml) — 3 copies; SHA-256 `d237ca9b5f1c4ba82058920ad31d11c21042a5f3a0ebe4b880ce4d65f11213bc`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0009.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0009.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/test-0009.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/test-0009.yaml)
+- [Sources/structured/spec_src/tests/test-0010.yaml](../Sources/structured/spec_src/tests/test-0010.yaml) — 3 copies; SHA-256 `2141e826f496b66b8ceb4e358ebb994272faaf1f5c9b9266aaa2d2acd88af7d2`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0010.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0010.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/test-0010.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/test-0010.yaml)
+- [Sources/structured/spec_src/tests/test-0011.yaml](../Sources/structured/spec_src/tests/test-0011.yaml) — 3 copies; SHA-256 `219d096a8b28320bf13e2fce6080b02f0a982175e77e71affd72faaab5af8f34`
+  - [Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0011.yaml](../Sources/v2/Archive/pkc-legacy/spec_src/tests/test-0011.yaml)
+  - [Sources/pkc07/plugins/premiere/spec_src/tests/test-0011.yaml](../Sources/pkc07/plugins/premiere/spec_src/tests/test-0011.yaml)
+- [Sources/structured/tests/test_developer_reference_framework.py](../Sources/structured/tests/test_developer_reference_framework.py) — 2 copies; SHA-256 `0175a69692c318f6883c565ce27853e4467d05241699f10a552fc57b6e4e70cd`
+  - [Sources/v2/Archive/pkc-legacy/tests/test_developer_reference_framework.py](../Sources/v2/Archive/pkc-legacy/tests/test_developer_reference_framework.py)
+- [Sources/structured/tests/test_extendscript_application_reference.py](../Sources/structured/tests/test_extendscript_application_reference.py) — 2 copies; SHA-256 `40ac7276b7bbe5a20364a0b5495bad096acaf83c92ccbb3938a49db83dc24ad3`
+  - [Sources/v2/Archive/pkc-legacy/tests/test_extendscript_application_reference.py](../Sources/v2/Archive/pkc-legacy/tests/test_extendscript_application_reference.py)
+- [Sources/structured/tests/test_ops_coverage.py](../Sources/structured/tests/test_ops_coverage.py) — 2 copies; SHA-256 `f334d6968c55336b9c0994cdee27d4525c88a7275e183a229aa765225e911b42`
+  - [Sources/v2/Archive/pkc-legacy/tests/test_ops_coverage.py](../Sources/v2/Archive/pkc-legacy/tests/test_ops_coverage.py)
+- [Sources/structured/tests/test_ops_graph.py](../Sources/structured/tests/test_ops_graph.py) — 2 copies; SHA-256 `1e6ad21a360bb82a856660cc7fea796fe6720f5cd9c79c3dd72626b785ac6eaf`
+  - [Sources/v2/Archive/pkc-legacy/tests/test_ops_graph.py](../Sources/v2/Archive/pkc-legacy/tests/test_ops_graph.py)
+- [Sources/structured/tools/ops_coverage.py](../Sources/structured/tools/ops_coverage.py) — 2 copies; SHA-256 `5a9e2ea629666efd70992aed7fd551de610716556fc9699a9f2ad717f1b4d0fc`
+  - [Sources/v2/Archive/pkc-legacy/tools/ops_coverage.py](../Sources/v2/Archive/pkc-legacy/tools/ops_coverage.py)
+- [Sources/structured/tools/ops_graph.py](../Sources/structured/tools/ops_graph.py) — 2 copies; SHA-256 `46fd36a1906eaf5a6436ab79ac8bc316b4ab3a90d3a73bb5ac45cc35aa8196fa`
+  - [Sources/v2/Archive/pkc-legacy/tools/ops_graph.py](../Sources/v2/Archive/pkc-legacy/tools/ops_graph.py)
+- [Sources/structured/tools/pkc.py](../Sources/structured/tools/pkc.py) — 3 copies; SHA-256 `068d07c0ce75cf5c4f86d1a5953584b5d69422b385883657dd79877f0c45aa90`
+  - [Sources/v2/Archive/pkc-legacy/tools/pkc.py](../Sources/v2/Archive/pkc-legacy/tools/pkc.py)
+  - [Sources/pkc07/tools/pkc.py](../Sources/pkc07/tools/pkc.py)
+- [Sources/v2/.github/workflows/validate.yml](../Sources/v2/.github/workflows/validate.yml) — 1 copies; SHA-256 `b7e200e5175384eb0c88155160dc321f3541d4ccc92e5d28b2aa71004ad6defd`
+- [Sources/v2/Archive/README.md](../Sources/v2/Archive/README.md) — 1 copies; SHA-256 `d74345167e95a04b181c566e7a6aa561b0f42d6e77e09373f2ea2596d9d62466`
+- [Sources/v2/Archive/pkc-legacy/developer_reference/MASTER_TABLE_OF_CONTENTS.md](../Sources/v2/Archive/pkc-legacy/developer_reference/MASTER_TABLE_OF_CONTENTS.md) — 1 copies; SHA-256 `0a0d04da4e27b64226db581e368bf2c577ab37448545a5190daa9e2125ed085e`
+- [Sources/v2/Archive/pkc-legacy/developer_reference/extendscript/Application/README.md](../Sources/v2/Archive/pkc-legacy/developer_reference/extendscript/Application/README.md) — 1 copies; SHA-256 `ae29ffe35cdff203686bd2d55c9d401e3da4a71ce47e9d01d1d8228c2d7d6ded`
+- [Sources/v2/Examples/python/parse_premiere_fcpxml.py](../Sources/v2/Examples/python/parse_premiere_fcpxml.py) — 5 copies; SHA-256 `16c7bbb5a7d6109e17ccaa028a830ca1fc712c7663d3555920cc1a59d06ad38d`
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Examples/python/parse_premiere_fcpxml.py](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Examples/python/parse_premiere_fcpxml.py)
+  - [Sources/imports/imported-copies/files-import-bundle/parse_premiere_fcpxml.py](../Sources/imports/imported-copies/files-import-bundle/parse_premiere_fcpxml.py)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Examples/python/parse_premiere_fcpxml.py](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Examples/python/parse_premiere_fcpxml.py)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Examples/python/parse_premiere_fcpxml.py](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Examples/python/parse_premiere_fcpxml.py)
+- [Sources/v2/Knowledge/ai-integration.md](../Sources/v2/Knowledge/ai-integration.md) — 1 copies; SHA-256 `be5c42084b1839b58231c8aff384e3e6e8d768260d4563e2fd8768c07ba6ae69`
+- [Sources/v2/Knowledge/automation.md](../Sources/v2/Knowledge/automation.md) — 1 copies; SHA-256 `c8855dcdc828519602f8ad5532258c877704c50f05784e0ccacb90c7c8f4d6dc`
+- [Sources/v2/Knowledge/best-practices.md](../Sources/v2/Knowledge/best-practices.md) — 1 copies; SHA-256 `007b6b761207b0adfe16e8ac50d1efd0aafc9c547e49b82b4e74cd08d1eaba1e`
+- [Sources/v2/Knowledge/captions.md](../Sources/v2/Knowledge/captions.md) — 1 copies; SHA-256 `f1cd1d89e875759e6742c953d712137a661ab8f33cab4b7426e4498e356b6337`
+- [Sources/v2/Knowledge/cep.md](../Sources/v2/Knowledge/cep.md) — 1 copies; SHA-256 `f908712c1747c57c46680175270455924b6ddff64f90792674c739e775b9f63f`
+- [Sources/v2/Knowledge/cpp-native-sdk.md](../Sources/v2/Knowledge/cpp-native-sdk.md) — 1 copies; SHA-256 `bfc6539b8c3daa34c7a9d51b9677e9139fe2b086442113a2ad9d12e878767dda`
+- [Sources/v2/Knowledge/debugging.md](../Sources/v2/Knowledge/debugging.md) — 1 copies; SHA-256 `b1c68daf2f889ed12c21100c4f59a2b91504373276c82c4e01917048b070d48a`
+- [Sources/v2/Knowledge/essential-graphics-mogrt-text.md](../Sources/v2/Knowledge/essential-graphics-mogrt-text.md) — 4 copies; SHA-256 `b1e9b3d639be514c60736531ed3c6618f5eb6b92e0516c4f30a0cc3dc4ad662d`
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/essential-graphics-mogrt-text.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/essential-graphics-mogrt-text.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/essential-graphics-mogrt-text.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/essential-graphics-mogrt-text.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/essential-graphics-mogrt-text.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/essential-graphics-mogrt-text.md)
+- [Sources/v2/Knowledge/examples-index.md](../Sources/v2/Knowledge/examples-index.md) — 1 copies; SHA-256 `516bb7c7e2d10d76a688c7cf4f96e8821f50099d093b82a0dfc0163476dd1095`
+- [Sources/v2/Knowledge/import.md](../Sources/v2/Knowledge/import.md) — 1 copies; SHA-256 `09f2c481339ea7b9577dce1a13076ed69dec98f4096c31d6a5c2e60d22c10783`
+- [Sources/v2/Knowledge/markers.md](../Sources/v2/Knowledge/markers.md) — 1 copies; SHA-256 `4c071109258c93e17b3300a6753f92be8c8cdf275308b2275eba510bb1409609`
+- [Sources/v2/Knowledge/panels.md](../Sources/v2/Knowledge/panels.md) — 1 copies; SHA-256 `2c0d858bacecda4d921ce66715f1377cb293791960a39a00710baf23af716124`
+- [Sources/v2/Knowledge/premiere-dom-overview.md](../Sources/v2/Knowledge/premiere-dom-overview.md) — 1 copies; SHA-256 `4db0eba792c9de8737e1ae348965f7a495e0cb701b94610069d8e4528d27cb93`
+- [Sources/v2/Knowledge/reverse-engineering-qe-dom.md](../Sources/v2/Knowledge/reverse-engineering-qe-dom.md) — 1 copies; SHA-256 `9e9a5614f9acf2a859835be549d3ab4a1aaa35551716d956d1090280e2b5a4d9`
+- [Sources/v2/Knowledge/uxp.md](../Sources/v2/Knowledge/uxp.md) — 1 copies; SHA-256 `c3c0e592cc2d0868b97190031e900ea6558dbc757cf525fb6ab211b2c13b9afd`
+- [Sources/v2/Knowledge/xml-fcpxml.md](../Sources/v2/Knowledge/xml-fcpxml.md) — 1 copies; SHA-256 `ba86d680608b5966f94a882bd39202195fea4ae84e5dd5267a711738272528e8`
+- [Sources/v2/README.md](../Sources/v2/README.md) — 1 copies; SHA-256 `c34ba2026b1f9543c619ad1875ad78d70b97e6c7f7ee39f95d1570f9135b3ed6`
+- [Sources/v2/Research/pkc-harvest-notes.md](../Sources/v2/Research/pkc-harvest-notes.md) — 1 copies; SHA-256 `61172a506f9f9a0233b61532bb534791ab4f6d1ec7aa7c0d6e64bd0aac603808`
+- [Sources/v2/requirements.txt](../Sources/v2/requirements.txt) — 1 copies; SHA-256 `8cfc3197b86bf23f2454918d3a0e212585c9cc70f8eee9ee36518311a93c7eb9`
+- [Sources/v2/tools/build_index.py](../Sources/v2/tools/build_index.py) — 1 copies; SHA-256 `e555df2edb8b81408c67f8ef72714fa83d1d35188838dda703805630bb43c67d`
+- [Sources/v2/tools/validate_frontmatter.py](../Sources/v2/tools/validate_frontmatter.py) — 1 copies; SHA-256 `818d19fc67f817934c72d99904ff6205f43da211736d967a9338f0f370b728f1`
+- [Sources/vfx/.github/workflows/validate.yml](../Sources/vfx/.github/workflows/validate.yml) — 1 copies; SHA-256 `7dafb1cd270281a9a3afcded3ee2f4390b7a9e5e930c3edd74b2c48a72c06abf`
+- [Sources/vfx/AUTOMATION_RESEARCH.md](../Sources/vfx/AUTOMATION_RESEARCH.md) — 1 copies; SHA-256 `b185ec8e1dcd755eb3e85304d70394f89c985f27a15a514887895ce31aa45d3b`
+- [Sources/vfx/Archive/README.md](../Sources/vfx/Archive/README.md) — 1 copies; SHA-256 `59bd6bcad80eab2de22d50c2aeafad117c0d823466fbc99ea43224e7d9b221d9`
+- [Sources/vfx/CAPTION_AUTOMATION_EXHAUSTIVE_ANALYSIS.md](../Sources/vfx/CAPTION_AUTOMATION_EXHAUSTIVE_ANALYSIS.md) — 1 copies; SHA-256 `42688d4afee4fe0c8958255ebaffb7cbafb6cc62ab8b70c7c353bf81593bf0bd`
+- [Sources/vfx/Examples/cep-theme-sync-panel.html](../Sources/vfx/Examples/cep-theme-sync-panel.html) — 1 copies; SHA-256 `9b128394a2aab169200d8151b595e7d7c17cc567b2c53666d7382bbfeb11eb0c`
+- [Sources/vfx/Examples/cep-theme-sync-panel.jsx](../Sources/vfx/Examples/cep-theme-sync-panel.jsx) — 1 copies; SHA-256 `d81e9efb94a12d0bab6fa0b7db32945bf4008131b6bb47f054a39b5da23b5aba`
+- [Sources/vfx/Examples/extendscript/batch-export-guarded.jsx](../Sources/vfx/Examples/extendscript/batch-export-guarded.jsx) — 5 copies; SHA-256 `ed176d7487d5759dbe41c91c5fa98ea0cc329a3e84446beb752c0cd9269f2e48`
+  - [Sources/v2/Examples/extendscript/batch-export-guarded.jsx](../Sources/v2/Examples/extendscript/batch-export-guarded.jsx)
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Examples/extendscript/batch-export-guarded.jsx](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Examples/extendscript/batch-export-guarded.jsx)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Examples/extendscript/batch-export-guarded.jsx](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Examples/extendscript/batch-export-guarded.jsx)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Examples/extendscript/batch-export-guarded.jsx](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Examples/extendscript/batch-export-guarded.jsx)
+- [Sources/vfx/Examples/extendscript/qe-safe-wrapper.jsx](../Sources/vfx/Examples/extendscript/qe-safe-wrapper.jsx) — 1 copies; SHA-256 `dca83669b31c9dbb0cf7a695851aa56a204d7f86d10d31591905889e8a0c4303`
+- [Sources/vfx/Examples/extendscript/update-mogrt-text.jsx](../Sources/vfx/Examples/extendscript/update-mogrt-text.jsx) — 5 copies; SHA-256 `dcf127979dc2b26e0d0ee524155da8372141c796235a76e6209f3e244d42e471`
+  - [Sources/v2/Examples/extendscript/update-mogrt-text.jsx](../Sources/v2/Examples/extendscript/update-mogrt-text.jsx)
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Examples/extendscript/update-mogrt-text.jsx](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Examples/extendscript/update-mogrt-text.jsx)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Examples/extendscript/update-mogrt-text.jsx](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Examples/extendscript/update-mogrt-text.jsx)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Examples/extendscript/update-mogrt-text.jsx](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Examples/extendscript/update-mogrt-text.jsx)
+- [Sources/vfx/Examples/python/parse_premiere_fcpxml.py](../Sources/vfx/Examples/python/parse_premiere_fcpxml.py) — 1 copies; SHA-256 `709ef0d97cbd0c89a6215e7b42b58836e77109011097d65e553560a0da9e36da`
+- [Sources/vfx/Examples/uxp-responsive-rubber-panel.html](../Sources/vfx/Examples/uxp-responsive-rubber-panel.html) — 1 copies; SHA-256 `0a1d6ca8c7ab20417ca56aa221eb8f791cd8af3ec97babe2f44a65cc5cc3fa16`
+- [Sources/vfx/Examples/uxp/batch-effects-captions.jsx](../Sources/vfx/Examples/uxp/batch-effects-captions.jsx) — 1 copies; SHA-256 `b88a23cbe9fcf540ac8246d6bafd33d7572b8c186b0d6cf52dd91ecc941a169c`
+- [Sources/vfx/Examples/uxp/list-sequences.jsx](../Sources/vfx/Examples/uxp/list-sequences.jsx) — 1 copies; SHA-256 `ec0d4c7190bcdc4c7e499465ce318969c56e9aa36fca8975550f6b2ba83472b4`
+- [Sources/vfx/INSTALL_INSTRUCTIONS.md](../Sources/vfx/INSTALL_INSTRUCTIONS.md) — 1 copies; SHA-256 `8b5aa6b4000af8daf6c43b29731caf7b317f33d36d4fcceea1bb237f1745326f`
+- [Sources/vfx/Knowledge/00-technology-status-matrix.md](../Sources/vfx/Knowledge/00-technology-status-matrix.md) — 5 copies; SHA-256 `a98116a20fc6c12d0e9127f8c023fc6682e578e20711fcf81de415f9ef8bbb55`
+  - [Sources/v2/Knowledge/00-technology-status-matrix.md](../Sources/v2/Knowledge/00-technology-status-matrix.md)
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/00-technology-status-matrix.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/00-technology-status-matrix.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/00-technology-status-matrix.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/00-technology-status-matrix.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/00-technology-status-matrix.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/00-technology-status-matrix.md)
+- [Sources/vfx/Knowledge/COMPREHENSIVE_RESEARCH_INDEX.md](../Sources/vfx/Knowledge/COMPREHENSIVE_RESEARCH_INDEX.md) — 1 copies; SHA-256 `c20891df66ac8637b4a01a634c7ac692e96aa8cc8b43e35ee29551486e71164b`
+- [Sources/vfx/Knowledge/aaf-interchange.md](../Sources/vfx/Knowledge/aaf-interchange.md) — 1 copies; SHA-256 `64022d65df2d55f83bf21824df188bef523398bfaa060985d8489ef07d9e0f9b`
+- [Sources/vfx/Knowledge/advanced-integration.md](../Sources/vfx/Knowledge/advanced-integration.md) — 1 copies; SHA-256 `afebec616fdc3f2dad08e1d783d2d6b6ea80966fb0a208bbda28873b50914bb1`
+- [Sources/vfx/Knowledge/ai-integration.md](../Sources/vfx/Knowledge/ai-integration.md) — 1 copies; SHA-256 `06eebcb07b8c75f24747ed4905c9c00f46d37780884f498d1b5d84d08dd671ba`
+- [Sources/vfx/Knowledge/api-coverage-matrix.md](../Sources/vfx/Knowledge/api-coverage-matrix.md) — 1 copies; SHA-256 `05cc87f7d93e6616162f3532c363423c3045a2c5b56afe5b75a01b1322c9b27f`
+- [Sources/vfx/Knowledge/audio-api.md](../Sources/vfx/Knowledge/audio-api.md) — 1 copies; SHA-256 `83de29c6186b78a6f1387c004292689fd599163f5a8f01204866155c151230f7`
+- [Sources/vfx/Knowledge/automation.md](../Sources/vfx/Knowledge/automation.md) — 1 copies; SHA-256 `a71cda3101a9a2e6166a9007a49be8a6ab3238688e8604523da9ab0c3c8c2671`
+- [Sources/vfx/Knowledge/best-practices.md](../Sources/vfx/Knowledge/best-practices.md) — 1 copies; SHA-256 `b0b4a44dc93dd45a50b91746b4134136e0c2925bd3184cf2872ec63d9fe3daae`
+- [Sources/vfx/Knowledge/build-premiere-pro-analog.md](../Sources/vfx/Knowledge/build-premiere-pro-analog.md) — 1 copies; SHA-256 `02a8f5cc28d1819b68b7371b6161d32e6522eb33d1b05b1c937392e9be49a2fe`
+- [Sources/vfx/Knowledge/captions.md](../Sources/vfx/Knowledge/captions.md) — 1 copies; SHA-256 `402447d8d16bfe97261c3eef7b38274abb52914d246362eb6a71dddb536ed1cf`
+- [Sources/vfx/Knowledge/cep.md](../Sources/vfx/Knowledge/cep.md) — 1 copies; SHA-256 `b313b21493b6bf2a8f5125918c6e42ff8a56c8c0481d2d81fd9e69094185a122`
+- [Sources/vfx/Knowledge/color-management.md](../Sources/vfx/Knowledge/color-management.md) — 1 copies; SHA-256 `7c4a046c727ffff96e33d045e88fddcf6f82815adfee1b3636a4e8105f8d5918`
+- [Sources/vfx/Knowledge/cpp-native-sdk.md](../Sources/vfx/Knowledge/cpp-native-sdk.md) — 1 copies; SHA-256 `1a3faa32a5a8aa1b7f330349e876194c01a386f9117544c91ee5170367c5d3ae`
+- [Sources/vfx/Knowledge/davinci-resolve-19-research-strengths-weaknesses.md](../Sources/vfx/Knowledge/davinci-resolve-19-research-strengths-weaknesses.md) — 1 copies; SHA-256 `dd971d35397b49fab4e4a008ee22d3147f04cd5dd0326cd272040116cc886e93`
+- [Sources/vfx/Knowledge/debugging.md](../Sources/vfx/Knowledge/debugging.md) — 1 copies; SHA-256 `20333c7f45c98fcff41608b208fe77436829b0414dda4d6e21f6aea80a416cd4`
+- [Sources/vfx/Knowledge/decision-trees.md](../Sources/vfx/Knowledge/decision-trees.md) — 1 copies; SHA-256 `a8c5ebfc11bc614225e016b71f8f8aa95f80b10bd497b2e9454b94be9b512a69`
+- [Sources/vfx/Knowledge/essential-graphics-mogrt-text.md](../Sources/vfx/Knowledge/essential-graphics-mogrt-text.md) — 1 copies; SHA-256 `f82f7dd32fde0d49f847d791a167e819f3a8b8eb4f42073ef098e960f1630186`
+- [Sources/vfx/Knowledge/examples-index.md](../Sources/vfx/Knowledge/examples-index.md) — 1 copies; SHA-256 `3488a585572057b30a8bbb50f36e80ab15149c1c7621454c6cbfe510b1c48cc4`
+- [Sources/vfx/Knowledge/export-rendering-media-encoder.md](../Sources/vfx/Knowledge/export-rendering-media-encoder.md) — 6 copies; SHA-256 `f7bf342c313af254bc85f6449bd932bc4c8ec358d0e6b832b7117eff2504bb20`
+  - [Sources/v2/Knowledge/export-rendering-media-encoder.md](../Sources/v2/Knowledge/export-rendering-media-encoder.md)
+  - [Sources/imports/imported-copies/files-import-bundle/export-rendering-media-encoder.md](../Sources/imports/imported-copies/files-import-bundle/export-rendering-media-encoder.md)
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/export-rendering-media-encoder.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/export-rendering-media-encoder.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/export-rendering-media-encoder.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/export-rendering-media-encoder.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/export-rendering-media-encoder.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/export-rendering-media-encoder.md)
+- [Sources/vfx/Knowledge/extendscript-core.md](../Sources/vfx/Knowledge/extendscript-core.md) — 5 copies; SHA-256 `e45cc8f4aa56da2615a211ee5316709f955b649fde60f1f2d51ae8c7dbee730a`
+  - [Sources/v2/Knowledge/extendscript-core.md](../Sources/v2/Knowledge/extendscript-core.md)
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/extendscript-core.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/extendscript-core.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/extendscript-core.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/extendscript-core.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/extendscript-core.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/extendscript-core.md)
+- [Sources/vfx/Knowledge/final-cut-pro-x-research-strengths-weaknesses.md](../Sources/vfx/Knowledge/final-cut-pro-x-research-strengths-weaknesses.md) — 1 copies; SHA-256 `ae546cbfb8d859e92fe79f0b391545131d992d5a9b96c7a4e8c2ab2742cd5054`
+- [Sources/vfx/Knowledge/glossary.md](../Sources/vfx/Knowledge/glossary.md) — 1 copies; SHA-256 `8aab53d48680be3e53663d53dea20caf80e69886129401d18c6dfa9dbfd3d638`
+- [Sources/vfx/Knowledge/import.md](../Sources/vfx/Knowledge/import.md) — 1 copies; SHA-256 `714871cd226aedd2c75fc820382b66c2fdafd88a431247886f95c6797a8dff6a`
+- [Sources/vfx/Knowledge/localization-i18n.md](../Sources/vfx/Knowledge/localization-i18n.md) — 1 copies; SHA-256 `84a369f4ada909c246d31ded1cfe23f68cf2fbf4d278b8a6689916c34bb38607`
+- [Sources/vfx/Knowledge/markers.md](../Sources/vfx/Knowledge/markers.md) — 1 copies; SHA-256 `d6bb5d000d312219619eb518c789562ef9cafba7f4073413d7e71a2ec9692aa4`
+- [Sources/vfx/Knowledge/menu-command-execution.md](../Sources/vfx/Knowledge/menu-command-execution.md) — 1 copies; SHA-256 `fb92175da9b0c97839cb5ce325c02457ed28f4902b2bb710c614d3691a5a7963`
+- [Sources/vfx/Knowledge/migration-cep-to-uxp.md](../Sources/vfx/Knowledge/migration-cep-to-uxp.md) — 1 copies; SHA-256 `475fed40afb0cf0e5ec41cff366ee5e1fe4d8116a3fc70da7ea2d94caeae6e87`
+- [Sources/vfx/Knowledge/migration-extendscript-to-uxp.md](../Sources/vfx/Knowledge/migration-extendscript-to-uxp.md) — 1 copies; SHA-256 `efb3c977e42970840962a3026a8ca39df3231588d30e9312019329621692162b`
+- [Sources/vfx/Knowledge/multicam-api.md](../Sources/vfx/Knowledge/multicam-api.md) — 1 copies; SHA-256 `3971f29a30327ab699f37e01fa3b810f589205a4d2a391a487e020e1b0f18151`
+- [Sources/vfx/Knowledge/nle-comparison-matrix-synthesis.md](../Sources/vfx/Knowledge/nle-comparison-matrix-synthesis.md) — 1 copies; SHA-256 `a92487a2177e4fb624235ca4d5ca97957d0a49ff7e2cd89e334a286a7fbfe744`
+- [Sources/vfx/Knowledge/nle-research-master-index.md](../Sources/vfx/Knowledge/nle-research-master-index.md) — 1 copies; SHA-256 `f67634ea1372bb69d27b1cf5c99412db5a4fefcbb5b83cf5b81b9653f78e3c39`
+- [Sources/vfx/Knowledge/otio-interchange.md](../Sources/vfx/Knowledge/otio-interchange.md) — 1 copies; SHA-256 `1c11fc3818a8f8f7789407a99cc5293243a7c0d24d629c2d07779f69250c285c`
+- [Sources/vfx/Knowledge/panels.md](../Sources/vfx/Knowledge/panels.md) — 1 copies; SHA-256 `f7807ceaa7c3e8ff36ceee7d154cae1ea1a31aba6df7571e6b27b53291451523`
+- [Sources/vfx/Knowledge/performance-optimization.md](../Sources/vfx/Knowledge/performance-optimization.md) — 1 copies; SHA-256 `41e9664b060a362f87aaefd3057136a93fb5f3ec1be0ff04d241f0d419c619ac`
+- [Sources/vfx/Knowledge/premiere-dom-overview.md](../Sources/vfx/Knowledge/premiere-dom-overview.md) — 1 copies; SHA-256 `c4cc738cd272b251fa0629d8f5b92a842491851ecb142050abd8d2d537215c4c`
+- [Sources/vfx/Knowledge/premiere-pro-2026-architecture.md](../Sources/vfx/Knowledge/premiere-pro-2026-architecture.md) — 1 copies; SHA-256 `cd774c4b929034f2ee8214f10658685e0eebceb0dc02c8b923969dbc70868862`
+- [Sources/vfx/Knowledge/premiere-pro-2026-research-strengths-weaknesses.md](../Sources/vfx/Knowledge/premiere-pro-2026-research-strengths-weaknesses.md) — 1 copies; SHA-256 `0b0741c5a0e2122535f1fec529533ec036c535ebacc73b45beb358225c516fbc`
+- [Sources/vfx/Knowledge/premiere-to-resolve-handoff-guide.md](../Sources/vfx/Knowledge/premiere-to-resolve-handoff-guide.md) — 1 copies; SHA-256 `7b3282228d6c2ff637928b71063523fc03b394515a2404e2011b15b566a756d0`
+- [Sources/vfx/Knowledge/production-case-studies.md](../Sources/vfx/Knowledge/production-case-studies.md) — 1 copies; SHA-256 `202a4283cc1c8afd1db66a6b354198f8a826dd7bc7f326438b6a7ca65c7b06ce`
+- [Sources/vfx/Knowledge/project-file-format.md](../Sources/vfx/Knowledge/project-file-format.md) — 1 copies; SHA-256 `8b869b23eeb63ee4ad607c0a4b41d609f73cf929fd1216ea3b1da9faa61e69dc`
+- [Sources/vfx/Knowledge/reverse-engineering-qe-dom.md](../Sources/vfx/Knowledge/reverse-engineering-qe-dom.md) — 1 copies; SHA-256 `3776fb72e9f5dadff4818bbe955427497c92b6a3428eddec87e4326c73c147c7`
+- [Sources/vfx/Knowledge/security-signing.md](../Sources/vfx/Knowledge/security-signing.md) — 1 copies; SHA-256 `e21b0b5b7a77ac44aa88687a51f3d9e719d5d2c4105c8c7604743df6a3c7d260`
+- [Sources/vfx/Knowledge/sequences-tracks-trackitems.md](../Sources/vfx/Knowledge/sequences-tracks-trackitems.md) — 6 copies; SHA-256 `51758c773f55339edf2387d93c38dbc4219c130da80cc3c1f1ebe76238275f25`
+  - [Sources/v2/Knowledge/sequences-tracks-trackitems.md](../Sources/v2/Knowledge/sequences-tracks-trackitems.md)
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/sequences-tracks-trackitems.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Knowledge/sequences-tracks-trackitems.md)
+  - [Sources/imports/imported-copies/files-import-bundle/sequences-tracks-trackitems.md](../Sources/imports/imported-copies/files-import-bundle/sequences-tracks-trackitems.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/sequences-tracks-trackitems.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Knowledge/sequences-tracks-trackitems.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/sequences-tracks-trackitems.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Knowledge/sequences-tracks-trackitems.md)
+- [Sources/vfx/Knowledge/source-monitor-logging-complete.md](../Sources/vfx/Knowledge/source-monitor-logging-complete.md) — 1 copies; SHA-256 `fabf3f43292e093ab45e0be4e7521e0a8101a17792e28e2cda66d7ce0429e946`
+- [Sources/vfx/Knowledge/timeline-operations-complete.md](../Sources/vfx/Knowledge/timeline-operations-complete.md) — 1 copies; SHA-256 `747ad418596764f384f6394ef571aaae106554c01660c4c14b4eb8284c8efb6d`
+- [Sources/vfx/Knowledge/ui-panels-workspace-complete.md](../Sources/vfx/Knowledge/ui-panels-workspace-complete.md) — 1 copies; SHA-256 `84b147b0d468bf8776bfc9a7cc3f108242f3535b9283677b27cca560a8bfd78d`
+- [Sources/vfx/Knowledge/ui-theming-and-responsive-panels.md](../Sources/vfx/Knowledge/ui-theming-and-responsive-panels.md) — 1 copies; SHA-256 `646c7056d7dfa07cce7019c6baea914dce872b8be413bcb4f2e061d36849fc93`
+- [Sources/vfx/Knowledge/uxp.md](../Sources/vfx/Knowledge/uxp.md) — 1 copies; SHA-256 `a840d5f6f96762af9bf808ee8e9af139511afa60e5dcfd888524f762ac9ae18a`
+- [Sources/vfx/Knowledge/xml-fcpxml.md](../Sources/vfx/Knowledge/xml-fcpxml.md) — 1 copies; SHA-256 `ed48497c19891a9a87cdb8207419216f2e9a833c87a9a1afa076573811d4e47b`
+- [Sources/vfx/PROJECT_SPECIFICATION.md](../Sources/vfx/PROJECT_SPECIFICATION.md) — 6 copies; SHA-256 `8ac82d760c91edc4d324f051c47b1500664f5cdb782bbfbed9ab6da44dd048eb`
+  - [Sources/v2/PROJECT_SPECIFICATION.md](../Sources/v2/PROJECT_SPECIFICATION.md)
+  - [Sources/imports/imported-copies/files-import-bundle/PROJECT_SPECIFICATION.md](../Sources/imports/imported-copies/files-import-bundle/PROJECT_SPECIFICATION.md)
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/PROJECT_SPECIFICATION.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/PROJECT_SPECIFICATION.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/PROJECT_SPECIFICATION.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/PROJECT_SPECIFICATION.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/PROJECT_SPECIFICATION.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/PROJECT_SPECIFICATION.md)
+- [Sources/vfx/QUICK_START.md](../Sources/vfx/QUICK_START.md) — 1 copies; SHA-256 `5e2fb5a109fb2271f9a4b6c5fadf24f3f0cee0d5351b33fd342121b697d2773f`
+- [Sources/vfx/README.md](../Sources/vfx/README.md) — 1 copies; SHA-256 `d712aa6107764e29d3b189241352826ff7aa800e0d20fdfd0554c8fc57f983af`
+- [Sources/vfx/README_VFX_TOOL_OPTIONS.md](../Sources/vfx/README_VFX_TOOL_OPTIONS.md) — 1 copies; SHA-256 `fa87cf1d219039f6138ff748c80c4ba1ababfd1b8b33eac034b2adcfbc122910`
+- [Sources/vfx/RESEARCH_COMPLETION_REPORT.md](../Sources/vfx/RESEARCH_COMPLETION_REPORT.md) — 1 copies; SHA-256 `c104c0b2c8b32f0c74ac50b370fbe5eb9a9809d85a21b5d337a92647be7631ba`
+- [Sources/vfx/Research/README.md](../Sources/vfx/Research/README.md) — 5 copies; SHA-256 `a5a013b6861b02a051ad5a0a3a4146059b81d96ca9ecac14653c58b5a475ba80`
+  - [Sources/v2/Research/README.md](../Sources/v2/Research/README.md)
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Research/README.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Research/README.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Research/README.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Research/README.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Research/README.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Research/README.md)
+- [Sources/vfx/Templates/_TOPIC_TEMPLATE.md](../Sources/vfx/Templates/_TOPIC_TEMPLATE.md) — 5 copies; SHA-256 `8ac11831c1e0e1a3f7e81950888cf44e8c404d24d701a534eedc4ca9814c3301`
+  - [Sources/v2/Templates/_TOPIC_TEMPLATE.md](../Sources/v2/Templates/_TOPIC_TEMPLATE.md)
+  - [Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Templates/_TOPIC_TEMPLATE.md](../Sources/imports/imported-copies/files-import-bundle/open-premiere-specification/Templates/_TOPIC_TEMPLATE.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-01/Templates/_TOPIC_TEMPLATE.md](../Sources/imports/imported-copies/open-premiere-specification-copy-01/Templates/_TOPIC_TEMPLATE.md)
+  - [Sources/imports/imported-copies/open-premiere-specification-copy-02/Templates/_TOPIC_TEMPLATE.md](../Sources/imports/imported-copies/open-premiere-specification-copy-02/Templates/_TOPIC_TEMPLATE.md)
+- [Sources/vfx/VFX_LIST_EXPORT_CEP_TOOL_REFERENCE.md](../Sources/vfx/VFX_LIST_EXPORT_CEP_TOOL_REFERENCE.md) — 1 copies; SHA-256 `ddb496cef539fe36d6c2f297ee88e8a2fa8db7c4a9f58c56684ed620294a8a38`
+- [Sources/vfx/VFX_LIST_UXP_README.md](../Sources/vfx/VFX_LIST_UXP_README.md) — 1 copies; SHA-256 `9458db53f613ad892f3c84a33e705b7257192b9ee22c5cdec31036ac1bf935c3`
+- [Sources/vfx/VFX_TOOL_DOCUMENTATION.md](../Sources/vfx/VFX_TOOL_DOCUMENTATION.md) — 1 copies; SHA-256 `5dcbeb7b358834c759904926b90010b0d4680150b317ed56b43e33e92f14ba8c`
+- [Sources/vfx/VFX_TOOL_DOCUMENTATION_INDEX.md](../Sources/vfx/VFX_TOOL_DOCUMENTATION_INDEX.md) — 1 copies; SHA-256 `b97b64ae6188216ae25622d2f1318a9a0d462efa0bc09301e567bfc1c9e524ab`
+- [Sources/vfx/VFX_TOOL_FINAL_SUMMARY.md](../Sources/vfx/VFX_TOOL_FINAL_SUMMARY.md) — 1 copies; SHA-256 `dc091255992cbbcfca3a74ae09a0f56f3033af8508f501b3d26fd9ea3032b8bf`
+- [Sources/vfx/VFX_TOOL_HYBRID_APPROACH.md](../Sources/vfx/VFX_TOOL_HYBRID_APPROACH.md) — 1 copies; SHA-256 `d687b99a82497a995b23826c2b9c0a40a16200d2b24bda575e1112dd91b5e346`
+- [Sources/vfx/VFX_TOOL_PREMIERE_GUIDE.md](../Sources/vfx/VFX_TOOL_PREMIERE_GUIDE.md) — 1 copies; SHA-256 `6091adee40d51d9b9b8d2570d7d4a0434cd97d8048a8fd4ee4b96a00b6098c72`
+- [Sources/vfx/VFX_TOOL_REALITY_CHECK.md](../Sources/vfx/VFX_TOOL_REALITY_CHECK.md) — 1 copies; SHA-256 `789aca6c3a27638e3475fa022e6a6dd0f6f3ed698e8f3bb6077fc8265d711bfd`
+- [Sources/vfx/VFX_TOOL_V3_FINAL_HONEST.md](../Sources/vfx/VFX_TOOL_V3_FINAL_HONEST.md) — 1 copies; SHA-256 `9e767fc83e03d144f3e8d84c2db1fa689b5a259e507dc5e0ab449ac76d6d3f29`
+- [Sources/vfx/VFX_TOOL_V4_MANUAL_CAPTION_EDITOR.md](../Sources/vfx/VFX_TOOL_V4_MANUAL_CAPTION_EDITOR.md) — 1 copies; SHA-256 `b12d124194cc567d6f39faf3358498c8d8522c54d558d5ad626691d2c58a674f`
+- [Sources/vfx/VFX_TOOL_V4_TEST_PLAN.md](../Sources/vfx/VFX_TOOL_V4_TEST_PLAN.md) — 1 copies; SHA-256 `eded594a2cdfdaea07daea9da8b3e8ca4c0bb98bf544249ba529f1b5325d771d`
+- [Sources/vfx/build_davinci_installer.sh](../Sources/vfx/build_davinci_installer.sh) — 1 copies; SHA-256 `02b4dc245f8e27fd3c2d324ced0838ebda3d405387222419b4cd354a66bcc078`
+- [Sources/vfx/export_by_markers.lua](../Sources/vfx/export_by_markers.lua) — 1 copies; SHA-256 `ac9127d5327f31206864d87c8889ae0a35a797abb4f4f67da3c26faba9957e09`
+- [Sources/vfx/export_by_markers.py](../Sources/vfx/export_by_markers.py) — 1 copies; SHA-256 `23d9a64f420f9b06422e9f6a704602790c0f6b9b363f1e56aed952b08d7ae192`
+- [Sources/vfx/finalize_kb_v3.py](../Sources/vfx/finalize_kb_v3.py) — 1 copies; SHA-256 `bbda2633b2a3ee336f0d50e153ce1668dd28b8ec9d19216ef4e9ef0c8a840476`
+- [Sources/vfx/install.sh](../Sources/vfx/install.sh) — 1 copies; SHA-256 `e0928eab3af6a697d160beff9773a00f23ae4136640c3bff2f7e4c5ea786f1a4`
+- [Sources/vfx/install_davinci_script.sh](../Sources/vfx/install_davinci_script.sh) — 1 copies; SHA-256 `df9db4299f60487913dc442761f0de381b9823f83cc1341ce880e366d3afd350`
+- [Sources/vfx/requirements.txt](../Sources/vfx/requirements.txt) — 1 copies; SHA-256 `71749243f84428fee225bfaa796dca5ef6c1e83a98f6d2a407df615b0390d6fb`
+- [Sources/vfx/tools/build_index.py](../Sources/vfx/tools/build_index.py) — 1 copies; SHA-256 `fe342abce9a6566daddd6e4766136198e992352b0f4a31ed1d713dbf06ab02e7`
+- [Sources/vfx/tools/validate_frontmatter.py](../Sources/vfx/tools/validate_frontmatter.py) — 1 copies; SHA-256 `5726b1de17521005642dd7d4bc86444fcb3598c7adb38ba2782e1b25daa3693e`
+- [Sources/vfx/vfx-list-uxp-panel/manifest.json](../Sources/vfx/vfx-list-uxp-panel/manifest.json) — 1 copies; SHA-256 `3f385420740c498e0f866460d07000541a2a9163632dfb046821f89f905a5d5f`
+- [Sources/vfx/vfx-list-uxp-panel/src/extendscript-bridge.jsx](../Sources/vfx/vfx-list-uxp-panel/src/extendscript-bridge.jsx) — 1 copies; SHA-256 `11e78b1b196f0a06ca854e32d4daac316b8de7b4e201d9ec64a3e182162b4304`
+- [Sources/vfx/vfx-list-uxp-panel/src/index-v2.js](../Sources/vfx/vfx-list-uxp-panel/src/index-v2.js) — 1 copies; SHA-256 `2ff96f65525d09b3145e4c601b2b2681c1e7fe749f4752c0839d3e9b978e38a7`
+- [Sources/vfx/vfx-list-uxp-panel/src/index-v3-working.js](../Sources/vfx/vfx-list-uxp-panel/src/index-v3-working.js) — 1 copies; SHA-256 `d035af8e7de29db668ae785acfb2a740acbe29731718c47d60bffa79d16546ba`
+- [Sources/vfx/vfx-list-uxp-panel/src/index-v4-manual-editing.js](../Sources/vfx/vfx-list-uxp-panel/src/index-v4-manual-editing.js) — 1 copies; SHA-256 `2717a400e42c7a5400f538f293eb561b4aa8695bd08b9cc789f613c2a635de10`
+- [Sources/vfx/vfx-list-uxp-panel/src/index.css](../Sources/vfx/vfx-list-uxp-panel/src/index.css) — 1 copies; SHA-256 `ee7c1eca3d7033e594ff18826087761a4cacce1f5c246f27d7b6fd6c2f412ea0`
+- [Sources/vfx/vfx-list-uxp-panel/src/index.html](../Sources/vfx/vfx-list-uxp-panel/src/index.html) — 1 copies; SHA-256 `bc9ac5e3f1cc0f45322b7329dfe90f9eb691aa3cac280a0a3a10c615d998adff`
+- [Sources/vfx/vfx-list-uxp-panel/src/index.js](../Sources/vfx/vfx-list-uxp-panel/src/index.js) — 1 copies; SHA-256 `8e0153848718b9115ff9566f0c50b36ba0f61d07642f19aea7b95a01a1479289`
+- [Sources/vfx/vfx_list_export_tool.py](../Sources/vfx/vfx_list_export_tool.py) — 1 copies; SHA-256 `55462bf346a214b0d36d36ecaf750c9d07726a6ff2cc8209bd2506788ea081ae`
+- [Sources/vfx/vfx_list_export_tool_premiere.py](../Sources/vfx/vfx_list_export_tool_premiere.py) — 1 copies; SHA-256 `8849be9287faa957925b7183a5895e0622da26a316e3521c71a3f73eaa87a8ac`
